@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.3.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.3.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="VirtualBox 安装 Ubuntu 16.04准备软件版本  Windows: Win 7/10VirtualBox: e.g., VirtualBox 5.2.6/5.1.16Ubuntu: ubuntu-16.04.4-desktop-amd64.iso    在 bios 开启 Virtualization Technology (VTx) 选项其目的是：可以安装 64 位 linux">
+<meta name="keywords" content="Configure">
+<meta property="og:type" content="article">
+<meta property="og:title" content="虚拟机配置 (Ubuntu, Python)">
+<meta property="og:url" content="https://eustomaqua.github.io/2018/07/07/2018-07-07-VirtualBox-on-Windows/index.html">
+<meta property="og:site_name" content="Aqua Eustoma">
+<meta property="og:description" content="VirtualBox 安装 Ubuntu 16.04准备软件版本  Windows: Win 7/10VirtualBox: e.g., VirtualBox 5.2.6/5.1.16Ubuntu: ubuntu-16.04.4-desktop-amd64.iso    在 bios 开启 Virtualization Technology (VTx) 选项其目的是：可以安装 64 位 linux">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-07-13T12:43:16.134Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="虚拟机配置 (Ubuntu, Python)">
+<meta name="twitter:description" content="VirtualBox 安装 Ubuntu 16.04准备软件版本  Windows: Win 7/10VirtualBox: e.g., VirtualBox 5.2.6/5.1.16Ubuntu: ubuntu-16.04.4-desktop-amd64.iso    在 bios 开启 Virtualization Technology (VTx) 选项其目的是：可以安装 64 位 linux">
+
+
+
+
+
+
+  <link rel="canonical" href="https://eustomaqua.github.io/2018/07/07/2018-07-07-VirtualBox-on-Windows/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>虚拟机配置 (Ubuntu, Python) | Aqua Eustoma</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Aqua Eustoma</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />Search</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://eustomaqua.github.io/2018/07/07/2018-07-07-VirtualBox-on-Windows/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="eustomaqua">
+      <meta itemprop="description" content="Once upon a time....">
+      <meta itemprop="image" content="/images/EustomaAqua.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aqua Eustoma">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">虚拟机配置 (Ubuntu, Python)
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-07 16:51:10" itemprop="dateCreated datePublished" datetime="2018-07-07T16:51:10-05:00">2018-07-07</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-07-13 07:43:16" itemprop="dateModified" datetime="2018-07-13T07:43:16-05:00">2018-07-13</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Records/" itemprop="url" rel="index"><span itemprop="name">Records</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="VirtualBox-安装-Ubuntu-16-04"><a href="#VirtualBox-安装-Ubuntu-16-04" class="headerlink" title="VirtualBox 安装 Ubuntu 16.04"></a>VirtualBox 安装 Ubuntu 16.04</h1><h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p><strong>软件版本</strong></p>
+<blockquote>
+<p><strong>Windows:</strong> Win 7/10<br><strong>VirtualBox:</strong> e.g., VirtualBox 5.2.6/5.1.16<br><strong>Ubuntu:</strong> ubuntu-16.04.4-desktop-amd64.iso  </p>
+</blockquote>
+<p><strong>在 bios 开启 Virtualization Technology (VTx) 选项</strong><br>其目的是：可以安装 64 位 linux 操作系统，并且可以开启虚拟机多 CPU 配置。<br>机器不同，BIOS 配置不同，有些机器是默认打开 VTx 选项的，无需此步。如果没有打开 VTx，在 BIOS 打开即可。<br>如：<br><a href="https://bbs.thinkpad.com/thread-4406091-1-1.html" target="_blank" rel="noopener">thinkpad t460 开启虚拟化</a><br><a href="http://iknow.lenovo.com/app/detail/dc_C183451.html" target="_blank" rel="noopener">如何开启笔记本的 VT-x 虚拟化技术功能</a><br><a href="https://blog.csdn.net/liynet/article/details/7232599" target="_blank" rel="noopener">联想 ThinkPad 使用虚拟机时遇到要求打开 CPU 中 VT 的方法</a>  </p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>新建虚拟机  </p>
+<ul>
+<li>“新建”虚拟机电脑，选择“现在创建虚拟磁盘”，其中内存设为 2048 GB（自定义）  </li>
+<li>创建虚拟磁盘，文件大小设为 40 GB（自定义），‘虚拟磁盘文件类型’使用 vdi 或 vmdb 均可，‘存储在物理磁盘上’选择“动态分配”  </li>
+</ul>
+<p>开始安装  </p>
+<ul>
+<li>点击“启动”，选择光盘文件开始安装  </li>
+<li>选择语言，中英均可  </li>
+<li>安装时下载更新  </li>
+<li>清除整个磁盘并安装  </li>
+<li>设置时区  </li>
+<li>设置键盘语言  </li>
+<li>设置用户名和密码  </li>
+<li>等待……  </li>
+<li>安装完成后重启，重启前要移除安装光盘  </li>
+</ul>
+<p>安装增强功能  </p>
+<ul>
+<li>“设备” -&gt; “安装增强功能”  </li>
+<li>重启  </li>
+</ul>
+<p>设置共享文件夹  </p>
+<ul>
+<li>“控制” -&gt; “设置” -&gt; “共享文件夹”，点击右侧的添加按钮  </li>
+<li>一定要选中“自动挂载”和“固定分配”  </li>
+<li>添加共享文件夹权限  <blockquote>
+<p>sudo usermod -G vboxsf username</p>
+</blockquote>
+</li>
+<li>一定要重启。重启完成后再查看，发现每个文件夹前都多了”sf_”，在”/media”文件夹下。</li>
+</ul>
+<h2 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h2><ul>
+<li>设置 root 密码  <blockquote>
+<p>sudo passwd   </p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">安装 ubuntu 成功后，都是普通用户权限，并没有最高 root 权限。如果需要使用 root 权限，通常都会在命令前面加上 sudo 。有时候这样比较麻烦。  </span><br><span class="line">我们一般使用 su 命令来直接切换到 root 用户，但是会抛出 su: Authentication failure 这样的问题。这是因为：ubuntu 默认 root 密码是随机的，即每次开机都有一个新密码。  </span><br><span class="line">给 root 用户设置一个初始密码只需要输入 sudo passwd 命令，输入一般用户密码并设定 root 用户密码。  </span><br><span class="line">设定 root 密码成功后，输入 su 命令，并输入刚才设定的 root 密码，就可以切换成 root 了。  </span><br><span class="line">提示符 $ 代表一般用户，提示符 # 代表 root 用户。  </span><br><span class="line">输入 exit 命令，可退出 root 并返回一般用户。</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>username 不在 sudoer 文件中。此事将被报告  </p>
+<blockquote>
+<p>gedit /etc/sudoers 在 “# User privilege specification” 下增加一行 usernameALL=(ALL:ALL) ALL</p>
+</blockquote>
+</li>
+<li><p><strong>无法进入root权限，却又需要root权限才能解决问题，的死循环</strong><br><strong><em>出错原因：</em></strong><br>设置root密码时把命令错输成 su passwd，再输正确命令时就提示不在sudoers文件中了。<br>此时，root密码随机，无法进入root权限；而更改sudoers文件又需要root权限，因此陷入死循环。  </p>
+<p><strong><em>更正办法：</em></strong>  <a href="https://blog.csdn.net/u011277123/article/details/78011983" target="_blank" rel="noopener">sudoers修改不能在终端使用sudo 和su的解决方法</a>  </p>
+<ul>
+<li>重启电脑，一直按着 esc 键，进入 “高级模式 -&gt; recovery mode -&gt; root” ，回车，这时会进入root目录，相当于单用户模式  </li>
+<li>在root终端输入    # mount -o remount rw /  </li>
+<li>修改/etc/sudoers的权限为777（默认权限是440）    # chmod 777 /etc/sudoers  </li>
+<li># vi /etc/sudoers 回车，然后在后端加入 %admin ALL=(ALL) ALL 回车 sudo ALL=(ALL:ALL) ALL 保存  </li>
+<li>修改完保存退出后将/etc/sudoers权限恢复成默认的440权限，然后重启。这样你的问题解决！ <blockquote>
+<p># chmod 440 /etc/sudoers<br># reboot</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>E: 无法修正错误，因为您要求某些软件包保持现状，就是它们破坏了软件包间的依赖关系。</p>
+<p>在“设置”下的“软件和更新”里，去掉“更新”下的“不支持的更新”<br>然后更新一下  </p>
+<blockquote>
+<p>sudo apt-get update</p>
+</blockquote>
+</li>
+</ul>
+<p>参考  </p>
+<ol>
+<li><p>Ubuntu 的选择， i386 还是 amd64 ？<br><a href="http://forum.ubuntu.org.cn/viewtopic.php?t=80409" target="_blank" rel="noopener">UBUNTU amd64 和 i386有什么区别</a><br>i386是32位，amd64是64位。<br>64位支持的内存一般更大（但如果只有1-2G内存的话，没必要装64位的）；且性能会高些，如果是数值计算，性能会高很多，整数运算上同频率64位的效率是32位的4倍左右。<br>不过用的人少，问题略多（没有64位的flash支持，只能先用32位的，还有一些软件默认不提供64位包，不过可以自己编译。图省事的，还是用32位的吧）。</p>
+</li>
+<li><p>VirtualBox 安装 虚拟机 Ubuntu 16.04<br><a href="https://www.linuxidc.com/Linux/2016-08/134580.htm" target="_blank" rel="noopener">VirtualBox安装部署Ubuntu 16.04 图文详解</a><br><a href="https://blog.csdn.net/u012732259/article/details/70172704" target="_blank" rel="noopener">基于VirtualBox虚拟机安装Ubuntu图文教程</a>  </p>
+</li>
+<li><p>ubuntu 设置 root 密码<br><a href="https://blog.csdn.net/u012301841/article/details/73692426" target="_blank" rel="noopener">ubuntu 16.04 设置root用户初始密码</a><br><a href="https://blog.csdn.net/weixin_36210698/article/details/72857366" target="_blank" rel="noopener">ubuntu 首次登陆设置root密码</a>  </p>
+</li>
+<li><p>ubuntu 不在 sudoers 文件中。此事将被报告。<br><a href="https://blog.csdn.net/lincyang/article/details/21020295" target="_blank" rel="noopener">用户名 不在 sudoers文件中，此事将被报告。</a><br><a href="https://blog.csdn.net/byzhang19900624/article/details/8813396" target="_blank" rel="noopener">解决 用户不在 sudoers 文件中 的问题</a>  </p>
+</li>
+</ol>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><p>ref:  <a href="https://blog.csdn.net/debug_cpp/article/details/2687067" target="_blank" rel="noopener">如何查看ubuntu的内核版本和发行版本号</a></p>
+<p>查看 Ubuntu 的内核和发行版本号</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/issue</span><br><span class="line">sudo lsb_release -a</span><br></pre></td></tr></table></figure>
+<h1 id="Ubuntu-16-04-下-Python-的使用"><a href="#Ubuntu-16-04-下-Python-的使用" class="headerlink" title="Ubuntu 16.04 下 Python 的使用"></a>Ubuntu 16.04 下 Python 的使用</h1><h2 id="默认"><a href="#默认" class="headerlink" title="默认"></a>默认</h2><p>ref:  <a href="https://blog.csdn.net/jenyzhang/article/details/49646641" target="_blank" rel="noopener">linux 查看python安装路径,版本号</a> </p>
+<p>Ubuntu 16.04 自带两个版本的 Python，分别为 2.7 和 3.5 。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">python2</span><br><span class="line">python3</span><br><span class="line">python  //默认为 2</span><br></pre></td></tr></table></figure></p>
+<p>查看 Ubuntu 中安装的 Python 路径<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">whereis python</span><br><span class="line"><span class="built_in">which</span> python</span><br></pre></td></tr></table></figure></p>
+<p>查看 Ubuntu 中安装的 Python 版本号<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python --version</span><br><span class="line">python</span><br></pre></td></tr></table></figure></p>
+<h2 id="pip-相关"><a href="#pip-相关" class="headerlink" title="pip 相关"></a>pip 相关</h2><h3 id="管理员安装"><a href="#管理员安装" class="headerlink" title="管理员安装"></a>管理员安装</h3><p>程序“pip”尚未安装。如需运行‘pip’，请要求管理员安装 ‘python-pip’ 软件包。</p>
+<p>安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install python-pip</span><br><span class="line">sudo apt-get install python3-pip  //pip3</span><br></pre></td></tr></table></figure></p>
+<p>更新<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install --upgrade pip  //bug! 会更新到 10.x</span><br><span class="line">pip install --upgrade pip==9.0.3</span><br></pre></td></tr></table></figure></p>
+<p>查看<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip 8.1.1:	pip list</span><br><span class="line">pip 9.0.1:	pip list --format=columns</span><br><span class="line">pip 10.0.1:	pip list</span><br></pre></td></tr></table></figure></p>
+<h3 id="virtualenv-与-virtualenvwrapper"><a href="#virtualenv-与-virtualenvwrapper" class="headerlink" title="virtualenv 与 virtualenvwrapper"></a>virtualenv 与 virtualenvwrapper</h3><p>ref: <a href="https://www.jianshu.com/p/44ab75fbaef2" target="_blank" rel="noopener">python 虚拟环境[virtualenv/virtualenvwrapper]设置</a></p>
+<p>安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install virtualenv</span><br><span class="line">pip install virtualenvwrapper</span><br></pre></td></tr></table></figure></p>
+<p>创建新环境<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">virtualenv [新环境名]</span><br><span class="line">virtualenv [新环境名] --python=/usr/bin/python3</span><br></pre></td></tr></table></figure></p>
+<p>e.g.,  </p>
+<blockquote>
+<p>mkdir VirtualEnv<br>virtualenv py27env –python=/usr/bin/python2<br>virtualenv py35env –python=/usr/bin/python3</p>
+</blockquote>
+<p>虚拟环境的进入和退出  </p>
+<blockquote>
+<p>cd VirtualEnv<br>source py27env/bin/activate<br>deactivate<br>source py35env/bin/activate<br>deactivate</p>
+</blockquote>
+<h2 id="安装所需包"><a href="#安装所需包" class="headerlink" title="安装所需包"></a>安装所需包</h2><h3 id="通用"><a href="#通用" class="headerlink" title="通用"></a>通用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">pip install numpy</span><br><span class="line">pip install scipy</span><br><span class="line">pip install scikit-learn</span><br><span class="line"></span><br><span class="line">pip install matplotlib</span><br><span class="line">pip install pandas</span><br><span class="line">pip install pillow</span><br><span class="line"></span><br><span class="line">pip install pathos</span><br><span class="line">pip install lmdb</span><br><span class="line">pip install requests</span><br></pre></td></tr></table></figure>
+<h3 id="Python-2-7-12"><a href="#Python-2-7-12" class="headerlink" title="Python 2.7.12+"></a>Python 2.7.12+</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">pip install theano</span><br><span class="line">pip install keras</span><br><span class="line"></span><br><span class="line">pip install tensorflow==1.4.1</span><br><span class="line"></span><br><span class="line">pip install http://download.pytorch.org/whl/cpu/torch-0.4.0-cp27-cp27mu-linux_x86_64.whl</span><br><span class="line">pip install torchvision</span><br></pre></td></tr></table></figure>
+<p>如果有 GPU，比如服务器<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install tensorflow-gpu==1.4.*</span><br><span class="line">pip install torch torchvision</span><br><span class="line">//pip uninstall tensorflow tensorboard</span><br></pre></td></tr></table></figure></p>
+<h3 id="Python-3-5-2"><a href="#Python-3-5-2" class="headerlink" title="Python 3.5.2+"></a>Python 3.5.2+</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">pip install tensorflow==1.4.1</span><br><span class="line">pip install http://download.pytorch.org/whl/cpu/torch-0.3.1-cp35-cp35m-linux_x86_64.whl</span><br><span class="line">pip install torchvision==0.2.0</span><br><span class="line">pip install keras</span><br><span class="line"></span><br><span class="line">pip install pymongo</span><br><span class="line">pip install photinia</span><br></pre></td></tr></table></figure>
+<p>服务器如有 GPU<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pip install tensorflow-gpu==1.4.*</span><br><span class="line">//pip3 install torch torchvision</span><br><span class="line">pip install http://download.pytorch.org/whl/cu80/torch-0.3.1-cp35-cp35m-linux_x86_64.whl</span><br><span class="line">pip install torchvision==0.2.0</span><br></pre></td></tr></table></figure></p>
+<p>注意：<br>使用 lmdb 需要安装 python3-dev<br>使用 matplotlib 需要安装 python3-tk  </p>
+<blockquote>
+<p>sudo apt-get install python3-dev<br>sudo apt-get install python3-tk</p>
+</blockquote>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> scipy</span><br><span class="line"><span class="keyword">import</span> sklearn</span><br><span class="line"><span class="comment"># import matplotlib</span></span><br><span class="line"><span class="comment"># matplotlib.use('Agg')</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> pandas</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="comment">#No need: import tensorboard</span></span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> torchvision</span><br><span class="line"><span class="keyword">import</span> theano</span><br><span class="line"><span class="keyword">import</span> keras</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pathos</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> lmdb</span><br><span class="line"><span class="keyword">import</span> pymongo</span><br><span class="line"><span class="keyword">import</span> photinia <span class="keyword">as</span> ph</span><br></pre></td></tr></table></figure>
+<h1 id="安装开发环境"><a href="#安装开发环境" class="headerlink" title="安装开发环境"></a>安装开发环境</h1><h2 id="sublime-texstudio-texlive"><a href="#sublime-texstudio-texlive" class="headerlink" title="sublime, texstudio, texlive"></a>sublime, texstudio, texlive</h2><p><a href="https://jingyan.baidu.com/article/64d05a023cd849de55f73be4.html" target="_blank" rel="noopener">Ubuntu 16.04安装sublime text3</a>  </p>
+<p>sudo add-apt-repository ppa:webupd8team/sublime-text-3<br>sudo apt-get update<br>sudo apt-get install sublime-text-installer<br>subl  </p>
+<p><a href="http://wuguowei.com/wordpress/archives/1578" target="_blank" rel="noopener">Linux系统 Ubuntu更新sublime-text3的正确方法</a>  </p>
+<p>wget -qO - <a href="https://download.sublimetext.com/sublimehq-pub.gpg" target="_blank" rel="noopener">https://download.sublimetext.com/sublimehq-pub.gpg</a> | sudo apt-key add -<br>echo “deb <a href="https://download.sublimetext.com/" target="_blank" rel="noopener">https://download.sublimetext.com/</a> apt/stable/“ | sudo tee /etc/apt/sources.list.d/sublime-text.list<br>sudo apt-get update<br>sudo apt-get install sublime-text   </p>
+<p><a href="http://wuguowei.com/wordpress/archives/1585" target="_blank" rel="noopener">sublime-text3无法输入中文的解决方法(linux环境)</a><br><a href="http://blog.51cto.com/xiumu/1766052" target="_blank" rel="noopener">sublime text3 安装 配置 以及常见问题汇总</a>   </p>
+<p><a href="https://blog.csdn.net/DreamHome_S/article/details/77920303" target="_blank" rel="noopener">Ubuntu16.04中使用texlive+texstudio搭建Latex环境</a>   </p>
+<p>sudo apt install texlive<br>sudo apt install latex-cjk-all<br>sudo apt install texstudio  </p>
+<p>安装 texlive, 中文字体包, texstudio  </p>
+<h2 id="安装-Python-开发环境"><a href="#安装-Python-开发环境" class="headerlink" title="安装 Python 开发环境"></a>安装 Python 开发环境</h2><h3 id="安装-Spyder"><a href="#安装-Spyder" class="headerlink" title="安装 Spyder"></a>安装 Spyder</h3><p>ref: <a href="http://blog.51cto.com/tong707/1970182" target="_blank" rel="noopener">在Ubuntu-16.04中安装Python可视化IDE——Spyder</a></p>
+<p>安装Spyder之前，安装以下python常用库和依赖（如果安装过会跳过）:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install python-dev python-pip libxml2-dev libxslt1-dev zlib1g-dev libffi-dev libssl-dev</span><br><span class="line">sudo pip install scrapy</span><br><span class="line">sudo apt-get install libzmq-dev</span><br><span class="line">sudo pip install pyzmq <span class="comment">#here</span></span><br><span class="line">sudo pip install pygments</span><br><span class="line">sudo apt-get install qt4-dev-tools qt4-doc qt4-qtconfig qt4-demos qt4-designer</span><br><span class="line">sudo pip install qtconsole</span><br><span class="line">sudo pip install ipython</span><br></pre></td></tr></table></figure></p>
+<p>安装 Spyder  </p>
+<blockquote>
+<p>sudo apt install spyder<br>我用的是 sudo apt-get install spyder</p>
+</blockquote>
+<p>安装成功后，命令行输入 spyder 可打开 IDE  </p>
+<blockquote>
+<p>spyder</p>
+</blockquote>
+<p>spyder 使用当前虚拟环境中的 python  </p>
+<blockquote>
+<p>虚拟环境的设置还可以通过 tools &gt; preferences &gt; python interpreter 来自定义 </p>
+</blockquote>
+<ul>
+<li>Tools &gt; Preferences  </li>
+<li>Step 1: Run &gt; Console &gt; 默认第一项改成第二项  </li>
+<li>Step 2: Console &gt; Advanced settings &gt; Python executable 的默认第一项改成第二项  </li>
+<li>Step 3: 把上一步中第二项的默认 “/usr/bin/python” 改成 “/home/ubuntu/VirtualEnv/py35env/bin/python”</li>
+</ul>
+<p>参考<br><a href="http://blog.51cto.com/tong707/1970182" target="_blank" rel="noopener">在Ubuntu-16.04中安装Python可视化IDE——Spyder</a><br><a href="https://blog.csdn.net/appleyuchi/article/details/78354694" target="_blank" rel="noopener">Ubuntu16.04下面spyder切换虚拟环境下面的python版本</a><br>废弃<br><a href="https://www.jianshu.com/p/1d33547f9f05" target="_blank" rel="noopener">conda 虚拟环境下配置spyder解释器为指定解释器</a><br><a href="https://www.jianshu.com/p/de68016087c4" target="_blank" rel="noopener">anaconda /spyder 多虚拟环境</a> </p>
+<h3 id="安装-PyCharm"><a href="#安装-PyCharm" class="headerlink" title="安装 PyCharm"></a>安装 PyCharm</h3><blockquote>
+<p>sudo add-apt-repository ppa:mystic-mirage/pycharm<br>sudo apt update<br>sudo apt install pycharm<br># 我后面两个用的是<br># sudo apt-get update</p>
+</blockquote>
+<h3 id="安装-Anaconda"><a href="#安装-Anaconda" class="headerlink" title="安装 Anaconda"></a>安装 Anaconda</h3><h2 id="安装-OpenCV"><a href="#安装-OpenCV" class="headerlink" title="安装 OpenCV"></a>安装 OpenCV</h2><h3 id="安装-opencv-3-0-0"><a href="#安装-opencv-3-0-0" class="headerlink" title="安装 opencv 3.0.0"></a>安装 opencv 3.0.0</h3><p>ref: <a href="http://nooverfit.com/wp/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%EF%BC%8C%E5%9C%A8ubuntu%E4%B8%8A%E5%AE%89%E8%A3%85opencv-3-0-%E5%92%8C-python-2-7/" target="_blank" rel="noopener">手把手教你，在Ubuntu上安装OpenCV 3.0 和 Python 2.7+</a></p>
+<p>(1) 打开终端窗口，更新 apt-get 包管理器，升级所有预安装包  </p>
+<blockquote>
+<p>$ sudo apt-get update<br>$ sudo apt-get upgrade  </p>
+</blockquote>
+<p>(2) 安装我们的开发工具和包  </p>
+<blockquote>
+<p>$ sudo apt-get install build-essential cmake git pkg-config  </p>
+</blockquote>
+<p>(3) OpenCV 需要从磁盘中加载不同格式的图片，如  JPEG, TIFF, PNG 等等．所以我们需要安装我们的图像 I/O 工具包  </p>
+<blockquote>
+<p>$ sudo apt-get install libjpeg-dev libtiff-dev libjasper-dev libpng-dev  </p>
+</blockquote>
+<p>(4) 另外，OpenCV 是用 GTK 开发包来显示 GUI,  即用户图形界面，所以我们要安装这个开发包  </p>
+<blockquote>
+<p>$ sudo apt-get install libgtk2.0-dev  </p>
+</blockquote>
+<p>(5) OpenCV 还必须处理视频流和单个帧，下面就是我们需要的安装包  </p>
+<blockquote>
+<p>$ sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev  </p>
+</blockquote>
+<p>(6) OpenCV 还包含一些内部优化工具  </p>
+<blockquote>
+<p>$ sudo apt-get install libatlas-base-dev gfortran  </p>
+</blockquote>
+<p>(7) 安装 python 包管理器 pip<br>(8) 步骤8  </p>
+<ul>
+<li><p>安装 virtualenv 和 virtualenvwrapper. 用来分割 python 虚拟环境. 这不是必须的, 但是强烈推荐  </p>
+<blockquote>
+<p>$ sudo pip install virtualenv virtualenvwrapper<br>$ sudo rm -rf ~/.cache/pip  </p>
+</blockquote>
+</li>
+<li><p>现在我们有了 virtualenv 和 virtualenvwrapper, 我们要更新我们的 ~/.bashrc 文件  </p>
+<blockquote>
+<p># virtualenv and virtualenvwrapper<br>export WORKON_HOME=$HOME/.virtualenvs<br>source /usr/local/bin/virtualenvwrapper.sh  </p>
+</blockquote>
+</li>
+<li><p>为了使 ~/.bashrc 文件生效 , 你可以用以下这些方法的其中之一<br>(1) 注销后重新登录, (2) 关闭终端开一个新终端, (3) 直接使得 ~/.bashrc 文件在当前生效:  </p>
+<blockquote>
+<p>$ source ~/.bashrc  </p>
+</blockquote>
+</li>
+<li><p>最后我们生成名字叫 cv 的虚拟开发环境:  </p>
+<blockquote>
+<p>$ mkvirtualenv cv  </p>
+</blockquote>
+</li>
+</ul>
+<p>(9) 步骤9  </p>
+<ul>
+<li><p>安装 python 开发工具  </p>
+<blockquote>
+<p>$ sudo apt-get install python2.7-dev  </p>
+</blockquote>
+</li>
+<li><p>安装 numpy   </p>
+<blockquote>
+<p>$ pip install numpy   </p>
+</blockquote>
+</li>
+</ul>
+<p>(10) 步骤10   </p>
+<ul>
+<li><p>预备环境终于都搞定啦, 我们进入正题, 安装 OpenCV 3.0.0  </p>
+<blockquote>
+<p>$ cd ~<br>$ git clone <a href="https://github.com/Itseez/opencv.git" target="_blank" rel="noopener">https://github.com/Itseez/opencv.git</a><br>$ cd opencv<br>$ git checkout 3.0.0   </p>
+</blockquote>
+</li>
+<li><p>你也可以在这里使用 3.1.0, 但是别忘了去 OpenCV.org 官网看看有什么变动.  </p>
+</li>
+<li><p>有一些牛叉的算法如 SIFT, SURF, 等等 在 opencv_contrib 里面, 所以我们要安装它来支持 OpenCV:  </p>
+<blockquote>
+<p>$ cd ~<br>$ git clone <a href="https://github.com/Itseez/opencv_contrib.git" target="_blank" rel="noopener">https://github.com/Itseez/opencv_contrib.git</a><br>$ cd opencv_contrib<br>$ git checkout 3.0.0  </p>
+</blockquote>
+</li>
+<li><p>注意: opencv_contrib 和 OpenCV 版本要一致  </p>
+</li>
+<li><p>是时候 build OpenCV 辣:  </p>
+<blockquote>
+<p>$ cd ~/opencv<br>$ mkdir build<br>$ cd build<br>$ cmake -D CMAKE_BUILD_TYPE=RELEASE \<br>  -D CMAKE_INSTALL_PREFIX=/usr/local \<br>  -D INSTALL_C_EXAMPLES=ON \<br>  -D INSTALL_PYTHON_EXAMPLES=ON \<br>  -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules \<br>  -D BUILD_EXAMPLES=ON ..  </p>
+</blockquote>
+</li>
+<li><p><strong>如果要装 OpenCV 3.1.0, 你需要设置 DINSTALL_C_EXAMPLES=OFF</strong>   </p>
+</li>
+<li>最后, 编译! :  <blockquote>
+<p>$ make -j4  </p>
+</blockquote>
+</li>
+</ul>
+<p>注意<br>cmake -D CMAKE_BUILD_TYPE=RELEASE  -D CMAKE_INSTALL_PREFIX=/usr/local  -D INSTALL_C_EXAMPLES=ON  -D INSTALL_PYTHON_EXAMPLES=ON  -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules  -D BUILD_EXAMPLES=ON .. </p>
+<p>即<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake -D CMAKE_BUILD_TYPE=RELEASE  -D CMAKE_INSTALL_PREFIX=/usr/<span class="built_in">local</span>  -D INSTALL_C_EXAMPLES=ON  -D INSTALL_PYTHON_EXAMPLES=ON  -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules  -D BUILD_EXAMPLES=ON ..</span><br></pre></td></tr></table></figure></p>
+<h3 id="卸载重装"><a href="#卸载重装" class="headerlink" title="卸载重装"></a>卸载重装</h3><p>ref: <a href="https://www.cnblogs.com/txg198955/p/5990295.html" target="_blank" rel="noopener">ubuntu卸载opencv并重装opencv3.0.0</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">一、 卸载opencv2.4.9： Going to the <span class="string">"build"</span> folder directory of opencv from terminal, and execute the following：</span><br><span class="line">1. $ sudo make uninstall</span><br><span class="line">2. $ <span class="built_in">cd</span> ..</span><br><span class="line">3. $ sudo rm -r build</span><br><span class="line">4. $ sudo rm -r /usr/<span class="built_in">local</span>/include/opencv2 /usr/<span class="built_in">local</span>/include/opencv /usr/include/opencv /usr/include/opencv2 /usr/<span class="built_in">local</span>/share/opencv /usr/<span class="built_in">local</span>/share/OpenCV /usr/share/opencv /usr/share/OpenCV /usr/<span class="built_in">local</span>/bin/opencv* /usr/<span class="built_in">local</span>/lib/libopencv*</span><br></pre></td></tr></table></figure>
+<h3 id="安装-opencv-3-2-0"><a href="#安装-opencv-3-2-0" class="headerlink" title="安装 opencv 3.2.0"></a>安装 opencv 3.2.0</h3><p>ref: <a href="https://blog.csdn.net/yudiemiaomiao/article/details/72780790" target="_blank" rel="noopener">ubuntu 16.04 安装opencv 3.2.0</a></p>
+<ol>
+<li>安装 opencv 依赖包   </li>
+<li><p>下载 opencv3.2.0<br>这里需要下载 opencv 和 opencv_contrib (后者会在 cmake 配置的时候用到)，这是因为 opencv3 以后 SIFT 和 SURF 之类的属性被移到了 contrib 中。   </p>
+<blockquote>
+<p>$ wget <a href="https://github.com/opencv/opencv/archive/3.2.0.zip" target="_blank" rel="noopener">https://github.com/opencv/opencv/archive/3.2.0.zip</a>  #从github上直接下载或者clone也可<br>$ wget <a href="https://github.com/opencv/opencv_contrib/archive/3.2.0.zip" target="_blank" rel="noopener">https://github.com/opencv/opencv_contrib/archive/3.2.0.zip</a>   </p>
+</blockquote>
+</li>
+<li><p>安装 opencv3.2.0   </p>
+</li>
+</ol>
+<p>cd VirtualEnv/opencv<br>cd opencv<br>git checkout 3.2.0<br>cd ../opencv_contrib<br>git checkout 3.2.0<br>cd ..  </p>
+<p>cd opencv<br>mkdir build<br>cd build<br>cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local ..  </p>
+<p>CMAKE_INSTALL_PREFIX：安装的python目录前缀，指定了python模块的安装路径：CMAKE_INSTALL_PREFIX/lib/python2.7/dist-packages，获取该路径的方式可以用： </p>
+<p>python -c “import sys; print sys.prefix”  </p>
+<p>在安装过程中，很有可能会出现错误：ICV: Downloading ippicv_linux_20151201.tgz 超时，据说此部分可有可无，可自行搜索文件名进行下载，然后替换opencv-3.2.0/3rdparty/ippicv/downloads/linux-*目录下的同名文件，重新cmake。</p>
+<p>optional(显示指定一些编译内容），我在安装时未显示指定：</p>
+<p>cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local WITH_TBB=ON -D BUILD_NEW_PYTHON_SUPPORT=ON -D WITH_V4L=ON -D INSTALL_C_EXAMPLES=ON -D INSTALL_PYTHON_EXAMPLES=ON -D BUILD_EXAMPLES=ON -D WITH_QT=ON -D WITH_OPENGL=ON -D ENABLE_FAST_MATH=1 -D WITH_CUDA=ON -D CUDA_FAST_MATH=1 -D WITH_CUBLAS=1 -D CUDA_GENERATION=Auto -D WITH_GSTREAMER_0_10=OFF ..  </p>
+<p>在 build 目录下：  </p>
+<p>make -j4  </p>
+<p>-j4 表示四核运算，可根据电脑配置选择。</p>
+<p>然后<br>编译没问题的话, 就可以安装了:</p>
+<p>sudo make install<br>sudo ldconfig -v  </p>
+<p>(11) 步骤11：<br>如果安装无误, OpenCV 现在已经安装在 /usr/local/lib/python2.7/site–packages 中了. 但是考虑到我们的虚拟环境 cv 还没有 OpenCV, 我们需要建立一个软链:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~  </span><br><span class="line"><span class="built_in">cd</span> VirtualEnv/py27env  </span><br><span class="line"><span class="built_in">cd</span> lib/python2.7/site-packages  </span><br><span class="line">ln -s /usr/<span class="built_in">local</span>/lib/python2.7/dist-packages/cv2.so cv2.so</span><br></pre></td></tr></table></figure>
+<p>(12) 步骤 12:<br>恭喜 ! 你完成了在 Ubuntu 上安装 OpenCV 3.0 和 Python 2.7+<br>所有剩下的就是验证一下啦：   </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ workon cv</span><br><span class="line">$ python</span><br><span class="line">&gt;&gt;&gt; import cv2</span><br><span class="line">&gt;&gt;&gt; cv2.__version__</span><br><span class="line">&gt;&gt;&gt; <span class="string">'3.0.0'</span></span><br></pre></td></tr></table></figure>
+<p>参考<br><a href="https://blog.csdn.net/yudiemiaomiao/article/details/72780790" target="_blank" rel="noopener">ubuntu 16.04 安装opencv 3.2.0</a><br><a href="http://nooverfit.com/wp/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%EF%BC%8C%E5%9C%A8ubuntu%E4%B8%8A%E5%AE%89%E8%A3%85opencv-3-0-%E5%92%8C-python-2-7/" target="_blank" rel="noopener">手把手教你，在Ubuntu上安装OpenCV 3.0 和 Python 2.7+</a><br><a href="https://www.jianshu.com/p/44ab75fbaef2" target="_blank" rel="noopener">python 虚拟环境[virtualenv/virtualenvwrapper]设置</a><br><a href="https://www.cnblogs.com/txg198955/p/5990295.html" target="_blank" rel="noopener">ubuntu卸载opencv并重装opencv3.0.0</a><br><a href="https://blog.csdn.net/u013453604/article/details/49781771" target="_blank" rel="noopener">Ubuntu下安装opencv 2.4.11</a></p>
+<h2 id="spyder-切换环境"><a href="#spyder-切换环境" class="headerlink" title="spyder 切换环境"></a>spyder 切换环境</h2><p>cd VirtualEnv</p>
+<p>source py35env/bin/activate<br>pip install ipython  </p>
+<h3 id="安装-PyQt4"><a href="#安装-PyQt4" class="headerlink" title="安装 PyQt4"></a>安装 PyQt4</h3><p>sudo apt-get install libxext6 libxext-dev libqt4-dev libqt4-gui libqt4-sql  //delete “libqt4-gui”<br>sudo apt-get install qt4-dev-tools qt4-doc qt4-qtconfig qt4-demos qt4-designer<br>sudo apt-get install python-qt4<br>sudo apt-get install python-qt4-*<br>sudo apt-get install python-qscintilla2   </p>
+<p>sudo apt-get install python3-pyqt4<br>sudo apt-get install python3-pyqt4.qsci<br>sudo apt-get install python3-pyqt4.qtsql<br>sudo apt-get install python3-pyqt4.phonon  </p>
+<p><a href="https://blog.csdn.net/baidu_33850454/article/details/78225155" target="_blank" rel="noopener">Ubuntu：Unable to locate package（无法定位安装包）</a><br><a href="https://www.bbsmax.com/A/obzbX1Y15E/" target="_blank" rel="noopener">Desktop Ubuntu 14.04LTS/16.04科学计算环境配置</a><br><a href="https://blog.csdn.net/tao_627/article/details/46529587" target="_blank" rel="noopener">在ubuntu 14.04 64bit下配置安装PyQt4(python2.7和python3.4)</a>  </p>
+<h3 id="安装-PySide"><a href="#安装-PySide" class="headerlink" title="安装 PySide"></a>安装 PySide</h3><p>sudo apt-get install build-essential<br>sudo apt-get install qt4-dev-tools qt4-doc qt4-qtconfig qt4-demos qt4-designer qtcreator<br>sudo pip3 install pyside  </p>
+<p><a href="https://blog.csdn.net/u011008379/article/details/55299371" target="_blank" rel="noopener">Ubuntu下安装PySide</a><br><a href="https://stackoverflow.com/questions/46723857/pyside-installation-error-with-command-python-setup-py-egg-info-failed-with-er" target="_blank" rel="noopener">PySide Installation error with Command “python setup.py egg_info” failed with error code 1</a>  </p>
+<h3 id="安装-ipython-pyside"><a href="#安装-ipython-pyside" class="headerlink" title="安装 ipython, pyside"></a>安装 ipython, pyside</h3><p>cd ~/VirtualEnv<br>source py35env/bin/activate<br>pip install pyside  </p>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><ul>
+<li>python2: ….   </li>
+<li>python3: ….   </li>
+<li>virtualenv, virtualenvwrapper   </li>
+<li>sublime text 3   </li>
+<li>texlive, texstudio   </li>
+<li>pycharm   </li>
+<li>spyder, spyder3  </li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Configure/" rel="tag"># Configure</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/02/2018-05-02-database-sublime-nodejs/" rel="next" title="数据库 (lmdb, mongodb) 的安装与使用，附 Sublime 插件配置">
+                <i class="fa fa-chevron-left"></i> 数据库 (lmdb, mongodb) 的安装与使用，附 Sublime 插件配置
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/08/2018-07-08-Git-Markdown-Linux-Vim/" rel="prev" title="Git, Markdown, Linux, Vim 常用命令汇总">
+                Git, Markdown, Linux, Vim 常用命令汇总 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/EustomaAqua.png"
+                alt="eustomaqua" />
+            
+              <p class="site-author-name" itemprop="name">eustomaqua</p>
+              <p class="site-description motion-element" itemprop="description">Once upon a time....</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/eustomaqua" target="_blank" title="GitHub"><i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#VirtualBox-安装-Ubuntu-16-04"><span class="nav-number">1.</span> <span class="nav-text">VirtualBox 安装 Ubuntu 16.04</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备"><span class="nav-number">1.1.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决问题"><span class="nav-number">1.3.</span> <span class="nav-text">解决问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用命令"><span class="nav-number">1.4.</span> <span class="nav-text">常用命令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Ubuntu-16-04-下-Python-的使用"><span class="nav-number">2.</span> <span class="nav-text">Ubuntu 16.04 下 Python 的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#默认"><span class="nav-number">2.1.</span> <span class="nav-text">默认</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pip-相关"><span class="nav-number">2.2.</span> <span class="nav-text">pip 相关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#管理员安装"><span class="nav-number">2.2.1.</span> <span class="nav-text">管理员安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#virtualenv-与-virtualenvwrapper"><span class="nav-number">2.2.2.</span> <span class="nav-text">virtualenv 与 virtualenvwrapper</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装所需包"><span class="nav-number">2.3.</span> <span class="nav-text">安装所需包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#通用"><span class="nav-number">2.3.1.</span> <span class="nav-text">通用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-2-7-12"><span class="nav-number">2.3.2.</span> <span class="nav-text">Python 2.7.12+</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-3-5-2"><span class="nav-number">2.3.3.</span> <span class="nav-text">Python 3.5.2+</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用"><span class="nav-number">2.3.4.</span> <span class="nav-text">使用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装开发环境"><span class="nav-number">3.</span> <span class="nav-text">安装开发环境</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#sublime-texstudio-texlive"><span class="nav-number">3.1.</span> <span class="nav-text">sublime, texstudio, texlive</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-Python-开发环境"><span class="nav-number">3.2.</span> <span class="nav-text">安装 Python 开发环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-Spyder"><span class="nav-number">3.2.1.</span> <span class="nav-text">安装 Spyder</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-PyCharm"><span class="nav-number">3.2.2.</span> <span class="nav-text">安装 PyCharm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-Anaconda"><span class="nav-number">3.2.3.</span> <span class="nav-text">安装 Anaconda</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-OpenCV"><span class="nav-number">3.3.</span> <span class="nav-text">安装 OpenCV</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-opencv-3-0-0"><span class="nav-number">3.3.1.</span> <span class="nav-text">安装 opencv 3.0.0</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#卸载重装"><span class="nav-number">3.3.2.</span> <span class="nav-text">卸载重装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-opencv-3-2-0"><span class="nav-number">3.3.3.</span> <span class="nav-text">安装 opencv 3.2.0</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#spyder-切换环境"><span class="nav-number">3.4.</span> <span class="nav-text">spyder 切换环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-PyQt4"><span class="nav-number">3.4.1.</span> <span class="nav-text">安装 PyQt4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-PySide"><span class="nav-number">3.4.2.</span> <span class="nav-text">安装 PySide</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-ipython-pyside"><span class="nav-number">3.4.3.</span> <span class="nav-text">安装 ipython, pyside</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#summary"><span class="nav-number">3.5.</span> <span class="nav-text">summary</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">eustomaqua</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.3.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
