@@ -1072,7 +1072,7 @@ pre .javascript .function {
   right: 30px;
   z-index: 1050;
   padding: 0 6px;
-  width: 24px;
+  width: initial;
   background: #222;
   font-size: 12px;
   opacity: 1;
@@ -1849,7 +1849,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff8b4e;
+  background: #b5b88c;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2834,4 +2834,12 @@ hr {
     width: auto;
     text-align: center;
   }
+}
+.post-body p a {
+  color: #0593d3;
+  border-bottom: none;
+}
+:.post-body p a:hover {
+  color: #0477ab;
+  text-decoration: underlines;
 }

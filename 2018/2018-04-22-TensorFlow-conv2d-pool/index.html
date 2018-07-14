@@ -112,7 +112,7 @@
     root: '/',
     scheme: 'Mist',
     version: '6.3.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -443,6 +443,20 @@
 
           
 
+
+          
+            <span class="post-letters-count">
+              &nbsp; | &nbsp;
+              <span title="post.wordcount">
+                1,103 words
+              </span>
+              &nbsp; | &nbsp;
+              <span title="post.min2read">
+                5 minutes
+              </span>
+            </span>
+          
+
         </div>
       </header>
     
@@ -663,7 +677,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -809,6 +823,8 @@
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
