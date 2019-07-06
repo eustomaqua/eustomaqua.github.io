@@ -66,7 +66,7 @@ $ cat ~/VirtualEnv/cuda90/include/cudnn.h | grep CUDNN_MAJOR -A5
 然后就可以安装自己想要安装的框架了
 
 后续：编译框架的时候提示无 lcuda.so 动态库   
-解决办法：在 /usr/lib64/nvidia 中有，创建软连接到自己的安装 cuda 的目录 /home/liuao/cuda91/lib64 即可。
+解决办法：在 /usr/lib64/nvidia 中有，创建软链接到自己的安装 cuda 的目录 /home/liuao/cuda91/lib64 (i.e., /home/username/VirtualEnv/cuda90/lib64) 即可。
 
 
 ### * 安装过程 (所用到的命令)
@@ -372,7 +372,7 @@ add the python path on the server, remember to "**Move this server to IDE settin
 Bitvise SSH Client
 
 可以写个 .sh 然后 nohup 执行。  
-如果不用 nohup，一旦关闭终端/链接断掉，这个脚本就会停止执行 
+如果不用 nohup，一旦关闭终端/连接断掉，这个脚本就会停止执行 
 ```shell
 $ vim yourtask.sh
 $ chmod +x ./yourtask.sh
@@ -390,6 +390,9 @@ $ du -h --max-depth=1
 $ git checkout branchname
 $ git pull upstream branchname
 $ git rebase upstream/branchname
+
+$ git log    # q (exit)
+$ git config --list
 ```
 
 

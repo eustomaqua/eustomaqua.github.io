@@ -341,13 +341,15 @@ TexStudio 配置语法检查 LanguageTool
 
 
 矢量画图工具 Inkscape  
+[ubuntu使用PPA安装Inkscape 0.91](https://www.linuxdashen.com/ubuntu%E4%BD%BF%E7%94%A8ppa%E5%AE%89%E8%A3%85inkscape-0-91)  
 [Linux for Ubuntu安装Inkscape开源矢量图工具](https://blog.csdn.net/tydyz/article/details/76166224)  
 [Ubuntu安装Inkscape开源矢量图工具及基本使用](http://www.linuxdiyf.com/linux/32143.html)  
 [inkscape安装（ubuntu 16.04）](https://blog.csdn.net/lxlong89940101/article/details/86497925)
 
-sudo add-apt-repository ppa:inkscape.dev/stable
-sudo apt update
-sudo apt-get install inkscape
+sudo add-apt-repository ppa:inkscape.dev/stable  
+sudo apt update  
+sudo apt-get install inkscape  
+sudo apt-get remove inkscape  # 删除
 
 
 

@@ -28,7 +28,7 @@ logging 模块能很好地解决这个问题，通过设置 severity level，容
 
 ### 默认
 
-```python
+```Python
 #!/usr/local/bin/python
 # -*- coding: utf-8 -*-
 
