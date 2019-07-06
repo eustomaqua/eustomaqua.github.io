@@ -1,12 +1,14 @@
 ---
 title: Tips of Tables and Figures in Papers (论文图表小技巧)
-date: 2019-07-06 18:39:54
-updated: 
+date: 2019-06-15 16:52:13
+updated: 2019-07-06 22:14:21
 categories:
   - Records
 tags: 
   - LaTeX
 ---
+
+[comment]: <> (2019-07-06 18:39:54)
 
 
 # Contents
@@ -322,6 +324,26 @@ File -> PS to EPS -> "Automatically calculate Bounding Box"
 
 ## Packages
 
+
+### enumitem
+
+**类似''导入 enumerate 后设置项目符号''**  
+
+[comment]: <> (待补充....)
+
+```erlang
+% \usepackage{enumerate}  % 与 enumitem 不兼容
+\usepackage{enumitem}
+\setenumerate[1]{itemsep=-1pt, partopsep=0pt, parsep=0pt, topsep=0pt}
+\setitemize[1]{itemsep=0pt, partopsep=0pt, parsep=0pt, topsep=0pt}
+% \setdescription{itemsep=0pt, partopsep=0pt, parsep=0pt, topsep=0pt}
+\newlist{subquestion}{enumerate}{1}
+% \setlist[subquestion,1]{label=(\alph*)}  % options
+% \setlist[subquestion,1]{label=[\roman*]}  % options
+\setlist[subquestion,1]{label=[\arabic*]}  % options
+```
+
+
 ### enumerate
 
 **itemize 间距大小**  
@@ -373,9 +395,6 @@ File -> PS to EPS -> "Automatically calculate Bounding Box"
 \end{enumerate}
 ```
 
-**导入 enumerate 后设置项目符号**  
-
-待补充....
 
 ### marvosym
 
@@ -490,3 +509,5 @@ latex paper.tex
 <img src="http://www.texample.net/media/img/logo.png" alt="texamples">
 
 图片示例详见另一篇续吧，不然太长了……感觉加载反应迟钝……
+
+[comment]: <> "Tips of Tables and Figures in Papers (cont.) 续  https://eustomaqua.github.io/2019/2019-06-10-Latex-Paper-Figures-cont/"

@@ -1,13 +1,15 @@
 ---
 title: Tips of Tables and Figures in Papers (cont.) 续
 date: 2019-06-10 21:49:03
-updated: 2019-07-06 13:16:49
 updated: 2019-07-06 20:57:29
 categories:
   - Records
 tags: 
   - LaTeX
 ---
+
+[comment]: <> (updated: 2019-07-06 13:16:49)
+
 
 
 # Resources
