@@ -1307,8 +1307,9 @@ $6\times3$  items per page
 
 [eps2pgf](http://www.texample.net/tikz/examples/eps2pgf/)
 <img src="http://www.texample.net/media/tikz/examples/PNG/eps2pgf.png" width="150">
-<img src="http://media.texample.net/tikz/examples/extra/eps2pgf/meps2pgf1.png" width="150">
-<img src="http://media.texample.net/tikz/examples/extra/eps2pgf/meps2pgf2.png" width="150">
+
+[comment]: <> (<img src="http://media.texample.net/tikz/examples/extra/eps2pgf/meps2pgf1.png" width="150">)
+[comment]: <> (<img src="http://media.texample.net/tikz/examples/extra/eps2pgf/meps2pgf2.png" width="150">)
 
 [tikzDevice - TikZ output from R](http://www.texample.net/tikz/examples/tikzdevice-demo/)
 <img src="http://www.texample.net/media/tikz/examples/PNG/tikzdevice-demo.png" width="200">

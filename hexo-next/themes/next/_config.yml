@@ -303,14 +303,16 @@ post_meta:
 symbols_count_time:
   ##separated_meta: true
   item_text_post: true
-  item_text_total: false
+  ## item_text_total: false
+  item_text_total: true
   awl: 4
   wpm: 275
   ##
   item_text: true
   wordcount: true   # 单篇 字数统计
   min2read: true    # 单篇 阅读时长
-  totalcount: false # 网站 字数统计
+  ## totalcount: false # 网站 字数统计
+  totalcount: true
   separated_meta: true
 
 codeblock:
@@ -680,13 +682,27 @@ firestore:
 # Show Views/Visitors of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
-  enable: false
-  total_visitors: true
-  total_visitors_icon: user
-  total_views: true
-  total_views_icon: eye
-  post_views: true
-  post_views_icon: eye
+  # enable: false
+  # total_visitors: true
+  # total_visitors_icon: user
+  # total_views: true
+  # total_views_icon: eye
+  # post_views: true
+  # post_views_icon: eye
+  #
+  enable: true
+  # 站点UV配置：    效果：本站访客数12345人次
+  site_uv: true
+  site_uv_header: Total
+  site_uv_footer: Visitors
+  # 站点PV配置：    效果：本站总访问量12345次
+  site_pv: true
+  site_pv_header: Total
+  site_pv_footer: Views
+  # 单页面PV配置：    效果：本文总阅读量12345次
+  page_pv: true
+  page_pv_header: <i class="fa fa-file-o"></i>
+  page_pv_footer: Views
 
 
 # Tencent analytics ID
