@@ -1190,6 +1190,57 @@ ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$
 ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git add .
 ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git commit -m "annotations"  # 注释
 ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git push
+
+
+
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ cd ..
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git status
+位于分支 hexo-next
+您的分支领先 'origin/hexo-next' 共 1 个提交。
+  （使用 "git push" 来发布您的本地提交）
+尚未暂存以备提交的变更：
+  （使用 "git add <文件>..." 更新要提交的内容）
+  （使用 "git checkout -- <文件>..." 丢弃工作区的改动）
+
+  修改：     hexo-next/source/_posts/2020-02-08-Setup-Python-on-Linux.md
+
+修改尚未加入提交（使用 "git add" 和/或 "git commit -a"）
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git add .
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git commit -m "config done on gpu"
+[hexo-next 10c854a] config done on gpu
+ 1 file changed, 724 insertions(+), 18 deletions(-)
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git push
+warning: push.default 尚未设置，它的默认值在 Git 2.0 已从 'matching'
+变更为 'simple'。若要不再显示本信息并保持传统习惯，进行如下设置：
+
+  git config --global push.default matching
+
+若要不再显示本信息并从现在开始采用新的使用习惯，设置：
+
+  git config --global push.default simple
+
+当 push.default 设置为 'matching' 后，git 将推送和远程同名的所有
+本地分支。
+
+从 Git 2.0 开始，Git 默认采用更为保守的 'simple' 模式，只推送当前
+分支到远程关联的同名分支，即 'git push' 推送当前分支。
+
+参见 'git help config' 并查找 'push.default' 以获取更多信息。
+（'simple' 模式由 Git 1.7.11 版本引入。如果您有时要使用老版本的 Git，
+为保持兼容，请用 'current' 代替 'simple'）
+
+Username for 'https://github.com': eustomaqua
+Password for 'https://eustomaqua@github.com': 
+对象计数中: 13, 完成.
+Delta compression using up to 2 threads.
+压缩对象中: 100% (13/13), 完成.
+写入对象中: 100% (13/13), 15.88 KiB | 0 bytes/s, 完成.
+Total 13 (delta 8), reused 0 (delta 0)
+remote: Resolving deltas: 100% (8/8), completed with 4 local objects.
+To https://github.com/eustomaqua/eustomaqua.github.io.git
+   480734a..10c854a  hexo-next -> hexo-next
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ 
+
 ```
 
 post notes
