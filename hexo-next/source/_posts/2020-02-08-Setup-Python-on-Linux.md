@@ -1291,5 +1291,40 @@ INFO  Generated: search.xml
 INFO  Generated: index.html
 INFO  3 files generated in 9.83 s
 ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ 
+
+
+
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git add .
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git commit -m "backup history"
+[hexo-next 2b17507] backup history
+ 1 file changed, 51 insertions(+)
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ cd hex*
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ ls
+_config.yml  debug.log     package.json       public     source
+db.json      node_modules  package-lock.json  scaffolds  themes
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ hexo g
+INFO  Start processing
+INFO  Files loaded in 2.62 s
+INFO  Generated: search.xml
+INFO  Generated: 2020/2020-02-08-Setup-Python-on-Linux/index.html
+INFO  Generated: index.html
+INFO  3 files generated in 6.39 s
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ hexo d
+INFO  Deploying: git
+INFO  Clearing .deploy_git folder...
+INFO  Copying files from public folder...
+INFO  Copying files from extend dirs...
+[master c64205a] updated on Sat, 02/08/2020
+ 36 files changed, 3796 insertions(+), 79 deletions(-)
+ create mode 100644 2020/2020-02-08-Setup-Python-on-Linux/index.html
+ create mode 100644 archives/2020/02/index.html
+ create mode 100644 archives/2020/index.html
+Username for 'https://github.com': eustomaqua
+Password for 'https://eustomaqua@github.com': 
+To https://github.com/eustomaqua/eustomaqua.github.io.git
+   df22d0c..c64205a  HEAD -> master
+分支 master 设置为跟踪来自 https://github.com/eustomaqua/eustomaqua.github.io.git 的远程分支 master。
+INFO  Deploy done: git
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ 
 ```
 
