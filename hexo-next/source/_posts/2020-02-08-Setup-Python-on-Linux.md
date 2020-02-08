@@ -146,16 +146,16 @@ Please, press ENTER to continue
 >>> yes
 
 Anaconda3 will now be installed into this location:
-/home/yjbian/anaconda3
+/home/eustomaqua/anaconda3
 
   - Press ENTER to confirm the location
   - Press CTRL-C to abort the installation
   - Or specify a different location below
 
-[/home/yjbian/anaconda3] >>> '/home/yjbian/Software/anaconda3
+[/home/eustomaqua/anaconda3] >>> '/home/eustomaqua/Software/anaconda3
 ./Anaconda3-5.2.0-Linux-x86_64.sh: eval: line 301: unexpected EOF while looking for matching `''
 ./Anaconda3-5.2.0-Linux-x86_64.sh: eval: line 302: syntax error: unexpected end of file
-PREFIX=/home/yjbian/anaconda3
+PREFIX=/home/eustomaqua/anaconda3
 installing: python-3.6.5-hc3d631a_2 ...
 Python 3.6.5 :: Anaconda, Inc.
 installing: blas-1.0-mkl ...
@@ -165,11 +165,11 @@ installing: blas-1.0-mkl ...
 installing: anaconda-5.2.0-py36_3 ...
 installation finished.
 Do you wish the installer to prepend the Anaconda3 install location
-to PATH in your /home/yjbian/.bashrc ? [yes|no]
+to PATH in your /home/eustomaqua/.bashrc ? [yes|no]
 [no] >>> yes
 
-Appending source /home/yjbian/anaconda3/bin/activate to /home/yjbian/.bashrc
-A backup will be made to: /home/yjbian/.bashrc-anaconda3.bak
+Appending source /home/eustomaqua/anaconda3/bin/activate to /home/eustomaqua/.bashrc
+A backup will be made to: /home/eustomaqua/.bashrc-anaconda3.bak
 
 
 For this change to become active, you have to open a new terminal.
@@ -445,22 +445,11 @@ Sat Feb  8 22:19:53 2020
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 440.36       Driver Version: 440.36       CUDA Version: 10.2     |
 |-------------------------------+----------------------+----------------------+
-| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
-| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
-|===============================+======================+======================|
-|   0  GeForce RTX 207...  Off  | 00000000:01:00.0 Off |                  N/A |
-|  0%   37C    P8    20W / 215W |    386MiB /  7979MiB |      0%      Default |
-+-------------------------------+----------------------+----------------------+
 
 +-----------------------------------------------------------------------------+
 | Processes:                                                       GPU Memory |
 |  GPU       PID   Type   Process name                             Usage      |
 |=============================================================================|
-|    0      1155      G   /usr/lib/xorg/Xorg                            57MiB |
-|    0      1505      G   /usr/lib/xorg/Xorg                            24MiB |
-|    0      6744      G   /usr/bin/gnome-shell                         220MiB |
-|    0     28250      G   /usr/bin/gnome-shell                          81MiB |
-+-----------------------------------------------------------------------------+
 ~/Software$
 ```
 
@@ -484,10 +473,188 @@ Base Installer (Download)
 
 Download cuDNN v7.6.4 [September 27, 2019], for CUDA 10.0  
 - cuDNN Library for Linux
+- // or
+- // Download cuDNN v7.4.2 [Dec 14, 2018], for CUDA 10.0
+
 
 ### CUDA
 
+install .run:  
+```bash
+~/Software$ ls
+cuda_10.0.130_410.48_linux.run  cudnn-10.0-linux-x64-v7.6.4.38.solitairetheme8
+~/Software$ chmod +x cuda_10.0.130_410.48_linux.run
+~/Software$ ./cuda_10.0.130_410.48_linux.run
+Logging to /tmp/cuda_install_14812.log
+Using more to view the EULA.
+End User License Agreement
+--------------------------
+
+Preface
+-------
+The Software License Agreement in Chapter 1 and the Supplement
+in Chapter 2 contain license terms and conditions that govern
+the use of NVIDIA software. By accepting this agreement, you
+agree to comply with all the terms and conditions applicable
+to the product(s) included herein.
+
+NVIDIA Driver
+Description
+This package contains the operating system driver and
+fundamental system software components for NVIDIA GPUs.
+
+NVIDIA CUDA Toolkit
+Description
+
+
+
+  20. Licensee's use of linmath.h header for CPU functions for
+    GL vector/matrix operations from lunarG is subject to the
+    Apache License Version 2.0.
+
+-----------------
+Do you accept the previously read EULA?
+accept/decline/quit:
+
+Do you accept the previously read EULA?
+accept/decline/quit:
+Do you accept the previously read EULA?
+accept/decline/quit: yes
+Do you accept the previously read EULA?
+accept/decline/quit: accept
+
+Install NVIDIA Accelerated Graphics Driver for Linux-x86_64 410.48?
+(y)es/(n)o/(q)uit: no
+
+Install the CUDA 10.0 Toolkit?
+(y)es/(n)o/(q)uit: yes
+
+Enter Toolkit Location
+ [ default is /usr/local/cuda-10.0 ]: /home/eustomaqua/Software/cuda-10.0
+
+Do you want to install a symbolic link at /usr/local/cuda?
+(y)es/(n)o/(q)uit: no
+
+Install the CUDA 10.0 Samples?
+(y)es/(n)o/(q)uit: yes
+
+Enter CUDA Samples Location
+ [ default is /home/eustomaqua ]: /home/eustomaqua/Software/cuda-samples
+
+Installing the CUDA Toolkit in /home/eustomaqua/Software/cuda-10.0 ...
+Missing recommended library: libGLU.so
+Missing recommended library: libXi.so
+Missing recommended library: libXmu.so
+
+Installing the CUDA Samples in /home/eustomaqua/Software/cuda-samples ...
+Copying samples to /home/eustomaqua/Software/cuda-samples/NVIDIA_CUDA-10.0_Samples now...
+Finished copying samples.
+
+===========
+= Summary =
+===========
+
+Driver:   Not Selected
+Toolkit:  Installed in /home/eustomaqua/Software/cuda-10.0
+Samples:  Installed in /home/eustomaqua/Software/cuda-samples, but missing recommended libraries
+
+Please make sure that
+ -   PATH includes /home/eustomaqua/Software/cuda-10.0/bin
+ -   LD_LIBRARY_PATH includes /home/eustomaqua/Software/cuda-10.0/lib64, or, add /home/eustomaqua/Software/cuda-10.0/lib64 to /etc/ld.so.conf and run ldconfig as root
+
+To uninstall the CUDA Toolkit, run the uninstall script in /home/eustomaqua/Software/cuda-10.0/bin
+
+Please see CUDA_Installation_Guide_Linux.pdf in /home/eustomaqua/Software/cuda-10.0/doc/pdf for detailed information on setting up CUDA.
+
+***WARNING: Incomplete installation! This installation did not install the CUDA Driver. A driver of version at least 384.00 is required for CUDA 10.0 functionality to work.
+To install the driver using this installer, run the following command, replacing <CudaInstaller> with the name of this run file:
+    sudo <CudaInstaller>.run -silent -driver
+
+Logfile is /tmp/cuda_install_14812.log
+~/Software$
+```
+
+config .bashrc:  
+```bash
+~/Software$ vim ~/.bashrc
+~/Software$ source ~/.bashrc
+~/Software$ nvidia-smi
+Sat Feb  8 22:55:29 2020
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 440.36       Driver Version: 440.36       CUDA Version: 10.2     |
+|-------------------------------+----------------------+----------------------+
+```
+
+end of .bashrc file:  
+```bash
+# added by Anaconda3 installer
+export PATH="/home/eustomaqua/anaconda3/bin:$PATH"
+# self added for Nvidia
+export PATH=$HOME/Software/cuda-10.0/bin:$PATH
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/Software/cuda-10.0/lib64/
+```
+
+
 ### cuDNN
+
+```bash
+~/Software$ ls
+cuda-10.0                       cudnn-10.0-linux-x64-v7.4.2.24.solitairetheme8
+cuda_10.0.130_410.48_linux.run  cudnn-10.0-linux-x64-v7.6.4.38.solitairetheme8
+cuda-samples
+~/Software$ cp cudnn-10.0-linux-x64-v7.6.4.38.solitairetheme8 cudnn-10.0-linux-x64-v7.6.4.38.tgz
+~/Software$ tar -xvf cudnn-10.0-linux-x64-v7.6.4.38.tgz
+cuda/include/cudnn.h
+cuda/NVIDIA_SLA_cuDNN_Support.txt
+cuda/lib64/libcudnn.so
+cuda/lib64/libcudnn.so.7
+cuda/lib64/libcudnn.so.7.6.4
+cuda/lib64/libcudnn_static.a
+
+
+
+~/Software$ ls
+cuda                            cudnn-10.0-linux-x64-v7.4.2.24.solitairetheme8
+cuda-10.0                       cudnn-10.0-linux-x64-v7.6.4.38.solitairetheme8
+cuda_10.0.130_410.48_linux.run  cudnn-10.0-linux-x64-v7.6.4.38.tgz
+cuda-samples
+~/Software$
+~/Software$ ls cuda
+include  lib64  NVIDIA_SLA_cuDNN_Support.txt
+~/Software$ ls cuda/include
+cudnn.h
+~/Software$ ls cuda/lib64
+libcudnn.so  libcudnn.so.7  libcudnn.so.7.6.4  libcudnn_static.a
+~/Software$
+
+
+
+~/Software$ mv cuda/include/cudnn.h ~/Software/cuda-10.0/include/
+~/Software$ mv cuda/lib64/libcudnn* ~/Software/cuda-10.0/lib64
+~/Software$ chmod a+r ~/Software/cuda-10.0/include/cudnn.h ~/Software/cuda-10.0/lib64/libcudnn*
+~/Software$
+
+~/Software$ cat ~/Software/cuda-10.0/version.txt
+CUDA Version 10.0.130
+~/Software$ cat ~/Software/cuda-10.0/include/cudnn.h | grep CUDNN_MAJOR -A5
+#define CUDNN_MAJOR 7
+#define CUDNN_MINOR 6
+#define CUDNN_PATCHLEVEL 4
+
+#define CUDNN_VERSION (CUDNN_MAJOR * 1000 + CUDNN_MINOR * 100 + CUDNN_PATCHLEVEL)
+
+#include "driver_types.h"
+#include <cuda_runtime.h>
+#include <stdint.h>
+
+~/Software$
+
+
+
+~/Software$ mv cuda/NVIDIA_SLA_cuDNN_Support.txt cuda-10.0/
+~/Software$ rm -r cuda
+~/Software$
+```
 
 
 ### * refs
@@ -498,11 +665,500 @@ Download cuDNN v7.6.4 [September 27, 2019], for CUDA 10.0
 
 ## Install Python Packages
 
+
+### Expected packages
+
+with Anaconda:  
+```python
+jupyter == 1.0.0
+numpy == 1.14.3
+pandas == 0.23.0
+scikit-learn == 0.19.1
+matplotlib == 2.2.2
+Pillow == 5.1.0
+seaborn == 0.8.1
+```
+custom:  
+```python
+opencv-python
+tqdm
+torch
+torchvision
+tensorflow-gpu
+# keras
+tensorboardX
+```
+
+### Before custom installation
+
+```bash
+~/Software$ cd ..
+~$
+~$ python
+Python 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)
+[GCC 7.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import jupyter
+>>> import numpy as np
+>>> import pandas as pd
+>>> import sklearn
+>>> import matplotlib
+>>> from PIL import Image
+>>> import seaborn
+/home/eustomaqua/anaconda3/lib/python3.6/site-packages/matplotlib/font_manager.py:278: UserWarning: Matplotlib is building the font cache using fc-list. This may take a moment.
+  'Matplotlib is building the font cache using fc-list. '
+>>>
+>>> np.__version__
+'1.14.3'
+>>> pd.__version__
+'0.23.0'
+>>> seaborn.__version__
+'0.8.1'
+>>>
+[4]+  Stopped                 python
+~$
+~$ python
+Python 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)
+[GCC 7.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import seaborn
+>>>
+[5]+  Stopped                 python
+~$
+```
+
 ### pip install
 
 ```bash
 $
 ```
+
+#### custom
+
+```bash
+~$ pip config global.index-url  # same as: pip config
+Need an action (edit, get, list, set, unset) to perform.
+You are using pip version 10.0.1, however version 20.0.2 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+~$ pip config list global.index-url
+Got unexpected number of arguments, expected 0. (example: "pip config list")
+You are using pip version 10.0.1, however version 20.0.2 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+~$
+~$ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+Writing to /home/eustomaqua/.config/pip/pip.conf
+You are using pip version 10.0.1, however version 20.0.2 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+
+
+
+~$ pip install opencv-python
+Requirement already satisfied: numpy>=1.11.3 in ./anaconda3/lib/python3.6/site-packages (from opencv-python) (1.14.3)
+distributed 1.21.8 requires msgpack, which is not installed.
+Installing collected packages: opencv-python
+Successfully installed opencv-python-4.2.0.32
+
+~$ pip install tqdm
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Successfully installed tqdm-4.42.1
+```
+
+
+#### pytorch
+
+```bash
+~$ # pip install torch torchvision
+~$ # pip install tensorboardX
+
+
+~$ pip install torch==1.2.0 torchvision==0.4.0
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting torch==1.2.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/30/57/d5cceb0799c06733eefce80c395459f28970ebb9e896846ce96ab579a3f1/torch-1.2.0-cp36-cp36m-manylinux1_x86_64.whl (748.8MB)
+    100% |████████████████████████████████| 748.9MB 146kB/s
+Collecting torchvision==0.4.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/06/e6/a564eba563f7ff53aa7318ff6aaa5bd8385cbda39ed55ba471e95af27d19/torchvision-0.4.0-cp36-cp36m-manylinux1_x86_64.whl (8.8MB)
+    100% |████████████████████████████████| 8.8MB 3.4MB/s
+Requirement already satisfied: numpy in ./anaconda3/lib/python3.6/site-packages (from torch==1.2.0) (1.16.2)
+Requirement already satisfied: pillow>=4.1.1 in ./anaconda3/lib/python3.6/site-packages (from torchvision==0.4.0) (5.1.0)
+Requirement already satisfied: six in ./anaconda3/lib/python3.6/site-packages (from torchvision==0.4.0) (1.11.0)
+Installing collected packages: torch, torchvision
+Successfully installed torch-1.2.0 torchvision-0.4.0
+You are using pip version 10.0.1, however version 20.0.2 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+
+
+~$ pip install tensorboardX
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting tensorboardX
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/35/f1/5843425495765c8c2dd0784a851a93ef204d314fc87bcc2bbb9f662a3ad1/tensorboardX-2.0-py2.py3-none-any.whl (195kB)
+    100% |████████████████████████████████| 204kB 2.4MB/s
+Requirement already satisfied: six in ./anaconda3/lib/python3.6/site-packages (from tensorboardX) (1.11.0)
+Requirement already satisfied: protobuf>=3.8.0 in ./anaconda3/lib/python3.6/site-packages (from tensorboardX) (3.11.3)
+Requirement already satisfied: numpy in ./anaconda3/lib/python3.6/site-packages (from tensorboardX) (1.16.2)
+Requirement already satisfied: setuptools in ./anaconda3/lib/python3.6/site-packages (from protobuf>=3.8.0->tensorboardX) (45.1.0)
+Installing collected packages: tensorboardX
+Successfully installed tensorboardX-2.0
+You are using pip version 10.0.1, however version 20.0.2 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+
+
+~$ python
+Python 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)
+[GCC 7.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import torch
+>>> import torchvision
+>>> torch.cuda.is_available()
+True
+>>> from tensorboardX import SummaryWriter
+>>>
+[12]+  Stopped                 python
+```
+
+
+
+#### tensorflow-gpu
+
+tensorflow-gpu 2.0.0-beta0  
+
+(1) failed due to "install msgpack, wrapt"
+
+```bash
+~$ # pip install tensorflow-gpu  # keras
+~$ pip install tensorflow-gpu==2.0.*
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting tensorflow-gpu==2.0.*
+  Could not find a version that satisfies the requirement tensorflow-gpu==2.0.* (from versions: 0.12.1, 1.0.0, 1.0.1, 1.1.0rc1, 1.1.0rc2, 1.1.0, 1.2.0rc0, 1.2.0rc1, 1.2.0rc2, 1.2.0, 1.2.1, 1.3.0rc0, 1.3.0rc1, 1.3.0rc2, 1.3.0, 1.4.0rc0, 1.4.0rc1, 1.4.0, 1.4.1, 1.5.0rc0, 1.5.0rc1, 1.5.0, 1.5.1, 1.6.0rc0, 1.6.0rc1, 1.6.0, 1.7.0rc0, 1.7.0rc1, 1.7.0, 1.7.1, 1.8.0rc0, 1.8.0rc1, 1.8.0, 1.9.0rc0, 1.9.0rc1, 1.9.0rc2, 1.9.0, 1.10.0rc0, 1.10.0rc1, 1.10.0, 1.10.1, 1.11.0rc0, 1.11.0rc1, 1.11.0rc2, 1.11.0, 1.12.0rc0, 1.12.0rc1, 1.12.0rc2, 1.12.0, 1.12.2, 1.12.3, 1.13.0rc0, 1.13.0rc1, 1.13.0rc2, 1.13.1, 1.13.2, 1.14.0rc0, 1.14.0rc1, 1.14.0, 2.0.0a0, 2.0.0b0, 2.0.0b1)
+No matching distribution found for tensorflow-gpu==2.0.*
+You are using pip version 10.0.1, however version 20.0.2 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+
+
+~$ pip install tensorflow-gpu==2.0.0b0
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting tensorflow-gpu==2.0.0b0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/e8/7e/87c4c94686cda7066f52cbca4c344248516490acdd6b258ec6b8a805d956/tensorflow_gpu-2.0.0b0-cp36-cp36m-manylinux1_x86_64.whl (348.8MB)
+Collecting protobuf>=3.6.1 (from tensorflow-gpu==2.0.0b0)
+  Downloading protobuf-3.11.3-cp36-cp36m-manylinux1_x86_64.whl (1.3MB)
+Collecting absl-py>=0.7.0 (from tensorflow-gpu==2.0.0b0)
+  Downloading absl-py-0.9.0.tar.gz (104kB)
+Collecting google-pasta>=0.1.6 (from tensorflow-gpu==2.0.0b0)
+  Downloading google_pasta-0.1.8-py3-none-any.whl (57kB)
+Collecting termcolor>=1.1.0 (from tensorflow-gpu==2.0.0b0)
+  Downloading termcolor-1.1.0.tar.gz
+Collecting keras-preprocessing>=1.0.5 (from tensorflow-gpu==2.0.0b0)
+  Downloading Keras_Preprocessing-1.1.0-py2.py3-none-any.whl (41kB)
+Collecting gast>=0.2.0 (from tensorflow-gpu==2.0.0b0)
+  Downloading gast-0.3.3-py2.py3-none-any.whl
+Collecting astor>=0.6.0 (from tensorflow-gpu==2.0.0b0)
+  Downloading astor-0.8.1-py2.py3-none-any.whl
+Collecting wrapt>=1.11.1 (from tensorflow-gpu==2.0.0b0)
+  Downloading wrapt-1.11.2.tar.gz
+Collecting keras-applications>=1.0.6 (from tensorflow-gpu==2.0.0b0)
+  Downloading Keras_Applications-1.0.8-py3-none-any.whl (50kB)
+Collecting grpcio>=1.8.6 (from tensorflow-gpu==2.0.0b0)
+  Downloading grpcio-1.27.1-cp36-cp36m-manylinux1_x86_64.whl (2.7MB)
+Collecting tf-estimator-nightly<1.14.0.dev2019060502,>=1.14.0.dev2019060501 (from tensorflow-gpu==2.0.0b0)
+  Downloading tf_estimator_nightly-1.14.0.dev2019060501-py2.py3-none-any.whl (496kB)
+Requirement already satisfied: wheel>=0.26 in ./anaconda3/lib/python3.6/site-packages (from tensorflow-gpu==2.0.0b0) (0.31.1)
+Collecting tb-nightly<1.14.0a20190604,>=1.14.0a20190603 (from tensorflow-gpu==2.0.0b0)
+  Downloading tb_nightly-1.14.0a20190603-py3-none-any.whl (3.1MB)
+Collecting numpy<2.0,>=1.14.5 (from tensorflow-gpu==2.0.0b0)
+  Downloading numpy-1.18.1-cp36-cp36m-manylinux1_x86_64.whl (20.1MB)
+Requirement already satisfied: six>=1.10.0 in ./anaconda3/lib/python3.6/site-packages (from tensorflow-gpu==2.0.0b0) (1.11.0)
+Requirement already satisfied: setuptools in ./anaconda3/lib/python3.6/site-packages (from protobuf>=3.6.1->tensorflow-gpu==2.0.0b0) (39.1.0)
+Requirement already satisfied: h5py in ./anaconda3/lib/python3.6/site-packages (from keras-applications>=1.0.6->tensorflow-gpu==2.0.0b0) (2.7.1)
+Collecting markdown>=2.6.8 (from tb-nightly<1.14.0a20190604,>=1.14.0a20190603->tensorflow-gpu==2.0.0b0)
+  Downloading Markdown-3.2-py2.py3-none-any.whl (88kB)
+Requirement already satisfied: werkzeug>=0.11.15 in ./anaconda3/lib/python3.6/site-packages (from tb-nightly<1.14.0a20190604,>=1.14.0a20190603->tensorflow-gpu==2.0.0b0) (0.14.1)
+Building wheels for collected packages: absl-py, termcolor, wrapt
+  Running setup.py bdist_wheel for absl-py ... done
+  Stored in directory: /home/eustomaqua/.cache/pip/wheels/55/fd/b5/4db4cce08516c3aaa68ee4c843439f45c7fcf177320ba63d9f
+  Running setup.py bdist_wheel for termcolor ... done
+  Stored in directory: /home/eustomaqua/.cache/pip/wheels/e3/d8/fc/50ab6e66e3dead21d5afff006dc5298913a3064be2b1105359
+  Running setup.py bdist_wheel for wrapt ... done
+  Stored in directory: /home/eustomaqua/.cache/pip/wheels/48/31/f6/4ebf38e9000388204ef6f1931a0cd48f9d75a12a9c6a328cfd
+Successfully built absl-py termcolor wrapt
+distributed 1.21.8 requires msgpack, which is not installed.
+tb-nightly 1.14.0a20190603 has requirement setuptools>=41.0.0, but you'll have setuptools 39.1.0 which is incompatible.
+Installing collected packages: protobuf, absl-py, google-pasta, termcolor, numpy, keras-preprocessing, gast, astor, wrapt, keras-applications, grpcio, tf-estimator-nightly, markdown, tb-nightly, tensorflow-gpu
+  Found existing installation: numpy 1.14.3
+    Uninstalling numpy-1.14.3:
+      Successfully uninstalled numpy-1.14.3
+  Found existing installation: wrapt 1.10.11
+Cannot uninstall 'wrapt'. It is a distutils installed project and thus we cannot accurately determine which files belong to it which would lead to only a partial uninstall.
+```
+
+(2) succeed install, faile import
+
+```bash
+~$ pip install msgpack
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting msgpack
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/3d/a8/e01fea81691749044a7bfd44536483a296d9c0a7ed4ec8810a229435547c/msgpack-0.6.2-cp36-cp36m-manylinux1_x86_64.whl (249kB)
+    100% |████████████████████████████████| 256kB 3.6MB/s
+Installing collected packages: msgpack
+Successfully installed msgpack-0.6.2
+~$ pip install --ignore-installed wrapt
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting wrapt
+Installing collected packages: wrapt
+Successfully installed wrapt-1.11.2
+You are using pip version 10.0.1, however version 20.0.2 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+~$
+```
+
+```bash
+~$ pip install tensorflow-gpu==2.0.0b0
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting tensorflow-gpu==2.0.0b0
+  Downloading tensorflow_gpu-2.0.0b0-cp36-cp36m-manylinux1_x86_64.whl (348.8MB)
+    100% |████████████████████████████████| 348.9MB 296kB/s
+Collecting grpcio>=1.8.6 (from tensorflow-gpu==2.0.0b0)
+  Downloading grpcio-1.27.1-cp36-cp36m-manylinux1_x86_64.whl (2.7MB)
+    100% |████████████████████████████████| 2.7MB 13.3MB/s
+Requirement already satisfied: google-pasta>=0.1.6 in ./anaconda3/lib/python3.6/site-packages (from tensorflow-gpu==2.0.0b0) (0.1.8)
+Requirement already satisfied: gast>=0.2.0 in ./anaconda3/lib/python3.6/site-packages (from tensorflow-gpu==2.0.0b0) (0.3.3)
+Requirement already satisfied: numpy<2.0,>=1.14.5 in ./anaconda3/lib/python3.6/site-packages (from tensorflow-gpu==2.0.0b0) (1.18.1)
+Collecting tb-nightly<1.14.0a20190604,>=1.14.0a20190603 (from tensorflow-gpu==2.0.0b0)
+  Downloading tb_nightly-1.14.0a20190603-py3-none-any.whl (3.1MB)
+    100% |████████████████████████████████| 3.1MB 34.7MB/s
+Requirement already satisfied: protobuf>=3.6.1 in ./anaconda3/lib/python3.6/site-packages (from tensorflow-gpu==2.0.0b0) (3.11.3)
+Requirement already satisfied: termcolor>=1.1.0 in ./anaconda3/lib/python3.6/site-packages (from tensorflow-gpu==2.0.0b0) (1.1.0)
+Requirement already satisfied: absl-py>=0.7.0 in ./anaconda3/lib/python3.6/site-packages (from tensorflow-gpu==2.0.0b0) (0.9.0)
+Collecting keras-applications>=1.0.6 (from tensorflow-gpu==2.0.0b0)
+  Downloading Keras_Applications-1.0.8-py3-none-any.whl (50kB)
+    100% |████████████████████████████████| 51kB 27.3MB/s
+Requirement already satisfied: wheel>=0.26 in ./anaconda3/lib/python3.6/site-packages (from tensorflow-gpu==2.0.0b0) (0.31.1)
+Requirement already satisfied: six>=1.10.0 in ./anaconda3/lib/python3.6/site-packages (from tensorflow-gpu==2.0.0b0) (1.11.0)
+Requirement already satisfied: astor>=0.6.0 in ./anaconda3/lib/python3.6/site-packages (from tensorflow-gpu==2.0.0b0) (0.8.1)
+Requirement already satisfied: wrapt>=1.11.1 in ./anaconda3/lib/python3.6/site-packages (from tensorflow-gpu==2.0.0b0) (1.11.2)
+Requirement already satisfied: keras-preprocessing>=1.0.5 in ./anaconda3/lib/python3.6/site-packages (from tensorflow-gpu==2.0.0b0) (1.1.0)
+Collecting tf-estimator-nightly<1.14.0.dev2019060502,>=1.14.0.dev2019060501 (from tensorflow-gpu==2.0.0b0)
+  Downloading tf_estimator_nightly-1.14.0.dev2019060501-py2.py3-none-any.whl (496kB)
+    100% |████████████████████████████████| 501kB 12.7MB/s
+Collecting markdown>=2.6.8 (from tb-nightly<1.14.0a20190604,>=1.14.0a20190603->tensorflow-gpu==2.0.0b0)
+  Downloading Markdown-3.2-py2.py3-none-any.whl (88kB)
+    100% |████████████████████████████████| 92kB 16.3MB/s
+Collecting setuptools>=41.0.0 (from tb-nightly<1.14.0a20190604,>=1.14.0a20190603->tensorflow-gpu==2.0.0b0)
+  Downloading setuptools-45.1.0-py3-none-any.whl (583kB)
+    100% |████████████████████████████████| 593kB 28.1MB/s
+Requirement already satisfied: werkzeug>=0.11.15 in ./anaconda3/lib/python3.6/site-packages (from tb-nightly<1.14.0a20190604,>=1.14.0a20190603->tensorflow-gpu==2.0.0b0) (0.14.1)
+Requirement already satisfied: h5py in ./anaconda3/lib/python3.6/site-packages (from keras-applications>=1.0.6->tensorflow-gpu==2.0.0b0) (2.7.1)
+Installing collected packages: grpcio, setuptools, markdown, tb-nightly, keras-applications, tf-estimator-nightly, tensorflow-gpu
+  Found existing installation: setuptools 39.1.0
+    Uninstalling setuptools-39.1.0:
+      Successfully uninstalled setuptools-39.1.0
+Successfully installed grpcio-1.27.1 keras-applications-1.0.8 markdown-3.2 setuptools-45.1.0 tb-nightly-1.14.0a20190603 tensorflow-gpu-2.0.0b0 tf-estimator-nightly-1.14.0.dev2019060501
+You are using pip version 10.0.1, however version 20.0.2 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+```
+
+```bash
+~$ python
+Python 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)
+[GCC 7.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import tensorflow as tf
+/home/eustomaqua/anaconda3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/eustomaqua/anaconda3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/eustomaqua/anaconda3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/eustomaqua/anaconda3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/eustomaqua/anaconda3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/eustomaqua/anaconda3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/home/eustomaqua/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+/home/eustomaqua/anaconda3/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/eustomaqua/anaconda3/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/eustomaqua/anaconda3/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/eustomaqua/anaconda3/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/eustomaqua/anaconda3/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/eustomaqua/anaconda3/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+>>>
+[7]+  Stopped                 python
+```
+
+(3) warning import
+
+```bash
+~$ pip install numpy==1.16.2
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting numpy==1.16.2
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/35/d5/4f8410ac303e690144f0a0603c4b8fd3b986feb2749c435f7cdbb288f17e/numpy-1.16.2-cp36-cp36m-manylinux1_x86_64.whl (17.3MB)
+    100% |████████████████████████████████| 17.3MB 2.2MB/s
+Installing collected packages: numpy
+  Found existing installation: numpy 1.18.1
+    Uninstalling numpy-1.18.1:
+      Successfully uninstalled numpy-1.18.1
+Successfully installed numpy-1.16.2
+You are using pip version 10.0.1, however version 20.0.2 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+
+~$ python
+Python 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)
+[GCC 7.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import tensorflow as tf
+/home/eustomaqua/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+>>>
+[8]+  Stopped                 python
+```
+
+(4) succeed import, failed no cuda
+
+```bash
+~$ pip install -U h5py
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting h5py
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/60/06/cafdd44889200e5438b897388f3075b52a8ef01f28a17366d91de0fa2d05/h5py-2.10.0-cp36-cp36m-manylinux1_x86_64.whl (2.9MB)
+    100% |████████████████████████████████| 2.9MB 13.5MB/s
+Requirement not upgraded as not directly required: numpy>=1.7 in ./anaconda3/lib/python3.6/site-packages (from h5py) (1.16.2)
+Requirement not upgraded as not directly required: six in ./anaconda3/lib/python3.6/site-packages (from h5py) (1.11.0)
+Installing collected packages: h5py
+  Found existing installation: h5py 2.7.1
+    Uninstalling h5py-2.7.1:
+      Successfully uninstalled h5py-2.7.1
+Successfully installed h5py-2.10.0
+You are using pip version 10.0.1, however version 20.0.2 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+
+~$ python
+Python 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)
+[GCC 7.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import tensorflow as tf
+>>> tf.test.is_gpu_available()
+2020-02-08 23:52:36.691031: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-02-08 23:52:36.706948: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2020-02-08 23:52:36.853793: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1006] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-02-08 23:52:36.854165: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55f4173381e0 executing computations on platform CUDA. Devices:
+2020-02-08 23:52:36.854183: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): GeForce RTX 2070 SUPER, Compute Capability 7.5
+2020-02-08 23:52:36.873251: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3600000000 Hz
+2020-02-08 23:52:36.873745: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55f417727de0 executing computations on platform Host. Devices:
+2020-02-08 23:52:36.873759: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-02-08 23:52:36.873898: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1006] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-02-08 23:52:36.874134: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties:
+name: GeForce RTX 2070 SUPER major: 7 minor: 5 memoryClockRate(GHz): 1.8
+pciBusID: 0000:01:00.0
+2020-02-08 23:52:36.874223: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Could not dlopen library 'libcudart.so.10.0'; dlerror: libcudart.so.10.0: cannot open shared object file: No such file or directory
+2020-02-08 23:52:36.874269: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Could not dlopen library 'libcublas.so.10.0'; dlerror: libcublas.so.10.0: cannot open shared object file: No such file or directory
+2020-02-08 23:52:36.874312: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Could not dlopen library 'libcufft.so.10.0'; dlerror: libcufft.so.10.0: cannot open shared object file: No such file or directory
+2020-02-08 23:52:36.874353: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Could not dlopen library 'libcurand.so.10.0'; dlerror: libcurand.so.10.0: cannot open shared object file: No such file or directory
+2020-02-08 23:52:36.874395: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Could not dlopen library 'libcusolver.so.10.0'; dlerror: libcusolver.so.10.0: cannot open shared object file: No such file or directory
+2020-02-08 23:52:36.874435: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Could not dlopen library 'libcusparse.so.10.0'; dlerror: libcusparse.so.10.0: cannot open shared object file: No such file or directory
+2020-02-08 23:52:36.874476: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Could not dlopen library 'libcudnn.so.7'; dlerror: libcudnn.so.7: cannot open shared object file: No such file or directory
+2020-02-08 23:52:36.874484: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1663] Cannot dlopen some GPU libraries. Skipping registering GPU devices...
+2020-02-08 23:52:36.874494: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-02-08 23:52:36.874499: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0
+2020-02-08 23:52:36.874504: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N
+False
+>>>
+[9]+  Stopped                 python
+```
+
+(5) succeed
+
+
+**错因：** 之前的 LD_LIBRARY_PATH 误写成 LD_LIBARAY_PATH 了  
+错误写法：  export LD_LIBARAY_PATH=$LD_LIBRARY_PATH:$HOME/Software/cuda-10.0/lib64/  
+正确写法：  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/Software/cuda-10.0/lib64/  
+
+
+
+```bash
+~$ LD_LIBRARY_PATH
+LD_LIBRARY_PATH: command not found
+~$ source ~/.bashrc
+~$ vim ~/.bashrc
+~$ source ~/.bashrc
+~$ LD_LIBRARY_PATH
+LD_LIBRARY_PATH: command not found
+~$
+~$
+~$
+~$ vim ~/.bashrc
+~$ source ~/.bashrc
+~$ PATH
+PATH: command not found
+~$ echo PATH
+PATH
+~$ echo $PATH
+/home/eustomaqua/Software/cuda-10.0/bin:/home/eustomaqua/anaconda3/bin:/home/eustomaqua/Software/cuda-10.0/bin:/home/eustomaqua/anaconda3/bin:/home/eustomaqua/Software/cuda-10.0/bin:/home/eustomaqua/anaconda3/bin:/home/eustomaqua/Software/cuda-10.0/bin:/home/eustomaqua/anaconda3/bin:/home/eustomaqua/Software/cuda-10.0/bin:/home/eustomaqua/anaconda3/bin:/home/eustomaqua/anaconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+~$ echo $LD_LIBRARY_PATH
+:/home/eustomaqua/Software/cuda-10.0/lib64/:/home/eustomaqua/Software/cuda-10.0/lib64/
+
+~$ python
+Python 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)
+[GCC 7.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import tensorflow as tf
+>>> tf.test.is_gpu_available()
+2020-02-09 00:08:17.326460: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-02-09 00:08:17.343444: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2020-02-09 00:08:17.381171: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1006] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-02-09 00:08:17.381486: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55d5564a5150 executing computations on platform CUDA. Devices:
+2020-02-09 00:08:17.381501: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): GeForce RTX 2070 SUPER, Compute Capability 7.5
+2020-02-09 00:08:17.405235: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3600000000 Hz
+2020-02-09 00:08:17.405621: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55d556894ab0 executing computations on platform Host. Devices:
+2020-02-09 00:08:17.405633: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-02-09 00:08:17.405743: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1006] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-02-09 00:08:17.405958: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties:
+name: GeForce RTX 2070 SUPER major: 7 minor: 5 memoryClockRate(GHz): 1.8
+pciBusID: 0000:01:00.0
+2020-02-09 00:08:17.406103: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2020-02-09 00:08:17.406736: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2020-02-09 00:08:17.407325: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10.0
+2020-02-09 00:08:17.407470: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10.0
+2020-02-09 00:08:17.408220: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10.0
+2020-02-09 00:08:17.408804: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10.0
+2020-02-09 00:08:17.410651: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2020-02-09 00:08:17.410718: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1006] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-02-09 00:08:17.410960: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1006] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-02-09 00:08:17.411148: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2020-02-09 00:08:17.411170: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2020-02-09 00:08:17.411687: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-02-09 00:08:17.411696: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0
+2020-02-09 00:08:17.411700: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N
+2020-02-09 00:08:17.414113: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1006] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-02-09 00:08:17.414336: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1006] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-02-09 00:08:17.414546: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/device:GPU:0 with 7014 MB memory) -> physical GPU (device: 0, name: GeForce RTX 2070 SUPER, pci bus id: 0000:01:00.0, compute capability: 7.5)
+True
+>>>
+[13]+  Stopped                 python
+```
+
+### refs
+
+[安装Tensorlayer报错“Cannot uninstall 'xxx'"的解决方案](https://blog.csdn.net/u012654847/article/details/80875838)  
+[FutureWarning: Deprecated numpy API calls in tf.python.framework.dtypes](https://github.com/tensorflow/tensorflow/issues/30427)  
+[FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated](https://github.com/h5py/h5py/issues/961)  
+
+[TensorFlow Official: GPU support](https://www.tensorflow.org/install/gpu)  
+[ImportError: libcudnn.so.7: cannot open shared object file: No such file or directory](https://github.com/tensorflow/tensorflow/issues/20271)  
+[【UBUNTU深度学习环境】ImportError: libcudnn.so.7: cannot open shared object file: No such file or directory](https://blog.csdn.net/weixin_40298200/article/details/79420758)  
+
+[PyTorch使用tensorboardX](https://zhuanlan.zhihu.com/p/35675109)  
+[Pytorch使用tensorboardX可视化。超详细！！！](https://www.jianshu.com/p/46eb3004beca)  
+[官方总结 tensorboardX 使用教程](https://blog.csdn.net/qq_39575835/article/details/89160828)  
+
+[ubuntu 18.04 + Tensorflow-gpu 2.0环境搭建](https://zhuanlan.zhihu.com/p/77385238)  
+[TensorFlow 2.0 Alpha的初步尝试：安装及填坑小记](https://zhuanlan.zhihu.com/p/61296818)  
+
 
 
 ## References
@@ -528,11 +1184,61 @@ ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git status
 
 修改尚未加入提交（使用 "git add" 和/或 "git commit -a"）
 ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ 
+
+
+
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git add .
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git commit -m "annotations"  # 注释
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git push
 ```
 
 post notes
 
 ```bash
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ hexo g
+Usage: hexo <command>
 
+Commands:
+  help     Get help on a command.
+  init     Create a new Hexo folder.
+  version  Display version information.
+
+Global Options:
+  --config  Specify config file instead of using _config.yml
+  --cwd     Specify the CWD
+  --debug   Display all verbose messages in the terminal
+  --draft   Display draft posts
+  --safe    Disable all plugins and scripts
+  --silent  Hide output on console
+
+For more help, you can use 'hexo help [command]' for the detailed information
+or you can check the docs: http://hexo.io/docs/
+
+
+
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ ls
+hexo-next  README.md
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ cd hexo-next
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ hexo g  # 生成
+INFO  Start processing
+INFO  Files loaded in 3.29 s
+INFO  Generated: search.xml
+INFO  Generated: categories/index.html
+INFO  Generated: ....
+INFO  114 files generated in 5.96 s
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ hexo s  # 本地预览
+INFO  Start processing
+INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
+^CINFO  Farewell
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ hexo d  # 发布
+
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ hexo g
+INFO  Start processing
+INFO  Files loaded in 5.74 s
+INFO  Generated: 2020/2020-02-08-Setup-Python-on-Linux/index.html
+INFO  Generated: search.xml
+INFO  Generated: index.html
+INFO  3 files generated in 9.83 s
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ 
 ```
 
