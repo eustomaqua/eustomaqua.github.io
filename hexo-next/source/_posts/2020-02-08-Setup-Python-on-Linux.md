@@ -427,12 +427,132 @@ $ # 如果遇到网络问题，可以使用清华大学的镜像：
 $ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
+### conda
+
+```bash
+~/GitHubLab/ActivityNet/Crawler/Kinetics$ conda env create -f environment.yml
+Solving environment: done
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 4.5.4
+  latest version: 4.8.2
+
+Please update conda by running
+
+    $ conda update -n base conda
+
+
+
+Downloading and Extracting Packages
+ffmpeg-3.1.3         | 56.6 MB | ###9                                                        |   7%
+
+CondaHTTPError: HTTP 000 CONNECTION FAILED for url <https://conda.anaconda.org/menpo/linux-64/ffmpeg-3.1.3-0.tar.bz2>
+Elapsed: -
+
+An HTTP error occurred when trying to retrieve this URL.
+HTTP errors are often intermittent, and a simple retry will get you on your way.
+
+
+
+~/GitHubLab/ActivityNet/Crawler/Kinetics$ conda env create -f environment.yml
+Solving environment: done
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 4.5.4
+  latest version: 4.8.2
+
+Please update conda by running
+
+    $ conda update -n base conda
+
+
+
+Downloading and Extracting Packages
+ffmpeg-3.1.3         | 56.6 MB | 1                                                           |   0% ^Z
+[2]+  Stopped                 conda env create -f environment.yml
+~/GitHubLab/ActivityNet/Crawler/Kinetics$
+~/GitHubLab/ActivityNet/Crawler/Kinetics$ nano ~/.condarc
+~/GitHubLab/ActivityNet/Crawler/Kinetics$ nano ~/.condarc
+~/GitHubLab/ActivityNet/Crawler/Kinetics$ vim ~/.condarc
+~/GitHubLab/ActivityNet/Crawler/Kinetics$
+~/GitHubLab/ActivityNet/Crawler/Kinetics$ conda env create -f environment.yml
+Solving environment: done
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 4.5.4
+  latest version: 4.8.2
+
+Please update conda by running
+
+    $ conda update -n base conda
+
+
+
+Downloading and Extracting Packages
+python-dateutil-2.6. |  232 KB | ########################################################### | 100%
+joblib-0.9.4         |  121 KB | ########################################################### | 100%
+readline-6.2         |  606 KB | ########################################################### | 100%
+blas-1.0             |    6 KB | ########################################################### | 100%
+wheel-0.29.0         |   81 KB | ########################################################### | 100%
+python-2.7.13        | 11.5 MB | ########################################################### | 100%
+tk-8.5.18            |  1.9 MB | ########################################################### | 100%
+pip-9.0.1            |  1.6 MB | ########################################################### | 100%
+six-1.10.0           |   16 KB | ########################################################### | 100%
+pandas-0.19.2        | 15.3 MB | ########################################################### | 100%
+numpy-1.12.1         |  6.6 MB | ########################################################### | 100%
+ffmpeg-3.1.3         | 56.6 MB | ########################################################### | 100%
+setuptools-27.2.0    |  521 KB | ########################################################### | 100%
+zlib-1.2.8           |  101 KB | ########################################################### | 100%
+mkl-2017.0.1         | 128.2 MB | ########################################################## | 100%
+openssl-1.0.2k       |  3.2 MB | ########################################################### | 100%
+sqlite-3.13.0        |  4.0 MB | ########################################################### | 100%
+pytz-2017.2          |  204 KB | ########################################################### | 100%
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+Collecting decorator==4.0.11 (from -r /home/eustomaqua/GitHubLab/ActivityNet/Crawler/Kinetics/condaenv.1786bqps.requirements.txt (line 1))
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/00/cc/dd79ea98a0ff5a01d714c37eddd99cd0a71557113f1511921d1ef9a083b8/decorator-4.0.11-py2.py3-none-any.whl
+Collecting olefile==0.44 (from -r /home/eustomaqua/GitHubLab/ActivityNet/Crawler/Kinetics/condaenv.1786bqps.requirements.txt (line 2))
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/35/17/c15d41d5a8f8b98cc3df25eb00c5cee76193114c78e5674df6ef4ac92647/olefile-0.44.zip (74kB)
+    100% |████████████████████████████████| 81kB 1.1MB/s
+Collecting youtube-dl==2017.6.5 (from -r /home/eustomaqua/GitHubLab/ActivityNet/Crawler/Kinetics/condaenv.1786bqps.requirements.txt (line 3))
+  Cache entry deserialization failed, entry ignored
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/7d/87/4aa3ab6c0e2c4c0c840153bb311b3e749a4a3fb2ff828d757a456d0293f5/youtube_dl-2017.6.5-py2.py3-none-any.whl (1.6MB)
+    100% |████████████████████████████████| 1.6MB 1.0MB/s
+Building wheels for collected packages: olefile
+  Running setup.py bdist_wheel for olefile ... done
+  Stored in directory: /home/eustomaqua/.cache/pip/wheels/87/d1/0a/f210dcd910c1cbf0e20efaa6ab035aa20a5b80c989856a935e
+Successfully built olefile
+Installing collected packages: decorator, olefile, youtube-dl
+Successfully installed decorator-4.0.11 olefile-0.44 youtube-dl-2017.6.5
+#
+# To activate this environment, use:
+# > source activate kinetics
+#
+# To deactivate an active environment, use:
+# > source deactivate
+#
+
+~/GitHubLab/ActivityNet/Crawler/Kinetics$ conda env list
+# conda environments:
+#
+base                  *  /home/eustomaqua/anaconda3
+autovu                   /home/eustomaqua/anaconda3/envs/autovu
+kinetics                 /home/eustomaqua/anaconda3/envs/kinetics
+
+~/GitHubLab/ActivityNet/Crawler/Kinetics$
+```
+
 
 ### * refs
 
 [Ubuntu安装anaconda 介绍、安装、配置](https://blog.csdn.net/haeasringnar/article/details/82079943)  
 [ubuntu16.04安装和使用Anaconda3（详细）](https://blog.csdn.net/ITBigGod/article/details/85690257)  
 [Python 环境](https://dl.ypw.io/python-environment/)  
+[Python 环境 | 切换 anaconda 源](https://dl.ypw.io/python-environment/)  
 
 
 ## CUDA, cuDNN (NVIDIA Driver)
@@ -1158,6 +1278,39 @@ True
 
 [ubuntu 18.04 + Tensorflow-gpu 2.0环境搭建](https://zhuanlan.zhihu.com/p/77385238)  
 [TensorFlow 2.0 Alpha的初步尝试：安装及填坑小记](https://zhuanlan.zhihu.com/p/61296818)  
+
+
+
+## Issue: ssh 新终端必须先 source .bashrc 才能正常用自己的 python
+
+important:  
+[社区环境搭建 使用ssh登入ubuntu不执行.bashrc解决方法](https://qjzd.net/topic/56777682984f90d869bd23fc)  
+
+open a terminal:  
+```bash
+vim ~/.bash_profile
+```
+
+in .bash_profile file:  
+```bash
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+        . "$HOME/.bashrc"
+    fi
+fi
+```
+
+new terminal:
+```bash
+python
+```
+
+refs:  
+[ubuntu 用户修改.bashrc之后，每次登录需要运行source命令才生效](https://blog.51cto.com/xjhznick/1399938)  
+[解决.bashrc文件每次打开终端都需要source的问题](https://www.jianshu.com/p/c4946024b946)  
+[ubuntu12.04 .bashrc设置后无效](https://blog.csdn.net/heybob/article/details/8899703)  
 
 
 
