@@ -1,13 +1,16 @@
 ---
 title: Matplotlib Tutorials - 2. Examples
 date: 2020-03-21 05:54:21
-updated: 2020-03-21 17:39:14
+updated: 2020-03-22 16:38:13
 categories:
   - Drafting
 tags:
+  - Notes
   - Python
   - Matplotlib
 ---
+
+<!--updated: 2020-03-21 17:39:14-->
 
 [Sample plots in Matplotlib](https://matplotlib.org/3.1.1/tutorials/introductory/sample_plots.html#sphx-glr-tutorials-introductory-sample-plots-py)  
 [matplotlib/mpl-data/sample_data](https://github.com/matplotlib/matplotlib/tree/master/lib/matplotlib/mpl-data/sample_data)  
@@ -43,7 +46,7 @@ fig.savefig("test.png")
 plt.show()
 ```
 
-<img src="/images/2020-03/0321_Case_Line.png" width="70%">
+<img src="/images/2020-03/0321_Case_Line.png" width="67%">
 
 # Multiple subplots in one figure
 
@@ -74,7 +77,7 @@ plt.ylabel('Undamped')
 plt.show()
 ```
 
-<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_subplot_001.png" width="70%">
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_subplot_001.png" width="67%">
 
 # Images
 
@@ -107,7 +110,7 @@ im = ax.imshow(Z, interpolation='bilinear', cmap=cm.RdYlGn,
 plt.show()
 ```
 
-<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_image_demo_001.png" width="70%">
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_image_demo_001.png" width="67%">
 
 ## show images of pictures
 It is also possible to show images of pictures.
@@ -179,8 +182,7 @@ ax.set_title('CT density')
 plt.show()
 ```
 
-<img src="/images/2020-03/0321_Case_Image2a.png" width="45%">
-<img src="/images/2020-03/0321_Case_Image2b.png" width="45%">
+<img src="/images/2020-03/0321_Case_Image2a.png" width="45%"><img src="/images/2020-03/0321_Case_Image2b.png" width="45%">
 
 ## Interpolating images
 
@@ -235,8 +237,7 @@ axs[1].imshow(x, origin='lower', interpolation=interp)
 plt.show()
 ```
 
-<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_image_demo_005.png" width="50%">
-<img src="/images/2020-03/0321_Case_Image4b.png" width="50%">
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_image_demo_005.png" width="45%"><img src="/images/2020-03/0321_Case_Image4b.png" width="45%">
 
 ## show an image using a clip path
 Finally, we'll show an image using a clip path
@@ -337,7 +338,7 @@ fig.tight_layout()
 plt.show()
 ```
 
-<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_pcolormesh_levels_001.png" width="70%">
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_pcolormesh_levels_001.png" width="67%">
 
 # Histograms
 
@@ -379,7 +380,7 @@ fig.tight_layout()
 plt.show()
 ```
 
-<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_histogram_features_001.png" width="70%">
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_histogram_features_001.png" width="67%">
 
 ```python
 >>> # the histogram of the data
@@ -458,8 +459,7 @@ plt.show()
 ```
 
 Path.CURVE4, Path.CURVE3  
-<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_path_patch_001.png" width="50%">
-<img src="/images/2020-03/0321_Case_Path1b.png" width="50%">
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_path_patch_001.png" width="45%"><img src="/images/2020-03/0321_Case_Path1b.png" width="45%">
 
 ```python
 >>> Path = mpath.Path
@@ -563,7 +563,7 @@ fig.colorbar(surf, shrink=0.5, aspect=5)
 plt.show()
 ```
 
-<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_surface3d_001.png" width="70%">
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_surface3d_001.png" width="67%">
 
 # Streamplot
 
@@ -635,8 +635,7 @@ plt.show()
 ```
 
 aspect='equal', 'auto'  
-<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_plot_streamplot_001.png" width="50%">
-<img src="/images/2020-03/0321_Case_Stream1b.png" width="50%">
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_plot_streamplot_001.png" width="45%"><img src="/images/2020-03/0321_Case_Stream1b.png" width="45%">
 
 ```python
 >>> 100j
@@ -684,7 +683,7 @@ ax.set_ylim(0, 10)
 plt.show()
 ```
 
-<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_ellipse_demo_001.png" width="70%">
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_ellipse_demo_001.png" width="67%">
 
 ## Ellipse Rotated
 
@@ -712,8 +711,7 @@ plt.ylim(-1, 3)
 plt.show()
 ```
 
-<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_ellipse_demo_002.png" width="50%">
-<img src="/images/2020-03/0321_Case_Ellipse1b.png" width="50%">
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_ellipse_demo_002.png" width="45%"><img src="/images/2020-03/0321_Case_Ellipse1b.png" width="45%">
 
 # Bar charts
 
@@ -896,7 +894,7 @@ plt.legend(loc=2)
 plt.show()
 ```
 
-<img src="/images/2020-03/0321_Case_BarChart2b.png" width="70%">
+<img src="/images/2020-03/0321_Case_BarChart2b.png" width="67%">
 
 [python绘制带误差线的条形图](https://blog.csdn.net/songyunli1111/article/details/83625639)  
 [绘制带有误差线的分组数据](https://zzz5.xyz/2020/01/01/python/matplotlib/python-matplotlib-03/)  
@@ -1175,7 +1173,7 @@ plt.show()
 Using [table()](https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.table.html#matplotlib.pyplot.table)  
 e.g., Table Demo [Table Demo](https://matplotlib.org/3.1.1/gallery/misc/table_demo.html)  
 
-<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_table_demo_001.png" width="70%">
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_table_demo_001.png" width="67%">
 
 ```python
 import numpy as np
@@ -1299,7 +1297,7 @@ plt.show()
 Using [scatter()](https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.scatter.html#matplotlib.pyplot.scatter)  
 e.g., Scatter Demo2 [Scatter Demo2](https://matplotlib.org/3.1.1/gallery/lines_bars_and_markers/scatter_demo2.html)  
 
-<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_scatter_demo2_001.png" width="70%">
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_scatter_demo2_001.png" width="67%">
 
 ```python
 # Scatter
@@ -1344,7 +1342,7 @@ plt.show()
 
 形如下图，但是左侧和下侧均可以改变，左侧用于改变线条颜色，下侧用于改变波形，reset 可以恢复原始波形图。
 
-<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_slider_demo_001.png" width="70%">
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_slider_demo_001.png" width="67%">
 
 ```python
 import numpy as np
@@ -1402,7 +1400,7 @@ plt.show()
 Using [fill()](https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.fill.html#matplotlib.pyplot.fill)  
 e.g., Fill [Filled polygon](https://matplotlib.org/3.1.1/gallery/lines_bars_and_markers/fill.html)  
 
-<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_fill_001.png" width="100%">  
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_fill_001.png" width="70%">  
 <img src="https://matplotlib.org/3.1.1/_images/sphx_glr_fill_002.png" width="100%">  
 
 ```python
@@ -1493,7 +1491,7 @@ e.g., Date [Date tick labels](https://matplotlib.org/3.1.1/gallery/text_labels_a
 [Python: plt.plot(x,y) ValueError: Unrecognized character S in format string](https://stackoverflow.com/questions/52318672/python-plt-plotx-y-valueerror-unrecognized-character-s-in-format-string)  
 [Python 2.7运行时格式字符串中无法识别的字符G.](https://stackoom.com/question/1WiQs/Python-%E8%BF%90%E8%A1%8C%E6%97%B6%E6%A0%BC%E5%BC%8F%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E6%97%A0%E6%B3%95%E8%AF%86%E5%88%AB%E7%9A%84%E5%AD%97%E7%AC%A6G)  
 
-<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_date_001.png" width="70%">
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_date_001.png" width="67%">
 
 ```python
 # Date
@@ -1547,7 +1545,7 @@ plt.show()
 
 e.g., Log Demo [Log Demo](https://matplotlib.org/3.1.1/gallery/scales/log_demo.html)  
 
-<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_log_demo_001.png" width="70%">
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_log_demo_001.png" width="67%">
 
 ```python
 import numpy as np
@@ -1705,7 +1703,7 @@ plt.show()
 Using [polar()](https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.polar.html#matplotlib.pyplot.polar)  
 e.g., Polar Demo [Polar Demo](https://matplotlib.org/3.1.1/gallery/pie_and_polar_charts/polar_demo.html)  
 
-<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_polar_demo_001.png" width="70%">
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_polar_demo_001.png" width="67%">
 
 ```python
 # Polar
@@ -1790,7 +1788,7 @@ plt.show()
 Using [legend()](https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.legend.html#matplotlib.pyplot.legend)  
 e.g., Legend [Legend using pre-defined labels](https://matplotlib.org/3.1.1/gallery/text_labels_and_annotations/legend.html)  
 
-<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_legend_001.png" width="70%">
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_legend_001.png" width="67%">
 
 ```python
 import numpy as np
@@ -1974,15 +1972,216 @@ else:
     doall()
 ```
 
+## 标题显示不全 (尚未解决)
+
+<img src="/images/2020-03/0322_Case_Tex2.png" width="50%">
+
+```python
+def doall():
+    # Colors used in mpl online ducumentation.
+    mpl_blue_rvb = (191. / 255., 209. / 256., 212. / 255.)
+    mpl_orange_rvb = (202. / 255., 121. / 256., 0. / 255.)
+    mpl_grey_rvb = (51. / 255., 51. / 255., 51. / 255.)
+
+    # Creating figure and axis.
+    plt.figure(figsize=(6, 7)) # (6, 9))
+    plt.axes([0.01, 0.01, 0.98, 0.98], facecolor="white", frameon=True)
+    #' ''
+    ax = plt.gca()
+    ax.set_xlim(0., 1.)
+    ax.set_ylim(0., 1.) # 0.1, 0.98)
+    # ax.set_title("Matplotlib's math rendering engine",
+    #               color=mpl_grey_rvb, fontsize=14, weight='bold')
+    plt.suptitle("Matplotlib's math rendering engine")
+    # ax.set_xticklabels("", visible=False)
+    # ax.set_yticklabels("", visible=False)
+    '''
+    plt.xlim(0., 1.)
+    plt.ylim(0., 1.)
+    plt.title("Matplotlib's math rendering engine",
+                color=mpl_grey_rvb, fontsize=14, weight='bold')
+    plt.xticks("", visiable=False)
+    plt.yticks("", visiable=False)
+    '''
+
+    # Gap between lines in axes coords
+    line_axesfrac = (1. / (n_lines))
+
+    # Plotting header demonstration formula
+    full_demo = mathext_demos[0]
+    plt.annotate(full_demo,
+                xy=(0.5, 1. - 0.59 * line_axesfrac),
+                color=mpl_orange_rvb, ha='center', fontsize=20)
+    
+    # Plotting features demonstration formulae
+    for i_line in range(1, n_lines):
+        baseline = 1 - (i_line) * line_axesfrac
+        baseline_next = baseline - line_axesfrac
+        title = mathtext_titles[i_line] + ":"
+        fill_color = ['white', mpl_blue_rvb][i_line % 2]
+        plt.fill_between([0., 1.], [baseline, baseline],
+                        [baseline_next, baseline_next],
+                        color=fill_color, alpha=0.5)
+        plt.annotate(title,
+                    xy=(0.07, baseline - 0.3 * line_axesfrac),
+                    color=mpl_grey_rvb, weight='bold')
+        demo = mathext_demos[i_line]
+        plt.annotate(demo,
+                    xy=(0.05, baseline - 0.75 * line_axesfrac),
+                    color=mpl_grey_rvb, fontsize=16)
+    
+    for i in range(n_lines):
+        s = mathext_demos[i]
+        print(i, s)
+    # plt.tight_layout()
+    # plt.subplots_adjust(bottom=0.1) # top=0.01)
+    plt.show()
+```
+
 
 # Native TeX rendering
 
+e.g., Tex Demo: [Rendering math equation using TeX](https://matplotlib.org/3.1.1/gallery/text_labels_and_annotations/tex_demo.html)
+
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_tex_demo_001.png" width="47%"><img src="/images/2020-03/0322_Case_Tex3.png" width="47%">
+
+```python
+# Tex Native
+import numpy as np
+import matplotlib
+matplotlib.rcParams['text.usetex'] = True
+import matplotlib.pyplot as plt
+
+t = np.linspace(0.0, 1.0, 100)
+s = np.cos(4 * np.pi * t) + 2
+
+fig, ax = plt.subplots(figsize=(6, 4), tight_layout=True)
+ax.plot(t, s)
+
+ax.set_xlabel(r'\textbf{time (s)}')
+# ax.set_ylabel('\\textit{Velocity (\N{DEGREE SIGN}/sec)}', fontsize=16)
+ax.set_ylabel(r'\textit{Velocity ( $^{\circ}$/sec)}', fontsize=16)
+ax.set_title(# r'\TeX\ is Number $\displaystyle\sum_{n=1}^\infty'
+    #         # r'\frac{-e^{i\pi}}{2^n}$!', fontsize=16, color='r')
+    # r'\Tex\ is Number $\displaystyle\sum_{n=1}^{\infty}\frac{-e^{i\pi}}{2^n}$!'.encode('ascii', 'ignore').decode('ascii'),
+    r'TeX is Number $\sum_{n=1}^\infty\frac{-e^{i\pi}}{2^n}$!',
+    fontsize=16, color='g'
+)
+plt.show()
+```
 
 # EEG GUI
+
+略
 
 
 # XKCD-style sketch plots
 
+e.g., xkcd [XKCD](https://matplotlib.org/3.1.1/gallery/showcase/xkcd.html)
+
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_xkcd_001.png" width="47%"><img src="https://matplotlib.org/3.1.1/_images/sphx_glr_xkcd_002.png" width="47%">
+<img src="/images/2020-03/0322_Case_XKCD2a.png" width="47%"><img src="/images/2020-03/0322_Case_XKCD2b.png" width="47%">
+
+```python
+# XKCD-like plot
+import matplotlib.pyplot as plt
+import numpy as np
+
+with plt.xkcd():
+    # Based on "Stove Ownership" from XKCD by Randall Munroe
+    # https://xkcd.com/418/
+
+    fig = plt.figure()
+    ax = fig.add_axes((0.1, 0.2, 0.8, 0.7))
+    ax.spines['right'].set_color('none')
+    ax.spines['top'].set_color('none')
+    ax.set_xticks([])
+    ax.set_yticks([])
+    ax.set_ylim([-30, 10])
+
+    data = np.ones(100)
+    data[70:] -= np.arange(30)
+
+    ax.annotate(
+        'THE DAY I REALIZED\nI COULD COOK BACON\nWHENEVER I WANTED',
+        xy=(70, 1), arrowprops=dict(arrowstyle='->'), xytext=(15, -10))
+    
+    ax.plot(data)
+
+    ax.set_xlabel('time')
+    ax.set_ylabel('my overall health')
+    fig.text(
+        0.5, 0.05,
+        '"Stove Ownership" from xkcd by Randall Munroe',
+        ha='center')
+
+with plt.xkcd():
+    # Based on "The Data So Far" from XKCD by Randall Munroe
+    # https://xkcd.com/373/
+
+    fig = plt.figure()
+    ax = fig.add_axes((0.1, 0.2, 0.8, 0.7))
+    ax.bar([0, 1], [0, 100], 0.25)
+    ax.spines['right'].set_color('none')
+    ax.spines['top'].set_color('none')
+    ax.xaxis.set_ticks_position('bottom')
+    ax.set_xticks([0, 1])
+    ax.set_xticklabels(['CONFIRMED BY\nEXPERIMENT', 'REFUTED BY\nEXPERIMENT'])
+    ax.set_xlim([-0.5, 1.5])
+    ax.set_yticks([])
+    ax.set_ylim([0, 110])
+
+    ax.set_title("CLAIMS OF SUPERNATURAL POWERS")
+
+    fig.text(
+        0.5, 0.05,
+        '"The Data So Far" from xkcd by Randall Munroe',
+        ha='center')
+
+plt.show()
+```
 
 # Subplot example
 
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_sample_plots_001.png" width="67%">
+
+```python
+# Subplot example
+import matplotlib.pyplot as plt
+import numpy as np
+
+np.random.seed(19680801)
+data = np.random.randn(2, 100)
+
+fig, axs = plt.subplots(2, 2, figsize=(5, 5))
+axs[0, 0].hist(data[0])
+axs[1, 0].scatter(data[0], data[1])
+axs[0, 1].plot(data[0], data[1])
+axs[1, 1].hist2d(data[0], data[1])
+
+plt.show()
+```
+
+# * References
+
+同一行中，两张图片并排显示  
+[Markdown 图片排版](http://www.huyu.date/2017/08/30/Markdown%E5%9B%BE%E7%89%87%E6%8E%92%E7%89%88/)  
+[Github Markdown 图片如何并排显示](https://www.cnblogs.com/tsingke/p/10901654.html)  
+
+UnicodeEncodeError: 'ascii' codec can't encode character '\xb0' in position 247: ordinal not in range(128)  
+[Python UnicodeEncodeError: 'ascii' codec can't encode character in position 0: ordinal not in range(128)  | duplicate](https://stackoverflow.com/questions/48347331/python-unicodeencodeerror-ascii-codec-cant-encode-character-in-position-0-o)  
+
+TeX  
+[常用数学符号的 LaTeX 表示方法](https://www.mohu.org/info/symbols/symbols.htm)  
+[LaTeX技巧心得173：如何输入摄氏度、千分号](http://blog.sina.com.cn/s/blog_5e16f1770100ggxo.html)  
+
+markdown 注释  
+[第07节　Markdown注释](https://www.w3cschool.cn/lme/q92a1srq.html)  
+[如何在 Markdown 注释一段文字](https://www.jianshu.com/p/9be87e7e15bf)  
+[在Markdown中写注释](https://www.imooc.com/article/23400)  
+[在Markdown中写注释](https://www.cnblogs.com/yangzhou33/p/8438461.html)  
+
+html div 一行放两个图  
+[CSS让2个DIV在同一行显示的解决方法](https://blog.csdn.net/aitangyong/article/details/42775803)  
+[css中的并排显示（div/图片均适用）](https://blog.csdn.net/zsx930305/article/details/52525869)  
+[css如何让两个div不换行显示？](https://www.html.cn/qa/css3/13869.html)  

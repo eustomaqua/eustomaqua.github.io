@@ -7,6 +7,7 @@ categories:
 tags:
   - Python
   - Matplotlib
+  - Notes
 ---
 
 [TOC]

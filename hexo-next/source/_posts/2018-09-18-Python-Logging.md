@@ -7,6 +7,7 @@ categories:
 tags:
   - Commands
   - Python
+  - Notes
 ---
 
 [comment]: <> (title: Python 之日志处理 —— Logging;  tags: Python)

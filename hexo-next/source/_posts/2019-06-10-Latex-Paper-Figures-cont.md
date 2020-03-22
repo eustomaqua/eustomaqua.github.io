@@ -6,6 +6,7 @@ categories:
   - Writing
 tags: 
   - LaTeX
+  - Notes
 ---
 
 [comment]: <> (updated: 2019-07-06 13:16:49)
