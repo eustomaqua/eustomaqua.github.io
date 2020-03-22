@@ -65,9 +65,10 @@ tags:
 
 # Basic Format
 
-基本用法
+<font color=#8A2BE2>Say Hello to Pyplot:</font> 基本用法
 
-## Pyplot Simple [ref](https://matplotlib.org/3.1.1/gallery/pyplots/pyplot_simple.html#sphx-glr-gallery-pyplots-pyplot-simple-py)
+## Pyplot Simple
+[<font color=#8A2BE2>ref</font>](https://matplotlib.org/3.1.1/gallery/pyplots/pyplot_simple.html#sphx-glr-gallery-pyplots-pyplot-simple-py)
 
 ```python
 import matplotlib.pyplot as plt
@@ -75,12 +76,10 @@ plt.plot([1, 2, 3, 4])
 plt.ylabel('some numbers')
 plt.show()
 ```
-
 <img src="https://matplotlib.org/3.1.1/_images/sphx_glr_pyplot_simple_001.png" width="41%">
 
 ## plot() format string
-
-[ref](https://matplotlib.org/3.1.1/gallery/pyplots/pyplot_formatstr.html#sphx-glr-gallery-pyplots-pyplot-formatstr-py)
+[<font color=#8A2BE2>ref</font>](https://matplotlib.org/3.1.1/gallery/pyplots/pyplot_formatstr.html#sphx-glr-gallery-pyplots-pyplot-formatstr-py)
 
 ```python
 #! Plot Format String
@@ -93,8 +92,7 @@ plt.show()
 
 
 ## Pyplot Mathtext
-
-[ref](https://matplotlib.org/3.1.1/gallery/pyplots/pyplot_mathtext.html#sphx-glr-gallery-pyplots-pyplot-mathtext-py)
+[<font color=#8A2BE2>ref</font>](https://matplotlib.org/3.1.1/gallery/pyplots/pyplot_mathtext.html#sphx-glr-gallery-pyplots-pyplot-mathtext-py)
 
 ```python
 import numpy as np
@@ -115,8 +113,7 @@ plt.show()
 <img src="https://matplotlib.org/3.1.1/_images/sphx_glr_pyplot_mathtext_001.png" width="47%">
 
 ## Whats New 0.98.4 Legend
-
-[ref](https://matplotlib.org/3.1.1/gallery/pyplots/whats_new_98_4_legend.html#sphx-glr-gallery-pyplots-whats-new-98-4-legend-py)
+[<font color=#8A2BE2>ref</font>](https://matplotlib.org/3.1.1/gallery/pyplots/whats_new_98_4_legend.html#sphx-glr-gallery-pyplots-whats-new-98-4-legend-py)
 
 ```python
 #! Whats New Legend
@@ -134,7 +131,7 @@ leg.get_frame().set_alpha(0.5)
 plt.show()
 ```
 
-<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_whats_new_98_4_legend_001.png" width="47%">
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_whats_new_98_4_legend_001.png" width="67%">
 
 ### fancybox=False
 
@@ -174,10 +171,9 @@ plt.show()
 
 
 ## Color by y-value
+[<font color=#8A2BE2>ref</font>](https://matplotlib.org/3.1.1/gallery/color/color_by_yvalue.html#sphx-glr-gallery-color-color-by-yvalue-py)
 
-[ref](https://matplotlib.org/3.1.1/gallery/color/color_by_yvalue.html#sphx-glr-gallery-color-color-by-yvalue-py)
-
-<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_color_by_yvalue_001.png" width="47%">
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_color_by_yvalue_001.png" width="67%">
 
 ```python
 import numpy as np
@@ -202,8 +198,7 @@ plt.show()
 # Line related
 
 ## Step Demo
-
-[ref](https://matplotlib.org/3.1.1/gallery/lines_bars_and_markers/step_demo.html#sphx-glr-gallery-lines-bars-and-markers-step-demo-py)
+[<font color=#8A2BE2>ref</font>](https://matplotlib.org/3.1.1/gallery/lines_bars_and_markers/step_demo.html#sphx-glr-gallery-lines-bars-and-markers-step-demo-py)
 
 <img src="https://matplotlib.org/3.1.1/_images/sphx_glr_step_demo_001.png" width="67%">
 
@@ -228,6 +223,7 @@ plt.show()
 ```
 
 ## Triinterp Demo
+[<font color=#8A2BE2>ref</font>](https://matplotlib.org/3.1.1/gallery/images_contours_and_fields/triinterp_demo.html#sphx-glr-gallery-images-contours-and-fields-triinterp-demo-py)
 
 <img src="https://matplotlib.org/3.1.1/_images/sphx_glr_triinterp_demo_001.png" width="67%">
 
@@ -289,8 +285,7 @@ plt.show()
 ```
 
 ## axhspan Demo
-
-[ref](https://matplotlib.org/3.1.1/gallery/subplots_axes_and_figures/axhspan_demo.html#sphx-glr-gallery-subplots-axes-and-figures-axhspan-demo-py)
+[<font color=#8A2BE2>ref</font>](https://matplotlib.org/3.1.1/gallery/subplots_axes_and_figures/axhspan_demo.html#sphx-glr-gallery-subplots-axes-and-figures-axhspan-demo-py)
 
 <img src="https://matplotlib.org/3.1.1/_images/sphx_glr_axhspan_demo_001.png" width="67%">
 
@@ -349,8 +344,7 @@ plt.show()
 # Axes related
 
 ## Shared Axis Demo
-
-[ref](https://matplotlib.org/3.1.1/gallery/subplots_axes_and_figures/shared_axis_demo.html#sphx-glr-gallery-subplots-axes-and-figures-shared-axis-demo-py)
+[<font color=#8A2BE2>ref</font>](https://matplotlib.org/3.1.1/gallery/subplots_axes_and_figures/shared_axis_demo.html#sphx-glr-gallery-subplots-axes-and-figures-shared-axis-demo-py)
 
 通过将轴实例作为 sharex 或 sharey kwarg 传递，可以共享一个轴的 x 或 y 轴范围。  
 更改一个轴上的轴限制将自动反映在另一个轴上，反之亦然，因此，当您使用工具栏导航时，两个轴将在其共享轴上彼此跟随。同理改变轴的缩放比例（例如，对数与线性）。但是，刻度标记可能会有所不同，例如，您可以有选择地关闭一个轴上的刻度标记。  
@@ -395,10 +389,9 @@ plt.show()
 # Title related
 
 ## Titles Demo
+[<font color=#8A2BE2>ref</font>](https://matplotlib.org/3.1.1/gallery/text_labels_and_annotations/titles_demo.html#sphx-glr-gallery-text-labels-and-annotations-titles-demo-py)
 
-[ref](https://matplotlib.org/3.1.1/gallery/text_labels_and_annotations/titles_demo.html#sphx-glr-gallery-text-labels-and-annotations-titles-demo-py)
-
-<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_titles_demo_001.png" width="41%">
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_titles_demo_001.png" width="67%"> <!--"41%"-->
 
 ```python
 #! Title Demo
@@ -446,9 +439,10 @@ def make_plot(axs):
     ax4.set_ylabel('aligned 2', bbox=box)
 ```
 
-### Figure.align_ylabels [ref](https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.align_ylabels)
+### Figure.align_ylabels
+[<font color=#8A2BE2>ref</font>](https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.align_ylabels)
 
-<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_align_ylabels_0011.png" width="47%">
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_align_ylabels_0011.png" width="57%"> <!--"47%"-->
 
 ```python
 # Plot 1:
@@ -466,11 +460,13 @@ plt.show()
 > fig.align_ylabels(axs)
 >
 
-<img src="/images/2020-03/0322_Pyplot_alignylabel1b.png" width="47%">
+<img src="/images/2020-03/0322_Pyplot_alignylabel1b.png" width="57%">
 
-### Manually align the labels [ref](https://matplotlib.org/3.1.1/gallery/pyplots/align_ylabels.html#sphx-glr-gallery-pyplots-align-ylabels-py)
+### Manually align the labels
 
-<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_align_ylabels_002.png" width="47%">
+[<font color=#8A2BE2>ref</font>](https://matplotlib.org/3.1.1/gallery/pyplots/align_ylabels.html#sphx-glr-gallery-pyplots-align-ylabels-py)
+
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_align_ylabels_002.png" width="57%">
 
 ```python
 fig, axs = plt.subplots(2, 2)
@@ -611,8 +607,7 @@ plt.show()
 ```
 
 ## Text Rotation Relative To Line
-
-[ref](https://matplotlib.org/3.1.1/gallery/text_labels_and_annotations/text_rotation_relative_to_line.html#sphx-glr-gallery-text-labels-and-annotations-text-rotation-relative-to-line-py)
+[<font color=#8A2BE2>ref</font>](https://matplotlib.org/3.1.1/gallery/text_labels_and_annotations/text_rotation_relative_to_line.html#sphx-glr-gallery-text-labels-and-annotations-text-rotation-relative-to-line-py)
 
 matplotlib 中的文本对象通常相对于屏幕坐标系旋转（即，无论轴如何更改，旋转45度都会沿着水平和垂直之间的直线绘制文本）。 但是，有时人们想相对于绘图中的某物旋转文本。 在这种情况下，正确的角度将不是该对象在绘图坐标系中的角度，而是该对象在屏幕坐标系中显示的角度。 如下面的示例所示，可以通过将绘图中的角度转换为屏幕坐标系来找到该角度。
 
@@ -654,7 +649,9 @@ plt.show()
 
 [ref](https://matplotlib.org/3.1.1/gallery/subplots_axes_and_figures/multiple_figs_demo.html#sphx-glr-gallery-subplots-axes-and-figures-multiple-figs-demo-py)
 
+{% gp 1-2 %}
 <img src="/images/2020-03/0322_Pyplot_MultiFigs2a.png" width="47%"><img src="/images/2020-03/0322_Pyplot_MultiFigs2b.png" width="47%">
+{% endgp %}
 
 ```python
 #! Multiple Figs
@@ -1091,7 +1088,7 @@ plt.show()
 
 不太常用的
 
-## Dolphins [ref](https://matplotlib.org/3.1.1/gallery/shapes_and_collections/dolphin.html#sphx-glr-gallery-shapes-and-collections-dolphin-py)
+## Dolphins [<font color=#8A2BE2>ref</font>](https://matplotlib.org/3.1.1/gallery/shapes_and_collections/dolphin.html#sphx-glr-gallery-shapes-and-collections-dolphin-py)
 
 <img src="https://matplotlib.org/3.1.1/_images/sphx_glr_dolphin_001.png" width="67%">
 

@@ -182,7 +182,12 @@ ax.set_title('CT density')
 plt.show()
 ```
 
+<!--
 <img src="/images/2020-03/0321_Case_Image2a.png" width="45%"><img src="/images/2020-03/0321_Case_Image2b.png" width="45%">
+-->
+{% gp 1-2 %}
+<img src="/images/2020-03/0321_Case_Image2a.png"><img src="/images/2020-03/0321_Case_Image2b.png">
+{% endgp %}
 
 ## Interpolating images
 
@@ -237,7 +242,10 @@ axs[1].imshow(x, origin='lower', interpolation=interp)
 plt.show()
 ```
 
-<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_image_demo_005.png" width="45%"><img src="/images/2020-03/0321_Case_Image4b.png" width="45%">
+{% gp 1-2 %}
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_image_demo_005.png">
+<img src="/images/2020-03/0321_Case_Image4b.png">
+{% endgp %}
 
 ## show an image using a clip path
 Finally, we'll show an image using a clip path
@@ -279,10 +287,16 @@ ax.set_title('origin="{}"'.format(origin))
 plt.show()
 ```
 
-<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_image_demo_006.png" width="25%">
-<img src="/images/2020-03/0321_Case_Image5b.png" width="25%">
-<img src="/images/2020-03/0321_Case_Image5c.png" width="25%">
-<img src="/images/2020-03/0321_Case_Image5d.png" width="25%">
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_image_demo_006.png" width="33%">
+<!--width="25%" align="left"-->
+
+{% gp 1-3 %}
+<img src="/images/2020-03/0321_Case_Image5b.png">
+<img src="/images/2020-03/0321_Case_Image5c.png">
+<img src="/images/2020-03/0321_Case_Image5d.png">
+{% endgp %}
+
+
 
 
 # Contouring and pseudocolor
@@ -459,7 +473,11 @@ plt.show()
 ```
 
 Path.CURVE4, Path.CURVE3  
-<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_path_patch_001.png" width="45%"><img src="/images/2020-03/0321_Case_Path1b.png" width="45%">
+{% gp 1-2 %}
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_path_patch_001.png">
+<img src="/images/2020-03/0321_Case_Path1b.png">
+{% endgp %}
+<!--width="45%"-->
 
 ```python
 >>> Path = mpath.Path
@@ -635,7 +653,11 @@ plt.show()
 ```
 
 aspect='equal', 'auto'  
-<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_plot_streamplot_001.png" width="45%"><img src="/images/2020-03/0321_Case_Stream1b.png" width="45%">
+{% gp 1-2 %}
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_plot_streamplot_001.png">
+<img src="/images/2020-03/0321_Case_Stream1b.png">
+{% endgp %}
+<!--width="45%"-->
 
 ```python
 >>> 100j
@@ -711,18 +733,22 @@ plt.ylim(-1, 3)
 plt.show()
 ```
 
-<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_ellipse_demo_002.png" width="45%"><img src="/images/2020-03/0321_Case_Ellipse1b.png" width="45%">
+{% gp 1-2 %}
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_ellipse_demo_002.png">
+<img src="/images/2020-03/0321_Case_Ellipse1b.png">
+{% endgp %}
+<!--width="45%"-->
 
 # Bar charts
 
 Using [bar()](https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.bar.html#matplotlib.pyplot.bar), e.g., 
-- Barchart Demo [Percentiles as horizontal bar chart](https://matplotlib.org/3.1.1/gallery/statistics/barchart_demo.html)  
-- stacked bars [bar_stacked.py](https://matplotlib.org/3.1.1/gallery/lines_bars_and_markers/bar_stacked.html)  
-- horizontal bar charts [barh.py](https://matplotlib.org/3.1.1/gallery/lines_bars_and_markers/barh.html)
+- Barchart Demo: [Percentiles as horizontal bar chart](https://matplotlib.org/3.1.1/gallery/statistics/barchart_demo.html)  
+- stacked bars: [bar_stacked.py](https://matplotlib.org/3.1.1/gallery/lines_bars_and_markers/bar_stacked.html)  
+- horizontal bar charts: [barh.py](https://matplotlib.org/3.1.1/gallery/lines_bars_and_markers/barh.html)
 
 ## Percentiles as horizontal bar chart
 
-<img src="/images/2020-03/0321_Case_BarChart1.png" width="100%">
+<img src="/images/2020-03/0321_Case_BarChart1.png" width="97%">
 
 ```python
 # Demo
@@ -877,6 +903,29 @@ cohort_size = 62  # The number of other 2nd grade boys
 arts = plot_student_results(student, scores, cohort_size)
 plt.show()
 ```
+
+### 发现中间三个的白色字符没显示
+
+找到错因，white 部分手误把 align 写成了 aligh
+
+```python
+        rankStr = attach_ordinal(width)
+        # The bars aren't wide enough to print the ranking inside
+        if width < 40:
+            # Shift the text to the right side of the right edge
+            xloc = 5
+            # Black against white background
+            clr = 'black'
+            align = 'left'
+        else:
+            # Shift the text to the left side of the right edge
+            xloc = -15 # -5
+            # White on magenta
+            clr = 'red' # 'white'
+            align = 'right'  #!@ NOT aligh!
+```
+
+<img src="/images/2020-03/0322_Case_BarChart1.png" width="97%">
 
 
 ## 带误差线的分组柱状图
@@ -1843,8 +1892,16 @@ plt.show()
 
 e.g., Mathtext Examples [Mathtext Examples](https://matplotlib.org/3.1.1/gallery/text_labels_and_annotations/mathtext_examples.html)  
 
+<!--
 <img src="https://matplotlib.org/3.1.1/_images/sphx_glr_mathtext_examples_001.png" width="50%">
 <img src="/images/2020-03/0321_Case_Tex1.png" width="50%">
+-->
+
+{% gp 1-2 %}
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_mathtext_examples_001.png">
+<img src="/images/2020-03/0321_Case_Tex1.png">
+{% endgp %}
+
 
 ```python
 # Tex Mathematical
@@ -2043,7 +2100,14 @@ def doall():
 
 e.g., Tex Demo: [Rendering math equation using TeX](https://matplotlib.org/3.1.1/gallery/text_labels_and_annotations/tex_demo.html)
 
+<!--
 <img src="https://matplotlib.org/3.1.1/_images/sphx_glr_tex_demo_001.png" width="47%"><img src="/images/2020-03/0322_Case_Tex3.png" width="47%">
+-->
+{% gp 1-2 %}
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_tex_demo_001.png">
+<img src="/images/2020-03/0322_Case_Tex3.png">
+{% endgp %}
+
 
 ```python
 # Tex Native
@@ -2079,8 +2143,16 @@ plt.show()
 
 e.g., xkcd [XKCD](https://matplotlib.org/3.1.1/gallery/showcase/xkcd.html)
 
+<!--
 <img src="https://matplotlib.org/3.1.1/_images/sphx_glr_xkcd_001.png" width="47%"><img src="https://matplotlib.org/3.1.1/_images/sphx_glr_xkcd_002.png" width="47%">
 <img src="/images/2020-03/0322_Case_XKCD2a.png" width="47%"><img src="/images/2020-03/0322_Case_XKCD2b.png" width="47%">
+-->
+{% gp 2-2 %}
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_xkcd_001.png">
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_xkcd_002.png">
+<img src="/images/2020-03/0322_Case_XKCD2a.png">
+<img src="/images/2020-03/0322_Case_XKCD2b.png">
+{% endgp %}
 
 ```python
 # XKCD-like plot
