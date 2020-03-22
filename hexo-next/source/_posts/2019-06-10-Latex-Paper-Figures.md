@@ -3,7 +3,7 @@ title: Tips of Tables and Figures in Papers (论文图表小技巧)
 date: 2019-06-15 16:52:13
 updated: 2019-07-06 22:14:21
 categories:
-  - Records
+  - Writing
 tags: 
   - LaTeX
 ---

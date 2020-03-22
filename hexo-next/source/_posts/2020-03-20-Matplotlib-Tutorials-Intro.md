@@ -25,9 +25,9 @@ References:
 
 
 
-# Tutorials: Introductory 
+***Tutorials: Introductory***
 
-## User Guide
+# User Guide
 
 通用概念  
 ```python
@@ -86,11 +86,11 @@ plt.show()
 ```
 ![User Guide: Simple Plot](https://matplotlib.org/3.1.1/_images/sphx_glr_usage_003.png)  
 
-### 性能 Performance
+## 性能 Performance
 
 无论是以交互方式浏览数据还是以编程方式保存大量绘图，渲染性能都可能成为管道中的一个痛苦瓶颈。 Matplotlib提供了几种方法，以稍微改变绘制外观（达到可设置的公差）为代价，大大减少了渲染时间。减少渲染时间的可用方法取决于所创建绘图的类型。
 
-#### **Line segment simplification** 线段简化  
+### **Line segment simplification** 线段简化  
 对于具有线段的图（例如，典型的线图，多边形的轮廓等），可以通过matplotlibrc文件中的path.simplify和path.simplify_threshold参数来控制渲染性能（有关更多信息，请参见有关matplotlibrc文件，使用样式表和rcParams来自定义Matplotlib）。 path.simplify参数是一个布尔值，指示是否完全简化线段。 path.simplify_threshold参数控制简化的线段数量；阈值越高，渲染越快。  
 以下脚本将首先显示数据而不进行任何简化，然后以简化方式显示相同的数据。尝试与他们两个进行交互：  
 
@@ -118,7 +118,7 @@ Matplotlib当前默认为保守简化阈值1/9。如果要更改默认设置以�
 通过将线段迭代合并为单个矢量，直到下一个线段到矢量的垂直距离（在显示坐标空间中测量）大于path.simplify_threshold参数，简化了工作。  
 注意：在版本2.1中进行了有关简化线段的更改。在2.1之前的版本中，这些参数仍将改善渲染时间，但是在2.1及更高版本中，某些类型数据的渲染时间将得到极大的改善。
 
-#### **Marker simplification** 标记简化  
+### **Marker simplification** 标记简化  
 标记也可以简化，尽管不如线段健壮。简化标记仅适用于Line2D对象（通过markevery属性）。传递Line2D构造参数的任何地方（例如matplotlib.pyplot.plot()和matplotlib.axes.Axes.plot()），都可以使用markevery参数：
 
 ```python
@@ -127,7 +127,7 @@ plt.plot(x，y，markevery = 10)
 
 markevery参数允许进行简单的二次采样，或尝试均匀间隔（沿x轴）采样。有关更多信息，请参见Markevery演示。
 
-#### **Splitting lines into smaller chunks** 将行分成较小的块  
+### **Splitting lines into smaller chunks** 将行分成较小的块  
 如果使用的是Agg后端（请参阅什么是后端？），则可以使用agg.path.chunksize rc参数。这使您可以指定块的大小，任何大于多个顶点的线都将被拆分为多行，每行最多包含agg.path.chunksize个顶点。 （除非agg.path.chunksize为零，否则不进行分块。）对于某些类型的数据，将行分块为合理的大小可以大大减少渲染时间。
 
 以下脚本将首先显示没有任何块大小限制的数据，然后显示块大小为10,000的相同数据。当数字很大时，最好看到最大的区别，请尝试最大化GUI并与之交互：
@@ -153,10 +153,10 @@ plt.plot(y)
 plt.show()
 ```
 
-#### **Legends** 图例  
+### **Legends** 图例  
 轴的默认图例行为会尝试查找覆盖最少数据点的位置（loc = "best"）。 如果有很多数据点，这可能是非常昂贵的计算。 在这种情况下，您可能需要提供一个特定的位置。
 
-#### **Using the *fast* style** 使用快速样式  
+### **Using the *fast* style** 使用快速样式  
 快速样式可用于将简化和分块参数自动设置为合理的设置，以加快绘制大量数据的速度。 只需运行以下命令即可使用它：
 
 ```python
@@ -171,7 +171,7 @@ mplstyle.use(['dark_background', 'ggplot', 'fast'])
 ```
 
 
-## Pyplot tutorial
+# Pyplot tutorial
 
 ```python
 plt.plot([1, 2, 3, 4], 'ro')  # plot: y = [1,2,3,4], x = [0, len(y)-1]
@@ -183,7 +183,7 @@ plt.plot(t, t, 'r--', t, t**2, 'bs', t, t**3, 'g^')
 ```
 ![](https://matplotlib.org/3.1.1/_images/sphx_glr_pyplot_004.png)  
 
-### Formatting the style of your plot
+## Formatting the style of your plot
 line styles and format strings [plot()](https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot)  
 
 **Format Strings** 格式字符串 通常由 color, marker, line 组成，如
@@ -193,15 +193,15 @@ fmt = '[marker][line][color]'
 也支持其他形式如 [color][marker][line] ，但是可能会存在歧义。
 
 **Markers**
-<img src="/images/2020-03/20200320_Pyplot1a.png" width="100%">
+<img src="/images/2020-03/20200320_Pyplot1a.png" width="50%">
 
 **Line Styles**
-<img src="/images/2020-03/20200320_Pyplot1b.png" width="100%">
+<img src="/images/2020-03/20200320_Pyplot1b.png" width="50%">
 
 **Colors**
 <img src="/images/2020-03/20200320_Pyplot1c.png" width="100%">
 
-### Controlling line properties
+## Controlling line properties
 
 Lines 有许多可以设置的属性，如 linewidth, dash style, antialiased 等 [see matplotlib.lines.Line2D](https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D)  
 设置方法：  
@@ -223,7 +223,7 @@ plt.setp(lines, color='r', linewidth=2.0)
 plt.setp(lines, 'color', 'r', 'linewidth', 2.0)
 ```
 
-### Plotting with keyword strings
+## Plotting with keyword strings
 
 ```python
 data = {'a': np.arange(50),
@@ -241,7 +241,7 @@ plt.show()
 
 其中 c 参数代表颜色，s 代表标记大小 marker size，即 [plt.scatter()](https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.scatter.html#matplotlib.pyplot.scatter)
 
-### Plotting with categorical variables
+## Plotting with categorical variables
 
 ```python
 names = ['group_a', 'group_b', 'group_c']
@@ -259,7 +259,7 @@ plt.show()
 ```
 ![](https://matplotlib.org/3.1.1/_images/sphx_glr_pyplot_006.png)
 
-### Working with multiple figures and axes
+## Working with multiple figures and axes
 
 ```python
 def f(t):
@@ -313,7 +313,7 @@ plt.show()
 您可以使用 clf() 清除当前图形，并使用 cla() 清除当前轴。如果您发现在后台为您维护状态（特别是当前图像，图形和轴）很烦人，请不要绝望：这只是面向对象API的薄状态包装，您可以使用它（参见艺术家教程）  
 如果要制作大量图形，则还需要注意一件事：在使用 close() 显式关闭图形之前，图形所需的内存不会完全释放。删除对图形的所有引用，和/或使用窗口管理器杀死图形在屏幕上出现的窗口是不够的，因为pyplot会保留内部引用，直到调用 close() 为止。
 
-### Working with text
+## Working with text
 
 ```python
 mu, sigma = 100, 15
@@ -364,7 +364,7 @@ plt.show()
 [Advanced Annotation](https://matplotlib.org/3.1.1/tutorials/text/annotations.html#plotting-guide-annotation)  
 [Annotating Plots](https://matplotlib.org/3.1.1/tutorials/text/annotations.html#plotting-guide-annotation)  
 
-### **Logarithmic and other nonlinear axes** 对数和其他非线性轴  
+## **Logarithmic and other nonlinear axes** 对数和其他非线性轴  
 
 [matplotlib.pyplot](https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot) 支持线性轴尺度 (linear axis scales)、对数和逻辑斯特回归轴 (logarithmic and logit scales)、以及 symmetric log (symlog)  
 改变坐标轴尺度很简单，只需要  
@@ -375,7 +375,7 @@ plt.xscale('log')  # {"linear", "log", "symlog", "logit"}
 [Symlog Demo](https://matplotlib.org/3.1.1/gallery/scales/symlog_demo.html#sphx-glr-gallery-scales-symlog-demo-py) 
 [Pyplot Scales](https://matplotlib.org/3.1.1/gallery/pyplots/pyplot_scales.html#sphx-glr-gallery-pyplots-pyplot-scales-py)
 
-#### Pyplot Scales
+### Pyplot Scales
 
 ```python
 from matplotlib.ticker import NullFormatter  # useful for 'logit' scale
@@ -437,7 +437,7 @@ plt.show()
 ```
 <img src="/images/2020-03/20200320_Pyplot3a.png" width="100%">
 
-#### Symlog Demo
+### Symlog Demo
 
 ```python
 dt = 0.01
@@ -474,11 +474,11 @@ plt.show()
 <img src="/images/2020-03/20200320_Pyplot3b.png" width="100%">
 
 
-## Sample plots in Matplotlib
+# Sample plots in Matplotlib
 
 详见另一篇
 
-## Image tutorial
+# Image tutorial
 
 1. Startup commands
 2. Importing image data into Numpy arrays
@@ -506,9 +506,9 @@ lum_img = img[:, :, 0]
 plt.imshow(lum_img)
 plt.show()
 ```
-<img src="/images/2020-03/20200320_Image1a.png" width="100%">
+<img src="/images/2020-03/20200320_Image1a.png" width="70%">
 
-### **Applying pseudocolor schemes to image plots**  
+## **Applying pseudocolor schemes to image plots**  
 ```python
 plt.figure(figsize=(17, 2))#)
 plt.subplot(141)#221)
@@ -529,7 +529,7 @@ plt.show()
 ```
 <img src="/images/2020-03/20200320_Image1c.png" width="100%">
 
-### **Color scale reference**  
+## **Color scale reference**  
 i.e., colorbar()  
 ```python
 plt.figure(figsize=(20, 2))
@@ -560,7 +560,7 @@ plt.show()
 ```
 <img src="/images/2020-03/20200320_Image1d.png" width="100%">
 
-### **Examining a specific data range**  
+## **Examining a specific data range**  
 
 ```python
 img = mpimg.imread('./Matplotlib/cat.jpg')
@@ -625,7 +625,7 @@ plt.show()
 ```
 <img src="/images/2020-03/20200320_Image2b.png" width="100%">
 
-### **Array Interpolation schemes**  
+## **Array Interpolation schemes**  
 
 插值根据不同的数学方案计算“应该”像素的颜色或值。 发生这种情况的一个常见地方是调整图像大小时。 像素数会变化，但是您需要相同的信息。 由于像素是离散的，因此缺少空间。 插值法是您填充该空间的方式。 这就是为什么当您炸毁图像时有时会显得像素化的原因。 当原始图像和扩展图像之间的差异更大时，效果会更加明显。 让我们来缩小形象。 我们实际上是在丢弃像素，只保留少数像素。 现在，当我们绘制它时，该数据将爆炸到屏幕上的大小。 旧的像素不再存在，计算机必须提取像素来填充该空间。  
 我们将使用用于加载图像的Pillow库来调整图像的大小。
@@ -642,7 +642,7 @@ imgplot = plt.imshow(img)
 # <PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=64x27 at 0x..>
 plt.show()
 ```
-<img src="/images/2020-03/20200320_Image3a.png" width="100%">
+<img src="/images/2020-03/20200320_Image3a.png" width="70%">
 
 由于没有给imshow()任何插值参数，因此这里有默认的插值法，即双线性。  
 让我们尝试其他一些。 如“最近”，即不进行插值。  
@@ -678,7 +678,7 @@ plt.show()
 <img src="/images/2020-03/20200320_Image3d.png" width="100%">
 
 
-## The Lifecycle of a plot
+# The Lifecycle of a plot
 
 ```python
 # coding: utf8
@@ -719,7 +719,7 @@ plt.show()
 ```
 ['bmh', 'classic', 'dark_background', 'fast', 'fivethirtyeight', 'ggplot', 'grayscale', 'seaborn-bright', 'seaborn-colorblind', 'seaborn-dark-palette', 'seaborn-dark', 'seaborn-darkgrid', 'seaborn-deep', 'seaborn-muted', 'seaborn-notebook', 'seaborn-paper', 'seaborn-pastel', 'seaborn-poster', 'seaborn-talk', 'seaborn-ticks', 'seaborn-white', 'seaborn-whitegrid', 'seaborn', 'Solarize_Light2', 'tableau-colorblind10', '_classic_test']
 
-### Customizing the plot
+## Customizing the plot
 ```
 # Customizing the plot
 fig, ax = plt.subplots()
@@ -776,7 +776,7 @@ plt.show()
 ```
 ![](https://matplotlib.org/3.1.1/_images/sphx_glr_lifecycle_009.png)
 
-### Combining multiple visualizations
+## Combining multiple visualizations
 
 ```python
 plt.style.use('fivethirtyeight')
@@ -824,16 +824,17 @@ plt.show()
 3g. ax.set_xticks 
 <img src="/images/2020-03/20200320_Lifecycle3g.png" width="50%">  
 
-### Saving our plot
+## Saving our plot
 
 现在我们对绘图的结果感到满意，我们希望将其保存到磁盘。 我们可以在Matplotlib中保存许多文件格式。 要查看可用选项的列表，请使用：  
 ```python
 print(fig.canvas.get_supported_filetypes())
 ```
 
-> **fig**
-> <Figure size 800x800 with 1 Axes>
-> **fig.canvas**
+> **fig**  
+> <Figure size 800x800 with 1 Axes>  
+> 
+> **fig.canvas**  
 > <matplotlib.backends.backend_qt5agg.FigureCanvasQTAgg object at Ox...>
 >
 > **fig.canvas.get_supported_filetypes()**
@@ -854,13 +855,13 @@ print(fig.canvas.get_supported_filetypes())
 ```
 
 
-## Customizing Matplotlib with style
+# Customizing Matplotlib with style
 
 [Tips for customizing the properties and default styles of Matplotlib.](https://matplotlib.org/3.1.1/tutorials/introductory/customizing.html#sphx-glr-tutorials-introductory-customizing-py)  
 
-### Customizing Matplotlib with style sheets and rcParams 
+## Customizing Matplotlib with style sheets and rcParams 
 
-#### Using style sheets
+### Using style sheets
 
 ```python
 import numpy as np
@@ -873,7 +874,7 @@ print(plt.style.available)
 # ['bmh', 'classic', 'dark_background', 'fast', 'fivethirtyeight', 'ggplot', 'grayscale', 'seaborn-bright', 'seaborn-colorblind', 'seaborn-dark-palette', 'seaborn-dark', 'seaborn-darkgrid', 'seaborn-deep', 'seaborn-muted', 'seaborn-notebook', 'seaborn-paper', 'seaborn-pastel', 'seaborn-poster', 'seaborn-talk', 'seaborn-ticks', 'seaborn-white', 'seaborn-whitegrid', 'seaborn', 'Solarize_Light2', 'tableau-colorblind10', '_classic_test']
 ```
 
-#### Defining your own style
+### Defining your own style
 
 可以创建自定义样式并使用样式表的路径或URL调用style.use来使用它们。 此外，如果将 <style-name>.mplstyle 文件添加到 mpl_configdir/stylelib ，则可以通过调用 style.use(<style-name>) 重用自定义样式表。 默认情况下，mpl_configdir 应该为 ~/.config/matplotlib ，但也可以使用matplotlib.get_configdir() 来检查您的位置。 您可能需要创建此目录。 您还可以通过设置 MPLCONFIGDIR 环境变量来更改 matplotlib 在其中查找 stylelib/ 文件夹的目录，请参见 matplotlib 配置和缓存目录位置。  
 请注意，如果样式具有相同的名称，则 mpl_configdir/stylelib 中的自定义样式表将覆盖由 matplotlib 定义的样式表。  
@@ -893,11 +894,11 @@ ytick.labelsize : 16
 >>> mpl.get_configdir()
 'C:\\Users\\Lenovo\\.matplotlib'
 ```
-<img src="/images/2020-03/20200320_Stylesheet1a.png", width="80%">  
-<img src="/images/2020-03/20200320_Stylesheet1b.png", width="80%">  
+<img src="/images/2020-03/20200320_Stylesheet1a.png" width="80%">  
+<img src="/images/2020-03/20200320_Stylesheet1b.png" width="80%">  
 
 创建后即可使用  
-<img src="/images/2020-03/20200320_Stylesheet1c.png", width="80%">  
+<img src="/images/2020-03/20200320_Stylesheet1c.png" width="80%">  
 
 ```python
 # Defining your own style
@@ -905,14 +906,14 @@ ytick.labelsize : 16
 >>> plt.style.use('presentation')
 ```
 
-#### Composing styles
+### Composing styles
 
 ```python
 >>> import matplotlib.pyplot as plt
 >>> plt.style.use(['dark_background', 'presentation'])
 ```
 
-#### Temporary styling
+### Temporary styling
 
 如果您只想为特定的代码块使用样式，而又不想更改全局样式，则样式包提供了一个上下文管理器，用于将更改限制在特定范围内。 为了隔离样式更改，您可以编写如下内容：  
 ```python
@@ -923,7 +924,7 @@ plt.show()
 ```
 ![](https://matplotlib.org/3.1.1/_images/sphx_glr_customizing_001.png)
 
-### matplotlib rcParams
+## matplotlib rcParams
 
 **Important**  
 下面两种改法其实只能改变 lines.linewidth ，改变不了 lines.color  
@@ -1004,7 +1005,7 @@ fig.tight_layout() # 调整整体空白
 plt.subplots_adjust(wspace =0, hspace =0) # 调整子图间距
 ```
 
-#### Dynamic rc settings
+### Dynamic rc settings
 
 您还可以在python脚本中动态更改默认的rc设置，或者从python shell交互式更改默认的rc设置。 所有的rc设置都存储在类似字典的变量matplotlib.rcParams中，该变量是matplotlib软件包的全局变量。 rcParams可以直接修改，例如：  
 ```python
@@ -1025,69 +1026,60 @@ plt.show()
 ![](https://matplotlib.org/3.1.1/_images/sphx_glr_customizing_003.png)
 
 
-### The *matplotlibrc* file
+## The *matplotlibrc* file
 
+略
+
+
+
+
+# * Outline
+
+```markdown
+# Tutorials: Intro
 
 
 # Tutorials: Intermediate
 
 ## Artist tutorial
-
 ## Legend guide
-
 ## Styling with cycler
-
 ## Customizing Figure Layouts Using GridSpec and Other Functions
-
 ## Constrained Layout Guide
-
 ## Tight Layout guide
-
 ## origin and extend in imshow
 
 
 # Tutorials: Advanced
 
 ## Path Tutorial
-
 ## Path effects guide
-
 ## Transformations Tutorial
 
 
 # Colors
 
 ## Specifying Colors
-
 ## Customized Colorbars Tutorial
-
 ## Creating Colormaps in Matplotlib
-
 ## Colormap Normalization
-
 ## Choosing Colormaps in Matplotlib
 
 
 # Text
 
 ## Text in Matplotlib Plots
-
 ## Text properties and layout
-
 ## Annotations
-
 ## Writing mathematical expressions
-
 ## Typesetting With XeLaTeX/LuaLaTeX
-
 ## Text rendering With LaTeX
 
 
 # Toolkits
 
 ## Overview of axes_grid1 toolkit
-
 ## Overview of axisartist toolkit
-
 ## The mplot3d Toolkit
+```
 
