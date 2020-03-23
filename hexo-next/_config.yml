@@ -94,6 +94,9 @@ search:
 
 social:
   GitHub: https://github.com/eustomaqua
+  # E-mail: yjbian92@gmail.com
+  # <a href="mailto:yjbian92@gmail.com"> # yjbian92 AT gmail dot com</a>
+  # Email: yjbian92@gmail.com
 
 deploy:
   type: git

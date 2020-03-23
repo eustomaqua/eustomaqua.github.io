@@ -68,11 +68,14 @@ footer:
   icon:
     # Icon name in fontawesome, see: https://fontawesome.com/v4.7.0/icons
     # `heart` is recommended with animation in red (#ff0000).
-    name: user
+    ## name: user
     # If you want to animate the icon, set it to true.
-    animated: false
+    ## animated: false
     # Change the color of icon, using Hex Code.
-    color: "#808080"
+    ## color: "#808080"
+    name: paper-plane # leaf
+    animated: false # true
+    color: "#363636" # "#7FFFD4"
 
   # If not defined, will be used `author` from Hexo main config.
   copyright:
@@ -321,9 +324,11 @@ codeblock:
   border_radius:
   # Add copy button on codeblock
   copy_button:
-    enable: false
+    ## enable: false
     # Show text copy result
-    show_result: false
+    ## show_result: false
+    enable: true
+    show_result: true
 
 # Wechat Subscriber
 #wechat_subscriber:
@@ -850,7 +855,8 @@ lazyload: false
 
 # Progress bar in the top during page loading.
 # Dependencies: https://github.com/theme-next/theme-next-pace
-pace: false
+## pace: false
+pace: true
 # Themes list:
 #pace-theme-big-counter
 #pace-theme-bounce
