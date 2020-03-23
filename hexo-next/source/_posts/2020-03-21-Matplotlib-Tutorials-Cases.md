@@ -2147,7 +2147,8 @@ e.g., xkcd [XKCD](https://matplotlib.org/3.1.1/gallery/showcase/xkcd.html)
 <img src="https://matplotlib.org/3.1.1/_images/sphx_glr_xkcd_001.png" width="47%"><img src="https://matplotlib.org/3.1.1/_images/sphx_glr_xkcd_002.png" width="47%">
 <img src="/images/2020-03/0322_Case_XKCD2a.png" width="47%"><img src="/images/2020-03/0322_Case_XKCD2b.png" width="47%">
 -->
-{% gp 2-2 %}
+<!--gp 2-2-->
+{% gp 4-3 %}
 <img src="https://matplotlib.org/3.1.1/_images/sphx_glr_xkcd_001.png">
 <img src="https://matplotlib.org/3.1.1/_images/sphx_glr_xkcd_002.png">
 <img src="/images/2020-03/0322_Case_XKCD2a.png">
