@@ -832,10 +832,10 @@ plt.show()
 print(fig.canvas.get_supported_filetypes())
 ```
 
-> **fig**  
-> <Figure size 800x800 with 1 Axes>  
+> **fig** 
+> Figure size 800x800 with 1 Axes
 > 
-> **fig.canvas**  
+> **fig.canvas**
 > <matplotlib.backends.backend_qt5agg.FigureCanvasQTAgg object at Ox...>
 >
 > **fig.canvas.get_supported_filetypes()**
@@ -923,7 +923,8 @@ with plt.style.context('dark_background'):
     plt.plot(np.sin(np.linspace(0, 2 * np.pi)), 'r-o')
 plt.show()
 ```
-![](https://matplotlib.org/3.1.1/_images/sphx_glr_customizing_001.png)
+<!--![](https://matplotlib.org/3.1.1/_images/sphx_glr_customizing_001.png)-->
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_customizing_001.png" width="57%">
 
 ## matplotlib rcParams
 
@@ -1016,7 +1017,8 @@ plt.plot(data)
 
 plt.show()
 ```
-![](https://matplotlib.org/3.1.1/_images/sphx_glr_customizing_002.png)
+<!--![](https://matplotlib.org/3.1.1/_images/sphx_glr_customizing_002.png)-->
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_customizing_002.png" width="57%">
 
 Matplotlib还提供了一些方便的功能来修改rc设置。 使用关键字参数，可以使用 matplotlib.rc()) 命令一次修改单个组中的多个设置：  
 ```python
@@ -1024,8 +1026,8 @@ mpl.rc('lines', linewidth=4, color='g')
 plt.plot(data)
 plt.show()
 ```
-![](https://matplotlib.org/3.1.1/_images/sphx_glr_customizing_003.png)
-
+<!--![](https://matplotlib.org/3.1.1/_images/sphx_glr_customizing_003.png)-->
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_customizing_003.png" width="57%">
 
 ## The *matplotlibrc* file
 
