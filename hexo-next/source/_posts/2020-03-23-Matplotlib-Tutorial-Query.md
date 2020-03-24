@@ -723,6 +723,20 @@ Axes are very similar to subplots but allow placement of plots at any location i
 <img src="/images/2020-03/axes-2.png">
 {% endgp %}
 
+
+### Ticks
+
+Well formatted ticks are an important part of publishing-ready figures. Matplotlib provides a totally configurable system for ticks. There are tick locators to specify where ticks should appear and tick formatters to give ticks the appearance you want. Major and minor ticks can be located and formatted independently from each other. By default minor ticks are not shown, i.e. there is only an empty list for them because it is as NullLocator (see below).
+
+#### Tick Locators
+There are several locators for different kind of requirements:
+
+<img src="/images/2020-03/0323_Query_GitHub_quick5.png" width="80%">
+
+All of these locators derive from the base class matplotlib.ticker.Locator. You can make your own locator deriving from it. Handling dates as ticks can be especially tricky. Therefore, matplotlib provides special locators in matplotlib.dates.
+
+
+<!--<table width="92%"><tr><td style="width: 12%">Class</td><td style="width: 80%">Description</td></tr><tr><td>NullLocator</td><td>No ticks.</td></tr><tr><td>IndexLocator</td><td>Place a tick on every multiple of some base number of points plotted.</td></tr><tr><td>FixedLocator</td><td>Tick locations are fixed.</td></tr><tr><td>LinearLocator</td><td>Determine the tick locations.</td></tr><tr><td>MultipleLocator</td><td>Set a tick on every integer that is multiple of some base.</td></tr><tr><td>AutoLocator</td><td>Select no more than n intervals at nice locations.</td></tr><tr><td>LogLocator</td><td>Determine the tick locations for log axes.</td></tr></table>-->
 <!--
 {% gp 1-2 %}
 <img src="https://github.com/rougier/matplotlib-tutorial/raw/master/figures/subplot-grid.png">
@@ -736,14 +750,8 @@ Axes are very similar to subplots but allow placement of plots at any location i
 <img src="https://github.com/rougier/matplotlib-tutorial/raw/master/figures/axes-2.png">
 {% endgp %}
 -->
-
-
-### Ticks
-
-Well formatted ticks are an important part of publishing-ready figures. Matplotlib provides a totally configurable system for ticks. There are tick locators to specify where ticks should appear and tick formatters to give ticks the appearance you want. Major and minor ticks can be located and formatted independently from each other. By default minor ticks are not shown, i.e. there is only an empty list for them because it is as NullLocator (see below).
-
-#### Tick Locators
-There are several locators for different kind of requirements:
+<!--
+### Ticks Ticks
 
 | Class | Description |
 |-------|-------------|
@@ -754,12 +762,7 @@ There are several locators for different kind of requirements:
 | MultipleLocator | Set a tick on every integer that is multiple of some base. |
 | AutoLocator | Select no more than n intervals at nice locations. |
 | LogLocator  | Determine the tick locations for log axes. |
-
-All of these locators derive from the base class matplotlib.ticker.Locator. You can make your own locator deriving from it. Handling dates as ticks can be especially tricky. Therefore, matplotlib provides special locators in matplotlib.dates.
-
-<img src="/images/2020-03/0323_Query_GitHub_quick5.png" width="80%">
-
-<!--<table width="92%"><tr><td style="width: 12%">Class</td><td style="width: 80%">Description</td></tr><tr><td>NullLocator</td><td>No ticks.</td></tr><tr><td>IndexLocator</td><td>Place a tick on every multiple of some base number of points plotted.</td></tr><tr><td>FixedLocator</td><td>Tick locations are fixed.</td></tr><tr><td>LinearLocator</td><td>Determine the tick locations.</td></tr><tr><td>MultipleLocator</td><td>Set a tick on every integer that is multiple of some base.</td></tr><tr><td>AutoLocator</td><td>Select no more than n intervals at nice locations.</td></tr><tr><td>LogLocator</td><td>Determine the tick locations for log axes.</td></tr></table>-->
+-->
 
 <!--<div style="position: relative; float: left;">--->
 <!--
