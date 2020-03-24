@@ -7,6 +7,8 @@ categories:
 tags:
   - Commands
   - Linux
+  - Git
+  - Markdown
 ---
 
 [comment]: <> (updated: Git, Markdown, Linux, Vim 常用命令汇总)

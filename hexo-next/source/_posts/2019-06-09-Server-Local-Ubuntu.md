@@ -6,6 +6,8 @@ categories:
   - Records
 tags: 
   - Configure
+  - Linux
+  - Git
 ---
 
 
