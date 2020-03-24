@@ -1525,3 +1525,11 @@ INFO  Deploy done: git
 ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ 
 ```
 
+clean
+```bash
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ hexo clean
+INFO  Deleted database.
+INFO  Deleted public folder.
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$
+```
+
