@@ -6,7 +6,6 @@ categories:
   - Drafting
 tags:
   - Notes
-  - Python
   - Matplotlib
 ---
 
