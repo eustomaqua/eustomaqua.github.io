@@ -8,6 +8,7 @@ tags:
   - Hexo
   - Debug
   - LaTeX
+  - Markdown
 ---
 
 
@@ -609,7 +610,7 @@ html 写法:
 -->
 
 `list-style-type` 常见可选 *示例* 
-<ol style="line-height: 1ex">
+<ol style="line-height: 1.7ex">
   <li style="list-style-type: square;"> square 实心方块</li>
   <li style="list-style-type: disc;">   disc 实心圆，默认值</li>
   <li style="list-style-type: circle;"> circle 空心圆</li>
@@ -629,7 +630,7 @@ html 写法:
 </ol>
 
 ```markdown
-<ol style="line-height: 1ex">
+<ol style="line-height: 1ex"> <!--2ex-->
   <li style="list-style-type: square;"> square </li>
   <li style="list-style-type: disc;">   disc   </li>
   <li style="list-style-type: circle;"> circle </li>
@@ -714,7 +715,51 @@ html 写法:
   有一部分科技论文写作参考书，例如 *Mastering Scientific and Medical Writing: A Self-help Guide*，认为在科技论文中三种 em dash 一律不应采用，em dash 经常表示一种强有力的打断，如果可能，最好用更平滑、更柔和的圆括弧替代。
   权威的 *Scientific Style and Format: The CBE Manual for Authors, Editors, and Publishers* 也不推荐在参考文献中使用 3-em dash 来表示相同作者这一格式。
 
-## Markdown 语法
+## 列表: 倒序, 序号起始点
+有序列表的序号可以自行设置起始点，而非从默认值 1 开始；也可以倒序展示。
+
+语法 (其中若写成 `reversed="1"` 也是一样的效果)
+```markdown
+<ol style="line-height: 1ex; list-style-type: lower-roman;" reversed="0">
+    <li>Part I
+        <ol style="list-style-type: decimal;" start="3">
+            <li>Item 1</li>
+            <li>Item 2</li>
+        </ol>
+    </li>
+    <li>Part II
+        <ol style="list-style-type: decimal;" start="7">
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ol>
+    </li>
+</ol>
+```
+展示效果
+<ol style="line-height: 1ex; list-style-type: lower-roman;" reversed="0">
+    <li>Part I
+        <ol style="list-style-type: decimal;" start="3">
+            <li>Item 1</li>
+            <li>Item 2</li>
+        </ol>
+    </li>
+    <li>Part II
+        <ol style="list-style-type: decimal;" start="7">
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ol>
+    </li>
+</ol>
+
+ol 序号不重新开始  
+[ol 有序列表序号的倒序](http://note.rpsh.net/posts/2011/12/27/reverse-ordered-lists-in-html5/)  
+[ol 腾讯云](https://cloud.tencent.com/developer/section/1189739)  
+[HTML \<ol\> 元素](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/ol)  
+[关于css中为什么ol标签不显示序号的解决办法](https://blog.csdn.net/FJ2010080080026/article/details/38581173)  
+
+
+## Md 部分语法 (超链接, 锚点, 任务列表)
+<!--## Markdown 语法-->
 
 ### 超链接
 
@@ -835,6 +880,7 @@ e.g.,
 - [ ] 骑车
 - [x] 吃饭
 - [ ] 睡觉
+
 
 
 ## Q & A
