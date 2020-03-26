@@ -1,13 +1,17 @@
 ---
 title: 虚拟机配置 (Ubuntu, Python)
 date: 2018-07-07 16:51:10
-updated:
+updated: 2018-07-07 16:51:10
 categories:
   - Records
 tags:
   - Configure
   - Linux
 ---
+<!--
+updated:
+Edited on 24 Mar 2020 10:02:16
+-->
 
 
 # VirtualBox 安装 Ubuntu 16.04

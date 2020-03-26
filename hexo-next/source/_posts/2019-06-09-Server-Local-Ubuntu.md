@@ -1,7 +1,7 @@
 ---
 title: 远程服务器与本地机的使用 (Ubuntu 16.04)
 date: 2019-06-09 23:02:59
-updated: 
+updated: 2019-06-09 23:02:59
 categories: 
   - Records
 tags: 
@@ -9,6 +9,12 @@ tags:
   - Linux
   - Git
 ---
+<!--
+date: 2019-06-09 23:02:59
+updated: 
+
+Modified: 24 Mar 2020 10:05:57
+-->
 
 
 # Server

@@ -1,7 +1,7 @@
 ---
 title: Logging in Python (日志处理)
 date: 2018-09-18 16:26:21
-updated:
+updated: 2018-09-18 16:26:21
 categories:
   - Programming
 tags:

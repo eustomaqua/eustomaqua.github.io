@@ -1,7 +1,7 @@
 ---
 title: Setup on Linux (Ubuntu, CentOS 7)
 date: 2020-02-08 21:32:59
-updated: 
+updated: 2020-02-08 21:32:59
 categories:
   - Records
 tags:

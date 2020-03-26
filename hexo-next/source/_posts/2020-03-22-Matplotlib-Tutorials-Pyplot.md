@@ -1,7 +1,7 @@
 ---
 title: Matplotlib Tutorials - 3. matplotlib.pyplot.plot
 date: 2020-03-22 18:04:23
-updated: 
+updated: 2020-03-22 18:04:23
 categories:
   - Drafting
 tags:

@@ -1,7 +1,7 @@
 ---
 title: Matplotlib Tutorials - 5. Gallery
 date: 2020-03-24 23:31:03
-updated: 
+updated: 2020-03-24 23:31:03
 categories:
   - Drafting
 tags:
