@@ -363,7 +363,7 @@ sns.relplot(x="timepoint", y="signal", estimator=None, kind="line", data=fmri)
 plt.show()
 ```
 
-{% gp 2-2 %}
+{% gp 4-3 %}
 <img src="/images/2020-03/0326_sns_plot_visual2_ca.png">
 <img src="/images/2020-03/0326_sns_plot_visual2_cb.png">
 <img src="/images/2020-03/0326_sns_plot_visual2_cc.png">
@@ -422,7 +422,7 @@ plt.show()
 {% endgp %}
 
 `hue="event | region", style="region | region"`
-{% gp 2-2 %}
+{% gp 4-3 %}
 <img src="/images/2020-03/0326_sns_plot_visual2_dd.png">
 <img src="/images/2020-03/0326_sns_plot_visual2_dd2.png">
 <img src="/images/2020-03/0326_sns_plot_visual2_dd3.png">

@@ -9,6 +9,7 @@ tags:
   - Debug
   - LaTeX
   - Markdown
+  - Git
 ---
 
 
@@ -881,9 +882,242 @@ e.g.,
 - [x] 吃饭
 - [ ] 睡觉
 
+## 多图模式
+
+```markdown
+{% gp r-c %}
+<img src=""> x n
+{% endgp %}
+```
+
+| n | r-c | result |
+|---|-----|--------|
+| 2 | 1-2 | 2 |
+| 3 | 1-3 | 3 |
+| 4 | 4-3 | 2,2 |
+| 5 | 5-3 | 2,3 |
+| 5 | 5-2 | 2,1,2 |
+| 5 | 8-7 | 3,2 |
+| 7 | 8-5 | 2,3,2 |
+
+若是一张图，就使用 `<img src="" width="?%">` 即可。  
+`?%` 可为 1-100 间任意值，代表整个网页宽度的百分比。
+
+若是连续几张图，比如说两张，  
+下面这两种写法展示出来虽然都是分两行展示，但是间隙略有不同：  
+第一种两张图中间紧挨着，几乎没有缝隙；  
+第二种空隙更大，仿佛就是分了两行。  
+其中 `?%` 仍然同上，不非得是 `width="100%"` 
+```markdown
+# Method 1
+<img src="" width="?%"><img src="" width="?%">
+
+# Method 2
+<img src="" width="?%">
+<img src="" width="?%">
+```
 
 
 ## Q & A
+
+# Git & GitHub
+
+## "ca-certificates" & "RPC failed; curl"
+
+第一个是 ssh 验证问题，我在 Ubuntu Firefox 中尝试打开 github，也提示了连接问题（现在又好了，浏览器可以进），所以可能是那会就是连不上？  
+第二个按照网上的方法并没解决，其中一个是 ·git config xxx number· ，后来我又把文件都加回来（上一个 push 是试图删掉一些文件的），即压缩后的图片，又可以正常 push 了。所以难道是删除文件不行？
+
+*Used:*
+`git config http.sslverify false`
+`git config http.postBuffer 1048576000`
+
+
+fatal: unable to access : server certificate verification failed. CAfile: /etc/ssl/certs/ca-certificates.crt CRLfile: none  
+[git错误error: server certificate verification failed. CAfile: /etc/ssl/certs/ca-certificates.crt CRLfile: none](https://www.jianshu.com/p/7d599bdf370a)  
+[Git: client error, server certificate verification failed](https://fabianlee.org/2019/01/28/git-client-error-server-certificate-verification-failed/)  
+[\[SOLVED\] "server certificate verification failed"](https://bbs.archlinux.org/viewtopic.php?id=251096)  
+[Server certificate verification failed. CAfile: /etc/ssl/certs/ca-certificates.crt CRLfile: none](https://github.com/NVIDIA/nvidia-docker/issues/813)  
+[错误：server certificate verification failed. CAfile: /etc/ssl/certs/ca-certificates.crt CRLfile: none](https://blog.csdn.net/liurizhou/article/details/91361223)  
+[server certificate verification failed. CAfile: /etc/ssl/certs/ca-certificates.crt CRLfile: none](https://stackoverflow.com/questions/21181231/server-certificate-verification-failed-cafile-etc-ssl-certs-ca-certificates-c)  
+
+error: RPC failed; curl 56 GnuTLS recv error (-54): Error in the pull function.  
+[git error: RPC failed; curl 56 GnuTLS](https://stackoverflow.com/questions/38378914/git-error-rpc-failed-curl-56-gnutls)  
+[\[Solution\] gnutls_handshake() failed GIT repository – AWS codecommit](https://devopscube.com/gnutls-handshake-failed-aws-codecommit/)  
+[error: RPC failed; curl 56 GnuTLS recv error (-54): Error in the pull function.](https://blog.csdn.net/ai2000ai/article/details/80708079)  
+
+您必须在 sources.list 中指定代码源(deb-src) URI  
+[E: 您必须在 sources.list 中指定代码源(deb-src) URI 解决办法](https://blog.csdn.net/weixin_38634889/article/details/97941817)  
+[Ubuntu下安装gcc报错：E: 您必须在 sources.list 中指定代码源(deb-src) URI](https://www.cnblogs.com/51ma/p/12033773.html)  
+[E: 您必须在 sources.list 中指定代码源(deb-src) URI 解决办法](https://blog.csdn.net/Zhanganliu/article/details/86592524)  
+
+
+### server certificate verification failed. CAfile
+fatal: unable to access : server certificate verification failed. CAfile: /etc/ssl/certs/ca-certificates.crt CRLfile: none
+
+```bash
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git push
+fatal: unable to access 'https://github.com/eustomaqua/eustomaqua.github.io.git/': server certificate verification failed. CAfile: /etc/ssl/certs/ca-certificates.crt CRLfile: none
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ date -s
+date：选项需要一个参数 -- s
+Try 'date --help' for more information.
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ date --s
+date：选项 ‘--set’ 需要一个参数
+Try 'date --help' for more information.
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ date --help
+用法：date [选项]... [+格式]
+　或：date [-u|--utc|--universal] [MMDDhhmm[[CC]YY][.ss]]
+Display the current time in the given FORMAT, or set the system date.
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ date
+Thu Mar 26 18:09:05 CDT 2020
+
+
+
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ sudo apt-get install apt-transport-https ca-certificates -y
+[sudo] ubuntu 的密码： 
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+下列软件包是自动安装的并且现在不需要了：
+  linux-headers-4.15.0-47 linux-headers-4.15.0-47-generic
+  linux-headers-4.15.0-50 linux-headers-4.15.0-50-generic
+  linux-headers-4.15.0-51 linux-headers-4.15.0-51-generic
+  linux-headers-4.15.0-52 linux-headers-4.15.0-52-generic
+  linux-headers-4.15.0-54 linux-headers-4.15.0-54-generic
+  linux-headers-4.15.0-55 linux-headers-4.15.0-55-generic
+  linux-image-4.15.0-47-generic linux-image-4.15.0-50-generic
+  linux-image-4.15.0-51-generic linux-image-4.15.0-52-generic
+  linux-image-4.15.0-54-generic linux-image-4.15.0-55-generic
+  linux-modules-4.15.0-47-generic linux-modules-4.15.0-50-generic
+  linux-modules-4.15.0-51-generic linux-modules-4.15.0-52-generic
+  linux-modules-4.15.0-54-generic linux-modules-4.15.0-55-generic
+  linux-modules-extra-4.15.0-47-generic linux-modules-extra-4.15.0-50-generic
+  linux-modules-extra-4.15.0-51-generic linux-modules-extra-4.15.0-52-generic
+  linux-modules-extra-4.15.0-54-generic linux-modules-extra-4.15.0-55-generic
+使用'sudo apt autoremove'来卸载它(它们)。
+下列软件包将被升级：
+  apt-transport-https ca-certificates
+升级了 2 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 159 个软件包未被升级。
+需要下载 194 kB 的归档。
+解压缩后会消耗 0 B 的额外空间。
+获取:1 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-updates/main amd64 apt-transport-https amd64 1.2.32 [26.5 kB]
+获取:2 https://mirrors.tuna.tsinghua.edu.cn/ubuntu xenial-updates/main amd64 ca-certificates all 20170717~16.04.2 [167 kB]
+已下载 194 kB，耗时 0秒 (233 kB/s)   
+正在预设定软件包 ...
+(正在读取数据库 ... 系统当前共安装有 520023 个文件和目录。)
+正准备解包 .../apt-transport-https_1.2.32_amd64.deb  ...
+正在将 apt-transport-https (1.2.32) 解包到 (1.2.29ubuntu0.1) 上 ...
+正准备解包 .../ca-certificates_20170717~16.04.2_all.deb  ...
+正在将 ca-certificates (20170717~16.04.2) 解包到 (20170717~16.04.1) 上 ...
+正在处理用于 man-db (2.7.5-1) 的触发器 ...
+正在设置 apt-transport-https (1.2.32) ...
+正在设置 ca-certificates (20170717~16.04.2) ...
+正在处理用于 ca-certificates (20170717~16.04.2) 的触发器 ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+
+done.
+done.
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ sudo update-ca-certificates
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+
+done.
+done.
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ 
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ 
+
+
+
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ date
+Thu Mar 26 18:12:27 CDT 2020
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git push
+fatal: unable to access 'https://github.com/eustomaqua/eustomaqua.github.io.git/': server certificate verification failed. CAfile: /etc/ssl/certs/ca-certificates.crt CRLfile: none
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ openssl s_client -showcerts -servername git.mycompany.com -connect git.mycompany.com:443 </dev/null 2>/dev/null | sed -n -e '/BEGIN\ CERTIFICATE/,/END\ CERTIFICATE/ p'  > git-mycompany-com.pem
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ 
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ date
+Thu Mar 26 18:14:32 CDT 2020
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ 
+
+
+
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git push
+fatal: unable to access 'https://github.com/eustomaqua/eustomaqua.github.io.git/': server certificate verification failed. CAfile: /etc/ssl/certs/ca-certificates.crt CRLfile: none
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git config
+用法：git config [<选项>]
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git config http.sslverify
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git config http.sslverify --get
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git config http.sslverify false
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ 
+```
+
+### RPC failed; curl 56 GnuTLS recv error (-54)
+RPC failed; curl 56 GnuTLS recv error (-54): Error in the pull function.
+
+```bash
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git push
+Username for 'https://github.com': eustomaqua
+Password for 'https://eustomaqua@github.com': 
+对象计数中: 67, 完成.
+Delta compression using up to 2 threads.
+压缩对象中: 100% (67/67), 完成.
+写入对象中: 100% (67/67), 933.08 KiB | 0 bytes/s, 完成.
+Total 67 (delta 24), reused 0 (delta 0)
+error: RPC failed; curl 56 GnuTLS recv error (-54): Error in the pull function.
+fatal: The remote end hung up unexpectedly
+fatal: The remote end hung up unexpectedly
+Everything up-to-date
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ 
+
+
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git status
+位于分支 hexo-next
+您的分支领先 'origin/hexo-next' 共 3 个提交。
+  （使用 "git push" 来发布您的本地提交）
+未跟踪的文件:
+  （使用 "git add <文件>..." 以包含要提交的内容）
+
+    git-mycompany-com.pem
+
+提交为空，但是存在尚未跟踪的文件（使用 "git add" 建立跟踪）
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ whereis git-mycompany-com.pem
+git-mycompany-com:
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git status
+位于分支 hexo-next
+您的分支领先 'origin/hexo-next' 共 3 个提交。
+  （使用 "git push" 来发布您的本地提交）
+无文件要提交，干净的工作区
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ 
+
+
+
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git status
+位于分支 hexo-next
+您的分支领先 'origin/hexo-next' 共 3 个提交。
+  （使用 "git push" 来发布您的本地提交）
+无文件要提交，干净的工作区
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git push
+Username for 'https://github.com': eustomaqua
+Password for 'https://eustomaqua@github.com': 
+对象计数中: 67, 完成.
+Delta compression using up to 2 threads.
+压缩对象中: 100% (67/67), 完成.
+写入对象中: 100% (67/67), 933.08 KiB | 0 bytes/s, 完成.
+Total 67 (delta 24), reused 0 (delta 0)
+error: RPC failed; curl 56 GnuTLS recv error (-54): Error in the pull function.
+fatal: The remote end hung up unexpectedly
+fatal: The remote end hung up unexpectedly
+Everything up-to-date
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git status
+位于分支 hexo-next
+您的分支领先 'origin/hexo-next' 共 3 个提交。
+  （使用 "git push" 来发布您的本地提交）
+无文件要提交，干净的工作区
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ 
+```
+
+## FAQ
 
 # \*References
 
