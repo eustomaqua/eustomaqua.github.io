@@ -1,6 +1,6 @@
 ---
 title: Hexo+NexT, Trouble Solver
-date:
+date: 2020-03-27 14:59:15
 updated: 2020-03-25 21:36:22
 categories:
   - Records
@@ -23,6 +23,9 @@ Post on __25 Mar 2020
 Created 25 Mar 2020 09:21:22 / Modified: 21:36:00
 
 updated: 2020-03-25 21:36:22
+
+Created: 27 Mar 2020 14:59:15
+Modified: 25 Mar 2020 21:36:22 CDT
 -->
 [Hexo Official: Troubleshooting](https://hexo.io/docs/troubleshooting.html)  
 Hexo (一个快速、简洁且高效的博客框架) 使用中所遇到的一些问题,  
@@ -66,10 +69,10 @@ i.e., 多图模式不能写成 `{\% end gp \%}`; 和 `_` 字符使用时需反�
 ### Error log (错误日志) of Two
 #### FATAL Something's wrong
 ```bash
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ hexo clean
+~/eustomaqua.github.io/hexo-next$ hexo clean
 INFO  Deleted database.
 INFO  Deleted public folder.
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ hexo g
+~/eustomaqua.github.io/hexo-next$ hexo g
 INFO  Start processing
 FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
 Template render error: (unknown path) [Line 32, Column 2]
@@ -95,13 +98,13 @@ Template render error: (unknown path) [Line 32, Column 2]
     at runCallback (timers.js:696:18)
     at tryOnImmediate (timers.js:667:5)
     at processImmediate (timers.js:649:5)
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ 
+~/eustomaqua.github.io/hexo-next$ 
 ```
 #### YAMLException: imcomplete explicit mapping pair
 ```bash
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ hexo clean
+~/eustomaqua.github.io/hexo-next$ hexo clean
 INFO  Deleted database.
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ hexo g
+~/eustomaqua.github.io/hexo-next$ hexo g
 INFO  Start processing
 ERROR Process failed: _posts/2020-03-25-Hexo-Troubles.md
 YAMLException: incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 17:
@@ -153,7 +156,7 @@ Template render error: (unknown path) [Line 32, Column 2]
     at runCallback (timers.js:696:18)
     at tryOnImmediate (timers.js:667:5)
     at processImmediate (timers.js:649:5)
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ 
+~/eustomaqua.github.io/hexo-next$ 
 ```
 
 ## 冒号字符不可出现在标题中
@@ -174,7 +177,7 @@ tags:
 
 **Error log**
 ```bash
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ hexo g
+~/eustomaqua.github.io/hexo-next$ hexo g
 INFO  Start processing
 ERROR Process failed: _posts/2020-03-25-Hexo-Troubles.md
 YAMLException: incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 17:
@@ -204,7 +207,7 @@ YAMLException: incomplete explicit mapping pair; a key node is missed; or follow
     at Promise._settlePromise0 (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/promise.js:614:10)
 INFO  Files loaded in 3.31 s
 INFO  0 files generated in 12 s
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ 
+~/eustomaqua.github.io/hexo-next$ 
 ```
 
 ## 百分号`\%`出现在大括号`{}`中需反转义
@@ -237,7 +240,7 @@ i.e., 百分号 `\%` 出现在行间代码中需反转义
 
 **Error log**
 ```bash
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ hexo g
+~/eustomaqua.github.io/hexo-next$ hexo g
 INFO  Start processing
 FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
 Template render error: (unknown path) [Line 9, Column 113]
@@ -263,7 +266,7 @@ Template render error: (unknown path) [Line 9, Column 113]
     at runCallback (timers.js:696:18)
     at tryOnImmediate (timers.js:667:5)
     at processImmediate (timers.js:649:5)
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ 
+~/eustomaqua.github.io/hexo-next$ 
 ```
 
 ## 文中出现`#`时需反转义,不能直接使用
@@ -289,7 +292,7 @@ ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$
 
 **Error log**
 ```bash
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ hexo s
+~/eustomaqua.github.io/hexo-next$ hexo s
 INFO  Start processing
 INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
 Unhandled rejection Template render error: (unknown path)
@@ -317,7 +320,7 @@ Unhandled rejection Template render error: (unknown path)
     at processImmediate (timers.js:649:5)
 
 ^CINFO  Have a nice day
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ hexo g
+~/eustomaqua.github.io/hexo-next$ hexo g
 INFO  Start processing
 FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
 Template render error: (unknown path)
@@ -343,7 +346,7 @@ Template render error: (unknown path)
     at runCallback (timers.js:696:18)
     at tryOnImmediate (timers.js:667:5)
     at processImmediate (timers.js:649:5)
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ 
+~/eustomaqua.github.io/hexo-next$ 
 ```
 
 
@@ -466,7 +469,7 @@ ii) 我对<u>日期的填写</u>通常有 ***四种可能*** 方式：
   ```
   - Error log
 > ```bash
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ hexo g
+~/eustomaqua.github.io/hexo-next$ hexo g
 INFO  Start processing
 ERROR Process failed: _posts/2020-03-25-Hexo-Troubles.md
 YAMLException: incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 2, column 23:
@@ -496,8 +499,274 @@ YAMLException: incomplete explicit mapping pair; a key node is missed; or follow
     at Promise._settlePromise0 (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/promise.js:614:10)
 INFO  Files loaded in 2.55 s
 INFO  0 files generated in 10 s
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ 
+~/eustomaqua.github.io/hexo-next$ 
 ```
+
+## 网站底部字数统计
+
+[HEXO\_网站底部字数统计](http://www.wenxin.wiki/2018/11/22/HEXO-%E7%BD%91%E7%AB%99%E5%BA%95%E9%83%A8%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1/)  
+[Hexo 搭建个人博客系列：进阶设置篇](http://yearito.cn/posts/hexo-advanced-settings.html)  
+
+### Attempt 1: Failed
+
+1. 安装插件，切换到根目录
+  (早在搭建博客时已安装，详见 {% post_link 2018-07-14-Hexo-NexT Build_up_your_website %} )
+  ```bash
+  $ npm install hexo-wordcount --save
+  ```
+
+2. 找到 `/themes/next/layout/_partials/footer.swig` 文件， 
+  第 42--52 行内的最后加上如下第 12--15 行代码
+  ```html
+{% if theme.footer.counter %}
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <span class="post-meta-divider">|</span>
+  <span id="busuanzi_container_site_pv">
+    Total visits<span id="busuanzi_value_site_pv"></span>
+  </span>
+  <span class="post-meta-divider">|</span>
+  <span id="busuanzi_container_site_uv">
+    Total visitors<span id="busuanzi_value_site_uv"></span>
+  </span>
+  <span class="post-count">|</span>
+  <span>
+    Total count: {{ totalcount(site) }} words
+  </span>
+{% endif %}
+  ```
+
+### Attempt 2: Not as expected
+
+1. 在根目录下执行如下命令安装相关依赖
+```bash
+$ npm install hexo-symbols-count-time --save
+```
+  启动该功能需要同时修改站点配置文件和主题配置文件。
+```bash
+~/eustomaqua.github.io/hexo-next$ npm install hexo-symbols-count-time --save
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.4 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.4: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
++ hexo-symbols-count-time@0.7.1
+added 31 packages from 289 contributors and audited 3611 packages in 100.142s
+found 195 vulnerabilities (136 low, 5 moderate, 54 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+~/eustomaqua.github.io/hexo-next$ 
+
+
+~/eustomaqua.github.io/hexo-next$ npm audit fix
+npm WARN checkPermissions Missing write access to /home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/underscore.string
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@~2.1.2 (node_modules/nunjucks/node_modules/chokidar/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.0.0 (node_modules/chokidar/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.12: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
+npm ERR! path /home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/underscore.string
+npm ERR! code EACCES
+npm ERR! errno -13
+npm ERR! syscall access
+npm ERR! Error: EACCES: permission denied, access '/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/underscore.string'
+npm ERR!  { [Error: EACCES: permission denied, access '/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/underscore.string']
+npm ERR!   cause:
+npm ERR!    { Error: EACCES: permission denied, access '/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/underscore.string'
+npm ERR!      errno: -13,
+npm ERR!      code: 'EACCES',
+npm ERR!      syscall: 'access',
+npm ERR!      path:
+npm ERR!       '/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/underscore.string' },
+npm ERR!   isOperational: true,
+npm ERR!   stack:
+npm ERR!    'Error: EACCES: permission denied, access \'/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/underscore.string\'',
+npm ERR!   errno: -13,
+npm ERR!   code: 'EACCES',
+npm ERR!   syscall: 'access',
+npm ERR!   path:
+npm ERR!    '/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/underscore.string' }
+npm ERR! 
+npm ERR! The operation was rejected by your operating system.
+npm ERR! It is likely you do not have the permissions to access this file as the current user
+npm ERR! 
+npm ERR! If you believe this might be a permissions issue, please double-check the
+npm ERR! permissions of the file and its containing directories, or try running
+npm ERR! the command again as root/Administrator (though this is not recommended).
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/ubuntu/.npm/_logs/2020-03-27T12_17_55_906Z-debug.log
+~/eustomaqua.github.io/hexo-next$ 
+```
+
+2. 在 *站点配置文件* `./_config.yml` 中添加配置项，用于控制每项统计信息是否显示。
+```yaml
+symbols_count_time:
+  symbols: true # 统计单篇文章字数
+  time: false # 取消估算单篇文章阅读时间
+  total_symbols: true # 统计站点总字数
+  total_time: false # 取消估算站点总阅读时间
+```
+
+3. 在 *主题配置文件* `themes/next/_config.yml` 中做如下修改，用于控制统计信息的显示样式。
+```yaml
+symbols_count_time:
+  separated_meta: false # 统计信息不换行显示
+  item_text_post: true # 文章统计信息中是否显示“本文字数/阅读时长”等描述文字
+  item_text_total: true # 站点统计信息中是否显示“本文字数/阅读时长”等描述文字
+  awl: 4 # Average Word Length：平均字符长度
+  wpm: 275 # Words Per Minute：阅读速度
+```
+  汉字的平均字符长度为 1.5 ，如果在文章中使用纯中文进行写作（没有混杂英文），那么推荐设置 `awl: 2` 及 `wpm: 300`，但是如果文章中存在英文，建议设置 `awl: 4` 及 `wpm: 275`。
+
+4. 因为修改了站点配置文件，所以需要重新启动服务器才能生效。
+
+
+### Attempt 3: Work
+
+1. 卸载模块 hexo-symbols-count-time
+```bash
+~/eustomaqua.github.io/hexo-next$ npm uninstall hexo-symbols-count-time -g
+up to date in 0.076s
+
+~/eustomaqua.github.io/hexo-next$ npm uninstall hexo-symbols-count-time -g
+up to date in 0.051s
+~/eustomaqua.github.io/hexo-next$ npm uninstall hexo-symbols-count-time
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.4 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.4: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
+removed 31 packages and audited 3570 packages in 7.567s
+found 195 vulnerabilities (136 low, 5 moderate, 54 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+~/eustomaqua.github.io/hexo-next$ npm audit fix
+npm WARN checkPermissions Missing write access to /home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/underscore.string
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@~2.1.2 (node_modules/nunjucks/node_modules/chokidar/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.0.0 (node_modules/chokidar/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.12: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
+npm ERR! path /home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/underscore.string
+npm ERR! code EACCES
+npm ERR! errno -13
+npm ERR! syscall access
+npm ERR! Error: EACCES: permission denied, access '/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/underscore.string'
+npm ERR!  { [Error: EACCES: permission denied, access '/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/underscore.string']
+npm ERR!   cause:
+npm ERR!    { Error: EACCES: permission denied, access '/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/underscore.string'
+npm ERR!      errno: -13,
+npm ERR!      code: 'EACCES',
+npm ERR!      syscall: 'access',
+npm ERR!      path:
+npm ERR!       '/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/underscore.string' },
+npm ERR!   isOperational: true,
+npm ERR!   stack:
+npm ERR!    'Error: EACCES: permission denied, access \'/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/underscore.string\'',
+npm ERR!   errno: -13,
+npm ERR!   code: 'EACCES',
+npm ERR!   syscall: 'access',
+npm ERR!   path:
+npm ERR!    '/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/underscore.string' }
+npm ERR! 
+npm ERR! The operation was rejected by your operating system.
+npm ERR! It is likely you do not have the permissions to access this file as the current user
+npm ERR! 
+npm ERR! If you believe this might be a permissions issue, please double-check the
+npm ERR! permissions of the file and its containing directories, or try running
+npm ERR! the command again as root/Administrator (though this is not recommended).
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/ubuntu/.npm/_logs/2020-03-27T13_23_16_146Z-debug.log
+~/eustomaqua.github.io/hexo-next$ 
+```
+
+2. 修改 `/themes/next/layout/_macro/post.swig` 文件，发现第 74 行的 `<div class="post-meta">` 已添加了相应代码，即第 281--292 行
+```yaml
+          {% if theme.word_count %}
+            <span class="post-letters-count">
+              &nbsp; | &nbsp;
+              <span title="{{ __('post.wordcount') }}">
+                {{ wordcount(post.content) }} words
+              </span>
+              &nbsp; | &nbsp;
+              <span title="{{ __('post.min2read') }}">
+                {{ min2read(post.content) }} minutes
+              </span>
+            </span>
+          {% endif %}
+```
+
+3. 修改 `/themes/next/layout/_partials/footer.swig` 文件，在 `原 55--59 行的最前方` (not `原 42--52 行里的最后`) 添加下面代码块中语句
+```yaml
+  <div class="theme-info">
+    <div class="powered-by-post-count"></div>
+    <span class="post-count">共{{ totalcount(site) }}字</span>
+  </div>
+```
+  修饰后第 55--64 行代码如下所示
+  ```yaml
+  <div class="total-wordcount-info">
+    <div class="powered-by-post-count"></div>
+    <span class="post-count">Total {{ totalcount(site) }} Words</span>
+    <span class="post-meta-devider"> | </span>
+  </div>
+  ```
+  或是在 `原 55 行之前` 加上
+  ```yaml
+{% if theme.footer.powered.enable and theme.footer.theme.enable %}
+  <div class="total-wordcount-info">
+    <div class="powered-by-post-count"></div>
+    <span class="post-count">Total {{ totalcount(site) }} Words</span>
+  </div>
+  <span class="post-meta-devider">|</span>
+{% endif %}
+  ```
+
+4. (3') 最后的代码修改为
+```yaml
+{% if theme.footer.powered.enable %}
+  <div class="theme-info">
+    <div class="powered-by-post-count"></div>
+    <span class="post-count">Total {{ totalcount(site) }} Words</span>
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="powered-by">{#
+  #}{{ __('footer.powered', '<a class="theme-link" target="_blank"' + nofollow + ' href="https://hexo.io">Hexo</a>') }}{% if theme.footer.powered.version %} v{{ hexo_env('version') }}{% endif %}{#
+#}</div>
+{% endif %}
+```
+
+hexo 全站总字数  
+[为Hexo NexT主题添加字数统计功能](https://eason-yang.com/2016/11/05/add-word-count-to-hexo-next/)  
+[hexo页脚添加访客人数和总访问量](https://www.jianshu.com/p/c311d31265e0)  
+[Hexo-NexT魔改系列-03-添加数据统计](https://www.wqh4u.cn/2019/09/15/Hexo-NexT%E9%AD%94%E6%94%B9%E7%B3%BB%E5%88%97-03-%E6%B7%BB%E5%8A%A0%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1/)  
+npm 删除插件  
+[npm 安装卸载模块 & ionic插件安装与卸载](https://www.jianshu.com/p/5183053f2e95)  
+[【npm】利用npm安装/删除/发布/更新/撤销发布包目录](https://www.cnblogs.com/penghuwan/p/6973702.html)  
+[npm卸载模块](https://blog.csdn.net/qq_38543537/article/details/78522199)  
+hexo powered by  
+[Hexo 中如何才可去除底部的 Powered by 信息 ?](https://www.zhihu.com/question/47761889)  
+[Hexo-Next底部powered by的logo栏更改以及注意事项（附官方文档,文末有福利链）](https://www.jianshu.com/p/4fbc57269f1b)  
+
+## 站内文章自引
+
+hexo 引用自己的博文  
+[如何在Hexo的博文中引用自己的文章](https://www.mls-tech.info/hexo/hexo-use-internal-link/)  
+[Hexo引用站内文章](https://www.jibing57.com/2017/10/30/how-to-use-post-link-on-hexo/)  
+
+引用自己写的另一篇文章有两种方法。
+
+- 使用标准 Markdown 引用语法，这种写法需要知道 Hexo 将博文转换后的命令规则，*如默认规则是 "/year/month/day/title" 即 "/年/月/日/文章名" ，而我修改成了 "/year/title"*。但是显然这种做法缺乏灵活性和可维护性。
+
+- 也可以使用 Hexo 内置的标签语法来实现文章对内部博文的引用，语法如下：
+```markdown
+{% post_link 文件名(不要后缀) 文章别名(可选) %}
+```
+  其中文件名指的是博文的文件名，例如博客中有一篇文件名为 HelloWorld.md 的博客，就可以使用 ``{\% post_link HelloWorld \%}`` 来引用，Hexo 会自动将 HelloWorld 这篇博文的标题 (title) 显示在文章中，并带上正确的链接。 
+  当然也可以给链接使用另外一个名字，比如 "MyHelloWorld我的"，就可以使用 ``{\% post_link HelloWorld MyHelloWorld我的 \%}``  
+  如果博文在子目录中，也可以包含目录名。
+
+**注意**:  
+1. 文件名这一项是可以带上目录名的，比如若将 HelloWorld.md 文件放在了 `_post/hello` 这个目录下，那么引用时需要跟上目录名，否则会引用不到。
+  ```markdown
+  {% post_link hello/HelloWorld %}
+  ```
+2. 加入内部链接后，直接运行 `hexo server` 是看不到效果的，必须先运行 `hexo generate` 命令重新生成相关的博文才能看到链接。  
 
 
 ## Questions? (with Error log)
@@ -893,11 +1162,17 @@ e.g.,
 | n | r-c | result |
 |---|-----|--------|
 | 2 | 1-2 | 2 |
-| 3 | 1-3 | 3 |
-| 4 | 4-3 | 2,2 |
-| 5 | 5-3 | 2,3 |
-| 5 | 5-2 | 2,1,2 |
+| 3 | 1-3 or 1-2 | 3 |
+| 4 | 4-3 or 5-3 | 2,2 |
+| 4 | 6-5 or 8-7 or 5-4 | 3,1 |
+| 4 | 1-4 or 1-5 | 3,? |
+| 5 | 5-3 or 7-4 | 2,3 |
+| 5 | 5-2 or 6-3 | 2,1,2 |
 | 5 | 8-7 | 3,2 |
+| 6 | 6-3 | 2,1,3 |
+| 6 | 7-4 | 2,3,1 |
+| 6 | 7-3 | 2,2,2 |
+| 6 | 8-7 | 3,3 |
 | 7 | 8-5 | 2,3,2 |
 
 若是一张图，就使用 `<img src="" width="?%">` 即可。  
@@ -916,6 +1191,30 @@ e.g.,
 <img src="" width="?%">
 <img src="" width="?%">
 ```
+
+另外，若是有几张图不好排列的话，可以考虑用 ``<img src="">`` 来占位，如下是 ``两行三列 (其中位置 4 为空，起始点为 1)`` 和 ``三行两列 (图分组为 1-2-1 模式)`` 的代码：
+```markdown
+{% gp 8-7 %}
+<img src="http://seaborn.pydata.org/_images/regression_17_0.png">
+<img src="http://seaborn.pydata.org/_images/regression_19_0.png">
+<img src="http://seaborn.pydata.org/_images/regression_21_0.png">
+<img src="">
+<img src="http://seaborn.pydata.org/_images/regression_23_0.png">
+<img src="http://seaborn.pydata.org/_images/regression_25_0.png">
+{% endgp %}
+
+{% gp 7-3 %}
+<img src="http://seaborn.pydata.org/_images/categorical_36_0.png">
+<img src="">
+<img src="http://seaborn.pydata.org/_images/categorical_38_0.png">
+<img src="/images/2020-03/0327_sns_plot_category2_db2.png">
+<img src="">
+<img src="http://seaborn.pydata.org/_images/categorical_40_0.png">
+{% endgp %}
+```
+<!--Hello World-->
+
+附：如果 `hexo s` 后发现页面显示不正常，可以将 ``<!--"Hello World (optional)"-->`` 注释加在出现不正常的地方 (表现出不正常的位置 / 发现不正常前的最后修改部分)，一般情况下都可以恢复。
 
 
 ## Q & A
@@ -955,24 +1254,24 @@ error: RPC failed; curl 56 GnuTLS recv error (-54): Error in the pull function.
 fatal: unable to access : server certificate verification failed. CAfile: /etc/ssl/certs/ca-certificates.crt CRLfile: none
 
 ```bash
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git push
+~/eustomaqua.github.io$ git push
 fatal: unable to access 'https://github.com/eustomaqua/eustomaqua.github.io.git/': server certificate verification failed. CAfile: /etc/ssl/certs/ca-certificates.crt CRLfile: none
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ date -s
+~/eustomaqua.github.io$ date -s
 date：选项需要一个参数 -- s
 Try 'date --help' for more information.
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ date --s
+~/eustomaqua.github.io$ date --s
 date：选项 ‘--set’ 需要一个参数
 Try 'date --help' for more information.
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ date --help
+~/eustomaqua.github.io$ date --help
 用法：date [选项]... [+格式]
 　或：date [-u|--utc|--universal] [MMDDhhmm[[CC]YY][.ss]]
 Display the current time in the given FORMAT, or set the system date.
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ date
+~/eustomaqua.github.io$ date
 Thu Mar 26 18:09:05 CDT 2020
 
 
 
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ sudo apt-get install apt-transport-https ca-certificates -y
+~/eustomaqua.github.io$ sudo apt-get install apt-transport-https ca-certificates -y
 [sudo] ubuntu 的密码： 
 正在读取软件包列表... 完成
 正在分析软件包的依赖关系树       
@@ -1018,45 +1317,45 @@ Running hooks in /etc/ca-certificates/update.d...
 
 done.
 done.
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ sudo update-ca-certificates
+~/eustomaqua.github.io$ sudo update-ca-certificates
 Updating certificates in /etc/ssl/certs...
 0 added, 0 removed; done.
 Running hooks in /etc/ca-certificates/update.d...
 
 done.
 done.
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ 
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ 
+~/eustomaqua.github.io$ 
+~/eustomaqua.github.io$ 
 
 
 
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ date
+~/eustomaqua.github.io$ date
 Thu Mar 26 18:12:27 CDT 2020
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git push
+~/eustomaqua.github.io$ git push
 fatal: unable to access 'https://github.com/eustomaqua/eustomaqua.github.io.git/': server certificate verification failed. CAfile: /etc/ssl/certs/ca-certificates.crt CRLfile: none
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ openssl s_client -showcerts -servername git.mycompany.com -connect git.mycompany.com:443 </dev/null 2>/dev/null | sed -n -e '/BEGIN\ CERTIFICATE/,/END\ CERTIFICATE/ p'  > git-mycompany-com.pem
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ 
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ date
+~/eustomaqua.github.io$ openssl s_client -showcerts -servername git.mycompany.com -connect git.mycompany.com:443 </dev/null 2>/dev/null | sed -n -e '/BEGIN\ CERTIFICATE/,/END\ CERTIFICATE/ p'  > git-mycompany-com.pem
+~/eustomaqua.github.io$ 
+~/eustomaqua.github.io$ date
 Thu Mar 26 18:14:32 CDT 2020
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ 
+~/eustomaqua.github.io$ 
 
 
 
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git push
+~/eustomaqua.github.io$ git push
 fatal: unable to access 'https://github.com/eustomaqua/eustomaqua.github.io.git/': server certificate verification failed. CAfile: /etc/ssl/certs/ca-certificates.crt CRLfile: none
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git config
+~/eustomaqua.github.io$ git config
 用法：git config [<选项>]
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git config http.sslverify
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git config http.sslverify --get
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git config http.sslverify false
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ 
+~/eustomaqua.github.io$ git config http.sslverify
+~/eustomaqua.github.io$ git config http.sslverify --get
+~/eustomaqua.github.io$ git config http.sslverify false
+~/eustomaqua.github.io$ 
 ```
 
 ### RPC failed; curl 56 GnuTLS recv error (-54)
 RPC failed; curl 56 GnuTLS recv error (-54): Error in the pull function.
 
 ```bash
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git push
+~/eustomaqua.github.io$ git push
 Username for 'https://github.com': eustomaqua
 Password for 'https://eustomaqua@github.com': 
 对象计数中: 67, 完成.
@@ -1068,10 +1367,10 @@ error: RPC failed; curl 56 GnuTLS recv error (-54): Error in the pull function.
 fatal: The remote end hung up unexpectedly
 fatal: The remote end hung up unexpectedly
 Everything up-to-date
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ 
+~/eustomaqua.github.io$ 
 
 
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git status
+~/eustomaqua.github.io$ git status
 位于分支 hexo-next
 您的分支领先 'origin/hexo-next' 共 3 个提交。
   （使用 "git push" 来发布您的本地提交）
@@ -1081,23 +1380,23 @@ ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git status
     git-mycompany-com.pem
 
 提交为空，但是存在尚未跟踪的文件（使用 "git add" 建立跟踪）
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ whereis git-mycompany-com.pem
+~/eustomaqua.github.io$ whereis git-mycompany-com.pem
 git-mycompany-com:
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git status
+~/eustomaqua.github.io$ git status
 位于分支 hexo-next
 您的分支领先 'origin/hexo-next' 共 3 个提交。
   （使用 "git push" 来发布您的本地提交）
 无文件要提交，干净的工作区
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ 
+~/eustomaqua.github.io$ 
 
 
 
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git status
+~/eustomaqua.github.io$ git status
 位于分支 hexo-next
 您的分支领先 'origin/hexo-next' 共 3 个提交。
   （使用 "git push" 来发布您的本地提交）
 无文件要提交，干净的工作区
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git push
+~/eustomaqua.github.io$ git push
 Username for 'https://github.com': eustomaqua
 Password for 'https://eustomaqua@github.com': 
 对象计数中: 67, 完成.
@@ -1109,12 +1408,12 @@ error: RPC failed; curl 56 GnuTLS recv error (-54): Error in the pull function.
 fatal: The remote end hung up unexpectedly
 fatal: The remote end hung up unexpectedly
 Everything up-to-date
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ git status
+~/eustomaqua.github.io$ git status
 位于分支 hexo-next
 您的分支领先 'origin/hexo-next' 共 3 个提交。
   （使用 "git push" 来发布您的本地提交）
 无文件要提交，干净的工作区
-ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io$ 
+~/eustomaqua.github.io$ 
 ```
 
 ## FAQ

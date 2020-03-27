@@ -53,6 +53,11 @@
 
 
 {% if theme.footer.powered.enable %}
+  <div class="theme-info">
+    <div class="powered-by-post-count"></div>
+    <span class="post-count">Total {{ totalcount(site) }} Words</span>
+  </div>
+  <span class="post-meta-divider">|</span>
   <div class="powered-by">{#
   #}{{ __('footer.powered', '<a class="theme-link" target="_blank"' + nofollow + ' href="https://hexo.io">Hexo</a>') }}{% if theme.footer.powered.version %} v{{ hexo_env('version') }}{% endif %}{#
 #}</div>

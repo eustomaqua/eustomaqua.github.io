@@ -306,8 +306,7 @@ post_meta:
 symbols_count_time:
   ##separated_meta: true
   item_text_post: true
-  ## item_text_total: false
-  item_text_total: true
+  item_text_total: false
   awl: 4
   wpm: 275
   ##
@@ -316,7 +315,7 @@ symbols_count_time:
   min2read: true    # 单篇 阅读时长
   ## totalcount: false # 网站 字数统计
   totalcount: true
-  separated_meta: true
+  separated_meta: false
 
 codeblock:
   # Manual define the border radius in codeblock
