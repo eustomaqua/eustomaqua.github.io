@@ -166,10 +166,12 @@ $ rm -r cudasamples
 ~/Software$ ls
 Anaconda3-5.2.0-Linux-x86_64.sh  cudnn-10.0-linux-x64-v7.6.4.38.solitairetheme8
 cuda_10.0.130_410.48_linux.run   Python-3.6.1.tgz
+
 ~/Software$ chmod +x cuda_10.0.130_410.48_linux.run
 ~/Software$ ls
 Anaconda3-5.2.0-Linux-x86_64.sh  cudnn-10.0-linux-x64-v7.6.4.38.solitairetheme8
 cuda_10.0.130_410.48_linux.run   Python-3.6.1.tgz
+
 ~/Software$ ./cuda_10.0.130_410.48_linux.run
 Logging to /tmp/cuda_install_25104.log
 Using more to view the EULA.
@@ -264,6 +266,7 @@ CUDA Version 10.0.130
 Anaconda3-5.2.0-Linux-x86_64.sh  cuda-samples
 cuda-10.0                        cudnn-10.0-linux-x64-v7.6.4.38.solitairetheme8
 cuda_10.0.130_410.48_linux.run   Python-3.6.1.tgz
+
 ~/Software$ cp cudnn-10.0-linux-x64-v7.6.4.38.solitairetheme8 cudnn-10.0-linux-x64-v7.6.4.38.tgz
 ~/Software$ tar -xvf cudnn-10.0-linux-x64-v7.6.4.38.tgz
 cuda/include/cudnn.h
@@ -694,13 +697,13 @@ Type "help", "copyright", "credits" or "license" for more information.
 2020-04-03 07:02:35.550509: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libnvinfer.so.6
 2020-04-03 07:02:35.552571: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libnvinfer_plugin.so.6
 >>> import adanet
-WARNING:tensorflow:From /home/eustomaqua/VirtualEnv/anaconda3/envs/adapruning/lib/python3.6/site-packages/adanet/core/tpu_estimator.py:39: The name tf.estimator.tpu.TPUEstimator is deprecated. Please use tf.compat.v1.estimator.tpu.TPUEstimator instead.
+WARNING:tensorflow:From /home/eustomaqua/VirtualEnv/anaconda3/envs/adanet/lib/python3.6/site-packages/adanet/core/tpu_estimator.py:39: The name tf.estimator.tpu.TPUEstimator is deprecated. Please use tf.compat.v1.estimator.tpu.TPUEstimator instead.
 
 >>>
 >>> import tensorrt
 >>> import uff
 Traceback (most recent call last):
-  File "/home/eustomaqua/VirtualEnv/anaconda3/envs/adapruning/lib/python3.6/site-packages/uff/converters/tensorflow/conversion_helpers.py", line 18, in <module>
+  File "/home/eustomaqua/VirtualEnv/anaconda3/envs/adanet/lib/python3.6/site-packages/uff/converters/tensorflow/conversion_helpers.py", line 18, in <module>
     from tensorflow import GraphDef
 ImportError: cannot import name 'GraphDef'
 
@@ -708,9 +711,9 @@ During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-  File "/home/eustomaqua/VirtualEnv/anaconda3/envs/adapruning/lib/python3.6/site-packages/uff/__init__.py", line 2, in <module>
+  File "/home/eustomaqua/VirtualEnv/anaconda3/envs/adanet/lib/python3.6/site-packages/uff/__init__.py", line 2, in <module>
     from uff.converters.tensorflow.conversion_helpers import from_tensorflow  # noqa
-  File "/home/eustomaqua/VirtualEnv/anaconda3/envs/adapruning/lib/python3.6/site-packages/uff/converters/tensorflow/conversion_helpers.py", line 23, in <module>
+  File "/home/eustomaqua/VirtualEnv/anaconda3/envs/adanet/lib/python3.6/site-packages/uff/converters/tensorflow/conversion_helpers.py", line 23, in <module>
     https://www.tensorflow.org/install/""".format(err))
 ImportError: ERROR: Failed to import module (cannot import name 'GraphDef')
 Please make sure you have TensorFlow installed.
@@ -946,6 +949,51 @@ $ cat README.md
 
 此外使用 tensorflow-gpu==2.1.0 时，发现它调用的是 TensorRT 6.x ，不能用 TensorRT 7.x；  
 把 tensorflow-gpu 版本降级为 1.15.2 后，仍然可以使用 TensorRT 6.x
+
+```bash
+# 1. Install CUDA 10.0.130, cuDNN 7.6.4
+#    install tensorflow-gpu=2.1.0 or 1.15.2 (recommend 1.15.2 for uff)
+$ pip install tensorflow-gpu==1.*
+
+# 2. download TensorRT tar from NVIDIA
+$ wget TensorRT-6.0.1.5.Ubuntu-{16/18}.04.x86_64-gnu.cuda-10.0.cudnn7.6.tar.gz
+$ tar -xzvf TensorRT-6.0.1.5.Ubuntu-16.04.x86_64-gpu.cuda-10.0.cudnn7.6.tar.gz
+
+# 3. .bashrc
+$ vim ~/.bashrc
+```
+```bash
+# add by Anaconda3 install
+export PATH="/home/eustomaqua/VirtualEnv/anaconda3/bin:$PATH"
+# self added for Nvidia
+export PATH=$HOME/Software/cuda-10.0/bin:$PATH
+export LD_LIBRARY_PATH=$HOME/Software/cuda-10.0/lib64:$LD_LIBRARY_PATH
+# self modified for TensorRT
+export LD_LIBRARY_PATH=$HOME/Software/TensorRT-6.0.1.5/lib:$LD_LIBRARY_PATH
+export CUDA_INSTALL_DIR=$HOME/Software/cuda-10.0
+export CUDNN_INSTALL_DIR=$HOME/Software/cuda-10.0
+```
+```bash
+$ # source ~/.bashrc
+$ echo $HOME
+
+# 4. install tensorrt
+$ cd TensorRT-6.0.1.5
+$ cd python
+$ pip install tensorrt-6.0.1.5-cp36-none-linux_x86_64.whl
+
+# 5. install uff
+$ cd ../uff
+$ pip install uff-0.6.5-py2.py3-none-any.whl
+```
+```python
+# 6. check
+>>> import tensorflow as tf
+>>> import adanet
+>>> import tensorrt
+>>> tensorrt.__version__
+>>> import uff
+```
 
 # \*References
 

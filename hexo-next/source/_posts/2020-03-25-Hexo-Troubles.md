@@ -350,6 +350,80 @@ Template render error: (unknown path)
 ```
 
 
+## lastIndex of undefined
+
+简记出问题的文件为 `bug.md`
+1. 寻找占用端口 4000 的程序并杀掉，但是好像没有占用的。另外这个命令需 root 权限
+  ```bash
+  $ su
+  # netstat -tunlp | grep 4000
+  # kill -9 [process-id]
+  # exit
+  ```
+  此处记录另外两个命令，但是这里没有尝试
+  ```bash
+  $ ps -ef | grep 4000
+  $ lsof -i:4000
+  ```
+2. 尝试逐块重新复制进来，发现 hexo g 正常。但是 hexo s 会提示端口被占用，也就是最开始出现的错误情形。此时再继续尝试 hexo g 就会报错。两个错误提示可见下列的两个 log  
+  另外有网友说是代码块没有指定语言的问题，这个好像也没有找到。 ref: [运行`hexo g`出错 \#1913](https://github.com/hexojs/hexo/issues/1913)
+3. 把错误文件移除，尝试 hexo g, hexo s 可以正常生成网页。此时再把 `bug.md` 移入，即可正常执行。
+
+查看 使用端口的程序  
+[linux 下查看进程占用端口和端口号占用进程命令](https://blog.csdn.net/gochenguowei/article/details/80926000)  
+[linux下查看某一端口被哪个进程占用](https://blog.csdn.net/xiangwanpeng/article/details/78804225)  
+here: http://hexo.io/docs/troubleshooting.html Error: listen EADDRINUSE 0.0.0.0:4000  
+[hexo搭建博客过程中出现的问题，4000端口被占用](https://segmentfault.com/q/1010000008546859)  
+[Hexo--hexo server失败，提示端口被占用](https://www.difashi.com/2019-08/17-hexo-2.html)  
+
+TypeError: Cannot set property 'lastIndex' of undefined  
+[运行`hexo g`出错 \#1913](https://github.com/hexojs/hexo/issues/1913)  
+[TypeError: Cannot set property 'lastIndex' of undefined](https://github.com/hexojs/hexo/issues/2380)  
+
+```bash
+# hexo-g  # work normally
+
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ hexo s
+FATAL Port 4000 has been used. Try other port instead.
+FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
+Error: listen EADDRINUSE 0.0.0.0:4000
+    at Server.setupListenHandle [as _listen2] (net.js:1335:14)
+    at listenInCluster (net.js:1383:12)
+    at doListen (net.js:1509:7)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ 
+```
+
+```bash
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ hexo g
+INFO  Start processing
+FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
+TypeError: Cannot set property 'lastIndex' of undefined
+    at highlight (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/highlight.js/lib/highlight.js:511:35)
+    at /home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/highlight.js/lib/highlight.js:561:21
+    at Array.forEach (<anonymous>)
+    at Object.highlightAuto (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/highlight.js/lib/highlight.js:560:40)
+    at /home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/hexo-util/lib/highlight.js:117:25
+    at highlight (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/hexo-util/lib/highlight.js:120:7)
+    at highlightUtil (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/hexo-util/lib/highlight.js:22:14)
+    at /home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/hexo/lib/plugins/filter/before_post_render/backtick_code_block.js:62:15
+    at String.replace (<anonymous>)
+    at Hexo.backtickCodeBlock (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/hexo/lib/plugins/filter/before_post_render/backtick_code_block.js:14:31)
+    at Hexo.tryCatcher (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/util.js:16:23)
+    at Hexo.<anonymous> (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/method.js:15:34)
+    at Promise.each.filter (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/hexo/lib/extend/filter.js:63:65)
+    at tryCatcher (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/util.js:16:23)
+    at Object.gotValue (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/reduce.js:155:18)
+    at Object.gotAccum (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/reduce.js:144:25)
+    at Object.tryCatcher (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/promise.js:512:31)
+    at Promise._settlePromise (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/promise.js:569:18)
+    at Promise._settlePromiseCtx (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/promise.js:606:10)
+    at Async._drainQueue (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/async.js:138:12)
+    at Async._drainQueues (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/async.js:143:10)
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$
+```
+
 ## Questions?
 
 
