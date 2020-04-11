@@ -885,6 +885,53 @@ search: hexo 添加 email
 [Hexo博客Next主题个性设置集锦](http://www.mdslq.cn/archives/40609c5b.html#%E6%96%87%E7%AB%A0%E5%8A%A0%E5%AF%86%E8%AE%BF%E9%97%AE)  
 [hexo博客设置自己的邮箱链接、及分类归档的设置](https://blog.csdn.net/qq_42893625/article/details/102671013)  
 
+**Not Useful:**  
+本想解决侧边栏图标和对应文字之间太紧密的问题，想添加个空格，没添加成。或许可能与主题有关。改变主题布局或可能行，不过我没尝试。  
+*补充：* E-Mail 与图标之间的空格确实与主题布局有关，使用 `scheme: Gemini` 可达到想要的效果
+
+hexo 侧边栏图标  
+[hexo侧边栏社交小图标设置](https://www.jianshu.com/p/7e30afa09fab)  
+[HEXO\_侧边栏社交小图标设置](http://www.wenxin.wiki/2018/11/22/HEXO-%E4%BE%A7%E8%BE%B9%E6%A0%8F%E7%A4%BE%E4%BA%A4%E5%B0%8F%E5%9B%BE%E6%A0%87%E8%AE%BE%E7%BD%AE/)  
+hexo 侧边栏图标 空格  
+[Hexo和NexT主题个性配置和优化](https://otuki.top/Hexo%E5%92%8CNexT%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E9%85%8D%E7%BD%AE%E5%92%8C%E4%BC%98%E5%8C%96/)  
+[关于侧边栏社交链接的显示问题](https://github.com/iissnan/hexo-theme-next/issues/525)  
+[Hexo Yelee主题侧边栏社交图标中的github图标不显示](https://www.codeleading.com/article/3849260970/)  
+[hexo的next主题个性化配置](https://zhuanlan.zhihu.com/p/60424755)  
+
+## 改变主题的布局样式
+
+打开主题配置文件 `./themes/next/_config.yml` ，搜索 `scheme:` 关键字（大致在第 147--152 行），修改相应内容即可，如
+```yaml
+# Schemes
+# scheme: Muse | Mist | Pisces | Gemini {choices}
+scheme: Mist
+#
+# Muse：默认 Scheme，这是 NexT 最初的版本，黑白主调，大量留白
+# Mist：Muse 的紧凑版本，整洁有序的单栏外观
+# Pisces：双栏 Scheme，小家碧玉似的清新
+# Gemini：左侧网站信息及目录，块+片段结构布局
+```
+
+示例 **Examples**:
+- Gemini / Pisces
+- Mist / Muse
+
+{% gp 4-3 %}
+<img src="/images/2020-04/0412_hexonext_scheme_gemini.png">
+<img src="/images/2020-04/0412_hexonext_scheme_pisces.png">
+<img src="/images/2020-04/0412_hexonext_scheme_mist.png">
+<img src="/images/2020-04/0412_hexonext_scheme_muse.png">
+{% endgp %}
+<!--Hello-->
+<br>
+
+*SEARCH*  
+[侧边栏设置 | Hexo和NexT主题个性配置和优化](https://otuki.top/Hexo%E5%92%8CNexT%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E9%85%8D%E7%BD%AE%E5%92%8C%E4%BC%98%E5%8C%96/)  
+next misc 布局  
+[Hexo添加自定义分类菜单项并定制页面布局](https://finisky.github.io/2019/02/24/customizedcategory/)  
+[修改hexo的主题nexT中的Pisces主题宽度](https://blog.csdn.net/csdnsr/article/details/78300820)  
+[HEXO搭配Next主题修改博客](https://blog.codesfile.com/2017/12/16/HEXO%E6%90%AD%E9%85%8DNext%E4%B8%BB%E9%A2%98%E4%BF%AE%E6%94%B9%E5%8D%9A%E5%AE%A2/)  
+
 ## 评论系统
 
 ### 给整个博客添加评论系统

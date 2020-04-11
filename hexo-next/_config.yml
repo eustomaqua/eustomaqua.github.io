@@ -94,11 +94,11 @@ search:
   limit: 10000
 
 social:
-  GitHub: https://github.com/eustomaqua || github
+  GitHub: https://github.com/eustomaqua || github 
   ## E-mail: yjbian92@gmail.com
   ## <a href="mailto:yjbian92@gmail.com"> # yjbian92 AT gmail dot com</a>
   ## Email: yjbian92@gmail.com
-  E-Mail: mailto:yjbian92@gmail.com || envelope
+  E-Mail: mailto:yjbian92@gmail.com || envelope 
 
 deploy:
   type: git
