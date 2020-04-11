@@ -180,6 +180,8 @@ site_state: true
   #YouTube: https://youtube.com/yourname || youtube
   #Instagram: https://instagram.com/yourname || instagram
   #Skype: skype:yourname?call|chat || skype
+## social:
+##   E-Mail: mailto:yjbian92@gmail.com
 
 social_icons:
   enable: true
@@ -541,6 +543,7 @@ valine:
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
 #livere_uid: your uid
+livere_uid: MTAyMC80OTYwMS8yNjA5Mg==
 
 # Gitment
 # Introduction: https://imsun.net/posts/gitment-introduction/

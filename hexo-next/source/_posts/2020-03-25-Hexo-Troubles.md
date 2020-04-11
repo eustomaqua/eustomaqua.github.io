@@ -843,6 +843,121 @@ hexo 引用自己的博文
 2. 加入内部链接后，直接运行 `hexo server` 是看不到效果的，必须先运行 `hexo generate` 命令重新生成相关的博文才能看到链接。  
 
 
+## 侧边栏邮箱链接
+
+在站点配置文件 `./_config.yml` 中，
+```yaml
+social:
+  E-Mail: mailto:your-email-address
+```
+也可以在主题配置文件 `./themes/next/_config.yml` 里修改，同样是搜索 `social` 可得。  
+
+**注意** 侧边栏的图标，
+- 我之前的写法是：
+  ```yaml
+social:
+  GitHub: https://github.com/eustomaqua
+  E-Mail: mailto:your-email-address
+  ```
+  这样写 GitHub 图标正常，但是 Email 是个小地球形状。
+- 修改成如下写法：
+  ```yaml
+social:
+  GitHub: https://github.com/eustomaqua
+  E-Mail: mailto:your-email-address || envelope
+  ```
+  此时 Email 图标正常了，但是 GitHub 变成小地球的图片了。
+- 继续修改：
+  ```yaml
+social:
+  GitHub: https://github.com/eustomaqua || github
+  E-Mail: mailto:your-email-address || envelope
+  ```
+  终于都正常了
+  *猜测* 小地球图片应该是个默认选项，或者没有合适图标时出现
+
+search: hexo 添加 email  
+[Hexo - NexT - 在侧边栏添加邮箱](https://www.yanyunliang.com/2018/11/10/hexo-next-add-a-mailbox-to-the-sidebar.html)  
+[请问怎么在侧边栏社交处添加邮箱呢](https://github.com/iissnan/hexo-theme-next/issues/1489)  
+[Hexo博客Next主题个性设置集锦](http://www.mdslq.cn/archives/40609c5b.html#%E6%96%87%E7%AB%A0%E5%8A%A0%E5%AF%86%E8%AE%BF%E9%97%AE)  
+[hexo博客设置自己的邮箱链接、及分类归档的设置](https://blog.csdn.net/qq_42893625/article/details/102671013)  
+
+## 评论系统
+
+### 给整个博客添加评论系统
+<!--为-->
+
+ref: [使用来必力为博客添加评论系统](https://sherlockgy.github.io/2018/06/01/%E4%BD%BF%E7%94%A8%E6%9D%A5%E5%BF%85%E5%8A%9B%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/) | [设置VsCode自动换行](https://sherlockgy.github.io/2018/09/01/%E8%AE%BE%E7%BD%AEVsCode%E8%87%AA%E5%8A%A8%E6%8D%A2%E8%A1%8C/)  
+
+使用韩国产品 [来必力](https://livere.com/)，首先注册一个账号。  
+*注意:* 我先用 Chrome 注册，这一步卡在了验证码，一直提示 "验证码不匹配"，无法继续操作；所以换到火狐尝试，仍然没能验证邮箱，先是登录提示密码不正确，然后试图找回密码时，莫名其妙地自己登入了，然后就继续后面流程了。  
+
+注册成功后点击最上方的安装，即可获取 uid ，复制该 `uid` 代码。  
+- 点击 "安装"，选择 City 版用于安装
+  <img src="/images/2020-04/0412_LiveRe1.png" width="97%">
+
+- 输入个人网站地址，即 `https://your-username/github.io`
+  <img src="/images/2020-04/0412_LiveRe2.png" width="97%">
+  
+- 从 "一般网站" 代码中复制 `data-uid` 的值
+  备注：最后面的两个 `==` 好像复制不复制都不影响，如果没有的话貌似加载会慢一点，不过差别也不是太大
+  <img src="/images/2020-04/0412_LiveRe3p.png" width="97%">
+
+然后打开主题配置文件 `./themes/next/_config.yml`，搜索 `livere_uid` ，将其前的 `#` 注释符号去掉，在后面填入方才复制的 uid 即可。
+
+
+### 关掉某一页面的评论系统
+
+**出现问题：** 到此为止，评论系统可以正常显示了，但是点击 Category / Tags 页面会发现它们的下方也会出现评论系统。那么怎样恢复正常呢？  ref: [个人博客网站接入来必力评论系统](https://blog.csdn.net/xiangzhihong8/article/details/77703791)  
+找到主题相关配置文件 `./themes/next/layout/_partials/comments.swig`，修改该文件中条件，即在最后追加 LiveRe 是否引用的判断逻辑。**注意** next 中已包含此步。  
+**备注**，原代码在 `./themes/next/layout/_partials/comments.swig` 的第 33--36 行，即
+```yaml
+  {% elseif theme.livere_uid %}
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="{{ theme.livere_uid }}"></div>
+    </div>
+```
+
+**Solution** refs:  
+- NexT 主题配置 [hexo的Next创建tags](https://www.jianshu.com/p/03d3da9a1b68) , [如何关闭新建页面的评论功能？](https://theme-next.iissnan.com/faqs.html)  
+- LiveRe 管理页面 [https://livere.com/insight/myCode](https://livere.com/insight/myCode)  
+
+真正能解决此项问题的办法是：  
+找到 `source/categories/index.md` 和 `source/tags/index.md` ，编辑其中的内容，即在结尾增加一行 `comments: false`，如下所示
+```markdown
+---
+title: tags / categories
+date: 2018-07-13 01:23:06 / 01:23:24
+
+type: "tags" / "categories"
+layout: "tags" / "categories"
+comments: false
+---
+```
+
+### Search Refs Record
+**Search:**  
+来必力 tags 页面也出现  
+[Hexo搭建的GitHub博客之优化大全](https://zhuanlan.zhihu.com/p/33616481)  
+[进阶(二)：hexo博客配置](https://champyin.com/2018/09/19/%E8%BF%9B%E9%98%B6-%E4%BA%8C-%EF%BC%9Ahexo%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE/)  
+[Hexo-NexT配置超炫网页效果](https://www.jianshu.com/p/9f0e90cc32c2)  
+next tags 取消评论  
+[添加「标签」页面](https://theme-next.iissnan.com/theme-settings.html)  
+[如何关闭新建页面的评论功能？](https://theme-next.iissnan.com/faqs.html)  
+next tags页面 怎么生成  
+[iissnan hexo-theme-next: 创建标签云页面](https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E6%A0%87%E7%AD%BE%E4%BA%91%E9%A1%B5%E9%9D%A2)  
+[iissnan hexo-theme-next: 创建分类页面](https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2)  
+[hexo的Next创建tags](https://www.jianshu.com/p/03d3da9a1b68)  
+[Hexo使用攻略-添加分类及标签](https://linlif.github.io/2017/05/27/Hexo%E4%BD%BF%E7%94%A8%E6%94%BB%E7%95%A5-%E6%B7%BB%E5%8A%A0%E5%88%86%E7%B1%BB%E5%8F%8A%E6%A0%87%E7%AD%BE/)  
+
+## 文章加密
+
+hexo 博客加密  
+[hexo文章加密](https://www.jianshu.com/p/44e211829447)  
+[Hexo-blog-encrypt，给博客文章加密](https://xsin.gitee.io/2019/01/11/hexo-blog-encrypt/)  
+[Hexo博客文章加密](https://www.jianshu.com/p/e4203ee066e5)  
+
+
 ## Questions? (with Error log)
 
 
