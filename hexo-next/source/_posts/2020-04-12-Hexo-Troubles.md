@@ -369,10 +369,13 @@ Template render error: (unknown path)
   另外有网友说是代码块没有指定语言的问题，这个好像也没有找到。 ref: [运行`hexo g`出错 \#1913](https://github.com/hexojs/hexo/issues/1913)
 3. 把错误文件移除，尝试 hexo g, hexo s 可以正常生成网页。此时再把 `bug.md` 移入，即可正常执行。
 
+<!--2020-04-12 3:28am 移除--> 
+**备注：** 这个错误还出现过一次，当时情景是我修改了标签云的颜色，其他 .md 文件基本都没改（只给 2018 年 hexo 文件的标签云部分加粗了两个关键词）。 纠正过程是先把所有 .md 文件都移出 source/\_posts 文件夹，然后再逐个移回：2018 年 5 篇；2019 年 5 篇；2020 年 6 篇；2020 年 2 篇；2020 年 latex badge ；2020 年 hexo troubles 。移动过程中逐个生成 hexo g 均正常，最后移动完成后就没有再出现此问题了
+
 查看 使用端口的程序  
 [linux 下查看进程占用端口和端口号占用进程命令](https://blog.csdn.net/gochenguowei/article/details/80926000)  
 [linux下查看某一端口被哪个进程占用](https://blog.csdn.net/xiangwanpeng/article/details/78804225)  
-here: http://hexo.io/docs/troubleshooting.html Error: listen EADDRINUSE 0.0.0.0:4000  
+*here:* http://hexo.io/docs/troubleshooting.html *Error: listen EADDRINUSE 0.0.0.0:4000*  
 [hexo搭建博客过程中出现的问题，4000端口被占用](https://segmentfault.com/q/1010000008546859)  
 [Hexo--hexo server失败，提示端口被占用](https://www.difashi.com/2019-08/17-hexo-2.html)  
 
