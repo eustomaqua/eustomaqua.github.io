@@ -8,6 +8,7 @@ tags:
   - Configure
   - Linux
   - Git
+  - Remote Server
 ---
 <!--
 date: 2019-06-09 23:02:59
@@ -190,7 +191,7 @@ $ deactivate
 ```shell
 ssh -L 16006:127.0.0.1:6006 yourname@server.address
 ```
-其中 16006:127.0.0.1 代表自己机器上的 16006 号端口，6006 是服务器上 TensorBoard 使用的端口
+  其中 16006:127.0.0.1 代表自己机器上的 16006 号端口，6006 是服务器上 TensorBoard 使用的端口
 2. 在浏览器中打开 http://127.0.0.1:16006
 3. 服务器上 ctrl+c 关闭后，本地即无法连接
 4. 本地终端 exit
@@ -219,7 +220,15 @@ ubuntu@VirtualBox:~$
 ```
 
 ### 使用
+Usage: ``$ tensorboard --logdir=folder_path``
 
+1. between Local Steps 1 & 2
+2. 在服务器上开启 TensorBoard
+  ```shell
+  tensorboard --logdir=./network
+  ```
+
+e.g.,
 ```powershell
 ubuntu@VirtualBox:~$ ssh -L 16006:127.0.0.1:6006 yourname@server.address
 yourname@server.address's password: 

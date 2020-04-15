@@ -1,5 +1,5 @@
 ---
-title: Tips of LaTeX and GitHub Badges
+title: Tips of LaTeX and Badges, Remote Server
 date: 2020-04-03 23:44:18
 updated: 2020-04-03 23:44:18
 categories:
@@ -8,6 +8,7 @@ tags:
   - LaTeX
   - Git
   - Configure
+  - Remote Server
 ---
 
 <!--
@@ -16,6 +17,9 @@ Created: 2020-04-01 23:14:51
 Updated:
 2020-04-03 23:44:18
 2020-04-12 01:36:29
+
+Tips of LaTeX and Badges, Usage of Remote Server
+Tag: Remote Server / Linux
 -->
 
 

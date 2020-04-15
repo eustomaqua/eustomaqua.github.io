@@ -464,3 +464,62 @@ logging 全局设一个就够了，否则会重复输出
 [Python日志输出——logging模块](https://blog.csdn.net/chosen0ne/article/details/7319306)  
 [Python之日志处理(logging模块)](https://www.cnblogs.com/yyds/p/6901864.html)  
 [Python logging 模块使用指南](http://www.codebelief.com/article/2017/05/python-logging-module-tutorial/)  
+
+# \* Example
+
+目标场景：比如说两个模块，在其中一个模块中引用另外一个模块，并存在某一日志文件中
+
+- test.py
+  ```python
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+
+import logging
+logging.basicConfig(level=logging.INFO)
+
+import os
+if os.path.exists('logger.log'):
+    os.remove('logger.log')
+
+logger = logging.getLogger('youruser')
+ch2 = logging.FileHandler('logger.log')
+ch2.setLevel(logging.NOTSET)
+formatter = logging.Formatter('%(asctime)s %(name)s/%(levelname)s: %(message)s')
+# formatter = logging.Formatter('%(created)f - %(name)s - %(levelno)s - %(message)s')
+# formatter = logging.Formatter('%(relativeCreated)s - %(module)s/%(funcName)s | %(message)s')
+ch2.setFormatter(formatter)
+logger.addHandler(ch2)
+logger.info('')
+logger.info('2\n')
+logger.info('\n3')
+logger.info('\t4')
+logger.warning('hello')
+logger.warn('world')
+logger.warn('main Test {}'.format(4))
+
+from testa import funcA
+funcA(logger)
+  ```
+- testa.py
+  ```python
+# import logging
+
+def funcA(logger):
+    logger.warn('Test A')
+  ```
+
+- print `logger.log`
+  ```txt
+2020-04-15 04:53:45,247 youruser/INFO: 
+2020-04-15 04:53:45,247 youruser/INFO: 2
+
+2020-04-15 04:53:45,248 youruser/INFO: 
+3
+2020-04-15 04:53:45,248 youruser/INFO:  4
+2020-04-15 04:53:45,248 youruser/WARNING: hello
+2020-04-15 04:53:45,248 youruser/WARNING: world
+2020-04-15 04:53:45,249 youruser/WARNING: main Test 4
+2020-04-15 04:53:45,250 youruser/WARNING: Test A
+
+  ```
