@@ -465,7 +465,10 @@ logging 全局设一个就够了，否则会重复输出
 [Python之日志处理(logging模块)](https://www.cnblogs.com/yyds/p/6901864.html)  
 [Python logging 模块使用指南](http://www.codebelief.com/article/2017/05/python-logging-module-tutorial/)  
 
-# \* Example
+# \* Examples
+<!--update: 2020/4/16 4:49am Thu-->
+
+## Only One
 
 目标场景：比如说两个模块，在其中一个模块中引用另外一个模块，并存在某一日志文件中
 
@@ -523,3 +526,104 @@ def funcA(logger):
 2020-04-15 04:53:45,250 youruser/WARNING: Test A
 
   ```
+
+## Multiple Outputs
+目标场景：想同时输出两个 logging 文件，一个存自定义设置的信息，一个用于输出 tensorflow 给出的日志信息
+
+### main
+
+- testdouble.py
+```python
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+
+import logging
+logging.basicConfig(level=logging.INFO)
+
+import os
+import shutil
+for fn in ['tf1.log', 'tf2.log']:
+    if os.path.exists(fn):
+        os.remove(fn)
+
+formatter = logging.Formatter('%(asctime)s %(name)s/%(levelname)s: %(message)s')
+logger = logging.getLogger('double')
+# ch2 = logging.FileHandler('tfdouble.log')
+ch2 = logging.FileHandler('tf1.log')
+ch2.setFormatter(formatter)
+
+'''
+# http://landcareweb.com/questions/26327/ru-he-jiang-tensorflowri-zhi-ji-lu-zhong-ding-xiang-dao-wen-jian
+# get TF logger
+log = logging.getLogger('tensorflow')
+log.setLevel(logging.DEBUG)
+# create formatter and add it to the handlers
+#formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+# create file handler which logs even debug messages
+fh = logging.FileHandler('tensorflow.log')
+fh.setLevel(logging.DEBUG)
+#fh.setFormatter(formatter)
+log.addHandler(fh)
+'''
+
+tflog = logging.getLogger('tensorflow')
+tfh = logging.FileHandler('tf2.log')
+tfh.setLevel(logging.DEBUG)
+tfm = logging.Formatter(logging.BASIC_FORMAT, None)
+tfh.setFormatter(tfm)
+tflog.addHandler(tfh)
+
+logger.addHandler(ch2)
+logger.warn("hello")
+logging.critical("critical")
+
+from testa import funcA
+from testb import funcB
+funcA(logger)
+funcB()
+from testb import funcTF
+funcTF()
+```
+
+### import modules
+
+- testa.py (same as prev)
+  ```python
+# import logging
+
+def funcA(logger):
+    logger.warn('Test A')
+  ```
+- testb.py
+  ```python
+import logging
+
+def funcB():
+    logging.warn("Warn, hello")
+
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+import tensorflow as tf
+# 禁用 GPU
+
+def funcTF():
+    # tf.logging.ERROR("tf._logging.ERROR")  # 1.14.0
+    tf.compat.v1.logging.info("tf.logging.info")
+    tf.compat.v1.logging.error("tf.logging.error")
+  ```
+
+### Results
+
+- tf1.log
+```txt
+2020-04-16 04:29:34,398 double/WARNING: hello
+2020-04-16 04:29:39,795 double/WARNING: Test A
+
+```
+- tf2.log
+```txt
+INFO:tensorflow:tf.logging.info
+ERROR:tensorflow:tf.logging.error
+
+```

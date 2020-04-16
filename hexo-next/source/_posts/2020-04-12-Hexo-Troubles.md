@@ -10,6 +10,7 @@ tags:
   - LaTeX
   - Markdown
   - Git
+mathjax: true
 ---
 
 
@@ -424,6 +425,48 @@ TypeError: Cannot set property 'lastIndex' of undefined
     at Promise._settlePromiseCtx (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/promise.js:606:10)
     at Async._drainQueue (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/async.js:138:12)
     at Async._drainQueues (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/async.js:143:10)
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$
+```
+
+## 谨慎使用大括号(花括号)
+
+Code causing error:
+```markdown
+[关于 hexo 对文章渲染解析{{}}的问题](https://www.v2ex.com/t/510207)  
+[关于 hexo 对文章渲染解析\{\{\}\}的问题](https://www.v2ex.com/t/510207)  
+[关于 hexo 对文章渲染解析``{{}}``的问题](https://www.v2ex.com/t/510207)  
+```
+
+Solve: 删掉这两对花括号/大括号即可。
+
+Error log
+```shell
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ hexo g
+INFO  Start processing
+FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
+Template render error: (unknown path) [Line 554, Column 154]
+  unexpected token: }}
+    at Object._prettifyError (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/nunjucks/src/lib.js:36:11)
+    at Template.render (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/nunjucks/src/environment.js:524:21)
+    at Environment.renderString (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/nunjucks/src/environment.js:362:17)
+    at Promise (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/hexo/lib/extend/tag.js:66:9)
+    at Promise._execute (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/debuggability.js:303:9)
+    at Promise._resolveFromExecutor (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/promise.js:483:18)
+    at new Promise (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/promise.js:79:10)
+    at Tag.render (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/hexo/lib/extend/tag.js:64:10)
+    at Object.tagFilter [as onRenderEnd] (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/hexo/lib/hexo/post.js:230:16)
+    at Promise.then.then.result (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/hexo/lib/hexo/render.js:65:19)
+    at tryCatcher (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/promise.js:512:31)
+    at Promise._settlePromise (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/promise.js:569:18)
+    at Promise._settlePromise0 (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/promise.js:614:10)
+    at Promise._settlePromises (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/promise.js:693:18)
+    at Async._drainQueue (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/async.js:133:16)
+    at Async._drainQueues (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/async.js:143:10)
+    at Immediate.Async.drainQueues (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/async.js:17:14)
+    at runCallback (timers.js:696:18)
+    at tryOnImmediate (timers.js:667:5)
+    at processImmediate (timers.js:649:5)
 ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$
 ```
 
@@ -1457,6 +1500,338 @@ e.g.,
 
 
 ## Q & A
+
+# Plugins 插件
+<!--Updated: 2020.4.16 13:11-->
+
+## 数学公式
+ref: [hexo中插入数学公式](http://stevenshi.me/2017/06/26/hexo-insert-formula/)
+
+> 原生hexo并不支持数学公式，需要安装插件 mathJax。[mathJax](https://www.mathjax.org/) 是一款运行于浏览器中的开源数学符号渲染引擎，使用 mathJax 可以方便的在浏览器中嵌入数学公式。mathJax 使用网络字体产生高质量的排版，因此可适应各种分辨率，它的显示是基于文本的而非图片，因此显示效果更好。这些公式可以被搜索引擎使用，因此公式里的符号一样可以被搜索引擎检索到。
+
+### 安装
+```shell
+$ npm install hexo-math --save
+```
+
+i.e., 
+```shell
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ npm install hexo-math --save
+
+> hexo-math@3.0.4 postinstall /home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/hexo-math
+> cd ../.. && npm install --save hexo-inject
+
+^C[..................] / rollbackFailedOptional: verb npm-session 50e6c5afa624b8
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ 
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ 
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ 
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ npm install hexo-math --save
+
+> hexo-math@3.0.4 postinstall /home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/hexo-math
+> cd ../.. && npm install --save hexo-inject
+
+npm WARN deprecated hexo-inject@1.0.0: The author does not use Hexo any more. This plugin is no longer maintained.
+npm WARN deprecated core-js@2.6.11: core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3.
+
+> core-js@2.6.11 postinstall /home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/babel-polyfill/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+Thank you for using core-js ( https://github.com/zloirock/core-js ) for polyfilling JavaScript standard library!
+
+The project needs your help! Please consider supporting of core-js on Open Collective or Patreon: 
+> https://opencollective.com/core-js 
+> https://www.patreon.com/zloirock 
+
+Also, the author of core-js ( https://github.com/zloirock ) is looking for a good job -)
+
++ hexo-inject@1.0.0
+added 8 packages from 5 contributors, removed 3 packages and audited 3632 packages in 137.766s
+found 203 vulnerabilities (136 low, 5 moderate, 62 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
++ hexo-math@3.0.4
+updated 1 package and audited 3575 packages in 166.293s
+found 195 vulnerabilities (136 low, 5 moderate, 54 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ 
+```
+
+### 配置
+
+- 在站点配置文件 `./_config.yml` 的末尾添加
+```yaml
+math:
+  engine: 'mathjax' # or 'katex'
+  mathjax:
+    # src: custom_mathjax_source
+    config:
+      # MathJax config
+```
+- 在 NexT 主题配置文件 `./themes/next/_config.yml` 中将 mathJax 设为 true
+```yaml
+# MathJax Support
+mathjax:
+  enable: true
+  per_page: true # false
+  cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+```
+
+- \* 也可以在文章的开始集成插件支持，但不建议这么做
+```markdown
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+```
+
+**Backup:** default `./themes/next/_config.yml`
+```yaml
+# ---------------------------------------------------------------
+# Third Party Services Settings
+# ---------------------------------------------------------------
+
+# Math Equations Render Support
+math:
+  enable: false
+
+  # Default(true) will load mathjax/katex script on demand
+  # That is it only render those page who has 'mathjax: true' in Front Matter.
+  # If you set it to false, it will load mathjax/katex srcipt EVERY PAGE.
+  per_page: true
+
+  engine: mathjax
+  #engine: katex
+
+  # hexo-rendering-pandoc (or hexo-renderer-kramed) needed to full MathJax support.
+  mathjax:
+    # Use 2.7.1 as default, jsdelivr as default CDN, works everywhere even in China
+    cdn: //cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+    # For newMathJax CDN (cdnjs.cloudflare.com) with fallback to oldMathJax (cdn.mathjax.org).
+    #cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+    # For direct link to MathJax.js with CloudFlare CDN (cdnjs.cloudflare.com).
+    #cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML
+    # For automatic detect latest version link to MathJax.js and get from Bootcss.
+    #cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
+
+  # hexo-renderer-markdown-it-plus (or hexo-renderer-markdown-it with markdown-it-katex plugin)
+  # needed to full Katex support.
+  katex:
+    # Use 0.7.1 as default, jsdelivr as default CDN, works everywhere even in China
+    cdn: //cdn.jsdelivr.net/npm/katex@0.7.1/dist/katex.min.css
+    # CDNJS, provided by cloudflare, maybe the best CDN, but not works in China
+    #cdn: //cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css
+    # Bootcss, works great in China, but not so well in other region
+    #cdn: //cdn.bootcss.com/KaTeX/0.7.1/katex.min.css
+
+# Han Support
+# Dependencies: https://github.com/theme-next/theme-next-han
+han: false
+```
+
+### 使用
+公式 (Equation) 插入格式
+```markdown
+$数学公式$  行内 不独占一行
+$$数学公式$$  行间 独占一行
+```
+
+### 示例
+
+```markdown
+---
+title: MathJax Support
+date: 2020-04-16 10:41:40
+tags:
+mathjax: true
+---
+```
+
+### 语法格式
+
+#### 上标与下标
+
+使用 ^ 表示上标，使用 _ 表示下标，如果上下标的内容多于一个字符，可以使用大括号括起来：  
+e.g., ``$$f(x) = a_1x^n + a_2x^{n-1} + a_3x^{n-2}$$``  
+$$f(x) = a_1x^n + a_2x^{n-1} + a_3x^{n-2}$$
+
+如果左右两边都有上下标可以使用 \sideset 语法：  
+e.g., ``$$\sideset{^n_k}{^x_y}a$$``  
+$$\sideset{^n_k}{^x_y}a$$
+
+#### 括号
+
+在 markdown 语法中，, $, {, }, _ 都是有特殊含义的，所以需要加 \ 转义。小括号与方括号可以使用原始的 () [] 大括号需要转义 \ 也可以使用 \lbrace 和 \rbrace  
+
+e.g., 
+```markdown
+$$ \{x*y\} $$
+
+$$ \lbrace x*y \rbrace $$
+```
+$$\{x*y\}$$
+
+$$\lbrace x*y \rbrace$$
+
+原始符号不会随着公式大小自动缩放，需要使用 \left 和 \right 来实现自动缩放：
+e.g., ``$$\left \lbrace \sum_{i=0}^n i^3 = \frac{(n^2+n)(n+6)}{9} \right \rbrace$$``
+$$\left \lbrace \sum_{i=0}^n i^3 = \frac{(n^2+n)(n+6)}{9} \right \rbrace$$
+
+不使用 \left 和 \right 的效果：
+i.e., ``$$ \lbrace \sum_{i=0}^n i^3 = \frac{(n^2+n)(n+6)}{9}  \rbrace$$``
+$$ \lbrace \sum_{i=0}^n i^3 = \frac{(n^2+n)(n+6)}{9}  \rbrace$$
+
+#### 分数与开方
+
+可以使用 \frac 或者 \over 实现分数的显示：
+```markdown
+$\frac xy$
+$ x+3 \over y+5 $
+```
+分别显示为 $\frac xy$ 和 $ x+3 \over y+5 $
+
+开方使用\sqrt:  
+```markdown
+$ \sqrt{x^5} $
+$ \sqrt[3]{\frac xy} $
+```
+分别显示为 $\sqrt{x^5}$ 和 $\sqrt [3]{\frac xy}$
+
+**Notice:** $\sqrt [3]{\frac{x}{y}}$  
+***遗留问题***： 开根号不能正常显示，尚未找到解决方法。
+
+$\sqrt [3]{2}$
+
+#### 求和与积分
+
+求和使用 \sum ，可加上下标；积分使用 \int ，可加上下限；双重积分用 \iint ：
+```markdown
+$ \sum_{i=0}^n $
+$ \int_1^\infty $
+$ \iint_1^\infty $
+```
+分别显示为 $ \sum_{i=0}^n $ 、 $ \int_1^\infty $ 以及 $ \iint_1^\infty $
+
+#### 极限
+极限使用 \lim ：
+e.g., ``$ \lim_{x \to 0} $`` 
+显示为 $ \lim_{x \to 0} $
+
+#### 表格与矩阵
+
+表格样式 lcr 表示居中，| 加入一条竖线，\hline 表示行间横线，列之间用 & 分隔，行之间用 \ 分隔  
+```markdown
+$$\begin{array}{c|lcr}
+n & \text{Left} & \text{Center} & \text{Right} \\\\
+\hline
+1 & 1.97 & 5 & 12 \\\\
+2 & -11 & 19 & -80 \\\\
+3 & 70 & 209 & 1+i \\\\
+\end{array}$$
+```
+显示效果为  
+$$\begin{array}{c|lcr}
+n & \text{Left} & \text{Center} & \text{Right} \\\\
+\hline
+1 & 1.97 & 5 & 12 \\\\
+2 & -11 & 19 & -80 \\\\
+3 & 70 & 209 & 1+i \\\\
+\end{array}$$
+
+表格的插入也可以使用以下方式： 
+```markdown
+|名称|说明|
+|---|---|---|
+|temperature|  室内温度 |
+|set temperature|  设定温度 |
+|height|  室内高度 |
+```
+显示效果为  
+
+|名称|说明|
+|---|---|---|
+|temperature|  室内温度 |
+|set temperature|  设定温度 |
+|height|  室内高度 |
+
+矩阵显示和表格很相似  
+```markdown
+$$\left[
+\begin{matrix}
+V_A \\\\
+V_B \\\\
+V_C \\\\
+\end{matrix}
+\right] =
+\left[
+\begin{matrix}
+1 & 0 & L \\\\
+-cosψ & sinψ & L \\\\
+-cosψ & -sinψ & L
+\end{matrix}
+\right]
+\left[
+\begin{matrix}
+V_x \\\\
+V_y \\\\
+W \\\\
+\end{matrix}
+\right] $$
+```
+展示为  
+$$\left[
+\begin{matrix}
+V_A \\\\
+V_B \\\\
+V_C \\\\
+\end{matrix}
+\right] =
+\left[
+\begin{matrix}
+1 & 0 & L \\\\
+-cosψ & sinψ & L \\\\
+-cosψ & -sinψ & L
+\end{matrix}
+\right]
+\left[
+\begin{matrix}
+V_x \\\\
+V_y \\\\
+W \\\\
+\end{matrix}
+\right] $$
+
+还有其他矩阵如内联矩阵增广矩阵方程组等，此处未补充。
+
+### Refs
+
+github pages 英文公式  
+[怎样用 Github Pages 建立博客（2. 进阶）](https://wklchris.github.io/Advanced-blog-skills.html)  
+[使用Jekyll在GitHub上搭建个人博客](https://lyk6756.github.io/jekyll/2017/02/26/build_blog.html)  
+[github上利用jekyll搭建自己的blog的操作顺序？](https://www.zhihu.com/question/30018945)  
+[用 jekyll + Github Pages搭建个人博客](https://blog.csdn.net/u013553529/article/details/54588010)  
+hexo 数学公式  
+[hexo中插入数学公式](http://stevenshi.me/2017/06/26/hexo-insert-formula/)  
+[在Hexo中渲染MathJax数学公式](https://www.jianshu.com/p/7ab21c7f0674)  
+[Hexo 的 Next 主题中渲染 MathJax 数学公式](https://blog.csdn.net/wgshun616/article/details/81019687)  
+[在 Hexo 中使用 MathJax 渲染数学公式](https://abelsu7.top/2018/10/29/hexo-mathjax/)  
+
+hexo 公式开方  
+[markdown之数学公式语法](http://xwxz.github.io/tools-markdown/)  
+[在Hexo中使用MathJax插入数学公式](http://blog.mobing.net/content/hexo/hexo-mathjax.html)  
+latex 数学公式  
+[常用数学符号的 LaTeX 表示方法](http://mohu.org/info/symbols/symbols.htm)  
+
+hexo 个别公式不加载  
+[Hexo Math Support | 冯玮的博客](https://fwzju.com/2018/06/24/math-support/)  
+[Hexo+Github: 个人博客网站搭建完全教程(看这篇就够了)-上半部分](https://zhuanlan.zhihu.com/p/80140564)  
+[Hexo博客(13)添加MathJax数学公式渲染](http://masikkk.com/article/hexo-13-MathJax/)  
+[在Hexo中渲染MathJax数学公式](http://wangxin123.com/2017/09/20/%E5%9C%A8Hexo%E4%B8%AD%E6%B8%B2%E6%9F%93MathJax%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/)  
+
+hexo sqrt 有问题  
+[Latex 的渲染问题](https://github.com/hexojs/hexo/issues/2115)  
+[关于 hexo 对文章渲染解析 的问题](https://www.v2ex.com/t/510207)  
+[结合MathType和MathJax在Hexo博客中插入数学公式](https://zhuanlan.zhihu.com/p/108766968)  
+[hexo 迷之代码高亮？](https://www.zhihu.com/question/37222515)  
+[Hexo 中使用数学公式](https://suzhouxing.github.io/techive/2017/09/03/HexoMathSupport/)  
+
 
 # Git & GitHub
 

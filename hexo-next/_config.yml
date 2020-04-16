@@ -113,3 +113,10 @@ word_count: true #true|false  #开启/关闭字数统计
 #   wordcount: true # 单篇 字数统计
 #   min2read: true  # 单篇 阅读时长
 #   totalcount: true  # 网站 字数统计
+
+math:
+  engine: 'mathjax' # or 'katex'
+  mathjax:
+    # src: custom_mathjax_source
+    config:
+      # MathJax config
