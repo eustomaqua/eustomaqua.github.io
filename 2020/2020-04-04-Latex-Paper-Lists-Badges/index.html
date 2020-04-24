@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+  .pace .pace-progress {
+    background: #1E92FB; /*进度条颜色*/
+    height: 3px;
+  }
+  .pace .pace-progress-inner {
+    box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+  }
+  .pace .pace-activity {
+    border-top-color: #1E92FB;    /*上边框颜色*/
+    border-left-color: #1E92FB;    /*左边框颜色*/
+  }
+</style>
+
+
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/EustomaAqua.png?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/EustomaAqua.png?v=6.3.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.3.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="# Tips of Lists and Codes in Papers (列表 etc.)latex 数学符号: 常用数学符号的 LaTeX 表示方法 LaTeX: Functionseumerate, itemizeenumerate 起始编号定义Latex,enumerate环境下起始编号定义(How can I make an enumerate list 123456789\begi">
+<meta name="keywords" content="Configure,Git,Remote Server,LaTeX">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tips of LaTeX and Badges, Remote Server">
+<meta property="og:url" content="https://eustomaqua.github.io/2020/2020-04-04-Latex-Paper-Lists-Badges/index.html">
+<meta property="og:site_name" content="Aqua Eustoma">
+<meta property="og:description" content="# Tips of Lists and Codes in Papers (列表 etc.)latex 数学符号: 常用数学符号的 LaTeX 表示方法 LaTeX: Functionseumerate, itemizeenumerate 起始编号定义Latex,enumerate环境下起始编号定义(How can I make an enumerate list 123456789\begi">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://eustomaqua.github.io/images/2020-04/0404_GitHubCI_Coveralls_1public.png">
+<meta property="og:image" content="https://eustomaqua.github.io/images/2020-04/0404_GitHubCI_Coveralls_2private.png">
+<meta property="og:updated_time" content="2020-04-04T04:44:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Tips of LaTeX and Badges, Remote Server">
+<meta name="twitter:description" content="# Tips of Lists and Codes in Papers (列表 etc.)latex 数学符号: 常用数学符号的 LaTeX 表示方法 LaTeX: Functionseumerate, itemizeenumerate 起始编号定义Latex,enumerate环境下起始编号定义(How can I make an enumerate list 123456789\begi">
+<meta name="twitter:image" content="https://eustomaqua.github.io/images/2020-04/0404_GitHubCI_Coveralls_1public.png">
+
+
+
+
+
+
+  <link rel="canonical" href="https://eustomaqua.github.io/2020/2020-04-04-Latex-Paper-Lists-Badges/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Tips of LaTeX and Badges, Remote Server | Aqua Eustoma</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Aqua Eustoma</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />Search</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://eustomaqua.github.io/2020/2020-04-04-Latex-Paper-Lists-Badges/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="eustomaqua">
+      <meta itemprop="description" content="Once upon a time....">
+      <meta itemprop="image" content="/images/EustomaAqua.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aqua Eustoma">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Tips of LaTeX and Badges, Remote Server
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 03 Apr 2020 23:44:18" itemprop="dateCreated datePublished" datetime="2020-04-03T23:44:18-05:00">03 Apr 2020</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Writing/" itemprop="url" rel="index"><span itemprop="name">Writing</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+
+          
+            <span class="post-letters-count">
+              &nbsp; | &nbsp;
+              <span title="post.wordcount">
+                2,585 words
+              </span>
+              &nbsp; | &nbsp;
+              <span title="post.min2read">
+                11 minutes
+              </span>
+            </span>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <!--
+Tips of Lists and Codes in Papers (列表 etc.)
+Created: 2020-04-01 23:14:51
+Updated:
+2020-04-03 23:44:18
+2020-04-12 01:36:29
+
+Tips of LaTeX and Badges, Usage of Remote Server
+Tag: Remote Server / Linux
+-->
+
+
+<p># Tips of Lists and Codes in Papers (列表 etc.)<br>latex 数学符号: <a href="https://www.mohu.org/info/symbols/symbols.htm" target="_blank" rel="noopener">常用数学符号的 LaTeX 表示方法</a></p>
+<h1 id="LaTeX-Functions"><a href="#LaTeX-Functions" class="headerlink" title="LaTeX: Functions"></a>LaTeX: Functions</h1><h2 id="eumerate-itemize"><a href="#eumerate-itemize" class="headerlink" title="eumerate, itemize"></a>eumerate, itemize</h2><h3 id="enumerate-起始编号定义"><a href="#enumerate-起始编号定义" class="headerlink" title="enumerate 起始编号定义"></a>enumerate 起始编号定义</h3><p><a href="http://blog.sina.com.cn/s/blog_a0e53bf70102vtwz.html" target="_blank" rel="noopener">Latex,enumerate环境下起始编号定义(How can I make an enumerate list</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;enumerate&#125;</span><br><span class="line">\setcounter&#123;enumi&#125;&#123;3&#125;</span><br><span class="line">\item[4.] Question?</span><br><span class="line">\begin&#123;enumerate&#125;</span><br><span class="line">    \item[1)] Item A</span><br><span class="line">    \item[2)] Item B</span><br><span class="line">    \item[3)] Item C</span><br><span class="line">\end&#123;enumerate&#125;</span><br><span class="line">\end&#123;enumerate&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="分支函数"><a href="#分支函数" class="headerlink" title="分支函数"></a>分支函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;enumerate&#125;</span><br><span class="line">f(x) = </span><br><span class="line">\begin&#123;cases&#125;</span><br><span class="line">1, &amp; x&gt;0\,;\\</span><br><span class="line">0, &amp; x&lt;0\,.</span><br><span class="line">\end&#123;cases&#125;</span><br><span class="line">\end&#123;enumerate&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="算法清单"><a href="#算法清单" class="headerlink" title="算法清单"></a>算法清单</h3><h4 id="algorithm2e"><a href="#algorithm2e" class="headerlink" title="algorithm2e"></a>algorithm2e</h4><p>latex algorithm2e, state<br><a href="https://blog.csdn.net/yq_forever/article/details/89815562" target="_blank" rel="noopener">Latex之使用algorithm2e包来写算法</a><br><a href="https://blog.csdn.net/robert_chen1988/article/details/71512914?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1&utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1" target="_blank" rel="noopener">latex 算法，算法包 algorithm， algorithm2e</a><br><a href="https://download.nus.edu.sg/mirror/ctan/macros/latex/contrib/algorithm2e/doc/algorithm2e.pdf" target="_blank" rel="noopener">algorithm2e document</a>  </p>
+<h2 id><a href="#" class="headerlink" title="?"></a>?</h2><h1 id="LaTeX-Others"><a href="#LaTeX-Others" class="headerlink" title="LaTeX: Others"></a>LaTeX: Others</h1><h1 id="GitHub-repos"><a href="#GitHub-repos" class="headerlink" title="GitHub repos"></a>GitHub repos</h1><h2 id="using-git-to-control-versions"><a href="#using-git-to-control-versions" class="headerlink" title="using git to control versions"></a>using git to control versions</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> [repo-address]</span><br><span class="line">$ <span class="built_in">cd</span> [repo-name]</span><br><span class="line"></span><br><span class="line">$ git config user.name eustomaqua</span><br><span class="line">$ git config user.email [your-email-address]</span><br><span class="line">$ git config push.default simple</span><br><span class="line"><span class="comment">#                         simple  </span></span><br><span class="line"><span class="comment">## only pushes the current branch to the corresponding</span></span><br><span class="line"><span class="comment">## remote branch that 'git pull' uses to update the </span></span><br><span class="line"><span class="comment">## current branch</span></span><br><span class="line"><span class="comment">#$ git config push.default matching</span></span><br><span class="line"></span><br><span class="line">$ git <span class="built_in">help</span> config</span><br><span class="line"><span class="comment"># q: quit</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line"></span><br><span class="line"><span class="comment"># to begin with</span></span><br><span class="line">$ git checkout -b adanet</span><br><span class="line">$ git push --<span class="built_in">set</span>-upstream origin adanet</span><br><span class="line"></span><br><span class="line"><span class="comment"># next</span></span><br><span class="line">$ git status</span><br><span class="line">$ git add .</span><br><span class="line">$ git commit -m <span class="string">"messages"</span></span><br><span class="line">$ git push</span><br><span class="line"></span><br><span class="line"><span class="comment"># switch over</span></span><br><span class="line">$ git checkout [branch-name]</span><br></pre></td></tr></table></figure>
+
+<h2 id="徽章-CI-bots"><a href="#徽章-CI-bots" class="headerlink" title="徽章 / CI bots"></a>徽章 / CI bots</h2><h3 id="Travis-CI-build-passing"><a href="#Travis-CI-build-passing" class="headerlink" title="Travis CI (build passing)"></a>Travis CI (build passing)</h3><p>#### Public <a href="https://travis-ci.org/" target="_blank" rel="noopener">https://travis-ci.org/</a><br>#### Private <a href="https://travis-ci.com/" target="_blank" rel="noopener">https://travis-ci.com/</a>  </p>
+<p><strong>私有仓库</strong>  </p>
+<ol>
+<li>start with<ol>
+<li>进入 <a href="https://travis-ci.com/dashboard" target="_blank" rel="noopener">Dashboard</a>  </li>
+<li>选择相应的仓库，点击右侧 <code>Trigger a build</code><br>然后网页上方就会弹出提示 <em>Hooray! You’re successfully triggered a build for eustomaqua/repo. Hold tight, it might take a moment to show up.</em>  </li>
+<li>刷新网页后进入该仓库，此时它的徽章仍是 <code>build unknown</code>  </li>
+<li>点击右方 <code>More options</code> –&gt; <code>Settings</code></li>
+</ol>
+</li>
+<li>在项目根目录下创建 <code>.travis.yml</code> 文件，添加源代码<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">env:</span></span><br><span class="line">  <span class="attr">global:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">CODACY_PROJECT_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">CODECOV_TOKEN</span> <span class="string">=</span> <span class="string">"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p><strong>公开仓库</strong>  </p>
+<ol>
+<li>打开主页 <a href="https://travis-ci.org/" target="_blank" rel="noopener">https://travis-ci.org/</a></li>
+<li>点击 页面左上方 <code>My Repositories</code> 的右侧的 <code>+</code> 加号，<br>然后可以看到许多仓库，都是公开的</li>
+<li>选择相关仓库，如果找不到就先 <code>Sync account</code>，还不行就在 <code>Legacy Services Integration</code> 中直接搜</li>
+<li>打开该仓库的右侧开关，然后点击仓库名进入，此时仍显示 <code>build unknown</code> </li>
+<li>点击 Badge 本身就可获得它对应的代码；若想换成别的分支，把 master 改成相关的分支名就行。</li>
+<li>其他类似。暂略</li>
+</ol>
+<p><strong>徽章:</strong> 进入 build 页面，鼠标左键单击徽章，则可见 <code>Status Image</code>，选择 FORMAT 复制 RESULT 即可。</p>
+<h3 id="Coveralls-coverage"><a href="#Coveralls-coverage" class="headerlink" title="Coveralls (coverage)"></a>Coveralls (coverage)</h3><p>#### public repos</p>
+<p>官网 <a href="https://coveralls.io/" target="_blank" rel="noopener">https://coveralls.io/</a><br>只支持公开仓库</p>
+<ol>
+<li><p>用 GitHub 账号登入，点击左侧 <code>ADD REPOS</code></p>
+</li>
+<li><p>选择仓库。若仓库显示不全，就点击右上角 <code>SYNC REPOS</code></p>
+</li>
+<li><p><code>OFF --&gt; ON</code> ，然后点击 repo 名进入该仓库 </p>
+</li>
+<li><p>Click 左侧的 <code>Setting</code></p>
+</li>
+<li><p><code>.coveralls.yml</code></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">repo_token:</span> <span class="string">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>此时还是 <code>只支持公开仓库</code> 的状态；若想支持私有仓库 <strong>[尝试失败]</strong>，</p>
+<ul>
+<li>在页面最下方找到 Need to Access Un-Publicized Organization Memberships，</li>
+<li>点击其右的 <code>ENABLE PRIVATE REPO ACCESS</code>，则显示 <em>SYNCING…</em></li>
+<li>稍等片刻后出现授权页面 “Anthorize Coveralls Pro”，确定授权 <code>Anthorize Iemurheavy</code></li>
+<li>回到自动重定向后的页面，发现此时仍然只有公开库，找到页面最下方的 “Refresh Your Private Repos”，点击右侧 <code>REFRESH PRIVATE REPOS</code>，出现 <em>SYNCING…</em></li>
+<li>发现还是只有公开仓库</li>
+<li>注：最下方的 <code>GITHUB SETTINGS</code> 点进去是授权页面，需要时可 <code>Revoke Access</code></li>
+</ul>
+<p><em>COVERALLS 示意图</em></p>
+<ol>
+<li>UN-PUBLICIZED 授权之前<img src="/images/2020-04/0404_GitHubCI_Coveralls_1public.png" width="97%"></li>
+<li>UN-PUBLICIZED 授权之后<img src="/images/2020-04/0404_GitHubCI_Coveralls_2private.png" width="97%">
+
+</li>
+</ol>
+<h3 id="Codecov-codecov"><a href="#Codecov-codecov" class="headerlink" title="Codecov (codecov)"></a>Codecov (codecov)</h3><p>#### public repos<br>#### private repos  </p>
+<p>官网 <a href="https://codecov.io/" target="_blank" rel="noopener">https://codecov.io/</a></p>
+<ol>
+<li><p>使用 GitHub (/ GitLab / Bitbucket) 账号登入</p>
+</li>
+<li><p>右上角点击自己的头像，在新进入的页面点击右方 <code>Add new repository</code>  </p>
+</li>
+<li><p>页面 Choose a new repository below: 在下方选择仓库<br><em>Notice:</em> 如果想找的仓库不显示，就点击 <code>Add repository</code> 页面最下方的 <code>Sync team list</code> ，<br>即 “头像 -&gt; Account -&gt; Repositories -&gt; Sync team repository list”</p>
+</li>
+<li><p>页面 Let’s get your project covered  </p>
+<ol>
+<li><p>Copy Token, 把代码填入 <code>.travis.yml</code> 的 “env: global” 部分  </p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">env:</span></span><br><span class="line">  <span class="attr">global:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">CODECOV_TOKEN</span> <span class="string">=</span> <span class="string">"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将测试覆盖率报告上传给 Codecov</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">after_success:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">codecov</span> <span class="string">--token="$CODECOV_TOKEN"</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">bash</span> <span class="string">&lt;(curl</span> <span class="string">-s</span> <span class="string">https://codecov.io/bash)</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>在官网上查看报告</p>
+</li>
+</ol>
+<ul>
+<li>Overview</li>
+<li>Settings<br>Badge -&gt; Markdown</li>
+</ul>
+<p>第一次成功上传后找到</p>
+<ul>
+<li>Branches: 可查看对应分支的报告 </li>
+<li>Settings: <ul>
+<li>General: 改变 <code>Default Branch</code>，输入对应分支名，然后 <code>Update</code></li>
+<li>Badge: 页面多刷新几次之后，发现徽章的 Markdown 代码改变，对应更新 readme 即可</li>
+<li>其实两个徽章的代码里面也就只有 [branch-name] 不一样，其他都一样</li>
+</ul>
+</li>
+</ul>
+<h3 id="Codacy-code-quality-coverage"><a href="#Codacy-code-quality-coverage" class="headerlink" title="Codacy (code quality, coverage)"></a>Codacy (code quality, coverage)</h3><p>#### public repos<br>#### private repos  </p>
+<p>官网 <a href="https://www.codacy.com" target="_blank" rel="noopener">https://www.codacy.com</a>  </p>
+<ol>
+<li><p>Click <code>Add repository</code><br>用 GitHub 账号 (也可使用 GitLab, Bitbucket) 进入<a href="https://app.codacy.com/projects" target="_blank" rel="noopener">官网</a>，添加自己的仓库。<br>注意此时能 access 到的仓库都是 Public 的。要想 access 到私有仓库，需授权</p>
+</li>
+<li><p><code>Give access on GitHub</code><br>点击后按页面说明进行，需要输入 GitHub 账号密码。<br>授权后可 access 到 Private 仓库。</p>
+</li>
+<li><p>指定仓库 Click <code>Add</code><br>找到想要 review 的仓库，点击右方 <code>Add</code>。<br>等待：<em>Checking permissions…</em>, <em>Reviewing…</em><br>其中 Reviewing 这一步需要等一会儿，时间不定</p>
+</li>
+</ol>
+<p>进入 My Repositories –&gt; Settings </p>
+<ul>
+<li>Branches<ul>
+<li><code>ANALYSIS</code> 可以设置对哪个分支进行分析</li>
+<li><code>Select Main Branch</code> 可以把默认分支从 master 移到其他分支</li>
+</ul>
+</li>
+<li>General<ul>
+<li>Codacy Badge</li>
+</ul>
+</li>
+</ul>
+<p>回到 Dashboard ，进入 Coverage: <code>Set up your coverage here</code> </p>
+<ul>
+<li><p>Copy the Repository Token ，修改 <code>.travis.yml</code> 文件</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">env:</span></span><br><span class="line">  <span class="attr">global:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">CODACY_PROJECT_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生成测试覆盖率的报告文件</p>
+</li>
+<li><p>上传报告</p>
+</li>
+<li><p><em>Notice:</em> 此时再回到 Settings -&gt; General, 会发现 Codacy Badge 已经从一个 code quality 变到了两个，即增加了 coverage </p>
+</li>
+</ul>
+<h2 id="refs"><a href="#refs" class="headerlink" title="refs"></a>refs</h2><p>github 自动 travis<br><a href="https://github.com/levy9527/blog/issues/1" target="_blank" rel="noopener">Github集成TravisCI：自动发布</a><br><a href="https://www.jianshu.com/p/e22c13d85659" target="_blank" rel="noopener">手把手教你使用Travis CI自动部署你的Hexo博客到Github上</a><br><a href="https://www.chenxublog.com/2019/01/29/github-travis-ci-auto-release.html" target="_blank" rel="noopener">给github项目加上持续集成（travis-ci）与自动release发布软件功能</a><br><a href="https://www.liesauer.net/blog/post/github-auto-release-with-travis-ci.html" target="_blank" rel="noopener">如何使用Travis CI来做GitHub的Release自动发布</a>  </p>
+<p>github 使用 codacy<br><a href="https://www.jianshu.com/p/ed46ceca0654" target="_blank" rel="noopener">徽章系列7： codacy 的使用</a><br><a href="https://zhuanlan.zhihu.com/p/30780998" target="_blank" rel="noopener">聊聊GITHUB上的那些小工具01——代码质量</a><br><a href="https://www.cnblogs.com/shengulong/p/8866681.html" target="_blank" rel="noopener">聊聊Code Review</a><br><a href="https://blog.csdn.net/gdky005/article/details/73330343" target="_blank" rel="noopener">徽章系列7： codacy 的使用</a>  </p>
+<p><strong>孤独狂饮 | 简书</strong><br><a href="https://www.jianshu.com/p/226b4d8007e5" target="_blank" rel="noopener">徽章系列3： Travis CI 的使用</a><br><a href="https://www.jianshu.com/p/1a0225eca32f" target="_blank" rel="noopener">徽章系列4： Circle CI 的使用</a><br><a href="https://www.jianshu.com/p/c0fc577407a6" target="_blank" rel="noopener">徽章系列5： Codecov 的使用</a><br><a href="https://www.jianshu.com/p/ed46ceca0654" target="_blank" rel="noopener">徽章系列7： codacy 的使用</a><br><a href="https://www.jianshu.com/p/7e176d1fb583" target="_blank" rel="noopener">徽章系列8：生成个性徽章</a><br><a href="https://www.jianshu.com/p/f973eb1de56a" target="_blank" rel="noopener">打造一个高逼格的android开源项目——小白全攻略</a><br><a href="https://www.jianshu.com/nb/13467652" target="_blank" rel="noopener">开源徽章系列</a>  </p>
+<h2 id="pytest"><a href="#pytest" class="headerlink" title="pytest"></a>pytest</h2><p>在 conda 虚拟环境下使用 pytest 会调用主环境的 python</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">source</span> activate adanet</span><br><span class="line">$ pip install -r requirements.txt</span><br><span class="line">$ pip install pytest</span><br><span class="line">$ <span class="comment">#    python -m pytest </span></span><br><span class="line">$ <span class="comment"># or pytest #tests</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>pytest</strong></p>
+<ul>
+<li>pytest 设置 python 路径<br><a href="https://blog.csdn.net/liuchunming033/article/details/46506131" target="_blank" rel="noopener">【Pytest】pytest的基本设置</a><br><a href="https://blog.csdn.net/weixin_43743725/article/details/85048235" target="_blank" rel="noopener"><font color="green">Pytest-配置文件</font></a><br>The command “coverage run –source=./ -m pytest” exited with 5.<br><a href="https://github.com/pytest-dev/pytest/issues/2239" target="_blank" rel="noopener">No documentation on exit code 5</a>  </li>
+<li>pytest, deselected 什么情形<br><a href="https://learning-pytest.readthedocs.io/zh/latest/doc/test-function/mark.html" target="_blank" rel="noopener"><font color="green">pytest docs: 标记函数</font></a><br><a href="https://www.jianshu.com/p/ec2663524d86" target="_blank" rel="noopener">pytest 执行测试用例的几种方法</a><br><a href="https://www.jianshu.com/p/a754e3d47671" target="_blank" rel="noopener">Pytest - 使用介绍</a><br><a href="https://blog.csdn.net/df0128/article/details/91040953" target="_blank" rel="noopener">pytest教程之分组测试</a><br><a href="https://cuyu.github.io/python/2016/09/21/Play-Python-Library%E4%B9%8Bpytest-mark%E7%AF%87" target="_blank" rel="noopener">Play Python Library之pytest–mark篇</a>  </li>
+<li>虚拟环境 pytest<br><a href="https://blog.csdn.net/keineahnung2345/article/details/86080914" target="_blank" rel="noopener"><font color="green">在conda虛擬環境下使用py.test會調用主環境的Python</font></a><br><a href="https://www.cnblogs.com/yoyoketang/p/11427362.html" target="_blank" rel="noopener">python笔记41-虚拟环境virtualenv</a>  </li>
+</ul>
+<h1 id="Remote-Servers"><a href="#Remote-Servers" class="headerlink" title="Remote Servers"></a>Remote Servers</h1><h2 id="VSCode"><a href="#VSCode" class="headerlink" title="VSCode"></a>VSCode</h2><p>Visual Studio Code 安装插件  </p>
+<ul>
+<li>Remote - SSH</li>
+<li># Remote Development</li>
+</ul>
+<h3 id="ssh-配置文件"><a href="#ssh-配置文件" class="headerlink" title="ssh 配置文件"></a>ssh 配置文件</h3><p><code>Remote - SSH</code> 可以点击左下角连接远程服务器，它的配置文件是 <code>C:\Users\Lenovo\.ssh\config</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\Lenovo\.ssh</span><br><span class="line">λ ls</span><br><span class="line">config  id_rsa  id_rsa.pub  known_hosts</span><br><span class="line"></span><br><span class="line">C:\Users\Lenovo\.ssh</span><br><span class="line">λ vim config</span><br><span class="line"><span class="comment"># Esc + :q or :wq</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ControlPath ~/.ssh/%r@%h_%p</span></span><br><span class="line"><span class="comment"># Read more about SSH config files: https://linux.die.net/man/5/ssh_config</span></span><br><span class="line"><span class="comment"># Host alias</span></span><br><span class="line"><span class="comment">#     HostName hostname</span></span><br><span class="line"><span class="comment">#     User user</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line">Host eustomaqua</span><br><span class="line">    HostName        127.0.0.1</span><br><span class="line">    Port            22</span><br><span class="line">    User            eustomaqua</span><br><span class="line">    IdentityFile    ~/.ssh/id_rsa  <span class="comment"># C:\Users\Lenovo\.ssh\id_rsa</span></span><br><span class="line">    IdentitiesOnly  yes</span><br></pre></td></tr></table></figure>
+
+<h3 id="设置免密登录"><a href="#设置免密登录" class="headerlink" title="设置免密登录"></a>设置免密登录</h3><p>VSCode 每次远程连接都要输入密码，很麻烦，所以还需要设置一下 ssh 的免密登录。</p>
+<ol>
+<li><p><strong>在本地 PC 生成 SSH 的公钥和私钥</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">λ ssh-keygen -t rsa</span><br></pre></td></tr></table></figure>
+
+<p>这样会在当前目录生成名为 <code>id_rsa</code> 的私钥文件和名为 <code>id_rsa.pub</code> 的公钥文件，<code>-t</code> 表示密钥类型是 rsa。<br>如果只输入 ssh-keygen 生成的 RSA 密钥长度为 2048，如果你对安全性要求比较高可以指定 4096 位的长度，这里 <code>-b</code> 就是多少位：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">λ ssh-keygen -b 4096 -t rsa</span><br></pre></td></tr></table></figure>
+
+<p>当你在生成 SSHKEY 的时候在命令行下会提示你 Enter file in which to save the key，让你确认密钥文件保存的路径，一般回车即可（一般默认会在当前用户家目录下的 .ssh 目录下）。<br>第二个提示是 Enter passphrase (empty for no passphrase) 让你输入一个密钥的密码，如果不输入则留空；回车生成公私钥完毕 。（这里建议密码留空）</p>
+</li>
+<li><p><strong>手动上传公钥文件</strong><br>将本地的公钥文件上传到服务器上，然后在服务器需要免密登录的用户家目录下查看是否有 <code>~/.ssh/authorized_keys</code> 这个文件，如果没有手动创建一个:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="comment"># cd ~/.ssh</span></span><br><span class="line">$ touch ~/.ssh/authorized_keys</span><br><span class="line">$ <span class="comment"># cat authorized_keys 为空</span></span><br></pre></td></tr></table></figure>
+
+<p>然后将公钥内容写入到 <code>authorized_keys</code> 文件中，因为这个文件可能已经有内容了，所以可以使用如下方式</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cat -n ~/.ssh/rsa.pub ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>
+
+<p>也可以使用 <code>vim</code> 打开这个文件，然后把本地公钥内容粘贴到文件末端 (另起一行，粘贴公钥)</p>
+</li>
+</ol>
+<h3 id="内网穿透-暂略"><a href="#内网穿透-暂略" class="headerlink" title="内网穿透 (暂略)"></a>内网穿透 (暂略)</h3><p>使用 autossh 进行内网穿透<br>设想这样的场景，你在公司或者学校有一台用于炼丹的服务器，但是只能在内网访问。我在家里使用笔记本也想连接到远程的服务器中，这时我们应该怎么办呢。<br>答案是我们需要一台具有公网 ip 的服务器作为中继，使用 autossh 将公网服务器作为代理服务器。假设公网服务器为主机 A，内网炼丹炉为主机 B，我们的笔记本为 C 则</p>
+<h3 id="其它设置"><a href="#其它设置" class="headerlink" title="其它设置"></a>其它设置</h3><p><a href="https://sherlockgy.github.io/2018/09/01/%E8%AE%BE%E7%BD%AEVsCode%E8%87%AA%E5%8A%A8%E6%8D%A2%E8%A1%8C/" target="_blank" rel="noopener">设置VsCode自动换行</a>  </p>
+<h2 id="PyCharm"><a href="#PyCharm" class="headerlink" title="PyCharm"></a>PyCharm</h2><h2 id="Refs"><a href="#Refs" class="headerlink" title="Refs"></a>Refs</h2><p>vscode 远程 一直输入密码<br><a href="https://zhuanlan.zhihu.com/p/89662757" target="_blank" rel="noopener">使用vscode进行远程炼丹</a><br><a href="https://blog.csdn.net/hchhbbcxl/article/details/101429447" target="_blank" rel="noopener">vscode remote开发ssh免密登陆失败</a><br><a href="https://zhuanlan.zhihu.com/p/68577071" target="_blank" rel="noopener">VS Code Remote SSH配置</a>  </p>
+<p>ubuntu 查看目录权限<br><a href="https://blog.csdn.net/haydenwang8287/article/details/1753883" target="_blank" rel="noopener">linux文件权限查看及修改-chmod ——入门的一些常识</a><br><a href="https://blog.csdn.net/qq_22605739/article/details/46722161" target="_blank" rel="noopener">ubuntu 文件及子文件夹的权限的查看及修改</a>  </p>
+<h2 id="出现问题"><a href="#出现问题" class="headerlink" title="出现问题"></a>出现问题</h2><p>有时候明明已经设置了 <code>authorized_keys</code> 文件，并加入了自己的公钥，但是仍然会一直提示输入密码信息。因为自己是非 root 用户，无法在服务器上改 ssh_config 文件或是重启 ssh 服务，所以没有尝试下面这些所提出的解决方法。</p>
+<p><em>References:</em><br>ssh authorized_keys 不生效<br><a href="https://blog.csdn.net/xexiyong/article/details/77742994" target="_blank" rel="noopener">SSH authorized_keys 无效问题</a><br><a href="https://blog.csdn.net/lisongjia123/article/details/78513244" target="_blank" rel="noopener">解决SSH免密登录配置成功后不生效问题</a><br>ssh_config 文件<br><a href="https://daemon369.github.io/ssh/2015/03/21/using-ssh-config-file" target="_blank" rel="noopener">使用 SSH config 文件</a><br><a href="https://www.cnblogs.com/xiaochina/p/5802008.html" target="_blank" rel="noopener">ssh配置文件ssh_config和sshd_config区别</a>  </p>
+<h1 id="References"><a href="#References" class="headerlink" title="*References"></a>*References</h1>
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Configure/" rel="tag"># Configure</a>
+          
+            <a href="/tags/Git/" rel="tag"># Git</a>
+          
+            <a href="/tags/Remote-Server/" rel="tag"># Remote Server</a>
+          
+            <a href="/tags/LaTeX/" rel="tag"># LaTeX</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/2020-04-03-Ubuntu-TensorRT/" rel="next" title="NVIDIA TensorRT Installation">
+                <i class="fa fa-chevron-left"></i> NVIDIA TensorRT Installation
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/2020-04-16-Python-Debug-cProfile-TensorBoard/" rel="prev" title="Debug Tips - cProfile in Python, TensorBoard">
+                Debug Tips - cProfile in Python, TensorBoard <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80OTYwMS8yNjA5Mg=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/EustomaAqua.png"
+                alt="eustomaqua" />
+            
+              <p class="site-author-name" itemprop="name">eustomaqua</p>
+              <p class="site-description motion-element" itemprop="description">Once upon a time....</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">22</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/eustomaqua" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:yjbian92@gmail.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#LaTeX-Functions"><span class="nav-number">1.</span> <span class="nav-text">LaTeX: Functions</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#eumerate-itemize"><span class="nav-number">1.1.</span> <span class="nav-text">eumerate, itemize</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#enumerate-起始编号定义"><span class="nav-number">1.1.1.</span> <span class="nav-text">enumerate 起始编号定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支函数"><span class="nav-number">1.1.2.</span> <span class="nav-text">分支函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法清单"><span class="nav-number">1.1.3.</span> <span class="nav-text">算法清单</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#algorithm2e"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">algorithm2e</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.2.</span> <span class="nav-text">?</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#LaTeX-Others"><span class="nav-number">2.</span> <span class="nav-text">LaTeX: Others</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GitHub-repos"><span class="nav-number">3.</span> <span class="nav-text">GitHub repos</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#using-git-to-control-versions"><span class="nav-number">3.1.</span> <span class="nav-text">using git to control versions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#徽章-CI-bots"><span class="nav-number">3.2.</span> <span class="nav-text">徽章 / CI bots</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Travis-CI-build-passing"><span class="nav-number">3.2.1.</span> <span class="nav-text">Travis CI (build passing)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Coveralls-coverage"><span class="nav-number">3.2.2.</span> <span class="nav-text">Coveralls (coverage)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Codecov-codecov"><span class="nav-number">3.2.3.</span> <span class="nav-text">Codecov (codecov)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Codacy-code-quality-coverage"><span class="nav-number">3.2.4.</span> <span class="nav-text">Codacy (code quality, coverage)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#refs"><span class="nav-number">3.3.</span> <span class="nav-text">refs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pytest"><span class="nav-number">3.4.</span> <span class="nav-text">pytest</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Remote-Servers"><span class="nav-number">4.</span> <span class="nav-text">Remote Servers</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#VSCode"><span class="nav-number">4.1.</span> <span class="nav-text">VSCode</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ssh-配置文件"><span class="nav-number">4.1.1.</span> <span class="nav-text">ssh 配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置免密登录"><span class="nav-number">4.1.2.</span> <span class="nav-text">设置免密登录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内网穿透-暂略"><span class="nav-number">4.1.3.</span> <span class="nav-text">内网穿透 (暂略)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其它设置"><span class="nav-number">4.1.4.</span> <span class="nav-text">其它设置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PyCharm"><span class="nav-number">4.2.</span> <span class="nav-text">PyCharm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Refs"><span class="nav-number">4.3.</span> <span class="nav-text">Refs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#出现问题"><span class="nav-number">4.4.</span> <span class="nav-text">出现问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#References"><span class="nav-number">5.</span> <span class="nav-text">*References</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-paper-plane"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">eustomaqua</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+  <div class="theme-info">
+    <div class="powered-by-post-count"></div>
+    <span class="post-count">Total 142.7k Words</span>
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.3.0</div>
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      Total
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      Visitors
+    </span>
+  
+
+  
+    <span class="site-pv">
+      Total
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      Views
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap')
+      $(e).after($wrap)
+      $wrap.append($('<button>').addClass('copy-btn').append('Copy').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text()
+        }).toArray().join('\n')
+        var ta = document.createElement('textarea')
+        document.body.appendChild(ta)
+        ta.style.position = 'absolute'
+        ta.style.top = '0px'
+        ta.style.left = '0px'
+        ta.value = code
+        ta.select()
+        ta.focus()
+        var result = document.execCommand('copy')
+        document.body.removeChild(ta)
+        
+          if(result)$(this).text('Copied')
+          else $(this).text('Copy failed')
+        
+        $(this).blur()
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn')
+        setTimeout(function () {
+          $b.text('Copy')
+        }, 300)
+      }).append(e)
+    })
+  </script>
+
+
+</body>
+</html>

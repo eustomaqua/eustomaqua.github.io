@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+  .pace .pace-progress {
+    background: #1E92FB; /*进度条颜色*/
+    height: 3px;
+  }
+  .pace .pace-progress-inner {
+    box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+  }
+  .pace .pace-activity {
+    border-top-color: #1E92FB;    /*上边框颜色*/
+    border-left-color: #1E92FB;    /*左边框颜色*/
+  }
+</style>
+
+
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/EustomaAqua.png?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/EustomaAqua.png?v=6.3.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.3.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="Installation# Ubuntu 18.04 or 16.04    Anaconda3-5.2.0-Linux-x86_64.sh CUDA 10.0.130 cuDNN v7.6.4 for CUDA 10.0  Anaconda卸载Ubuntu 卸载 anacondalinux上anaconda的卸载Ubuntu上 anaconda的卸载   12345678910$ # 1.">
+<meta name="keywords" content="Configure,Linux,NVIDIA TensorRT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NVIDIA TensorRT Installation">
+<meta property="og:url" content="https://eustomaqua.github.io/2020/2020-04-03-Ubuntu-TensorRT/index.html">
+<meta property="og:site_name" content="Aqua Eustoma">
+<meta property="og:description" content="Installation# Ubuntu 18.04 or 16.04    Anaconda3-5.2.0-Linux-x86_64.sh CUDA 10.0.130 cuDNN v7.6.4 for CUDA 10.0  Anaconda卸载Ubuntu 卸载 anacondalinux上anaconda的卸载Ubuntu上 anaconda的卸载   12345678910$ # 1.">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-262e209917537c0f699cc1a5eb803b2d_720w.png">
+<meta property="og:updated_time" content="2020-04-03T13:21:30.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NVIDIA TensorRT Installation">
+<meta name="twitter:description" content="Installation# Ubuntu 18.04 or 16.04    Anaconda3-5.2.0-Linux-x86_64.sh CUDA 10.0.130 cuDNN v7.6.4 for CUDA 10.0  Anaconda卸载Ubuntu 卸载 anacondalinux上anaconda的卸载Ubuntu上 anaconda的卸载   12345678910$ # 1.">
+<meta name="twitter:image" content="https://pic2.zhimg.com/80/v2-262e209917537c0f699cc1a5eb803b2d_720w.png">
+
+
+
+
+
+
+  <link rel="canonical" href="https://eustomaqua.github.io/2020/2020-04-03-Ubuntu-TensorRT/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>NVIDIA TensorRT Installation | Aqua Eustoma</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Aqua Eustoma</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />Search</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://eustomaqua.github.io/2020/2020-04-03-Ubuntu-TensorRT/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="eustomaqua">
+      <meta itemprop="description" content="Once upon a time....">
+      <meta itemprop="image" content="/images/EustomaAqua.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aqua Eustoma">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">NVIDIA TensorRT Installation
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 03 Apr 2020 08:21:30" itemprop="dateCreated datePublished" datetime="2020-04-03T08:21:30-05:00">03 Apr 2020</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Records/" itemprop="url" rel="index"><span itemprop="name">Records</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+
+          
+            <span class="post-letters-count">
+              &nbsp; | &nbsp;
+              <span title="post.wordcount">
+                6,920 words
+              </span>
+              &nbsp; | &nbsp;
+              <span title="post.min2read">
+                39 minutes
+              </span>
+            </span>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <!--
+Created: 2020-04-03 02:31:04
+-->
+
+
+<h1 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h1><p># Ubuntu 18.04 or 16.04  </p>
+<ul>
+<li>Anaconda3-5.2.0-Linux-x86_64.sh</li>
+<li>CUDA 10.0.130</li>
+<li>cuDNN v7.6.4 for CUDA 10.0</li>
+</ul>
+<h2 id="Anaconda"><a href="#Anaconda" class="headerlink" title="Anaconda"></a>Anaconda</h2><h3 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h3><p><a href="https://blog.csdn.net/lqp888888/article/details/79807885" target="_blank" rel="noopener">Ubuntu 卸载 anaconda</a><br><a href="https://blog.csdn.net/qq_22474567/article/details/54984257" target="_blank" rel="noopener">linux上anaconda的卸载</a><br><a href="https://blog.csdn.net/lixintong1992/article/details/67654753" target="_blank" rel="noopener">Ubuntu上 anaconda的卸载</a>  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="comment"># 1. 进入安装 Anaconda 目录，用下面这个命令 即可删除文件夹。</span></span><br><span class="line">$ <span class="built_in">cd</span> ~/VirtualEnv</span><br><span class="line">$ rm -r anaconda3</span><br><span class="line"></span><br><span class="line">$ <span class="comment"># 2. 更新路径。输入命令</span></span><br><span class="line">$ gedit ~/.bashrc</span><br><span class="line">$ <span class="comment">## 注释掉或者删除“ export PATH=/home/usr/anaconda3/bin:$PATH ”，保存文档。</span></span><br><span class="line"></span><br><span class="line">$ <span class="comment"># 3. 可使之立即生效；也可关闭当前终端，新开终端即可生效.</span></span><br><span class="line">$ <span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>Anaconda3-5.2.0-Linux-x86_64.sh <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/" target="_blank" rel="noopener">[mirrors.thu]</a>  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~</span><br><span class="line">$ mv software Software</span><br><span class="line">$ <span class="built_in">cd</span> ~/Software</span><br><span class="line">$ bash ./Anaconda3-5.2.0-Linux-x86_64.sh</span><br><span class="line"></span><br><span class="line">In order to <span class="built_in">continue</span> the installation process, please review the license agreement.</span><br><span class="line">Please, press ENTER to <span class="built_in">continue</span></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Do you accept the license terms? [yes|no]</span><br><span class="line">[no] &gt;&gt;&gt;</span><br><span class="line">Please answer <span class="string">'yes'</span> or <span class="string">'no'</span>:<span class="string">'</span></span><br><span class="line"><span class="string">&gt;&gt;&gt; yes</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Anaconda3 will now be installed into this location:</span></span><br><span class="line"><span class="string">/home/eustomaqua/anaconda3</span></span><br><span class="line"><span class="string">  - Press ENTER to confirm the location</span></span><br><span class="line"><span class="string">  - Press CTRL-C to abort the installation</span></span><br><span class="line"><span class="string">  - Or specify a different location below</span></span><br><span class="line"><span class="string">[/home/eustomaqua/anaconda3] &gt;&gt;&gt; /home/eustomaqua/VirtualEnv/anaconda3</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">PREFIX=/home/eustomaqua/VirtualEnv/anaconda3</span></span><br><span class="line"><span class="string">installing: python-3.6.5-hc3d631a_2 ...</span></span><br><span class="line"><span class="string">Python 3.6.5 :: Anaconda, Inc.</span></span><br><span class="line"><span class="string">installing: blas-1.0-mkl ...</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">installation finished.</span></span><br><span class="line"><span class="string">WARNING:</span></span><br><span class="line"><span class="string">    You currently have a PYTHONPATH environment variable set. This may cause</span></span><br><span class="line"><span class="string">    unexpected behavior when running the Python interpreter in Anaconda3.</span></span><br><span class="line"><span class="string">    For best results, please verify that your PYTHONPATH only points to</span></span><br><span class="line"><span class="string">    directories of packages that are compatible with the Python interpreter</span></span><br><span class="line"><span class="string">    in Anaconda3: /home/eustomaqua/VirtualEnv/anaconda3</span></span><br><span class="line"><span class="string">Do you wish the installer to prepend the Anaconda3 install location</span></span><br><span class="line"><span class="string">to PATH in your /home/eustomaqua/.bashrc ? [yes|no]</span></span><br><span class="line"><span class="string">[no] &gt;&gt;&gt; yes</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Appending source /home/eustomaqua/VirtualEnv/anaconda3/bin/activate to /home/eustomaqua/.bashrc</span></span><br><span class="line"><span class="string">A backup will be made to: /home/eustomaqua/.bashrc-anaconda3.bak</span></span><br><span class="line"><span class="string">For this change to become active, you have to open a new terminal.</span></span><br><span class="line"><span class="string">Thank you for installing Anaconda3!</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">===========================================================================</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Anaconda is partnered with Microsoft! Microsoft VSCode is a streamlined</span></span><br><span class="line"><span class="string">code editor with support for development operations like debugging, task</span></span><br><span class="line"><span class="string">running and version control.</span></span><br><span class="line"><span class="string">To install Visual Studio Code, you will need:</span></span><br><span class="line"><span class="string">  - Administrator Privileges</span></span><br><span class="line"><span class="string">  - Internet connectivity</span></span><br><span class="line"><span class="string">Visual Studio Code License: https://code.visualstudio.com/license</span></span><br><span class="line"><span class="string">Do you wish to proceed with the installation of Microsoft VSCode? [yes|no]</span></span><br><span class="line"><span class="string">&gt;&gt;&gt; no</span></span><br><span class="line"><span class="string">$</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="检查"><a href="#检查" class="headerlink" title="检查"></a>检查</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">~/software$ python</span><br><span class="line">Python 2.7.12 (default, Nov 12 2018, 14:36:49)</span><br><span class="line">[GCC 5.4.0 20160609] on linux2</span><br><span class="line">Type <span class="string">"help"</span>, <span class="string">"copyright"</span>, <span class="string">"credits"</span> or <span class="string">"license"</span> <span class="keyword">for</span> more information.</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">[1]+  Stopped(SIGTSTP)        python</span><br><span class="line">~/software$</span><br><span class="line"></span><br><span class="line">~/software$ <span class="built_in">source</span> ~/.bashrc</span><br><span class="line">~/software$ python</span><br><span class="line">Python 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)</span><br><span class="line">[GCC 7.2.0] on linux</span><br><span class="line">Type <span class="string">"help"</span>, <span class="string">"copyright"</span>, <span class="string">"credits"</span> or <span class="string">"license"</span> <span class="keyword">for</span> more information.</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">[2]+  Stopped(SIGTSTP)        python</span><br><span class="line">~/software$</span><br><span class="line">~/software$ pip list</span><br></pre></td></tr></table></figure>
+
+<h2 id="miniconda"><a href="#miniconda" class="headerlink" title="* miniconda"></a>* miniconda</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> whereis conda</span></span><br><span class="line">conda: /opt/miniconda/bin/conda</span><br><span class="line"><span class="meta">$</span><span class="bash"> ls /opt/miniconda | grep EPFO</span></span><br><span class="line">(yourenv) $ ls /opt/miniconda/envs | grep yourenv</span><br><span class="line"><span class="meta">$</span><span class="bash"> conda info</span></span><br><span class="line"></span><br><span class="line">     active environment : yourenv</span><br><span class="line">    active env location : /home/eustomaqua/.conda/envs/EPFD</span><br><span class="line">            shell level : 2</span><br><span class="line">       user config file : /home/eustomaqua/.condarc</span><br><span class="line"> populated config files :</span><br><span class="line">          conda version : 4.5.11</span><br><span class="line">    conda-build version : not installed</span><br><span class="line">         python version : 2.7.15.final.0</span><br><span class="line">       base environment : /opt/miniconda  (read only)</span><br><span class="line">           channel URLs : https://repo.anaconda.com/pkgs/main/linux-64</span><br><span class="line">                          https://repo.anaconda.com/pkgs/main/noarch</span><br><span class="line">                          https://repo.anaconda.com/pkgs/free/linux-64</span><br><span class="line">                          https://repo.anaconda.com/pkgs/free/noarch</span><br><span class="line">                          https://repo.anaconda.com/pkgs/r/linux-64</span><br><span class="line">                          https://repo.anaconda.com/pkgs/r/noarch</span><br><span class="line">                          https://repo.anaconda.com/pkgs/pro/linux-64</span><br><span class="line">                          https://repo.anaconda.com/pkgs/pro/noarch</span><br><span class="line">          package cache : /opt/miniconda/pkgs</span><br><span class="line">                          /home/eustomaqua/.conda/pkgs</span><br><span class="line">       envs directories : /home/eustomaqua/.conda/envs</span><br><span class="line">                          /opt/miniconda/envs</span><br><span class="line">               platform : linux-64</span><br><span class="line">             user-agent : conda/4.5.11 requests/2.18.4 CPython/2.7.15 Linux/2.6.32-754.14.2.el6.x86_64 centos/6.10 glibc/2.18</span><br><span class="line">                UID:GID : 504:504</span><br><span class="line">             netrc file : None</span><br><span class="line">           offline mode : False</span><br><span class="line"></span><br><span class="line">(yourenv) $</span><br><span class="line">(yourenv) $ conda env list</span><br><span class="line"><span class="meta">#</span><span class="bash"> conda environments:</span></span><br><span class="line"><span class="meta">#</span></span><br><span class="line">yourenv               *  /home/eustomaqua/.conda/envs/yourenv</span><br><span class="line">base                     /opt/miniconda</span><br><span class="line">python3                  /opt/miniconda/envs/python3</span><br></pre></td></tr></table></figure>
+
+<p>感觉非 root 用户使用系统的 miniconda 创建环境好像有点问题。</p>
+<ul>
+<li>比如说我创建了一个环境名叫 <code>yourenv</code> ，创建好之后，进入环境会发现 pip 已有的包跟 base 一样；</li>
+<li>然后从 <code>/opt/miniconda/envs</code> 路径去查看包会发现，并没有自己创建的这个环境；</li>
+<li>但是查找 <code>/home/eustomaqua/.conda/envs/yourenv/lib/python3.6/site-packages</code> 又会发现里面只有最基础的几个包，更不用说自己从本地文件夹安装的包了。</li>
+</ul>
+<p>我本是想查找在自己环境里从文件夹安装的模块会是个什么样，没想到根本找不到位置，凡是想和 <code>site-packages</code> 有关的地方好像都没找到，包括：</p>
+<ul>
+<li><code>/opt/miniconda/envs</code> <em>: 没有这个环境</em></li>
+<li><code>~/.conda/envs</code> <em>: 根本就没有装相关包，纯白板</em></li>
+<li><code>~/software/python35/lib/python3.5/site-packages</code> <em>: 虽然这个 pip 安装了自己的文件夹包，但是在这个文件夹里就是找不到，然后 <code>pip list</code> 的时候会出现安装文件夹的绝对地址</em></li>
+</ul>
+<p>可能就是把安装的文件夹作为安装地址了吧，因为发现该文件夹里好像多了 <code>your-package.egg-info</code>，而且虽然我有写 <code>setup.py</code>，但是并没有像 Numpy 一般自己生成了 <code>version.py</code></p>
+<p><em>Reference:</em><br>miniconda 家目录 环境地址<br><a href="https://www.jianshu.com/p/a5e9190b909c" target="_blank" rel="noopener">告别窘迫：修改conda环境和缓存默认路径</a>  </p>
+<p>conda 环境 出现了别的环境的包<br><a href="http://lizhiqiang.me/conda/" target="_blank" rel="noopener">conda的简单使用</a><br><a href="https://blog.csdn.net/CV_YOU/article/details/83074448" target="_blank" rel="noopener">conda建立虚拟环境并安装相应包</a>  </p>
+<h2 id="显卡驱动"><a href="#显卡驱动" class="headerlink" title="显卡驱动"></a>显卡驱动</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvidia-smi</span><br></pre></td></tr></table></figure>
+
+<h2 id="CUDA"><a href="#CUDA" class="headerlink" title="CUDA"></a>CUDA</h2><h3 id="卸载-1"><a href="#卸载-1" class="headerlink" title="卸载"></a>卸载</h3><p><a href="https://blog.csdn.net/XunCiy/article/details/89070315" target="_blank" rel="noopener">Win10中CUDA、cuDNN的安装与卸载</a><br><a href="https://blog.csdn.net/qq_33200967/article/details/80689543" target="_blank" rel="noopener">Ubuntu安装和卸载CUDA和CUDNN</a>  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="comment"># 先卸载原来的 cuda, cudnn</span></span><br><span class="line">$ <span class="built_in">cd</span> ~/VirtualEnv</span><br><span class="line">$ ./cuda90/bin/uninstall_cuda_9.0.pl</span><br><span class="line">$ rm -r cuda90</span><br><span class="line"></span><br><span class="line">$ rm -r cuda  <span class="comment">## cudnn</span></span><br><span class="line">$ rm -r cudasamples</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>为什么一开始我就要卸载CUDA呢，这是因为笔者是换了显卡RTX2070，原本就安装了CUDA 8.0 和 CUDNN 7.0.5不能够正常使用，笔者需要安装CUDA 10.0 和 CUDNN 7.4.2，所以要先卸载原来的CUDA。注意以下的命令都是在root用户下操作的。<br>卸载CUDA很简单，一条命令就可以了，主要执行的是CUDA自带的卸载脚本，读者要根据自己的cuda版本找到卸载脚本：<br><code>sudo /usr/local/cuda-8.0/bin/uninstall_cuda_8.0.pl</code><br>卸载之后，还有一些残留的文件夹，之前安装的是CUDA 8.0。可以一并删除：<br><code>sudo rm -rf /usr/local/cuda-8.0/</code><br>这样就算卸载完了CUDA。</p>
+</blockquote>
+<h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">~$ <span class="built_in">cd</span> Software</span><br><span class="line">~/Software$ ls</span><br><span class="line">Anaconda3-5.2.0-Linux-x86_64.sh  cudnn-10.0-linux-x64-v7.6.4.38.solitairetheme8</span><br><span class="line">cuda_10.0.130_410.48_linux.run   Python-3.6.1.tgz</span><br><span class="line"></span><br><span class="line">~/Software$ chmod +x cuda_10.0.130_410.48_linux.run</span><br><span class="line">~/Software$ ls</span><br><span class="line">Anaconda3-5.2.0-Linux-x86_64.sh  cudnn-10.0-linux-x64-v7.6.4.38.solitairetheme8</span><br><span class="line">cuda_10.0.130_410.48_linux.run   Python-3.6.1.tgz</span><br><span class="line"></span><br><span class="line">~/Software$ ./cuda_10.0.130_410.48_linux.run</span><br><span class="line">Logging to /tmp/cuda_install_25104.log</span><br><span class="line">Using more to view the EULA.</span><br><span class="line">End User License Agreement</span><br><span class="line">--------------------------</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  20. Licensee<span class="string">'s use of linmath.h header for CPU functions for</span></span><br><span class="line"><span class="string">    GL vector/matrix operations from lunarG is subject to the</span></span><br><span class="line"><span class="string">    Apache License Version 2.0.</span></span><br><span class="line"><span class="string">-----------------</span></span><br><span class="line"><span class="string">Do you accept the previously read EULA?</span></span><br><span class="line"><span class="string">accept/decline/quit: Do you accept the previously read EULA?</span></span><br><span class="line"><span class="string">accept/decline/quit: accept</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Install NVIDIA Accelerated Graphics Driver for Linux-x86_64 410.48?</span></span><br><span class="line"><span class="string">(y)es/(n)o/(q)uit: no</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Install the CUDA 10.0 Toolkit?</span></span><br><span class="line"><span class="string">(y)es/(n)o/(q)uit: yes</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Enter Toolkit Location</span></span><br><span class="line"><span class="string"> [ default is /usr/local/cuda-10.0 ]: /home/eustomaqua/Software/cuda-10.0</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Do you want to install a symbolic link at /usr/local/cuda?</span></span><br><span class="line"><span class="string">(y)es/(n)o/(q)uit: no</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Install the CUDA 10.0 Samples?</span></span><br><span class="line"><span class="string">(y)es/(n)o/(q)uit: yes</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Enter CUDA Samples Location</span></span><br><span class="line"><span class="string"> [ default is /home/eustomaqua ]: /home/eustomaqua/Software/cuda-samples</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">$</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">~/Software$ vim ~/.bashrc</span><br><span class="line">~/Software$ <span class="comment"># Esc + ':wq'</span></span><br><span class="line">~/Software$ <span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<p>修改 <code>~/.bashrc</code> 文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## cuda 9.0: 5-May-2019 central time</span></span><br><span class="line"><span class="comment"># export PATH=$HOME/VirtualEnv/cuda90/bin:$PATH</span></span><br><span class="line"><span class="comment"># export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/VirtualEnv/cuda90/lib64/</span></span><br><span class="line"><span class="comment"># export CPATH=$HOME/VirtualEnv/cuda90/include:$CPATH</span></span><br><span class="line"><span class="comment"># export DYLD_LIBRARY_PATH=$HOME/VirtualEnv/cuda90/lib:$DYLD_LIBRARY_PATH</span></span><br><span class="line"><span class="comment">## cuda 10.0: 3-Dec-2019 beijing time</span></span><br><span class="line"><span class="comment"># export PATH=/usr/local/cuda/bin:$PATH</span></span><br><span class="line"><span class="comment"># export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64/</span></span><br><span class="line"><span class="comment"># export CPATH=/usr/local/cuda/include:$CPATH</span></span><br><span class="line"><span class="comment"># export DYLD_LIBRARY_PATH=/usr/local/cuda/lib:$DYLD_LIBRARY_PATH</span></span><br><span class="line"><span class="comment"># alias python='/home/eustomaqua/VirtualEnv/py36env/bin/python3'</span></span><br><span class="line"><span class="built_in">export</span> PYTHONPATH=/home/eustomaqua/VirtualEnv/py36env/bin/python3</span><br><span class="line"><span class="built_in">export</span> PYTHONPATH=<span class="string">"<span class="variable">$&#123;PYTHONPATH&#125;</span>:/home/eustomaqua/GitHubLab/ml-fairness-gym"</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># added by Anaconda3 installer</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">"/home/eustomaqua/VirtualEnv/anaconda3/bin:<span class="variable">$PATH</span>"</span></span><br><span class="line"><span class="comment"># self added for Nvidia</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$HOME</span>/Software/cuda-10.0/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=<span class="variable">$LD_LIBRARY_PATH</span>:<span class="variable">$HOME</span>/Software/cuda-10.0/lib64/</span><br></pre></td></tr></table></figure>
+
+<h3 id="检查-1"><a href="#检查-1" class="headerlink" title="检查"></a>检查</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">~/Software$ nvidia-smi</span><br><span class="line"></span><br><span class="line">~/Software$ cat /usr/<span class="built_in">local</span>/cuda/version.txt</span><br><span class="line">CUDA Version 10.2.89</span><br><span class="line">~/Software$ cat cuda-10.0/version.txt</span><br><span class="line">CUDA Version 10.0.130</span><br><span class="line">~/Software$</span><br><span class="line"></span><br><span class="line">~/Software$ ls /usr/<span class="built_in">local</span>/cuda/lib64 | grep cudnn</span><br><span class="line">~/Software$ ls cuda-10.0/lib64 | grep cudnn</span><br><span class="line">~/Software$ <span class="comment"># 检查表示尚未安装 cuDNN</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="CUDNN"><a href="#CUDNN" class="headerlink" title="CUDNN"></a>CUDNN</h2><h3 id="安装-2"><a href="#安装-2" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">~/Software$ ls</span><br><span class="line">Anaconda3-5.2.0-Linux-x86_64.sh  cuda-samples</span><br><span class="line">cuda-10.0                        cudnn-10.0-linux-x64-v7.6.4.38.solitairetheme8</span><br><span class="line">cuda_10.0.130_410.48_linux.run   Python-3.6.1.tgz</span><br><span class="line"></span><br><span class="line">~/Software$ cp cudnn-10.0-linux-x64-v7.6.4.38.solitairetheme8 cudnn-10.0-linux-x64-v7.6.4.38.tgz</span><br><span class="line">~/Software$ tar -xvf cudnn-10.0-linux-x64-v7.6.4.38.tgz</span><br><span class="line">cuda/include/cudnn.h</span><br><span class="line">cuda/NVIDIA_SLA_cuDNN_Support.txt</span><br><span class="line">cuda/lib64/libcudnn.so</span><br><span class="line">cuda/lib64/libcudnn.so.7</span><br><span class="line">cuda/lib64/libcudnn.so.7.6.4</span><br><span class="line">cuda/lib64/libcudnn_static.a</span><br><span class="line">~/Software$</span><br><span class="line"></span><br><span class="line">~/Software$ ls</span><br><span class="line">Anaconda3-5.2.0-Linux-x86_64.sh  cuda-samples</span><br><span class="line">cuda                             cudnn-10.0-linux-x64-v7.6.4.38.solitairetheme8</span><br><span class="line">cuda-10.0                        cudnn-10.0-linux-x64-v7.6.4.38.tgz</span><br><span class="line">cuda_10.0.130_410.48_linux.run   Python-3.6.1.tgz</span><br><span class="line">~/Software$ rm cudnn-10.0-linux-x64-v7.6.4.38.solitairetheme8</span><br><span class="line">~/Software$ <span class="built_in">cd</span> cuda</span><br><span class="line">:~/Software/cuda$ ls</span><br><span class="line">include  lib64  NVIDIA_SLA_cuDNN_Support.txt</span><br><span class="line">~/Software/cuda$ <span class="built_in">cd</span> ..</span><br><span class="line"></span><br><span class="line">~/Software$ mv cuda/include/cudnn.h ~/Software/cuda-10.0/include/</span><br><span class="line">~/Software$ mv cuda/lib64/libcudnn* ~/Software/cuda-10.0/lib64</span><br><span class="line">~/Software$ chmod a+r ~/Software/cuda-10.0/include/cudnn.h ~/Software/cuda-10.0/lib64/libcudnn*</span><br><span class="line">~/Software$</span><br><span class="line">~/Software$ rm -r cuda</span><br><span class="line">rm: remove write-protected regular file <span class="string">'cuda/NVIDIA_SLA_cuDNN_Support.txt'</span>? y</span><br><span class="line">~/Software$</span><br></pre></td></tr></table></figure>
+
+<h3 id="检查-2"><a href="#检查-2" class="headerlink" title="检查"></a>检查</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">~/Software$ cat ~/Software/cuda-10.0/version.txt</span><br><span class="line">CUDA Version 10.0.130</span><br><span class="line">~/Software$ cat ~/Software/cuda-10.0/include/cudnn.h | grep CUDNN_MAJOR -A5</span><br><span class="line"><span class="comment">#define CUDNN_MAJOR 7</span></span><br><span class="line"><span class="comment">#define CUDNN_MINOR 6</span></span><br><span class="line"><span class="comment">#define CUDNN_PATCHLEVEL 4</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#define CUDNN_VERSION (CUDNN_MAJOR * 1000 + CUDNN_MINOR * 100 + CUDNN_PATCHLEVEL)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#include "driver_types.h"</span></span><br><span class="line"><span class="comment">#include &lt;cuda_runtime.h&gt;</span></span><br><span class="line"><span class="comment">#include &lt;stdint.h&gt;</span></span><br><span class="line"></span><br><span class="line">~/Software$ ls ~/Software/cuda-10.0/lib64 | grep cudnn</span><br><span class="line">libcudnn.so</span><br><span class="line">libcudnn.so.7</span><br><span class="line">libcudnn.so.7.6.4</span><br><span class="line">libcudnn_static.a</span><br><span class="line">~/Software$</span><br></pre></td></tr></table></figure>
+
+<h1 id="Python-related"><a href="#Python-related" class="headerlink" title="Python related"></a>Python related</h1><h2 id="virtualenv"><a href="#virtualenv" class="headerlink" title="virtualenv"></a>virtualenv</h2><p>安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ pip install virtualenv</span><br><span class="line">$ pip install virtualenvwrapper</span><br></pre></td></tr></table></figure>
+
+<p>创建新环境</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ virtualenv [新环境名] --python=/usr/bin/python3</span><br></pre></td></tr></table></figure>
+
+<p>e.g.,</p>
+<blockquote>
+<p>cd ~<br>mkdir VirtualEnv<br>virtualenv py27env –python=/usr/bin/python2<br>virtualenv py35env –python=/usr/bin/python3</p>
+</blockquote>
+<p>虚拟环境的进入和退出</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/VirtualEnv</span><br><span class="line">$ <span class="built_in">source</span> py35env/bin/activate</span><br><span class="line">$ deactivate</span><br></pre></td></tr></table></figure>
+
+<p>删除环境</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="comment"># 直接删除虚拟环境 (venv) 所在的文件夹即可</span></span><br><span class="line">$ rm -r py27env</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://www.jianshu.com/p/44ab75fbaef2" target="_blank" rel="noopener">python 虚拟环境 virtualenv/virtualenvwrapper 设置</a><br><a href="https://www.jianshu.com/p/0d3c91f13d68" target="_blank" rel="noopener">虚拟环境virtualenv简单操作</a><br><a href="http://blog.sina.com.cn/s/blog_4ddef8f80101eu0w.html" target="_blank" rel="noopener">Python的虚拟环境virtualenv sina</a>  </p>
+<h2 id="conda-env"><a href="#conda-env" class="headerlink" title="conda env"></a>conda env</h2><p><a href="https://blog.csdn.net/H_O_W_E/article/details/77370456" target="_blank" rel="noopener">Anaconda创建环境、删除环境、激活环境、退出环境</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">~/Software$ python</span><br><span class="line">Python 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)</span><br><span class="line">[GCC 7.2.0] on linux</span><br><span class="line">Type <span class="string">"help"</span>, <span class="string">"copyright"</span>, <span class="string">"credits"</span> or <span class="string">"license"</span> <span class="keyword">for</span> more information.</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">[3]+  Stopped(SIGTSTP)        python</span><br><span class="line">~/Software$ conda env list</span><br><span class="line"><span class="comment"># conda environments:</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line">base                  *  /home/eustomaqua/VirtualEnv/anaconda3</span><br><span class="line"></span><br><span class="line">~/Software$ <span class="built_in">source</span> activate base</span><br><span class="line">(base) ~/Software$ <span class="built_in">source</span> deactivate</span><br><span class="line">~/Software$</span><br><span class="line"></span><br><span class="line">~/Software$ conda create -n py36env python=3.6</span><br><span class="line">~/Software$ conda remove -n py36env --all</span><br><span class="line">~/Software$ conda activate adanet</span><br><span class="line">~/Software$ conda deactivate</span><br></pre></td></tr></table></figure>
+
+<h2 id="Packages"><a href="#Packages" class="headerlink" title="Packages"></a>Packages</h2><h1 id="TensorRT"><a href="#TensorRT" class="headerlink" title="TensorRT"></a>TensorRT</h1><p>官方文档<br><a href="https://docs.nvidia.com/deeplearning/sdk/tensorrt-archived/index.html#trt_7" target="_blank" rel="noopener">Deep Learning SDK Documentation</a><br><a href="https://developer.nvidia.com/tensorrt" target="_blank" rel="noopener">NVIDIA TensorRT</a><br><a href="https://docs.nvidia.com/deeplearning/sdk/tensorrt-install-guide/index.html" target="_blank" rel="noopener">TensorRT Installation Guide - NVIDIA Developer Documentation</a>  </p>
+<h2 id="First-Attempt-Failed"><a href="#First-Attempt-Failed" class="headerlink" title="First Attempt: Failed"></a>First Attempt: Failed</h2><p><a href="https://zhuanlan.zhihu.com/p/64053177" target="_blank" rel="noopener">深度学习 TensorRT安装</a><br><a href="https://blog.csdn.net/zong596568821xp/article/details/86077553" target="_blank" rel="noopener">TensorRT安装及使用教程</a><br><a href="https://blog.csdn.net/wgshun616/article/details/81019601" target="_blank" rel="noopener">Ubuntu16.04 安装 TensorRT</a>  </p>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>在 Nvidia 官网注册，填写调查问卷之后可下载 TensorRT<br><a href="https://developer.nvidia.com/tensorrt" target="_blank" rel="noopener">NVIDIA TensorRT</a>  Click <code>Download Now</code><br>下载前先检查下自己的开发环境 —— 系统和 CUDA 版本</p>
+<ul>
+<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">~$ cat /etc/issue</span><br><span class="line">Ubuntu 18.04.3 LTS \n \l</span><br><span class="line"></span><br><span class="line">~$ cat /usr/<span class="built_in">local</span>/cuda/version.txt</span><br><span class="line">cat: /usr/<span class="built_in">local</span>/cuda/version.txt: No such file or directory</span><br><span class="line">~$ cat ~/Software/cuda-10.0/version.txt</span><br><span class="line">CUDA Version 10.0.130</span><br><span class="line">~$</span><br></pre></td></tr></table></figure>
+</li>
+<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">~/Software$ cat /etc/issue</span><br><span class="line">Ubuntu 16.04.6 LTS \n \l</span><br><span class="line"></span><br><span class="line">~/Software$ cat /usr/<span class="built_in">local</span>/cuda/version.txt</span><br><span class="line">CUDA Version 10.2.89</span><br><span class="line">~/Software$ cat ~/Software/cuda-10.0/version.txt</span><br><span class="line">CUDA Version 10.0.130</span><br><span class="line">~/Software$</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><a href="https://developer.nvidia.com/nvidia-tensorrt-7x-download" target="_blank" rel="noopener">NVIDIA TensorRT 7.x Download</a><br>选择最新版 <code>TensorRT 7.0 for Linux</code></p>
+<ul>
+<li>Debian and RPM Install Packages for Linux x86<ul>
+<li><a href="https://developer.nvidia.com/compute/machine-learning/tensorrt/secure/7.0/7.0.0.11/local_repo/nv-tensorrt-repo-ubuntu1804-cuda10.0-trt7.0.0.11-ga-20191216_1-1_amd64.deb" target="_blank" rel="noopener">TensorRT 7.0.0.11 for Ubuntu 1804 and CUDA 10.0 DEB local repo packages</a></li>
+<li><a href="https://developer.nvidia.com/compute/machine-learning/tensorrt/secure/7.0/7.0.0.11/local_repo/nv-tensorrt-repo-ubuntu1604-cuda10.0-trt7.0.0.11-ga-20191216_1-1_amd64.deb" target="_blank" rel="noopener">TensorRT 7.0.0.11 for Ubuntu 1604 and CUDA 10.0 DEB local repo packages</a></li>
+</ul>
+</li>
+<li>Tar File Install Packages For Linux x86<ul>
+<li><a href="https://developer.nvidia.com/compute/machine-learning/tensorrt/secure/7.0/7.0.0.11/tars/TensorRT-7.0.0.11.Ubuntu-18.04.x86_64-gnu.cuda-10.0.cudnn7.6.tar.gz" target="_blank" rel="noopener">TensorRT 7.0.0.11 for Ubuntu 18.04 and CUDA 10.0 tar package</a></li>
+<li><a href="https://developer.nvidia.com/compute/machine-learning/tensorrt/secure/7.0/7.0.0.11/tars/TensorRT-7.0.0.11.Ubuntu-16.04.x86_64-gnu.cuda-10.0.cudnn7.6.tar.gz" target="_blank" rel="noopener">TensorRT 7.0.0.11 for Ubuntu 16.04 and CUDA 10.0 tar package</a></li>
+</ul>
+</li>
+</ul>
+<p>这里使用基于 deb 文件的安装，但是建议还是下载一个 tar 文件，这样在安装完成后，如果报错发现一些依赖包缺失，便于安装依赖包，在之后就会看到这样的操作。<br>同时需要注意的是，英伟达自己的几个 GPU 平台是有不一样的安装指南的。比如你用 Drive PX2，就要使用 DriveInstall 来安装 TensorRT 了。<br><img src="https://pic2.zhimg.com/80/v2-262e209917537c0f699cc1a5eb803b2d_720w.png" width="100%"></p>
+<h3 id="安装-3"><a href="#安装-3" class="headerlink" title="安装"></a>安装</h3><h4 id="使用-deb-包安装"><a href="#使用-deb-包安装" class="headerlink" title="使用 deb 包安装"></a>使用 deb 包安装</h4><p>### 添加环境变量<br>### 检查</p>
+<h4 id="prelim"><a href="#prelim" class="headerlink" title="prelim"></a>prelim</h4><p>先在 Ubuntu 16.04 系统上使用 tar 安装 TensorRT，安装完后可导入 tensorrt，但是 uff 导入失败。错因是没有 tensorflow 模块</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">$ conda remove -n adanet --all</span><br><span class="line">$ conda create -n adanet python=3.6</span><br><span class="line">$ <span class="built_in">source</span> activate adanet</span><br><span class="line">$ pip install tensorrt uff <span class="comment"># as follows in `tar`</span></span><br><span class="line"><span class="comment"># numpy=1.18.2; setuptools=46.1.3.post20200330</span></span><br><span class="line">Package    Version</span><br><span class="line">---------- -------------------</span><br><span class="line">certifi    2019.11.28</span><br><span class="line">numpy      1.18.2</span><br><span class="line">pip        20.0.2</span><br><span class="line">protobuf   3.11.3</span><br><span class="line">setuptools 46.1.3.post20200330</span><br><span class="line">six        1.14.0</span><br><span class="line">tensorrt   7.0.0.11</span><br><span class="line">uff        0.6.5</span><br><span class="line">wheel      0.34.2</span><br><span class="line"></span><br><span class="line">$ pip install adanet</span><br><span class="line"><span class="comment"># Successfully installed </span></span><br><span class="line"><span class="comment"># absl-py-0.9.0  adanet-0.8.0</span></span><br><span class="line"><span class="comment"># colorama-0.4.3 coverage-4.5.4</span></span><br><span class="line"><span class="comment"># mock-3.0.5     nose-1.3.7</span></span><br><span class="line"><span class="comment"># rednose-1.3.0  termstyle-0.1.11</span></span><br><span class="line"></span><br><span class="line">$ pip install tensorflow-gpu</span><br><span class="line"><span class="comment"># Successfully installed</span></span><br><span class="line"><span class="comment"># astor-0.8.1 cachetools-4.0.0 chardet-3.0.4 gast-0.2.2</span></span><br><span class="line"><span class="comment"># google-auth-1.13.1 google-auth-oauthlib-0.4.1 google-pasta-0.2.0</span></span><br><span class="line"><span class="comment"># grpcio-1.27.2 h5py-2.10.0 idna-2.9</span></span><br><span class="line"><span class="comment"># keras-applications-1.0.8 keras-preprocessing-1.1.0</span></span><br><span class="line"><span class="comment"># markdown-3.2.1 oauthlib-3.1.0 opt-einsum-3.2.0</span></span><br><span class="line"><span class="comment"># pyasn1-0.4.8 pyasn1-modules-0.2.8</span></span><br><span class="line"><span class="comment"># requests-2.23.0 requests-oauthlib-1.3.0 rsa-4.0</span></span><br><span class="line"><span class="comment"># scipy-1.4.1</span></span><br><span class="line"><span class="comment"># tensorboard-2.1.1 tensorflow-estimator-2.1.0 tensorflow-gpu-2.1.0</span></span><br><span class="line"><span class="comment"># termcolor-1.1.0 urllib3-1.25.8 werkzeug-1.0.1 wrapt-1.12.1</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>导入错误</strong></p>
+<p>Cannot dlopen some TensorRT libraries.<br><a href="https://github.com/tensorflow/tensorflow/issues/36201" target="_blank" rel="noopener">“Could not load dynamic library ‘libnvinfer.so.6’” when installing from WSL 2</a><br><a href="https://github.com/tensorflow/tensorflow/issues/35968" target="_blank" rel="noopener">Could not load dynamic library ‘libnvinfer_plugin.so.6’</a><br><a href="https://stackoverflow.com/questions/59954265/installation-errors-with-tensorflow-2-1-0" target="_blank" rel="noopener">Installation errors with tensorflow 2.1.0</a>  </p>
+<p>Could not find .pgm in data directories, TensorRT<br><a href="https://github.com/NVIDIA/TensorRT/issues/375" target="_blank" rel="noopener">Keras vs. TensorRT Incorrect Results</a><br><a href="https://github.com/tensorflow/tensorflow/issues/36724" target="_blank" rel="noopener">Bug for TF2.x + TensorRT(7) failing when minimum_segment_size=2</a>  </p>
+<p><a href="https://github.com/tensorflow/tensorflow/issues/34329" target="_blank" rel="noopener">Tensorflow TensorRT: Could not load dynamic library ‘libnvinfer.so.5’</a>  </p>
+<p><strong>tensorflow-gpu 2.1.0 需要 libnvinfer.so.6 ，不是 TensorRT 7.x</strong><br><strong>必须重新安装 TensorRT 6.0</strong> </p>
+<h4 id="使用-tar-包安装"><a href="#使用-tar-包安装" class="headerlink" title="使用 tar 包安装"></a>使用 tar 包安装</h4><p>首先下载 tar 版本的安装包，下载地址需要登陆 NVIDIA。<br>安装 TensorRT 前需要安装 CUDA 和 cuDNN </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">~$ <span class="comment"># 1. 打开下载路径，解压 tar 文件 </span></span><br><span class="line">~$ <span class="built_in">cd</span> Software</span><br><span class="line">~/Software$ ls</span><br><span class="line">Anaconda3-5.2.0-Linux-x86_64.sh</span><br><span class="line">cuda-10.0</span><br><span class="line">cuda_10.0.130_410.48_linux.run</span><br><span class="line">cuda-samples</span><br><span class="line">cudnn-10.0-linux-x64-v7.6.4.38.tgz</span><br><span class="line">nv-tensorrt-repo-ubuntu1604-cuda10.0-trt7.0.0.11-ga-20191216_1-1_amd64.deb</span><br><span class="line">Python-3.6.1.tgz</span><br><span class="line">TensorRT-7.0.0.11.Ubuntu-16.04.x86_64-gnu.cuda-10.0.cudnn7.6.tar.gz</span><br><span class="line">~/Software$ tar -xvf TensorRT-7.0.0.11.Ubuntu-16.04.x86_64-gnu.cuda-10.0.cudnn7.6.tar.gz</span><br><span class="line"></span><br><span class="line">~/Software$ <span class="comment"># 此时多了一个 `TensorRT-7.0.0.11` 文件夹</span></span><br><span class="line">~/Software$ <span class="comment"># 2. 解压好添加环境变量</span></span><br><span class="line">~/Software$ vim ~/.bashrc  <span class="comment"># 打开环境变量文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## # 将下面三个环境变量写入环境变量文件并保存</span></span><br><span class="line"><span class="comment">## export LD_LIBRARY_PATH=TensorRT解压路径/lib:$LD_LIBRARY_PATH</span></span><br><span class="line"><span class="comment">## export CUDA_INSTALL_DIR=/usr/local/cuda-9.0</span></span><br><span class="line"><span class="comment">## export CUDNN_INSTALL_DIR=/usr/local/cuda-9.0</span></span><br><span class="line">i.e,,</span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=<span class="variable">$HOME</span>/Software/TensorRT-7.0.0.11/lib:<span class="variable">$LD_LIBRARY_PATH</span></span><br><span class="line"><span class="built_in">export</span> CUDA_INSTALL_DIR=<span class="variable">$HOME</span>/Software/cuda-10.0</span><br><span class="line"><span class="built_in">export</span> CUDNN_INSTALL_DIR=<span class="variable">$HOME</span>/Software/cuda-10.0</span><br><span class="line"></span><br><span class="line">~/Software$ <span class="built_in">source</span> ~/.bashrc  <span class="comment"># 使刚刚修改的环境变量文件生效</span></span><br></pre></td></tr></table></figure>
+
+<p>下面是安装 Python 的 TensorRT 包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">~/Software$ <span class="comment"># 3. 进入解压后的 TensorRT 目录下的 python 文件夹</span></span><br><span class="line">~/Software$ <span class="built_in">cd</span> TensorRT-7.0.0.11</span><br><span class="line">~/Software/TensorRT-7.0.0.11$ ls</span><br><span class="line">bin   doc           include  python   targets                     uff</span><br><span class="line">data  graphsurgeon  lib      samples  TensorRT-Release-Notes.pdf</span><br><span class="line">~/Software/TensorRT-7.0.0.11$ <span class="built_in">cd</span> Python</span><br><span class="line">-sh: <span class="built_in">cd</span>: Python: No such file or directory</span><br><span class="line">~/Software/TensorRT-7.0.0.11$ <span class="built_in">cd</span> python</span><br><span class="line">~/Software/TensorRT-7.0.0.11/python$ ls</span><br><span class="line">tensorrt-7.0.0.11-cp27-none-linux_x86_64.whl  tensorrt-7.0.0.11-cp36-none-linux_x86_64.whl</span><br><span class="line">tensorrt-7.0.0.11-cp34-none-linux_x86_64.whl  tensorrt-7.0.0.11-cp37-none-linux_x86_64.whl</span><br><span class="line">tensorrt-7.0.0.11-cp35-none-linux_x86_64.whl</span><br><span class="line">~/Software/TensorRT-7.0.0.11/python$</span><br><span class="line"></span><br><span class="line">~/Software/TensorRT-7.0.0.11/python$ <span class="comment"># 安装。</span></span><br><span class="line"><span class="comment"># 注意刚刚 source ~/.bashrc 后自动退出虚拟环境，需重新进入</span></span><br><span class="line">~/Software/TensorRT-7.0.0.11/python$ conda activate adanet</span><br><span class="line">~/Software/TensorRT-7.0.0.11/python$ pip install tensorrt-7.0.0.11-cp36-none-linux_x86_64.whl</span><br><span class="line">Processing ./tensorrt-7.0.0.11-cp36-none-linux_x86_64.whl</span><br><span class="line">Installing collected packages: tensorrt</span><br><span class="line">Successfully installed tensorrt-7.0.0.11</span><br><span class="line">(adanet) ~/Software/TensorRT-7.0.0.11/python$ pip list</span><br><span class="line">Package    Version</span><br><span class="line">---------- -------------------</span><br><span class="line">certifi    2019.11.28</span><br><span class="line">pip        20.0.2</span><br><span class="line">setuptools 46.1.3.post20200330</span><br><span class="line">tensorrt   7.0.0.11</span><br><span class="line">wheel      0.34.2</span><br><span class="line">(adanet) ~/Software/TensorRT-7.0.0.11/python$</span><br></pre></td></tr></table></figure>
+
+<p>测试 TensorRT 是否安装成功，能正确输出版本号即可</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">(adanet) ~/Software/TensorRT-7.0.0.11/python$ python</span><br><span class="line">Python 3.6.10 |Anaconda, Inc.| (default, Mar 25 2020, 23:51:54)</span><br><span class="line">[GCC 7.3.0] on linux</span><br><span class="line">Type <span class="string">"help"</span>, <span class="string">"copyright"</span>, <span class="string">"credits"</span> or <span class="string">"license"</span> <span class="keyword">for</span> more information.</span><br><span class="line">&gt;&gt;&gt; import tensorrt</span><br><span class="line">&gt;&gt;&gt; tensorrt.__version__</span><br><span class="line"><span class="string">'7.0.0.11'</span></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">[5]+  Stopped(SIGTSTP)        python</span><br></pre></td></tr></table></figure>
+
+<p>然后转到 uff 目录下安装 uff 包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">(adanet) ~/Software/TensorRT-7.0.0.11/python$ <span class="built_in">cd</span> ../uff</span><br><span class="line">(adanet) ~/Software/TensorRT-7.0.0.11/uff$ ls</span><br><span class="line">uff-0.6.5-py2.py3-none-any.whl</span><br><span class="line">(adanet) ~/Software/TensorRT-7.0.0.11/uff$ pip install uff-0.6.5-py2.py3-none-any.whl</span><br><span class="line">Processing ./uff-0.6.5-py2.py3-none-any.whl</span><br><span class="line">Collecting protobuf&gt;=3.3.0</span><br><span class="line">  Downloading protobuf-3.11.3-cp36-cp36m-manylinux1_x86_64.whl (1.3 MB)</span><br><span class="line">     |████████████████████████████████| 1.3 MB 562 kB/s</span><br><span class="line">Collecting numpy&gt;=1.11.0</span><br><span class="line">  Downloading numpy-1.18.2-cp36-cp36m-manylinux1_x86_64.whl (20.2 MB)</span><br><span class="line">     |████████████████████████████████| 20.2 MB 2.3 MB/s</span><br><span class="line">Requirement already satisfied: setuptools <span class="keyword">in</span> /home/eustomaqua/VirtualEnv/anaconda3/envs/adanet/lib/python3.6/site-packages (from protobuf&gt;=3.3.0-&gt;uff==0.6.5) (46.1.3.post20200330)</span><br><span class="line">Collecting six&gt;=1.9</span><br><span class="line">  Downloading six-1.14.0-py2.py3-none-any.whl (10 kB)</span><br><span class="line">Installing collected packages: six, protobuf, numpy, uff</span><br><span class="line">Successfully installed numpy-1.18.2 protobuf-3.11.3 six-1.14.0 uff-0.6.5</span><br><span class="line">(adanet) ~/Software/TensorRT-7.0.0.11/uff$</span><br><span class="line"></span><br><span class="line"><span class="comment"># 测试，会输出 uff 的安装路径</span></span><br><span class="line">(adanet) ~/Software/TensorRT-7.0.0.11/uff$ <span class="built_in">which</span> convert-to-uff</span><br><span class="line">/home/eustomaqua/VirtualEnv/anaconda3/envs/adanet/bin/convert-to-uff</span><br><span class="line"></span><br><span class="line"><span class="comment"># 拷贝 lenet5.uff 到 python 相关目录进行验证</span></span><br><span class="line">(adanet) ~/Software/TensorRT-7.0.0.11/uff$ <span class="built_in">cd</span> ..</span><br><span class="line">(adanet) ~/Software/TensorRT-7.0.0.11$ mkdir python/data</span><br><span class="line">(adanet) ~/Software/TensorRT-7.0.0.11$ mkdir python/data/mnist</span><br><span class="line">(adanet) ~/Software/TensorRT-7.0.0.11$ cp ./data/mnist/lenet5.uff ./python/data/mnist/lenet5.uff</span><br><span class="line">(adanet) ~/Software/TensorRT-7.0.0.11$ <span class="built_in">cd</span> ./samples/sampleMNIST</span><br><span class="line">(adanet) ~/Software/TensorRT-7.0.0.11/samples/sampleMNIST$ ls</span><br><span class="line">Makefile  README.md  sampleMNIST.cpp</span><br><span class="line">(adanet) ~/Software/TensorRT-7.0.0.11/samples/sampleMNIST$ make clean</span><br><span class="line">(adanet) ~/Software/TensorRT-7.0.0.11/samples/sampleMNIST$ make</span><br><span class="line">(adanet) ~/Software/TensorRT-7.0.0.11/samples/sampleMNIST$ <span class="built_in">cd</span> ../../bin</span><br><span class="line">(adanet) ~/Software/TensorRT-7.0.0.11/bin$ ./sample_mnist</span><br><span class="line"><span class="comment"># 若命令执行顺利则/即安装成功</span></span><br><span class="line"><span class="comment"># Could not find 3.pgm in data directories: &amp;&amp;&amp;&amp; FAILED</span></span><br></pre></td></tr></table></figure>
+
+<p>Current optimization profile is: 0. Please ensure there are no enqueued operations pending in this context prior to switching profiles<br><a href="https://forums.developer.nvidia.com/t/please-ensure-there-are-no-enqueued-operations-pending-in-this-context-prior-to-switching-profiles-warning/111189" target="_blank" rel="noopener">Please ensure there are no enqueued operations pending in this context prior to switching profiles” warning</a>  </p>
+<h2 id="Second-Attempt-Work"><a href="#Second-Attempt-Work" class="headerlink" title="Second Attempt: Work"></a>Second Attempt: Work</h2><h3 id="下载-1"><a href="#下载-1" class="headerlink" title="下载"></a>下载</h3><p><a href="https://developer.nvidia.com/nvidia-tensorrt-6x-download" target="_blank" rel="noopener">NVIDIA TensorRT 6.x Download</a><br>TensorRT 6.0 GA for Linux</p>
+<ul>
+<li>Debian and RPM Install Packages for Linux x86<ul>
+<li>TensorRT 6.0.1.5 GA for Ubuntu 1804 and CUDA 10.0 DEB local repo packages</li>
+</ul>
+</li>
+<li>Tar File Install Packages For Linux x86<ul>
+<li>TensorRT 6.0.1.5 GA for Ubuntu 18.04 and CUDA 10.0 tar package</li>
+<li>TensorRT 6.0.1.5 GA for Ubuntu 16.04 and CUDA 10.0 tar package</li>
+</ul>
+</li>
+</ul>
+<h3 id="使用-tar-包安装-1"><a href="#使用-tar-包安装-1" class="headerlink" title="使用 tar 包安装"></a>使用 tar 包安装</h3><p>卸载 TensorRT<br><a href="https://www.cnblogs.com/darkknightzh/p/11129472.html" target="_blank" rel="noopener">（原）Ubuntu安装TensorRT</a><br><a href="https://blog.csdn.net/calmuse/article/details/93616720" target="_blank" rel="noopener">Ubuntu16.04 安装tensorRT 全过程</a><br><a href="https://blog.csdn.net/weixin_37669089/article/details/85255760" target="_blank" rel="noopener">ubuntu安装tensorRT</a>  </p>
+<p>先卸载</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">source</span> activate adanet</span><br><span class="line">$ pip uninstall uff  <span class="comment"># y</span></span><br><span class="line">$ pip uninstall tensorrt  <span class="comment"># y</span></span><br><span class="line">$ <span class="built_in">cd</span> ~/Software</span><br><span class="line">$ rm -r TensorRT-7.0.0.11</span><br></pre></td></tr></table></figure>
+
+<p>再安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">(adanet) ~$ <span class="built_in">cd</span> ~/Software </span><br><span class="line">$ tar -xzvf TensorRT-6.0.1.5.Ubuntu-16.04.x86_64-gnu.cuda-10.0.cudnn7.6.tar.gz</span><br><span class="line">$ vim ~/.bashrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># added by Anaconda3 installer</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">"/home/eustomaqua/VirtualEnv/anaconda3/bin:<span class="variable">$PATH</span>"</span></span><br><span class="line"><span class="comment"># self added for Nvidia</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$HOME</span>/Software/cuda-10.0/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=<span class="variable">$HOME</span>/Software/cuda-10.0/lib64:<span class="variable">$LD_LIBRARY_PATH</span></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=<span class="variable">$HOME</span>/Software/TensorRT-6.0.1.5/lib:<span class="variable">$LD_LIBRARY_PATH</span></span><br><span class="line"><span class="built_in">export</span> CUDA_INSTALL_DIR=<span class="variable">$HOME</span>/Software/cuda-10.0</span><br><span class="line"><span class="built_in">export</span> CUDNN_INSTALL_DIR=<span class="variable">$HOME</span>/Software/cuda-10.0</span><br></pre></td></tr></table></figure>
+
+<p>新开终端以便使 <code>~/.bashrc</code> 文件生效</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">(adanet) ~$ <span class="built_in">cd</span> ~/Software</span><br><span class="line">$ <span class="built_in">cd</span> TensorRT-6.0.1.5</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cd</span> python</span><br><span class="line">$ pip install tensorrt-6.0.1.5-cp36-none-linux_x86_64.whl</span><br><span class="line">Successfully installed tensorrt-6.0.1.5</span><br><span class="line">&gt;&gt;&gt; import tensorrt</span><br><span class="line">&gt;&gt;&gt; tensorrt.__version__</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cd</span> ../uff</span><br><span class="line">$ pip install uff-0.6.5-py2.py3-none-any.whl</span><br><span class="line">Successfully installed uff-0.6.5</span><br></pre></td></tr></table></figure>
+
+<p>检查 tensorflow, adanet, uff 的导入情况</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">Python <span class="number">3.6</span><span class="number">.10</span> |Anaconda, Inc.| (default, Mar <span class="number">25</span> <span class="number">2020</span>, <span class="number">23</span>:<span class="number">51</span>:<span class="number">54</span>)</span><br><span class="line">[GCC <span class="number">7.3</span><span class="number">.0</span>] on linux</span><br><span class="line">Type <span class="string">"help"</span>, <span class="string">"copyright"</span>, <span class="string">"credits"</span> <span class="keyword">or</span> <span class="string">"license"</span> <span class="keyword">for</span> more information.</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="number">2020</span><span class="number">-04</span><span class="number">-03</span> <span class="number">07</span>:<span class="number">02</span>:<span class="number">35.550509</span>: I tensorflow/stream_executor/platform/default/dso_loader.cc:<span class="number">44</span>] Successfully opened dynamic library libnvinfer.so<span class="number">.6</span></span><br><span class="line"><span class="number">2020</span><span class="number">-04</span><span class="number">-03</span> <span class="number">07</span>:<span class="number">02</span>:<span class="number">35.552571</span>: I tensorflow/stream_executor/platform/default/dso_loader.cc:<span class="number">44</span>] Successfully opened dynamic library libnvinfer_plugin.so<span class="number">.6</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> adanet</span><br><span class="line">WARNING:tensorflow:From /home/eustomaqua/VirtualEnv/anaconda3/envs/adanet/lib/python3<span class="number">.6</span>/site-packages/adanet/core/tpu_estimator.py:<span class="number">39</span>: The name tf.estimator.tpu.TPUEstimator <span class="keyword">is</span> deprecated. Please use tf.compat.v1.estimator.tpu.TPUEstimator instead.</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> tensorrt</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> uff</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"/home/eustomaqua/VirtualEnv/anaconda3/envs/adanet/lib/python3.6/site-packages/uff/converters/tensorflow/conversion_helpers.py"</span>, line <span class="number">18</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    <span class="keyword">from</span> tensorflow <span class="keyword">import</span> GraphDef</span><br><span class="line">ImportError: cannot <span class="keyword">import</span> name <span class="string">'GraphDef'</span></span><br><span class="line"></span><br><span class="line">During handling of the above exception, another exception occurred:</span><br><span class="line"></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">  File <span class="string">"/home/eustomaqua/VirtualEnv/anaconda3/envs/adanet/lib/python3.6/site-packages/uff/__init__.py"</span>, line <span class="number">2</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    <span class="keyword">from</span> uff.converters.tensorflow.conversion_helpers <span class="keyword">import</span> from_tensorflow  <span class="comment"># noqa</span></span><br><span class="line">  File <span class="string">"/home/eustomaqua/VirtualEnv/anaconda3/envs/adanet/lib/python3.6/site-packages/uff/converters/tensorflow/conversion_helpers.py"</span>, line <span class="number">23</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    https://www.tensorflow.org/install/<span class="string">""".format(err))</span></span><br><span class="line"><span class="string">ImportError: ERROR: Failed to import module (cannot import name 'GraphDef')</span></span><br><span class="line"><span class="string">Please make sure you have TensorFlow installed.</span></span><br><span class="line"><span class="string">For installation instructions, see:</span></span><br><span class="line"><span class="string">https://www.tensorflow.org/install/</span></span><br><span class="line"><span class="string">&gt;&gt;&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>ImportError: cannot import name ‘GraphDef’<br><a href="https://stackoverflow.com/questions/50031584/importerror-cannot-import-name-graph" target="_blank" rel="noopener">ImportError: cannot import name ‘Graph’</a><br><a href="https://forums.developer.nvidia.com/t/tensorrt-6-import-uff-error/108008" target="_blank" rel="noopener">TensorRT 6 : import uff error</a>  </p>
+<blockquote>
+<p>It seems to be due to Tensorflow version.<br>UFF converter not supporting TF version 2.0.<br>Please check the tensorflow version and install tensorflow version 1.15 or 1.14.</p>
+</blockquote>
+<p>检查 uff 的安装情况</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">$ pip uninstall uff  <span class="comment"># y</span></span><br><span class="line">$ deactivate</span><br><span class="line"></span><br><span class="line">$ conda env list</span><br><span class="line">$ conda create -n adanet python=3.6</span><br><span class="line">$ <span class="built_in">source</span> activate adanet</span><br><span class="line">$ pip install tensorflow-gpu==1.*</span><br><span class="line"><span class="comment"># Successfully installed</span></span><br><span class="line"><span class="comment"># absl-py-0.9.0 astor-0.8.1 gast-0.2.2</span></span><br><span class="line"><span class="comment"># google-pasta-0.2.0 grpcio-1.27.2 h5py-2.10.0</span></span><br><span class="line"><span class="comment"># keras-applications-1.0.8 keras-preprocessing-1.1.0</span></span><br><span class="line"><span class="comment"># markdown-3.2.1 numpy-1.18.2 opt-einsum-3.2.0</span></span><br><span class="line"><span class="comment"># protobuf-3.11.3 six-1.14.0</span></span><br><span class="line"><span class="comment"># tensorboard-1.15.0 tensorflow-estimator-1.15.1</span></span><br><span class="line"><span class="comment"># tensorflow-gpu-1.15.2</span></span><br><span class="line"><span class="comment"># termcolor-1.1.0 werkzeug-1.0.1 wrapt-1.12.1</span></span><br><span class="line">$ pip install adanet</span><br><span class="line"><span class="comment"># Successfully installed</span></span><br><span class="line"><span class="comment"># adanet-0.8.0 colorama-0.4.3 coverage-4.5.4</span></span><br><span class="line"><span class="comment"># mock-3.0.5 nose-1.3.7 rednose-1.3.0 termstyle-0.1.11</span></span><br><span class="line"></span><br><span class="line">Python 3.6.10 |Anaconda, Inc.| (default, Mar 25 2020, 23:51:54)</span><br><span class="line">[GCC 7.3.0] on linux</span><br><span class="line">Type <span class="string">"help"</span>, <span class="string">"copyright"</span>, <span class="string">"credits"</span> or <span class="string">"license"</span> <span class="keyword">for</span> more information.</span><br><span class="line">&gt;&gt;&gt; import tensorrt</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line 1, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">ModuleNotFoundError: No module named <span class="string">'tensorrt'</span></span><br><span class="line">&gt;&gt;&gt; import tensorflow as tf</span><br><span class="line">&gt;&gt;&gt; import adanet</span><br><span class="line">WARNING:tensorflow:From /home/eustomaqua/VirtualEnv/anaconda3/envs/adanet/lib/python3.6/site-packages/adanet/tf_compat/__init__.py:87: The name tf.losses.Reduction is deprecated. Please use tf.compat.v1.losses.Reduction instead.</span><br><span class="line">WARNING:tensorflow:From /home/eustomaqua/VirtualEnv/anaconda3/envs/adanet/lib/python3.6/site-packages/adanet/core/tpu_estimator.py:39: The name tf.estimator.tpu.TPUEstimator is deprecated. Please use tf.compat.v1.estimator.tpu.TPUEstimator instead.</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cd</span> ~/Software/TensorRT-6.0.1.5</span><br><span class="line">$ <span class="built_in">cd</span> python</span><br><span class="line">$ pip install tensorrt-6.0.1.5-cp36-none-linux_x86_64.whl</span><br><span class="line">$ <span class="built_in">cd</span> ../uff</span><br><span class="line">$ pip install uff-0.6.5-py2.py3-none-any.whl</span><br><span class="line"></span><br><span class="line">Python 3.6.10 |Anaconda, Inc.| (default, Mar 25 2020, 23:51:54)</span><br><span class="line">[GCC 7.3.0] on linux</span><br><span class="line">Type <span class="string">"help"</span>, <span class="string">"copyright"</span>, <span class="string">"credits"</span> or <span class="string">"license"</span> <span class="keyword">for</span> more information.</span><br><span class="line">&gt;&gt;&gt; import tensorrt</span><br><span class="line">&gt;&gt;&gt; import uff</span><br><span class="line">&gt;&gt;&gt; import tensorflow as tf</span><br><span class="line">&gt;&gt;&gt; import adanet</span><br><span class="line">WARNING:tensorflow:From /home/eustomaqua/VirtualEnv/anaconda3/envs/adanet/lib/python3.6/site-packages/adanet/tf_compat/__init__.py:87: The name tf.losses.Reduction is deprecated. Please use tf.compat.v1.losses.Reduction instead.</span><br><span class="line"></span><br><span class="line">WARNING:tensorflow:From /home/eustomaqua/VirtualEnv/anaconda3/envs/adanet/lib/python3.6/site-packages/adanet/core/tpu_estimator.py:39: The name tf.estimator.tpu.TPUEstimator is deprecated. Please use tf.compat.v1.estimator.tpu.TPUEstimator instead.</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">[6]+  Stopped(SIGTSTP)        python</span><br><span class="line">(adanet) ~/Software/TensorRT-6.0.1.5/uff$</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用-deb-包安装-1"><a href="#使用-deb-包安装-1" class="headerlink" title="使用 deb 包安装"></a>使用 deb 包安装</h3><p>创建环境</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">$ conda env list</span><br><span class="line">$ conda create -n adanet python=3.6  <span class="comment"># tensorflow-gpu==2.1.0 adanet=0.8.0</span></span><br><span class="line">$ <span class="built_in">source</span> activate adanet</span><br><span class="line">$ <span class="built_in">source</span> deactivate</span><br><span class="line">$ conda remove -n adanet -all</span><br><span class="line"></span><br><span class="line">$ conda create -n adanet python=3.6</span><br><span class="line">$ <span class="built_in">source</span> activate adanet</span><br><span class="line">$ pip list</span><br><span class="line">Package    Version</span><br><span class="line">---------- -------------------</span><br><span class="line">certifi    2019.11.28</span><br><span class="line">pip        20.0.2</span><br><span class="line">setuptools 46.1.3.post20200330</span><br><span class="line">wheel      0.34.2</span><br><span class="line"></span><br><span class="line">$ pip install tensorflow-gpu==1.*</span><br><span class="line"><span class="comment"># Successfully installed</span></span><br><span class="line"><span class="comment"># absl-py-0.9.0 astor-0.8.1 gast-0.2.2</span></span><br><span class="line"><span class="comment"># google-pasta-0.2.0 grpcio-1.27.2 h5py-2.10.0</span></span><br><span class="line"><span class="comment"># keras-applications-1.0.8 keras-preprocessing-1.1.0</span></span><br><span class="line"><span class="comment"># markdown-3.2.1 numpy-1.18.2 opt-einsum-3.2.0</span></span><br><span class="line"><span class="comment"># protobuf-3.11.3 six-1.14.0</span></span><br><span class="line"><span class="comment"># tensorboard-1.15.0 tensorflow-estimator-1.15.1</span></span><br><span class="line"><span class="comment"># tensorflow-gpu-1.15.2</span></span><br><span class="line"><span class="comment"># termcolor-1.1.0 werkzeug-1.0.1 wrapt-1.12.1</span></span><br><span class="line">$ pip install adanet</span><br><span class="line"><span class="comment"># Successfully installed</span></span><br><span class="line"><span class="comment"># adanet-0.8.0 colorama-0.4.3 coverage-4.5.4</span></span><br><span class="line"><span class="comment"># mock-3.0.5 nose-1.3.7 rednose-1.3.0 termstyle-0.1.11</span></span><br><span class="line"></span><br><span class="line">Python 3.6.10 |Anaconda, Inc.| (default, Mar 25 2020, 23:51:54)</span><br><span class="line">[GCC 7.3.0] on linux</span><br><span class="line">Type <span class="string">"help"</span>, <span class="string">"copyright"</span>, <span class="string">"credits"</span> or <span class="string">"license"</span> <span class="keyword">for</span> more information.</span><br><span class="line">&gt;&gt;&gt; import tensorflow as tf</span><br><span class="line">&gt;&gt;&gt; import adanet</span><br><span class="line">WARNING:tensorflow:From /home/eustomaqua/anaconda3/envs/adanet/lib/python3.6/site-packages/adanet/tf_compat/__init__.py:87: The name tf.losses.Reduction is deprecated. Please use tf.compat.v1.losses.Reduction instead.</span><br><span class="line">WARNING:tensorflow:From /home/eustomaqua/anaconda3/envs/adanet/lib/python3.6/site-packages/adanet/core/tpu_estimator.py:39: The name tf.estimator.tpu.TPUEstimator is deprecated. Please use tf.compat.v1.estimator.tpu.TPUEstimator instead.</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">[1]+  Stopped                 python</span><br></pre></td></tr></table></figure>
+
+<p>安装 TensorRT</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/Software</span><br><span class="line">$ ls</span><br><span class="line">cuda-10.0</span><br><span class="line">cuda-samples</span><br><span class="line">nv-tensorrt-repo-ubuntu1804-cuda10.0-trt6.0.1.5-ga-20190913_1-1_amd64.deb</span><br><span class="line">nv-tensorrt-repo-ubuntu1804-cuda10.0-trt7.0.0.11-ga-20191216_1-1_amd64.deb</span><br><span class="line">TensorRT-6.0.1.5.Ubuntu-18.04.x86_64-gnu.cuda-10.0.cudnn7.6.tar.gz</span><br><span class="line">TensorRT-7.0.0.11.Ubuntu-18.04.x86_64-gnu.cuda-10.0.cudnn7.6.tar.gz</span><br><span class="line"></span><br><span class="line">$ dpkg -i nv-tensorrt-repo-ubuntu1804-cuda10.0-trt6.0.1.5-ga-20190913_1-1_amd64.deb</span><br><span class="line">dpkg: error: requested operation requires superuser privilege</span><br></pre></td></tr></table></figure>
+
+<p>放弃 deb 安装，回到 tar 方式</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/Software</span><br><span class="line">$ tar -xvaf TensorRT-6.0.1.5.Ubuntu-18.04.x86_64-gnu.cuda-10.0.cudnn7.6.tar.gz</span><br><span class="line">$ <span class="built_in">cd</span> TensorRT-6.0.1.5</span><br><span class="line">$ <span class="built_in">cd</span> python</span><br><span class="line">$ pip install tensorrt-6.0.1.5-cp36-none-linux_x86_64.whl</span><br><span class="line">$ <span class="built_in">cd</span> ../uff</span><br><span class="line">$ pip install uff-0.6.5-py2.py3-none-any.whl</span><br><span class="line"></span><br><span class="line">$ vim ~/.bashrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># added by Anaconda3 installer</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">"/home/eustomaqua/anaconda3/bin:<span class="variable">$PATH</span>"</span></span><br><span class="line"><span class="comment"># self added for Nvidia</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">"<span class="variable">$HOME</span>/Software/cuda-10.0/bin:<span class="variable">$PATH</span>"</span></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=<span class="string">"<span class="variable">$LD_LIBRARY_PATH</span>:<span class="variable">$HOME</span>/Software/cuda-10.0/lib64/"</span></span><br><span class="line"><span class="comment"># TensorRT</span></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=<span class="variable">$HOME</span>/Software/TensorRT-6.0.1.5/lib:<span class="variable">$LD_LIBRARY_PATH</span></span><br><span class="line"><span class="built_in">export</span> CUDA_INSTALL_DIR=<span class="variable">$HOME</span>/Software/cuda-10.0</span><br><span class="line"><span class="built_in">export</span> CUDNN_INSTALL_DIR=<span class="variable">$HOME</span>/Software/cuda-10.0</span><br></pre></td></tr></table></figure>
+
+<p>新开终端使 <code>.bashrc</code> 生效</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">source</span> activate adanet</span><br><span class="line">$ <span class="built_in">cd</span> ~/Software/TensorRT-6.0.1.5</span><br><span class="line"></span><br><span class="line">Python 3.6.10 |Anaconda, Inc.| (default, Mar 25 2020, 23:51:54)</span><br><span class="line">[GCC 7.3.0] on linux</span><br><span class="line">Type <span class="string">"help"</span>, <span class="string">"copyright"</span>, <span class="string">"credits"</span> or <span class="string">"license"</span> <span class="keyword">for</span> more information.</span><br><span class="line">&gt;&gt;&gt; import tensorrt</span><br><span class="line">&gt;&gt;&gt; import uff</span><br><span class="line">&gt;&gt;&gt; import tensorflow as tf</span><br><span class="line">&gt;&gt;&gt; import adanet</span><br><span class="line">WARNING:tensorflow:From /home/eustomaqua/anaconda3/envs/adanet/lib/python3.6/site-packages/adanet/tf_compat/__init__.py:87: The name tf.losses.Reduction is deprecated. Please use tf.compat.v1.losses.Reduction instead.</span><br><span class="line"></span><br><span class="line">WARNING:tensorflow:From /home/eustomaqua/anaconda3/envs/adanet/lib/python3.6/site-packages/adanet/core/tpu_estimator.py:39: The name tf.estimator.tpu.TPUEstimator is deprecated. Please use tf.compat.v1.estimator.tpu.TPUEstimator instead.</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">[1]+  Stopped                 python</span><br></pre></td></tr></table></figure>
+
+<p>检查 tensorrt, uff 是否安装成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">$ python</span><br><span class="line">&gt;&gt;&gt; import tensorrt</span><br><span class="line">&gt;&gt;&gt; tensorrt.__version__</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cd</span> ~/Software/TensorRT-6.0.1.5</span><br><span class="line">$ <span class="built_in">which</span> convert-to-uff</span><br><span class="line">/home/eustomaqua/anaconda3/envs/adanet/bin/convert-to-uff</span><br><span class="line">$</span><br><span class="line">$ mkdir python/data</span><br><span class="line">$ mkdir python/data/mnist</span><br><span class="line">$ cp ./data/mnist/lenet5.uff ./python/data/mnist/lenet5.uff</span><br><span class="line">$ <span class="built_in">cd</span> ./samples/sampleMNIST</span><br><span class="line">$ make clean</span><br><span class="line">$ make</span><br><span class="line">$ <span class="built_in">cd</span> ../../bin</span><br><span class="line">$ ./sample_mnist</span><br><span class="line">&amp;&amp;&amp;&amp; RUNNING TensorRT.sample_mnist <span class="comment"># ./sample_mnist</span></span><br><span class="line">[03/03/2020-07:47:01] [I] Building and running a GPU inference engine <span class="keyword">for</span> MNIST</span><br><span class="line">[03/03/2020-07:47:07] [I] [TRT] Detected 1 inputs and 1 output network tensors.</span><br><span class="line">Could not find 8.pgm <span class="keyword">in</span> data directories:</span><br><span class="line">        data/mnist/</span><br><span class="line">        data/samples/mnist/</span><br><span class="line">&amp;&amp;&amp;&amp; FAILED</span><br></pre></td></tr></table></figure>
+
+<h3 id="检查-uff-的安装情况"><a href="#检查-uff-的安装情况" class="headerlink" title="检查 uff 的安装情况"></a>检查 uff 的安装情况</h3><p>Could not find 8.pgm in data directories:<br><a href="https://github.com/NVIDIA/TensorRT/issues/256" target="_blank" rel="noopener">Depreciated MNIST Sample</a><br><a href="https://arleyzhang.github.io/articles/c17471cb/" target="_blank" rel="noopener">TensorRT(2)-基本使用：mnist手写体识别</a><br><a href="https://blog.csdn.net/HaoBBNuanMM/article/details/102841685" target="_blank" rel="noopener">【代码分析】TensorRT sampleMNIST 详解</a>  </p>
+<p><a href="https://docs.nvidia.com/deeplearning/sdk/tensorrt-sample-support-guide/index.html" target="_blank" rel="noopener">TensorRT-sample-support-guide NVIDIA</a><br><a href="https://www.ibm.com/support/knowledgecenter/SS5SF7_1.6.1/navigation/wmlce_getstarted_tensorrt.html" target="_blank" rel="noopener">Getting started with PyTorch and TensorRT | IBM Knowledge Center</a>  </p>
+<p><a href="https://github.com/NVIDIA/TensorRT/issues/165" target="_blank" rel="noopener">Could not find 0.pgm in data directories: </a><br>Answer: <a href="https://github.com/NVIDIA/TensorRT/issues/256#issuecomment-568382745" target="_blank" rel="noopener">Answer in other thread:</a>  </p>
+<blockquote>
+<p>By running the download_pgms.py in the /TensorRT-7.0.0.11/data/mnist, I can already get the *.pgm files.</p>
+</blockquote>
+<p>generate_pgms.py<br><a href="https://docs.nvidia.com/deeplearning/sdk/tensorrt-release-notes/tensorrt-6.html" target="_blank" rel="noopener">tensorrt-release-notes NVIDIA</a><br><a href="https://zhuanlan.zhihu.com/p/110934202" target="_blank" rel="noopener">深度学习算法优化系列十七 | TensorRT介绍，安装及如何使用？</a>  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">~/Software/TensorRT-6.0.1.5/bin$ dpkg -l | grep TensorRT</span><br><span class="line">$ <span class="built_in">cd</span> ../data/mnist</span><br><span class="line">$ cat README.md</span><br></pre></td></tr></table></figure>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在安装 tensorrt, uff 之前，需先创建虚拟环境，并安装 tensorflow-gpu==1.*<br>注意 tensorflow-gpu 不能是 2.x 版本，因为 uff 与 tf2.0 不兼容  </p>
+<p>此外使用 tensorflow-gpu==2.1.0 时，发现它调用的是 TensorRT 6.x ，不能用 TensorRT 7.x；<br>把 tensorflow-gpu 版本降级为 1.15.2 后，仍然可以使用 TensorRT 6.x</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. Install CUDA 10.0.130, cuDNN 7.6.4</span></span><br><span class="line"><span class="comment">#    install tensorflow-gpu=2.1.0 or 1.15.2 (recommend 1.15.2 for uff)</span></span><br><span class="line">$ pip install tensorflow-gpu==1.*</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. download TensorRT tar from NVIDIA</span></span><br><span class="line">$ wget TensorRT-6.0.1.5.Ubuntu-&#123;16/18&#125;.04.x86_64-gnu.cuda-10.0.cudnn7.6.tar.gz</span><br><span class="line">$ tar -xzvf TensorRT-6.0.1.5.Ubuntu-16.04.x86_64-gpu.cuda-10.0.cudnn7.6.tar.gz</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. .bashrc</span></span><br><span class="line">$ vim ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># add by Anaconda3 install</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">"/home/eustomaqua/VirtualEnv/anaconda3/bin:<span class="variable">$PATH</span>"</span></span><br><span class="line"><span class="comment"># self added for Nvidia</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$HOME</span>/Software/cuda-10.0/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=<span class="variable">$HOME</span>/Software/cuda-10.0/lib64:<span class="variable">$LD_LIBRARY_PATH</span></span><br><span class="line"><span class="comment"># self modified for TensorRT</span></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=<span class="variable">$HOME</span>/Software/TensorRT-6.0.1.5/lib:<span class="variable">$LD_LIBRARY_PATH</span></span><br><span class="line"><span class="built_in">export</span> CUDA_INSTALL_DIR=<span class="variable">$HOME</span>/Software/cuda-10.0</span><br><span class="line"><span class="built_in">export</span> CUDNN_INSTALL_DIR=<span class="variable">$HOME</span>/Software/cuda-10.0</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="comment"># source ~/.bashrc</span></span><br><span class="line">$ <span class="built_in">echo</span> <span class="variable">$HOME</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 4. install tensorrt</span></span><br><span class="line">$ <span class="built_in">cd</span> TensorRT-6.0.1.5</span><br><span class="line">$ <span class="built_in">cd</span> python</span><br><span class="line">$ pip install tensorrt-6.0.1.5-cp36-none-linux_x86_64.whl</span><br><span class="line"></span><br><span class="line"><span class="comment"># 5. install uff</span></span><br><span class="line">$ <span class="built_in">cd</span> ../uff</span><br><span class="line">$ pip install uff-0.6.5-py2.py3-none-any.whl</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 6. check</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> adanet</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> tensorrt</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>tensorrt.__version__</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> uff</span><br></pre></td></tr></table></figure>
+
+<h1 id="References"><a href="#References" class="headerlink" title="*References"></a>*References</h1><p><a href="http://tech.it168.com/a2017/1026/3176/000003176180.shtml" target="_blank" rel="noopener">GitHub、GitLab与BitBucket应该怎么选?</a><br><a href="https://www.hi-linux.com/posts/14346.html" target="_blank" rel="noopener">利用 SSH 的用户配置文件 Config 管理 SSH 会话</a>  </p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Configure/" rel="tag"># Configure</a>
+          
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
+          
+            <a href="/tags/NVIDIA-TensorRT/" rel="tag"># NVIDIA TensorRT</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/2020-04-12-Hexo-Troubles/" rel="next" title="Hexo+NexT, Trouble Solver">
+                <i class="fa fa-chevron-left"></i> Hexo+NexT, Trouble Solver
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/2020-04-04-Latex-Paper-Lists-Badges/" rel="prev" title="Tips of LaTeX and Badges, Remote Server">
+                Tips of LaTeX and Badges, Remote Server <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80OTYwMS8yNjA5Mg=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/EustomaAqua.png"
+                alt="eustomaqua" />
+            
+              <p class="site-author-name" itemprop="name">eustomaqua</p>
+              <p class="site-description motion-element" itemprop="description">Once upon a time....</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">22</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/eustomaqua" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:yjbian92@gmail.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Installation"><span class="nav-number">1.</span> <span class="nav-text">Installation</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Anaconda"><span class="nav-number">1.1.</span> <span class="nav-text">Anaconda</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#卸载"><span class="nav-number">1.1.1.</span> <span class="nav-text">卸载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">1.1.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#检查"><span class="nav-number">1.1.3.</span> <span class="nav-text">检查</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#miniconda"><span class="nav-number">1.2.</span> <span class="nav-text">* miniconda</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显卡驱动"><span class="nav-number">1.3.</span> <span class="nav-text">显卡驱动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CUDA"><span class="nav-number">1.4.</span> <span class="nav-text">CUDA</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#卸载-1"><span class="nav-number">1.4.1.</span> <span class="nav-text">卸载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-1"><span class="nav-number">1.4.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置"><span class="nav-number">1.4.3.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#检查-1"><span class="nav-number">1.4.4.</span> <span class="nav-text">检查</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CUDNN"><span class="nav-number">1.5.</span> <span class="nav-text">CUDNN</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-2"><span class="nav-number">1.5.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#检查-2"><span class="nav-number">1.5.2.</span> <span class="nav-text">检查</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Python-related"><span class="nav-number">2.</span> <span class="nav-text">Python related</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#virtualenv"><span class="nav-number">2.1.</span> <span class="nav-text">virtualenv</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#conda-env"><span class="nav-number">2.2.</span> <span class="nav-text">conda env</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Packages"><span class="nav-number">2.3.</span> <span class="nav-text">Packages</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TensorRT"><span class="nav-number">3.</span> <span class="nav-text">TensorRT</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#First-Attempt-Failed"><span class="nav-number">3.1.</span> <span class="nav-text">First Attempt: Failed</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载"><span class="nav-number">3.1.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-3"><span class="nav-number">3.1.2.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用-deb-包安装"><span class="nav-number">3.1.2.1.</span> <span class="nav-text">使用 deb 包安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#prelim"><span class="nav-number">3.1.2.2.</span> <span class="nav-text">prelim</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用-tar-包安装"><span class="nav-number">3.1.2.3.</span> <span class="nav-text">使用 tar 包安装</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Second-Attempt-Work"><span class="nav-number">3.2.</span> <span class="nav-text">Second Attempt: Work</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-tar-包安装-1"><span class="nav-number">3.2.2.</span> <span class="nav-text">使用 tar 包安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-deb-包安装-1"><span class="nav-number">3.2.3.</span> <span class="nav-text">使用 deb 包安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#检查-uff-的安装情况"><span class="nav-number">3.2.4.</span> <span class="nav-text">检查 uff 的安装情况</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">3.3.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#References"><span class="nav-number">4.</span> <span class="nav-text">*References</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-paper-plane"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">eustomaqua</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+  <div class="theme-info">
+    <div class="powered-by-post-count"></div>
+    <span class="post-count">Total 142.7k Words</span>
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.3.0</div>
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      Total
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      Visitors
+    </span>
+  
+
+  
+    <span class="site-pv">
+      Total
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      Views
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap')
+      $(e).after($wrap)
+      $wrap.append($('<button>').addClass('copy-btn').append('Copy').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text()
+        }).toArray().join('\n')
+        var ta = document.createElement('textarea')
+        document.body.appendChild(ta)
+        ta.style.position = 'absolute'
+        ta.style.top = '0px'
+        ta.style.left = '0px'
+        ta.value = code
+        ta.select()
+        ta.focus()
+        var result = document.execCommand('copy')
+        document.body.removeChild(ta)
+        
+          if(result)$(this).text('Copied')
+          else $(this).text('Copy failed')
+        
+        $(this).blur()
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn')
+        setTimeout(function () {
+          $b.text('Copy')
+        }, 300)
+      }).append(e)
+    })
+  </script>
+
+
+</body>
+</html>

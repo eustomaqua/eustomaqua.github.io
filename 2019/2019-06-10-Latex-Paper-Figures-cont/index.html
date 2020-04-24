@@ -1,0 +1,2134 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+  .pace .pace-progress {
+    background: #1E92FB; /*进度条颜色*/
+    height: 3px;
+  }
+  .pace .pace-progress-inner {
+    box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+  }
+  .pace .pace-activity {
+    border-top-color: #1E92FB;    /*上边框颜色*/
+    border-left-color: #1E92FB;    /*左边框颜色*/
+  }
+</style>
+
+
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/EustomaAqua.png?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/EustomaAqua.png?v=6.3.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.3.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="ResourcesBeautiful ‘’Feather’’Feather 均是矢量图，风格简约；想修改成自己想要的图形也很方便，可以用 Inkscape 来修改 Awesome ‘’TEXamples’’Tikz examples TikZ and PGF examplesView: Alphabetical | Chronological | As list AlphabeticalChron">
+<meta name="keywords" content="LaTeX,Notes">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tips of Tables and Figures in Papers (cont.) 续">
+<meta property="og:url" content="https://eustomaqua.github.io/2019/2019-06-10-Latex-Paper-Figures-cont/index.html">
+<meta property="og:site_name" content="Aqua Eustoma">
+<meta property="og:description" content="ResourcesBeautiful ‘’Feather’’Feather 均是矢量图，风格简约；想修改成自己想要的图形也很方便，可以用 Inkscape 来修改 Awesome ‘’TEXamples’’Tikz examples TikZ and PGF examplesView: Alphabetical | Chronological | As list AlphabeticalChron">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://www.texample.net/media/img/logo.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/mosfet.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/nav1d.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/3d-cone.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/consort-flowchart.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/cone.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/nodetutorial.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/venn.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/smart-priority.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/smart-circle.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/smart-description.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/smart-bubbles.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/smart-constellation.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/family-tree.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/smart-flowchart.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/trigonometric-hexagon.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/servers.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/tutorial.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/tree.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/cycle.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/3d-graph-model.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/ac-drive-components.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/ac-drive-voltage.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/actor-transaction-diagram.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/airfoil-profiles.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/tikz-listings.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/andler-optimal-lot-size.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/wankel-motor.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/animated-definite-integral.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/animated-distributions.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/convolution-of-two-functions.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/animated-set-intersection.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/annotated-3d-box.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/three-link-annotated.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/archimedess-approximation-of-pi.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/balance.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/assignment-structure.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/asymmetric-information.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/atoms-and-orbitals.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/automata.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/BER-measurement.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/bar-chart.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/philosophy.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/bayes.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/beamer-arrows.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/belt-pulley.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/biconcave-lens.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/multiplexer.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/line-junctions.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/noise-shaper.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/bode-plot.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/bond-graph.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/bootstrap-resampling.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/borromean-rings.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/borrowers-and-lenders.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/box-and-whisker-plot.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/boxes-with-text-and-math.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/butterfly-lemma.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/cn4-points-of-intersection.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/cielab.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/labeled-chain.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/complex-plane.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/circuitikz.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/circuit.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/circular-arrows-text.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/parallelepiped.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/circumscribed-polygons-and-circles.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/class-diagram.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/clusters-of-atoms.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/colored-diagram.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/collpits.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/combinatorial-graphs.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/commutative-diagram-tikz.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/commutative-diagram.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/complexity-classes.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/computer-diagram.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/computer-science-mindmap.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/polars-tangents-conic.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/connecting-text-and-graphics.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/control-system-principles.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/credit-rationing.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/cuboid.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/d-flip-flops-and-shift-register.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/daniells-pile.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/data-flow-diagram.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/database-decimation-process.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/decision-tree.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/bernoulli.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/android.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/difference-quotient.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/fir-filter.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/dipolar-magnetic-field.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/ac-drive-dtc.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/doa-diagram.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/dva-vectors.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/distributed-processing.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/double-arrows.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/graph.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/drawing-graphs.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/angles-quotes.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/lattice-points.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/induction-machine.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/epc-flow-charts.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/flexible-flow-chart.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/circuit-decorations.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/energy-level-diagram.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/energy-levels.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/fluor-energy-levels.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/entity-relationship-diagram.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/er-diagram.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/escher-brick-penrose-triangle.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/tkz-orm-example.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/spacetime.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/text-fading.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/faking-slanted-small-caps.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/fancy-arrows.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/fancy-chapter-headings.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/colorful-tables.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/fault-tree.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/feynman-diagram.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/fibonacci-spiral.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/filesystem-tree.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/FIR-filter.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/fireworks.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/text-shape.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/math-flowchart.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/flowchart.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/focused-ion-beam-system.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/ford-circle.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/free-body-diagrams.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/gnuplot-basics.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/gajski-kuhn-y-chart.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/gamma-interaction.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/genaille-and-lucas-sticks.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/glider.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/global-nodes.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/gnuplot-tikz-terminal.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/graph-paper.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/gray-code-in-4-cube.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/growing-wave-decoration.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/h-tree.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/hsv-shading.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/line-junction.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/terminals.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/hierarchical-diagram.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/high-harmonics.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/highlighting-matrix.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/hilbert-curve.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/homotopy.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/hypercycle.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/is-lm-diagram.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/idealised-directional-spectrum.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/inertial-navigation-system.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/insulated-gate-bipolar-transistor.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/interaction-diagram.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/interaction-nets.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/intersecting-arcs.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/intersecting-lines.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/intersecting-rings.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/intersection-of.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/j-curve.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/kalman-filter.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/karnaugh-diagram.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/kb-exchange.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/draw-fill-bezier-curves.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/lambert-beer-law.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/lindenmayer-systems.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/line-plot-example.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/linear-regression.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/lipid-vesicle.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/logarithmic-spiral.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/logic-circuits-library.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/logic-matrix.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/lune-of-hippocrates.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/mesif.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/kascade-map.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/marketing-distribution-channel.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/matrix-multiplication.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/maze.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/scanning-electron-microscopy.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/merge-sort-recursion-tree.png">
+<meta property="og:image" content="http://media.texample.net/tikz/examples/extra/myncbar/mnodeconnections1.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/mindmap.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/minimum-shift-keying-modulator.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/mnemonic-rule-for-matrix-determinant.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/manet.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/throttle-valve.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/modifying-current-page-node.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/more-tikz-timing-examples.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/morleys-triangle.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/model-diagram.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/nested-grids-in-swan-and-wam-coupling.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/network-topology.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/neural-network.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/framed-tikz.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/nine-points-circle-of-a-triangle.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/node-shapes.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/oblique-incidence.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/observer-estimator.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/or-gate.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/polarization-controller.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/overlapping-arrows.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/oxidation-and-reduction.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/p2p-topology.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/pdca-cycle.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/pgf2-titlepage.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/pgf-version-118.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/pancake-network.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/parabola-plot.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/parallel-lines.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/parameterized-plots.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/pascal-triangle.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/penrose-tiling.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/periodic-table-of-chemical-elements.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/periodic-boundaries-conditions.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/bisector.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/perpendicular-bissector.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/personality-test.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/pgfplots.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/phasor-diagram.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/physical-pendulum.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/pie-chart.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/pie-chart-color.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/dandelin-spheres.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/plane-partition.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/planets.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/brillouin-function.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/poincare.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/polar-coordinates-template.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/polar-plot.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/polarization-state-of-light.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/polarizing-microscope.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/polygon-division.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/porter-model.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/power-electronics-rectifier.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/power-electronics-converter-inverter.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/power-electronics-solar-system.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/prerequisite-chart.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/pressurized-water-reactor.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/prims-algorithm.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/principle-of-x-ray-photoelectron-spectroscopy-xps.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/sontrol-safety-system.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/probability-tree.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/projectile.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/dome.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/pera-model.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/diagram-chains.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/puzzle.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/pythagoras-triangle.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/python-if-then-else-syntax-diagram.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/quantum-circuit.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/rgb-triangle.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/rna-codons-table.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/rpm-disc.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/radix2fft.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/raindrop.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/rectangle-node-with-diagonal-fill.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/red-black-tree.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/refraction.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/regular-polygons.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/triangles.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/geometric-series.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/rooty-helix.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/rose-rhodonea-curve.png">
+<meta property="og:image" content="http://texample.net/media/tikz/examples/thumbs/square.jpg">
+<meta property="og:image" content="http://texample.net/media/tikz/examples/thumbs/pentagon.jpg">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/rotated-polygons.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/rotated-squares.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/rotated-triangle.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/rule-based-diagram.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/rules.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/rusting-iron.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/swan-wave-model.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/safe-fusion.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/sankey-diagram.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/scatterplot.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/scenario-tree.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/labs-schema.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/schemabloc.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/fiber-coupler.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/euclid-algorithm.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/scientific-interactions.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/cylinder-segment.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/seismic-focal-mechanism-in-3d-view.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/junction-diagram.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/sequence-diagram.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/series-and-parallel-graph-diagrams.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/set-operations-illustrated-with-venn-diagrams.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/seven-segment-display.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/shake-rattle-pendulum.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/shear-torsion.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/eratosthenes-sieve.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/sign-diagram.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/signal-flow-building-blocks.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/signpost.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/simple-circuit-schematics-symbols.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/simple-flow-chart.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/hand-drawn-lines.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/simulation-abstraction.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/sine-and-cosine-functions-animation.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/skype-topology.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/smooth-maps.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/snake-lemma.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/snowflakes.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/spherical-and-cartesian-grids.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/spherical-polar-pots-with-3dplot.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/spiderweb-diagram.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/hydrogen-splitting.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/standard-deviation.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/model-physics.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/star-graph.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/state-machine.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/steradian-cone-sphere.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/map-projections.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/sudoku.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/sudoku-3d-cube.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/phyllotaxy.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/sunset.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/supersonic-nozzle.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/symmetries.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/4-bit-counter.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/system-combination.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/tcp-state-machine.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/arrow-table.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/textronics-oscilloscope.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/temperature-and-rain-sparklines.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/the-3dplot-package.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/earth-orbit.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/the-olympic-rings.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/the-perrin-jablonski-diagram.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/tex-workflow.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/electric-dipole.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/bridges-of-konigsberg.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/tkz-2d.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/tkz-berge.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/three-link-manipulator.png">
+<meta property="og:image" content="http://texample.net/media/tikz/examples/extra/pgf-version-2/mpgf2001.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/events.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/timetable.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/timing-diagram.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/tikz-timing.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/title-graphics.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/tkz-linknodes-examples.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/todo-notes.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/torn-paper.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/towers-of-hanoi.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/transmission-electron-microscope.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/transparent-png-overlay.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/transparent-shadows.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/transversal-loads.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/coin-flipping.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/truncated-cone.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/turing-machine-2.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/turing-machine.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/pgf-umlsd.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/ulam-spiral.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/unit-circle.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/contours-grids.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/valentine-heart.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/venn-diagram.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/venn-diagram-with-magnifier.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/venn-diagram-blended.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/complement.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/weather-stations-data.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/windshield-wiper.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/work-breakdown-structure.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/yellow-notes.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/yin-and-yang.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/eps2pgf.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/tikzdevice-demo.png">
+<meta property="og:image" content="http://www.texample.net/media/tikz/examples/PNG/tkz-plot2d.png">
+<meta property="og:image" content="https://www.packtpub.com/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/5/1/5148os_latex20cookbook.jpg">
+<meta property="og:image" content="https://www.packtpub.com/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/9/8/9867_latex20cov.jpg">
+<meta property="og:updated_time" content="2019-07-07T01:57:29.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Tips of Tables and Figures in Papers (cont.) 续">
+<meta name="twitter:description" content="ResourcesBeautiful ‘’Feather’’Feather 均是矢量图，风格简约；想修改成自己想要的图形也很方便，可以用 Inkscape 来修改 Awesome ‘’TEXamples’’Tikz examples TikZ and PGF examplesView: Alphabetical | Chronological | As list AlphabeticalChron">
+<meta name="twitter:image" content="http://www.texample.net/media/img/logo.png">
+
+
+
+
+
+
+  <link rel="canonical" href="https://eustomaqua.github.io/2019/2019-06-10-Latex-Paper-Figures-cont/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Tips of Tables and Figures in Papers (cont.) 续 | Aqua Eustoma</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Aqua Eustoma</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />Search</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://eustomaqua.github.io/2019/2019-06-10-Latex-Paper-Figures-cont/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="eustomaqua">
+      <meta itemprop="description" content="Once upon a time....">
+      <meta itemprop="image" content="/images/EustomaAqua.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aqua Eustoma">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Tips of Tables and Figures in Papers (cont.) 续
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 10 Jun 2019 21:49:03" itemprop="dateCreated datePublished" datetime="2019-06-10T21:49:03-05:00">10 Jun 2019</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 06 Jul 2019 20:57:29" itemprop="dateModified" datetime="2019-07-06T20:57:29-05:00">06 Jul 2019</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Writing/" itemprop="url" rel="index"><span itemprop="name">Writing</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+
+          
+            <span class="post-letters-count">
+              &nbsp; | &nbsp;
+              <span title="post.wordcount">
+                1,803 words
+              </span>
+              &nbsp; | &nbsp;
+              <span title="post.min2read">
+                11 minutes
+              </span>
+            </span>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h1><h2 id="Beautiful-‘’Feather’’"><a href="#Beautiful-‘’Feather’’" class="headerlink" title="Beautiful ‘’Feather’’"></a>Beautiful ‘’Feather’’</h2><p><a href="https://feathericons.com/" target="_blank" rel="noopener">Feather</a></p>
+<p>均是矢量图，风格简约；想修改成自己想要的图形也很方便，可以用 Inkscape 来修改</p>
+<h2 id="Awesome-‘’TEXamples’’"><a href="#Awesome-‘’TEXamples’’" class="headerlink" title="Awesome ‘’TEXamples’’"></a>Awesome ‘’TEXamples’’</h2><p><a href="http://www.texample.net/tikz/examples/" target="_blank" rel="noopener">Tikz examples</a><br><img src="http://www.texample.net/media/img/logo.png" alt="texamples"></p>
+<p><strong>TikZ and PGF examples</strong><br>View: Alphabetical | Chronological | As list</p>
+<p><a href="http://www.texample.net/tikz/examples/all/" target="_blank" rel="noopener">Alphabetical</a><br><a href="http://www.texample.net/tikz/examples/all/date/" target="_blank" rel="noopener">Chronological</a><br><a href="http://www.texample.net/tikz/examples/all/list/" target="_blank" rel="noopener">As list</a></p>
+<p><strong><em>Browse by:</em></strong> Features | Tags | Technical areas | Non-technical areas | Authors</p>
+<h3 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h3><p><a href="http://www.texample.net/tikz/examples/feature/absolute-positioning/" target="_blank" rel="noopener">Absolute positioning</a>  4<br><a href="http://www.texample.net/tikz/examples/feature/angles/" target="_blank" rel="noopener">Angles</a>  1<br><a href="http://www.texample.net/tikz/examples/feature/arcs/" target="_blank" rel="noopener">Arcs</a>  4<br><a href="http://www.texample.net/tikz/examples/feature/arrows/" target="_blank" rel="noopener">Arrows</a>  18<br><a href="http://www.texample.net/tikz/examples/feature/automata-and-petri-nets/" target="_blank" rel="noopener">Automata and Petri nets</a>  5<br><a href="http://www.texample.net/tikz/examples/feature/background/" target="_blank" rel="noopener">Background</a>  12<br><a href="http://www.texample.net/tikz/examples/feature/blending/" target="_blank" rel="noopener">Blending</a>  2<br><a href="http://www.texample.net/tikz/examples/feature/calendar-library/" target="_blank" rel="noopener">Calendar library</a>  5<br><a href="http://www.texample.net/tikz/examples/feature/callouts/" target="_blank" rel="noopener">Callouts</a>  1<br><a href="http://www.texample.net/tikz/examples/feature/chains/" target="_blank" rel="noopener">Chains</a>  12<br><a href="http://www.texample.net/tikz/examples/feature/circuits/" target="_blank" rel="noopener">Circuits</a>  3<br><a href="http://www.texample.net/tikz/examples/feature/clipping/" target="_blank" rel="noopener">Clipping</a>  18<br><a href="http://www.texample.net/tikz/examples/feature/coordinate-calculations/" target="_blank" rel="noopener">Coordinate calculations</a>  30<br><a href="http://www.texample.net/tikz/examples/feature/coordinate-systems/" target="_blank" rel="noopener">Coordinate systems</a>  8<br><a href="http://www.texample.net/tikz/examples/feature/decorations/" target="_blank" rel="noopener">Decorations</a>  45<br><a href="http://www.texample.net/tikz/examples/feature/fading/" target="_blank" rel="noopener">Fadings</a>  12<br><a href="http://www.texample.net/tikz/examples/feature/fit/" target="_blank" rel="noopener">Fit</a>  6<br><a href="http://www.texample.net/tikz/examples/feature/foreach/" target="_blank" rel="noopener">Foreach</a>  96<br><a href="http://www.texample.net/tikz/examples/feature/forest/" target="_blank" rel="noopener">Forest</a>  1<br><a href="http://www.texample.net/tikz/examples/feature/intersections/" target="_blank" rel="noopener">Intersections</a>  7<br><a href="http://www.texample.net/tikz/examples/feature/layers/" target="_blank" rel="noopener">Layers</a>  17<br><a href="http://www.texample.net/tikz/examples/feature/luatex/" target="_blank" rel="noopener">LuaTeX</a>  2<br><a href="http://www.texample.net/tikz/examples/feature/markings/" target="_blank" rel="noopener">Markings</a>  5<br><a href="http://www.texample.net/tikz/examples/feature/mathematical-engine/" target="_blank" rel="noopener">Mathematical engine</a>  41<br><a href="http://www.texample.net/tikz/examples/feature/matrices/" target="_blank" rel="noopener">Matrices</a>  25<br><a href="http://www.texample.net/tikz/examples/feature/mindmaps/" target="_blank" rel="noopener">Mindmaps</a>  4<br><a href="http://www.texample.net/tikz/examples/feature/node-positioning/" target="_blank" rel="noopener">Node positioning</a>  21<br><a href="http://www.texample.net/tikz/examples/feature/nodes-and-shapes/" target="_blank" rel="noopener">Nodes and shapes</a>  15<br><a href="http://www.texample.net/tikz/examples/feature/overlays/" target="_blank" rel="noopener">Overlays</a>  10<br><a href="http://www.texample.net/tikz/examples/feature/paper-folding/" target="_blank" rel="noopener">Paper folding</a>  1<br><a href="http://www.texample.net/tikz/examples/feature/patterns/" target="_blank" rel="noopener">Patterns</a>  1<br><a href="http://www.texample.net/tikz/examples/feature/pic/" target="_blank" rel="noopener">Pic</a>  5<br><a href="http://www.texample.net/tikz/examples/feature/plotting/" target="_blank" rel="noopener">Plotting</a>  20<br><a href="http://www.texample.net/tikz/examples/feature/postactions/" target="_blank" rel="noopener">Postactions</a>  2<br><a href="http://www.texample.net/tikz/examples/feature/quotes/" target="_blank" rel="noopener">Quotes</a>  1<br><a href="http://www.texample.net/tikz/examples/feature/remember-picture/" target="_blank" rel="noopener">Remember picture</a>  8<br><a href="http://www.texample.net/tikz/examples/feature/scopes/" target="_blank" rel="noopener">Scopes</a>  18<br><a href="http://www.texample.net/tikz/examples/feature/shadings/" target="_blank" rel="noopener">Shadings</a>  34<br><a href="http://www.texample.net/tikz/examples/feature/shadows/" target="_blank" rel="noopener">Shadows</a>  3<br><a href="http://www.texample.net/tikz/examples/feature/shapes/" target="_blank" rel="noopener">Shapes</a>  1<br><a href="http://www.texample.net/tikz/examples/feature/smartdiagram/" target="_blank" rel="noopener">Smartdiagram</a>  6<br><a href="http://www.texample.net/tikz/examples/feature/snakes/" target="_blank" rel="noopener">Snakes</a>  5<br><a href="http://www.texample.net/tikz/examples/feature/spy-library/" target="_blank" rel="noopener">Spy library</a>  5<br><a href="http://www.texample.net/tikz/examples/feature/styles/" target="_blank" rel="noopener">Styles</a>  36<br><a href="http://www.texample.net/tikz/examples/feature/to-paths/" target="_blank" rel="noopener">To paths</a>  14<br><a href="http://www.texample.net/tikz/examples/feature/transformations/" target="_blank" rel="noopener">Transformations</a>  31<br><a href="http://www.texample.net/tikz/examples/feature/transparency/" target="_blank" rel="noopener">Transparency</a>  20<br><a href="http://www.texample.net/tikz/examples/feature/trees/" target="_blank" rel="noopener">Trees</a>  16  </p>
+<h3 id="Tags"><a href="#Tags" class="headerlink" title="Tags"></a>Tags</h3><p><a href="http://www.texample.net/tikz/examples/tag/3d/" target="_blank" rel="noopener">3D</a>  34<br><a href="http://www.texample.net/tikz/examples/tag/angles/" target="_blank" rel="noopener">Angles</a>  7<br><a href="http://www.texample.net/tikz/examples/tag/animations/" target="_blank" rel="noopener">Animations</a>  10<br><a href="http://www.texample.net/tikz/examples/tag/annotations/" target="_blank" rel="noopener">Annotations</a>  9<br><a href="http://www.texample.net/tikz/examples/tag/axes/" target="_blank" rel="noopener">Axes</a>  9<br><a href="http://www.texample.net/tikz/examples/tag/basics/" target="_blank" rel="noopener">Basics</a>  7<br><a href="http://www.texample.net/tikz/examples/tag/beamer/" target="_blank" rel="noopener">Beamer</a>  13<br><a href="http://www.texample.net/tikz/examples/tag/block-diagrams/" target="_blank" rel="noopener">Block diagrams</a>  28<br><a href="http://www.texample.net/tikz/examples/tag/charts/" target="_blank" rel="noopener">Charts</a>  23<br><a href="http://www.texample.net/tikz/examples/tag/circuitikz/" target="_blank" rel="noopener">Circuitikz</a>  12<br><a href="http://www.texample.net/tikz/examples/tag/code-generation/" target="_blank" rel="noopener">Code generation</a>  6<br><a href="http://www.texample.net/tikz/examples/tag/color-manipulation/" target="_blank" rel="noopener">Color manipulation</a>  12<br><a href="http://www.texample.net/tikz/examples/tag/customization/" target="_blank" rel="noopener">Customization</a>  12<br><a href="http://www.texample.net/tikz/examples/tag/deprecated/" target="_blank" rel="noopener">Deprecated</a>  2<br><a href="http://www.texample.net/tikz/examples/tag/diagrams/" target="_blank" rel="noopener">Diagrams</a>  91<br><a href="http://www.texample.net/tikz/examples/tag/external-file/" target="_blank" rel="noopener">External file</a>  3<br><a href="http://www.texample.net/tikz/examples/tag/flowcharts/" target="_blank" rel="noopener">Flowcharts</a>  8<br><a href="http://www.texample.net/tikz/examples/tag/fractals/" target="_blank" rel="noopener">Fractals</a>  8<br><a href="http://www.texample.net/tikz/examples/tag/gnuplot/" target="_blank" rel="noopener">GNUPLOT</a>  9<br><a href="http://www.texample.net/tikz/examples/tag/graphs/" target="_blank" rel="noopener">Graphs</a>  25<br><a href="http://www.texample.net/tikz/examples/tag/grids/" target="_blank" rel="noopener">Grids</a>  10<br><a href="http://www.texample.net/tikz/examples/tag/hacks/" target="_blank" rel="noopener">Hacks</a>  1<br><a href="http://www.texample.net/tikz/examples/tag/macro-packages/" target="_blank" rel="noopener">Macro packages</a>  26<br><a href="http://www.texample.net/tikz/examples/tag/macros/" target="_blank" rel="noopener">Macros</a>  10<br><a href="http://www.texample.net/tikz/examples/tag/manual/" target="_blank" rel="noopener">Manual</a>  14<br><a href="http://www.texample.net/tikz/examples/tag/pgf-20/" target="_blank" rel="noopener">PGF 2.0</a>  16<br><a href="http://www.texample.net/tikz/examples/tag/pgf-30/" target="_blank" rel="noopener">PGF 3.0</a>  5<br><a href="http://www.texample.net/tikz/examples/tag/pgf-cvs/" target="_blank" rel="noopener">PGF CVS</a>  3<br><a href="http://www.texample.net/tikz/examples/tag/paths/" target="_blank" rel="noopener">Paths</a>  29<br><a href="http://www.texample.net/tikz/examples/tag/pie-charts/" target="_blank" rel="noopener">Pie charts</a>  1<br><a href="http://www.texample.net/tikz/examples/tag/plots/" target="_blank" rel="noopener">Plots</a>  33<br><a href="http://www.texample.net/tikz/examples/tag/random/" target="_blank" rel="noopener">Random</a>  10<br><a href="http://www.texample.net/tikz/examples/tag/text-and-math/" target="_blank" rel="noopener">Text and math</a>  18  </p>
+<h3 id="Technical-areas-Scientific-and-technical-areas"><a href="#Technical-areas-Scientific-and-technical-areas" class="headerlink" title="(Technical areas) Scientific and technical areas"></a>(Technical areas) Scientific and technical areas</h3><p><a href="http://www.texample.net/tikz/examples/area/astronomy/" target="_blank" rel="noopener">Astronomy</a>  3<br><a href="http://www.texample.net/tikz/examples/area/biology/" target="_blank" rel="noopener">Biology</a>  5<br><a href="http://www.texample.net/tikz/examples/area/chemistry/" target="_blank" rel="noopener">Chemistry</a>  12<br><a href="http://www.texample.net/tikz/examples/area/computer-science/" target="_blank" rel="noopener">Computer science</a>  42<br><a href="http://www.texample.net/tikz/examples/area/economics/" target="_blank" rel="noopener">Economics</a>  14<br><a href="http://www.texample.net/tikz/examples/area/electrical-engineering/" target="_blank" rel="noopener">Electrical engineering</a>  44<br><a href="http://www.texample.net/tikz/examples/area/geography/" target="_blank" rel="noopener">Geography</a>  1<br><a href="http://www.texample.net/tikz/examples/area/geometry/" target="_blank" rel="noopener">Geometry</a>  40<br><a href="http://www.texample.net/tikz/examples/area/mathematics/" target="_blank" rel="noopener">Mathematics</a>  81<br><a href="http://www.texample.net/tikz/examples/area/mechanics/" target="_blank" rel="noopener">Mechanics</a>  3<br><a href="http://www.texample.net/tikz/examples/area/networking/" target="_blank" rel="noopener">Networking</a>  4<br><a href="http://www.texample.net/tikz/examples/area/optics/" target="_blank" rel="noopener">Optics</a>  9<br><a href="http://www.texample.net/tikz/examples/area/philosophy/" target="_blank" rel="noopener">Philosophy</a>  1<br><a href="http://www.texample.net/tikz/examples/area/physics/" target="_blank" rel="noopener">Physics</a>  50<br><a href="http://www.texample.net/tikz/examples/area/psychology/" target="_blank" rel="noopener">Psychology</a>  1<br><a href="http://www.texample.net/tikz/examples/area/statistics/" target="_blank" rel="noopener">Statistics</a>  11  </p>
+<h3 id="Non-technical-areas-Other-areas"><a href="#Non-technical-areas-Other-areas" class="headerlink" title="(Non-technical areas) Other areas"></a>(Non-technical areas) Other areas</h3><p><a href="http://www.texample.net/tikz/examples/nontech/calendars/" target="_blank" rel="noopener">Calendars</a>  5<br><a href="http://www.texample.net/tikz/examples/nontech/christmas/" target="_blank" rel="noopener">Christmas</a>  4<br><a href="http://www.texample.net/tikz/examples/nontech/cookbook/" target="_blank" rel="noopener">Cookbook</a>  12<br><a href="http://www.texample.net/tikz/examples/nontech/decorative-drawings/" target="_blank" rel="noopener">Decorative drawings</a>  34<br><a href="http://www.texample.net/tikz/examples/nontech/fun/" target="_blank" rel="noopener">Fun</a>  15<br><a href="http://www.texample.net/tikz/examples/nontech/games/" target="_blank" rel="noopener">Games</a>  5<br><a href="http://www.texample.net/tikz/examples/nontech/music/" target="_blank" rel="noopener">Music</a>  1<br><a href="http://www.texample.net/tikz/examples/nontech/new-year/" target="_blank" rel="noopener">New Year</a>  1<br><a href="http://www.texample.net/tikz/examples/nontech/sports/" target="_blank" rel="noopener">Sports</a>  2  </p>
+<h3 id="Authors"><a href="#Authors" class="headerlink" title="Authors"></a>Authors</h3><h1 id="TEXamples-All"><a href="#TEXamples-All" class="headerlink" title="TEXamples (All)"></a>TEXamples (All)</h1><p>$6\times3$  items per page</p>
+<h2 id="Page-1"><a href="#Page-1" class="headerlink" title="Page 1"></a><a href="http://www.texample.net/tikz/examples/all/" target="_blank" rel="noopener">Page 1</a></h2><p><a href="http://www.texample.net/tikz/examples/mosfet/" target="_blank" rel="noopener">18W MOSFET amplifier with npn transistor</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/mosfet.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/nav1d/" target="_blank" rel="noopener">1D navigation</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/nav1d.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/3d-cone/" target="_blank" rel="noopener">3D cone</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/3d-cone.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/consort-flowchart/" target="_blank" rel="noopener">A CONSORT-style flowchart of a randomized controlled trial</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/consort-flowchart.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/cone/" target="_blank" rel="noopener">A Cone in 3D</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/cone.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/nodetutorial/" target="_blank" rel="noopener">A Petri-net for Hagen</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/nodetutorial.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/venn/" target="_blank" rel="noopener">A Venn diagram with PDF blending</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/venn.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/smart-priority/" target="_blank" rel="noopener">A bottom-up chart of a TeX workflow</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/smart-priority.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/smart-circle/" target="_blank" rel="noopener">A circular diagram of a TeX workflow</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/smart-circle.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/smart-description/" target="_blank" rel="noopener">A descriptive diagram of TikZ tasks</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/smart-description.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/smart-bubbles/" target="_blank" rel="noopener">A diagram of TeX engines</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/smart-bubbles.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/smart-constellation/" target="_blank" rel="noopener">A diagram of TeX software</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/smart-constellation.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/family-tree/" target="_blank" rel="noopener">A family tree</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/family-tree.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/smart-flowchart/" target="_blank" rel="noopener">A flowchart of a TeX workflow</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/smart-flowchart.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/trigonometric-hexagon/" target="_blank" rel="noopener">A hexagon for memorizing trigonometric identities</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/trigonometric-hexagon.png" width="150"></p>
+<h2 id="Page-2"><a href="#Page-2" class="headerlink" title="Page 2"></a><a href="http://www.texample.net/tikz/examples/all/?page=2" target="_blank" rel="noopener">Page 2</a></h2><p><a href="http://www.texample.net/tikz/examples/servers/" target="_blank" rel="noopener">A mindmap showing TeX projects supported by DANTE e.V.</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/servers.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/tutorial/" target="_blank" rel="noopener">A picture for Karl’s students</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/tutorial.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/tree/" target="_blank" rel="noopener">A simple Tree</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/tree.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/cycle/" target="_blank" rel="noopener">A simple cycle</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/cycle.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/3d-graph-model/" target="_blank" rel="noopener">A simple graph-model in 3D</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/3d-graph-model.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/ac-drive-components/" target="_blank" rel="noopener">AC drive components</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/ac-drive-components.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/ac-drive-voltage/" target="_blank" rel="noopener">AC drive voltage flux control</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/ac-drive-voltage.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/actor-transaction-diagram/" target="_blank" rel="noopener">Actor Transaction Diagram</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/actor-transaction-diagram.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/airfoil-profiles/" target="_blank" rel="noopener">Airfoil profiles</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/airfoil-profiles.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/tikz-listings/" target="_blank" rel="noopener">An example of tikz and listings jointly used</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/tikz-listings.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/andler-optimal-lot-size/" target="_blank" rel="noopener">Andler optimal lot-size</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/andler-optimal-lot-size.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/wankel-motor/" target="_blank" rel="noopener">Animated Wankel-Motor</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/wankel-motor.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/animated-definite-integral/" target="_blank" rel="noopener">Animated definite integral</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/animated-definite-integral.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/animated-distributions/" target="_blank" rel="noopener">Animated distributions</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/animated-distributions.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/convolution-of-two-functions/" target="_blank" rel="noopener">Animated illustration of the convolution of two functions.</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/convolution-of-two-functions.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/animated-set-intersection/" target="_blank" rel="noopener">Animated set intersection</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/animated-set-intersection.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/annotated-3d-box/" target="_blank" rel="noopener">Annotated 3D box</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/annotated-3d-box.png" width="150"></p>
+<h2 id="Page-3"><a href="#Page-3" class="headerlink" title="Page 3"></a><a href="http://www.texample.net/tikz/examples/all/?page=3" target="_blank" rel="noopener">Page 3</a></h2><p><a href="http://www.texample.net/tikz/examples/three-link-annotated/" target="_blank" rel="noopener">Annotated manipulator</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/three-link-annotated.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/archimedess-approximation-of-pi/" target="_blank" rel="noopener">Archimedes’s approximation of pi</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/archimedess-approximation-of-pi.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/balance/" target="_blank" rel="noopener">Arithmetic mean as center of mass</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/balance.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/assignment-structure/" target="_blank" rel="noopener">Assignment structure</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/assignment-structure.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/asymmetric-information/" target="_blank" rel="noopener">Asymmetric information</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/asymmetric-information.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/atoms-and-orbitals/" target="_blank" rel="noopener">Atoms and orbitals</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/atoms-and-orbitals.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/automata/" target="_blank" rel="noopener">Automata</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/automata.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/BER-measurement/" target="_blank" rel="noopener">BER measurement on fibre optical system</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/BER-measurement.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/bar-chart/" target="_blank" rel="noopener">Bar chart</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/bar-chart.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/philosophy/" target="_blank" rel="noopener">Basic Philosophy concepts</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/philosophy.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/bayes/" target="_blank" rel="noopener">Bayesian Probability Illustration Diagram</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/bayes.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/beamer-arrows/" target="_blank" rel="noopener">Beamer arrows</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/beamer-arrows.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/belt-pulley/" target="_blank" rel="noopener">Belt and pulley system</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/belt-pulley.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/biconcave-lens/" target="_blank" rel="noopener">Biconcave lens</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/biconcave-lens.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/multiplexer/" target="_blank" rel="noopener">Block Diagram for TTL IC Multiplexer 74HC153</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/multiplexer.png" width="200"></p>
+<h2 id="Page-4"><a href="#Page-4" class="headerlink" title="Page 4"></a><a href="http://www.texample.net/tikz/examples/all/?page=4" target="_blank" rel="noopener">Page 4</a></h2><p><a href="http://www.texample.net/tikz/examples/line-junctions/" target="_blank" rel="noopener">Block diagram line junctions</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/line-junctions.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/noise-shaper/" target="_blank" rel="noopener">Block diagram of Third order noise shaper in Compact Disc Players</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/noise-shaper.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/bode-plot/" target="_blank" rel="noopener">Bode plot</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/bode-plot.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/bond-graph/" target="_blank" rel="noopener">Bond graph</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/bond-graph.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/bootstrap-resampling/" target="_blank" rel="noopener">Bootstrap resampling</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/bootstrap-resampling.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/borromean-rings/" target="_blank" rel="noopener">Borromean rings</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/borromean-rings.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/borrowers-and-lenders/" target="_blank" rel="noopener">Borrowers and lenders</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/borrowers-and-lenders.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/box-and-whisker-plot/" target="_blank" rel="noopener">Box and whisker plot</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/box-and-whisker-plot.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/boxes-with-text-and-math/" target="_blank" rel="noopener">Boxes with text and math</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/boxes-with-text-and-math.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/butterfly-lemma/" target="_blank" rel="noopener">Butterfly Lemma</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/butterfly-lemma.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/cn4-points-of-intersection/" target="_blank" rel="noopener">C(n,4) points of intersection</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/cn4-points-of-intersection.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/cielab/" target="_blank" rel="noopener">CIELAB color space</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/cielab.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/labeled-chain/" target="_blank" rel="noopener">Chains with labeled edges</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/labeled-chain.png" width="200"></p>
+<h2 id="Page-5"><a href="#Page-5" class="headerlink" title="Page 5"></a><a href="http://www.texample.net/tikz/examples/all/?page=5" target="_blank" rel="noopener">Page 5</a></h2><p><a href="http://www.texample.net/tikz/examples/complex-plane/" target="_blank" rel="noopener">Circle in the complex plane</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/complex-plane.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/circuitikz/" target="_blank" rel="noopener">CircuiTikz - Easy electrical networks</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/circuitikz.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/circuit/" target="_blank" rel="noopener">Circuit example</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/circuit.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/circular-arrows-text/" target="_blank" rel="noopener">Circular arrows with text</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/circular-arrows-text.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/parallelepiped/" target="_blank" rel="noopener">Circumscribed Parallelepiped</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/parallelepiped.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/circumscribed-polygons-and-circles/" target="_blank" rel="noopener">Circumscribed polygons and circles</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/circumscribed-polygons-and-circles.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/class-diagram/" target="_blank" rel="noopener">Class diagram</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/class-diagram.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/clusters-of-atoms/" target="_blank" rel="noopener">Clusters of atoms</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/clusters-of-atoms.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/colored-diagram/" target="_blank" rel="noopener">Coloring diagrams - linear relaxation</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/colored-diagram.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/collpits/" target="_blank" rel="noopener">Colpitts oscillator, with npn transistor</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/collpits.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/combinatorial-graphs/" target="_blank" rel="noopener">Combinatorial graphs</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/combinatorial-graphs.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/commutative-diagram-tikz/" target="_blank" rel="noopener">Commutative diagram</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/commutative-diagram-tikz.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/commutative-diagram/" target="_blank" rel="noopener">Commutative diagram with crossing edges</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/commutative-diagram.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/complexity-classes/" target="_blank" rel="noopener">Computational Complexity Classes</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/complexity-classes.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/computer-diagram/" target="_blank" rel="noopener">Computer diagram</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/computer-diagram.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/computer-science-mindmap/" target="_blank" rel="noopener">Computer science mindmap</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/computer-science-mindmap.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/polars-tangents-conic/" target="_blank" rel="noopener">Conics - Polars and Tangents</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/polars-tangents-conic.png" width="150"></p>
+<h2 id="Page-6"><a href="#Page-6" class="headerlink" title="Page 6"></a><a href="http://www.texample.net/tikz/examples/all/?page=6" target="_blank" rel="noopener">Page 6</a></h2><p><a href="http://www.texample.net/tikz/examples/connecting-text-and-graphics/" target="_blank" rel="noopener">Connecting text and graphics</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/connecting-text-and-graphics.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/control-system-principles/" target="_blank" rel="noopener">Control system principles</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/control-system-principles.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/credit-rationing/" target="_blank" rel="noopener">Credit rationing</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/credit-rationing.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/cuboid/" target="_blank" rel="noopener">Cuboid in a 2 vanishing points perspective</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/cuboid.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/d-flip-flops-and-shift-register/" target="_blank" rel="noopener">D flip-flops and shift register</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/d-flip-flops-and-shift-register.png" width="250"></p>
+<p><a href="http://www.texample.net/tikz/examples/daniells-pile/" target="_blank" rel="noopener">Daniell’s pile</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/daniells-pile.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/data-flow-diagram/" target="_blank" rel="noopener">Data flow diagram</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/data-flow-diagram.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/database-decimation-process/" target="_blank" rel="noopener">Database decimation process</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/database-decimation-process.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/decision-tree/" target="_blank" rel="noopener">Decision tree</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/decision-tree.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/bernoulli/" target="_blank" rel="noopener">Diagram for the Bernoulli Principle</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/bernoulli.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/android/" target="_blank" rel="noopener">Diagram of Android activity life cycle</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/android.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/difference-quotient/" target="_blank" rel="noopener">Difference quotient</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/difference-quotient.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/fir-filter/" target="_blank" rel="noopener">Digital Signal Processing Library</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/fir-filter.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/dipolar-magnetic-field/" target="_blank" rel="noopener">Dipolar magnetic field</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/dipolar-magnetic-field.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/ac-drive-dtc/" target="_blank" rel="noopener">Direct torque control of AC drive</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/ac-drive-dtc.png" width="150"></p>
+<h2 id="Page-7"><a href="#Page-7" class="headerlink" title="Page 7"></a><a href="http://www.texample.net/tikz/examples/all/?page=7" target="_blank" rel="noopener">Page 7</a></h2><p><a href="http://www.texample.net/tikz/examples/doa-diagram/" target="_blank" rel="noopener">Direction-of-arrival diagram</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/doa-diagram.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/dva-vectors/" target="_blank" rel="noopener">Distance, velocity and acceleration vectors</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/dva-vectors.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/distributed-processing/" target="_blank" rel="noopener">Distributed processing</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/distributed-processing.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/double-arrows/" target="_blank" rel="noopener">Double Arrows a la Chef</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/double-arrows.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/graph/" target="_blank" rel="noopener">Drawing a graph</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/graph.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/drawing-graphs/" target="_blank" rel="noopener">Drawing a graph using the PG 3.0 graphdrawing library</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/drawing-graphs.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/angles-quotes/" target="_blank" rel="noopener">Drawing angles using the PG 3.0 angles and quotes libraries</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/angles-quotes.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/lattice-points/" target="_blank" rel="noopener">Drawing lattice points and vectors</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/lattice-points.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/induction-machine/" target="_blank" rel="noopener">Dynamic inverse-gamma-equivalent circuit for an induction machine</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/induction-machine.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/epc-flow-charts/" target="_blank" rel="noopener">EPC flow charts</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/epc-flow-charts.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/flexible-flow-chart/" target="_blank" rel="noopener">Easy-maintenance flowchart</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/flexible-flow-chart.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/circuit-decorations/" target="_blank" rel="noopener">Electric circuit decorations</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/circuit-decorations.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/energy-level-diagram/" target="_blank" rel="noopener">Energy level diagram</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/energy-level-diagram.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/energy-levels/" target="_blank" rel="noopener">Energy level diagrams - illustrating Hund’s rule</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/energy-levels.png" width="150"></p>
+<h2 id="Page-8"><a href="#Page-8" class="headerlink" title="Page 8"></a><a href="http://www.texample.net/tikz/examples/all/?page=8" target="_blank" rel="noopener">Page 8</a></h2><p><a href="http://www.texample.net/tikz/examples/fluor-energy-levels/" target="_blank" rel="noopener">Energy levels of a fluor molecule</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/fluor-energy-levels.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/entity-relationship-diagram/" target="_blank" rel="noopener">Entity-Relationship diagram</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/entity-relationship-diagram.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/er-diagram/" target="_blank" rel="noopener">Entity-relationship diagram</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/er-diagram.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/escher-brick-penrose-triangle/" target="_blank" rel="noopener">Escher Brick and Penrose Triangle</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/escher-brick-penrose-triangle.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/tkz-orm-example/" target="_blank" rel="noopener">Example for tkz-orm v0.1 2010/01/25</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/tkz-orm-example.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/spacetime/" target="_blank" rel="noopener">Excised, Horizon-Penetrating Coordinates for Black Hole Spacetime</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/spacetime.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/text-fading/" target="_blank" rel="noopener">Fading text</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/text-fading.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/faking-slanted-small-caps/" target="_blank" rel="noopener">Faking slanted small caps using TikZ low level transforms</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/faking-slanted-small-caps.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/fancy-arrows/" target="_blank" rel="noopener">Fancy arrows drawn with the PGF 3.0 arrows.meta library</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/fancy-arrows.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/fancy-chapter-headings/" target="_blank" rel="noopener">Fancy chapter headings</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/fancy-chapter-headings.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/colorful-tables/" target="_blank" rel="noopener">Fancy colorful tables with TikZ</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/colorful-tables.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/fault-tree/" target="_blank" rel="noopener">Fault tree</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/fault-tree.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/feynman-diagram/" target="_blank" rel="noopener">Feynman diagram</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/feynman-diagram.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/fibonacci-spiral/" target="_blank" rel="noopener">Fibonacci spiral</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/fibonacci-spiral.png" width="200"></p>
+<h2 id="Page-9"><a href="#Page-9" class="headerlink" title="Page 9"></a><a href="http://www.texample.net/tikz/examples/all/?page=9" target="_blank" rel="noopener">Page 9</a></h2><p><a href="http://www.texample.net/tikz/examples/filesystem-tree/" target="_blank" rel="noopener">Filesystem tree</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/filesystem-tree.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/FIR-filter/" target="_blank" rel="noopener">Finite impulse response filter</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/FIR-filter.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/fireworks/" target="_blank" rel="noopener">Fireworks</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/fireworks.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/text-shape/" target="_blank" rel="noopener">Fitting text to a shape</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/text-shape.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/math-flowchart/" target="_blank" rel="noopener">Flowchart</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/math-flowchart.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/flowchart/" target="_blank" rel="noopener">Flowchart</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/flowchart.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/focused-ion-beam-system/" target="_blank" rel="noopener">Focused ion beam system</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/focused-ion-beam-system.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/ford-circle/" target="_blank" rel="noopener">Ford circle</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/ford-circle.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/free-body-diagrams/" target="_blank" rel="noopener">Free body diagrams</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/free-body-diagrams.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/gnuplot-basics/" target="_blank" rel="noopener">GNUPLOT basics</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/gnuplot-basics.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/gajski-kuhn-y-chart/" target="_blank" rel="noopener">Gajski-Kuhn Y-chart</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/gajski-kuhn-y-chart.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/gamma-interaction/" target="_blank" rel="noopener">Gamma interaction</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/gamma-interaction.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/genaille-and-lucas-sticks/" target="_blank" rel="noopener">Genaille and Lucas sticks for multiplication and division</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/genaille-and-lucas-sticks.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/glider/" target="_blank" rel="noopener">Glider, a hacker emblem</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/glider.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/global-nodes/" target="_blank" rel="noopener">Global nodes</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/global-nodes.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/gnuplot-tikz-terminal/" target="_blank" rel="noopener">Gnuplot TikZ terminal</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/gnuplot-tikz-terminal.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/graph-paper/" target="_blank" rel="noopener">Graph paper</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/graph-paper.png" width="150"></p>
+<h2 id="Page-10"><a href="#Page-10" class="headerlink" title="Page 10"></a><a href="http://www.texample.net/tikz/examples/all/?page=10" target="_blank" rel="noopener">Page 10</a></h2><p><a href="http://www.texample.net/tikz/examples/gray-code-in-4-cube/" target="_blank" rel="noopener">Gray Code in 4-cube</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/gray-code-in-4-cube.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/growing-wave-decoration/" target="_blank" rel="noopener">Growing wave decoration</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/growing-wave-decoration.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/h-tree/" target="_blank" rel="noopener">H-tree and b-tree</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/h-tree.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/hsv-shading/" target="_blank" rel="noopener">HSV shading</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/hsv-shading.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/line-junction/" target="_blank" rel="noopener">Handling the crossover of intersecting lines</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/line-junction.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/terminals/" target="_blank" rel="noopener">Hidden and exposed terminal problems in Wi-Fi</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/terminals.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/hierarchical-diagram/" target="_blank" rel="noopener">Hierarchical diagram</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/hierarchical-diagram.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/high-harmonics/" target="_blank" rel="noopener">High harmonics</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/high-harmonics.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/highlighting-matrix/" target="_blank" rel="noopener">Highlighting elements in matrices</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/highlighting-matrix.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/hilbert-curve/" target="_blank" rel="noopener">Hilbert curve</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/hilbert-curve.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/homotopy/" target="_blank" rel="noopener">Homotopy of paths</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/homotopy.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/hypercycle/" target="_blank" rel="noopener">Hypercycle</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/hypercycle.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/is-lm-diagram/" target="_blank" rel="noopener">IS-LM diagram</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/is-lm-diagram.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/idealised-directional-spectrum/" target="_blank" rel="noopener">Idealised directional spectrum</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/idealised-directional-spectrum.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/inertial-navigation-system/" target="_blank" rel="noopener">Inertial navigation system</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/inertial-navigation-system.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/insulated-gate-bipolar-transistor/" target="_blank" rel="noopener">Insulated gate bipolar transistor equivalent circuit</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/insulated-gate-bipolar-transistor.png" width="150"></p>
+<h2 id="Page-11"><a href="#Page-11" class="headerlink" title="Page 11"></a><a href="http://www.texample.net/tikz/examples/all/?page=11" target="_blank" rel="noopener">Page 11</a></h2><p><a href="http://www.texample.net/tikz/examples/interaction-diagram/" target="_blank" rel="noopener">Interaction diagram</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/interaction-diagram.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/interaction-nets/" target="_blank" rel="noopener">Interaction nets</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/interaction-nets.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/intersecting-arcs/" target="_blank" rel="noopener">Intersecting arcs</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/intersecting-arcs.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/intersecting-lines/" target="_blank" rel="noopener">Intersecting lines</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/intersecting-lines.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/intersecting-rings/" target="_blank" rel="noopener">Intersecting rings</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/intersecting-rings.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/intersection-of/" target="_blank" rel="noopener">Intersection of</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/intersection-of.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/j-curve/" target="_blank" rel="noopener">J-Curve</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/j-curve.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/kalman-filter/" target="_blank" rel="noopener">Kalman Filter System Model</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/kalman-filter.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/karnaugh-diagram/" target="_blank" rel="noopener">Karnaugh diagram</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/karnaugh-diagram.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/kb-exchange/" target="_blank" rel="noopener">Knowledge Base Exchange framework</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/kb-exchange.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/draw-fill-bezier-curves/" target="_blank" rel="noopener">LR constraints - Drawing and filling with arcs and Bezier curves</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/draw-fill-bezier-curves.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/lambert-beer-law/" target="_blank" rel="noopener">Lambert-Beer law parameters drawing</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/lambert-beer-law.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/lindenmayer-systems/" target="_blank" rel="noopener">Lindenmayer systems</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/lindenmayer-systems.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/line-plot-example/" target="_blank" rel="noopener">Line Plot Example</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/line-plot-example.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/linear-regression/" target="_blank" rel="noopener">Linear regression</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/linear-regression.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/lipid-vesicle/" target="_blank" rel="noopener">Lipid vesicle</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/lipid-vesicle.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/logarithmic-spiral/" target="_blank" rel="noopener">Logarithmic spiral</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/logarithmic-spiral.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/logic-circuits-library/" target="_blank" rel="noopener">Logic circuits library</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/logic-circuits-library.png" width="150"></p>
+<h2 id="Page-12"><a href="#Page-12" class="headerlink" title="Page 12"></a><a href="http://www.texample.net/tikz/examples/all/?page=12" target="_blank" rel="noopener">Page 12</a></h2><p><a href="http://www.texample.net/tikz/examples/logic-matrix/" target="_blank" rel="noopener">Logic diagram</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/logic-matrix.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/lune-of-hippocrates/" target="_blank" rel="noopener">Lune of Hippocrates</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/lune-of-hippocrates.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/mesif/" target="_blank" rel="noopener">MESIF protocol</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/mesif.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/kascade-map/" target="_blank" rel="noopener">Map of a HiSPARC detector inside the KASCADE experiment</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/kascade-map.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/marketing-distribution-channel/" target="_blank" rel="noopener">Marketing distribution channel</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/marketing-distribution-channel.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/matrix-multiplication/" target="_blank" rel="noopener">Matrix multiplication</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/matrix-multiplication.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/maze/" target="_blank" rel="noopener">Maze</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/maze.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/scanning-electron-microscopy/" target="_blank" rel="noopener">Mechanism of Scanning electron microscopy</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/scanning-electron-microscopy.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/merge-sort-recursion-tree/" target="_blank" rel="noopener">Merge sort recursion tree</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/merge-sort-recursion-tree.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/myncbar/" target="_blank" rel="noopener">Metapost style ncbar connection</a><br><img src="http://media.texample.net/tikz/examples/extra/myncbar/mnodeconnections1.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/mindmap/" target="_blank" rel="noopener">Mindmap</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/mindmap.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/minimum-shift-keying-modulator/" target="_blank" rel="noopener">Minimum shift keying modulator</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/minimum-shift-keying-modulator.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/mnemonic-rule-for-matrix-determinant/" target="_blank" rel="noopener">Mnemonic rule for matrix determinant</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/mnemonic-rule-for-matrix-determinant.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/manet/" target="_blank" rel="noopener">Mobile ad-hoc network</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/manet.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/throttle-valve/" target="_blank" rel="noopener">Model of a throttle valve</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/throttle-valve.png" width="200"></p>
+<h2 id="Page-13"><a href="#Page-13" class="headerlink" title="Page 13"></a><a href="http://www.texample.net/tikz/examples/all/?page=13" target="_blank" rel="noopener">Page 13</a></h2><p><a href="http://www.texample.net/tikz/examples/modifying-current-page-node/" target="_blank" rel="noopener">Modifying the current page node</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/modifying-current-page-node.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/more-tikz-timing-examples/" target="_blank" rel="noopener">More tikz-timing examples</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/more-tikz-timing-examples.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/morleys-triangle/" target="_blank" rel="noopener">Morley’s triangle</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/morleys-triangle.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/model-diagram/" target="_blank" rel="noopener">Motivation model diagram Heckhausen Rheinberg</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/model-diagram.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/nested-grids-in-swan-and-wam-coupling/" target="_blank" rel="noopener">Nested Grids in SWAN and WAM coupling</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/nested-grids-in-swan-and-wam-coupling.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/network-topology/" target="_blank" rel="noopener">Network Topology</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/network-topology.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/neural-network/" target="_blank" rel="noopener">Neural network</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/neural-network.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/framed-tikz/" target="_blank" rel="noopener">Nice shaded/framed paragraphs using tikz and framed</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/framed-tikz.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/nine-points-circle-of-a-triangle/" target="_blank" rel="noopener">Nine points circle of a triangle</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/nine-points-circle-of-a-triangle.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/node-shapes/" target="_blank" rel="noopener">Node shapes</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/node-shapes.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/oblique-incidence/" target="_blank" rel="noopener">Oblique Incidence</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/oblique-incidence.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/observer-estimator/" target="_blank" rel="noopener">Observer/Estimator</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/observer-estimator.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/or-gate/" target="_blank" rel="noopener">One of the Quad-2 inputs OR Gate in MC14071B</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/or-gate.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/polarization-controller/" target="_blank" rel="noopener">Optical Fiber Polarization Controller</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/polarization-controller.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/overlapping-arrows/" target="_blank" rel="noopener">Overlapping arrows</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/overlapping-arrows.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/oxidation-and-reduction/" target="_blank" rel="noopener">Oxidation and reduction</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/oxidation-and-reduction.png" width="150"></p>
+<h2 id="Page-14"><a href="#Page-14" class="headerlink" title="Page 14"></a><a href="http://www.texample.net/tikz/examples/all/?page=14" target="_blank" rel="noopener">Page 14</a></h2><p><a href="http://www.texample.net/tikz/examples/p2p-topology/" target="_blank" rel="noopener">P2P system topology</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/p2p-topology.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/pdca-cycle/" target="_blank" rel="noopener">PDCA cycle</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/pdca-cycle.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/pgf2-titlepage/" target="_blank" rel="noopener">PGF 2.0 title page</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/pgf2-titlepage.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/pgf-version-118/" target="_blank" rel="noopener">PGF version 1.18</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/pgf-version-118.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/pancake-network/" target="_blank" rel="noopener">Pancake network</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/pancake-network.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/parabola-plot/" target="_blank" rel="noopener">Parabola plot</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/parabola-plot.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/parallel-lines/" target="_blank" rel="noopener">Parallel lines and related angles</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/parallel-lines.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/parameterized-plots/" target="_blank" rel="noopener">Parameterized plots</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/parameterized-plots.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/pascal-triangle/" target="_blank" rel="noopener">Pascal triangle</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/pascal-triangle.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/penrose-tiling/" target="_blank" rel="noopener">Penrose tiling</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/penrose-tiling.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/periodic-table-of-chemical-elements/" target="_blank" rel="noopener">Periodic Table of Chemical Elements</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/periodic-table-of-chemical-elements.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/periodic-boundaries-conditions/" target="_blank" rel="noopener">Periodic boundaries conditions</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/periodic-boundaries-conditions.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/bisector/" target="_blank" rel="noopener">Perpendicular bisectors of a triangle</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/bisector.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/perpendicular-bissector/" target="_blank" rel="noopener">Perpendicular bissector</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/perpendicular-bissector.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/personality-test/" target="_blank" rel="noopener">Personality test</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/personality-test.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/pgfplots/" target="_blank" rel="noopener">Pgfplots</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/pgfplots.png" width="150"></p>
+<h2 id="Page-15"><a href="#Page-15" class="headerlink" title="Page 15"></a><a href="http://www.texample.net/tikz/examples/all/?page=15" target="_blank" rel="noopener">Page 15</a></h2><p><a href="http://www.texample.net/tikz/examples/phasor-diagram/" target="_blank" rel="noopener">Phasor diagram</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/phasor-diagram.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/physical-pendulum/" target="_blank" rel="noopener">Physical pendulum</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/physical-pendulum.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/pie-chart/" target="_blank" rel="noopener">Pie chart</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/pie-chart.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/pie-chart-color/" target="_blank" rel="noopener">Pie chart with colors</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/pie-chart-color.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/dandelin-spheres/" target="_blank" rel="noopener">Plane Sections of the Cylinder - Dandelin Spheres</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/dandelin-spheres.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/plane-partition/" target="_blank" rel="noopener">Plane partition</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/plane-partition.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/planets/" target="_blank" rel="noopener">Planets</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/planets.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/brillouin-function/" target="_blank" rel="noopener">Plot of the Brillouin Function</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/brillouin-function.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/poincare/" target="_blank" rel="noopener">Poincare Diagram, Classification of Phase Portraits</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/poincare.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/polar-coordinates-template/" target="_blank" rel="noopener">Polar coordinates template</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/polar-coordinates-template.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/polar-plot/" target="_blank" rel="noopener">Polar plot with grid</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/polar-plot.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/polarization-state-of-light/" target="_blank" rel="noopener">Polarization state of light</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/polarization-state-of-light.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/polarizing-microscope/" target="_blank" rel="noopener">Polarizing microscope</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/polarizing-microscope.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/polygon-division/" target="_blank" rel="noopener">Polygon division</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/polygon-division.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/porter-model/" target="_blank" rel="noopener">Porter model</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/porter-model.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/power-electronics-rectifier/" target="_blank" rel="noopener">Power electronics - A controlled full-wave rectifier and it’s output voltage and current waveforms</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/power-electronics-rectifier.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/power-electronics-converter-inverter/" target="_blank" rel="noopener">Power electronics - Converters and Inverter</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/power-electronics-converter-inverter.png" width="200"></p>
+<h2 id="Page-16"><a href="#Page-16" class="headerlink" title="Page 16"></a><a href="http://www.texample.net/tikz/examples/all/?page=16" target="_blank" rel="noopener">Page 16</a></h2><p><a href="http://www.texample.net/tikz/examples/power-electronics-solar-system/" target="_blank" rel="noopener">Power electronics - The schematic diagram of a solar system connected to the grid</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/power-electronics-solar-system.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/prerequisite-chart/" target="_blank" rel="noopener">Prerequisite chart</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/prerequisite-chart.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/pressurized-water-reactor/" target="_blank" rel="noopener">Pressurized water reactor</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/pressurized-water-reactor.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/prims-algorithm/" target="_blank" rel="noopener">Prim’s algorithm</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/prims-algorithm.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/principle-of-x-ray-photoelectron-spectroscopy-xps/" target="_blank" rel="noopener">Principle of X-ray photoelectron spectroscopy (XPS)</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/principle-of-x-ray-photoelectron-spectroscopy-xps.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/sontrol-safety-system/" target="_blank" rel="noopener">Principle of separated control and safety systems</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/sontrol-safety-system.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/probability-tree/" target="_blank" rel="noopener">Probability tree</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/probability-tree.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/projectile/" target="_blank" rel="noopener">Projectile</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/projectile.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/dome/" target="_blank" rel="noopener">Projection of circles onto a spherical surface</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/dome.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/pera-model/" target="_blank" rel="noopener">Purdue Enterprise Reference Architecture Model</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/pera-model.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/diagram-chains/" target="_blank" rel="noopener">Putting a diagrams in chains</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/diagram-chains.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/puzzle/" target="_blank" rel="noopener">Puzzle</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/puzzle.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/pythagoras-triangle/" target="_blank" rel="noopener">Pythagorean triangle with the squares of its sides and labels</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/pythagoras-triangle.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/python-if-then-else-syntax-diagram/" target="_blank" rel="noopener">Python if-then-else syntax diagram</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/python-if-then-else-syntax-diagram.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/quantum-circuit/" target="_blank" rel="noopener">Quantum circuit</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/quantum-circuit.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/rgb-color-mixing/" target="_blank" rel="noopener">RGB color mixing</a><br><img src width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/rgb-triangle/" target="_blank" rel="noopener">RGB triangle</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/rgb-triangle.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/rna-codons-table/" target="_blank" rel="noopener">RNA codons table</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/rna-codons-table.png" width="150"></p>
+<h2 id="Page-17"><a href="#Page-17" class="headerlink" title="Page 17"></a><a href="http://www.texample.net/tikz/examples/all/?page=17" target="_blank" rel="noopener">Page 17</a></h2><p><a href="http://www.texample.net/tikz/examples/rpm-disc/" target="_blank" rel="noopener">RPM disc</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/rpm-disc.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/radix2fft/" target="_blank" rel="noopener">Radix-2 FFT signal flow</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/radix2fft.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/raindrop/" target="_blank" rel="noopener">Rainbows - Sun ray entering a rain drop</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/raindrop.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/rectangle-node-with-diagonal-fill/" target="_blank" rel="noopener">Rectangle node with diagonal fill</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/rectangle-node-with-diagonal-fill.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/red-black-tree/" target="_blank" rel="noopener">Red-black tree</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/red-black-tree.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/refraction/" target="_blank" rel="noopener">Refraction - Snell’s Law</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/refraction.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/regular-polygons/" target="_blank" rel="noopener">Regular polygons</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/regular-polygons.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/triangles/" target="_blank" rel="noopener">Replicating triangles</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/triangles.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/geometric-series/" target="_blank" rel="noopener">Representation of a geometric series</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/geometric-series.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/rooty-helix/" target="_blank" rel="noopener">Rooty helix</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/rooty-helix.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/rose-rhodonea-curve/" target="_blank" rel="noopener">Rose rhodonea curve</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/rose-rhodonea-curve.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/rotated-polygons/" target="_blank" rel="noopener">Rotated polygons</a><br><img src="http://texample.net/media/tikz/examples/thumbs/square.jpg" width="150"><br><img src="http://texample.net/media/tikz/examples/thumbs/pentagon.jpg" width="150"><br><img src="http://www.texample.net/media/tikz/examples/PNG/rotated-polygons.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/rotated-squares/" target="_blank" rel="noopener">Rotated squares</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/rotated-squares.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/rotated-triangle/" target="_blank" rel="noopener">Rotated triangle</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/rotated-triangle.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/rule-based-diagram/" target="_blank" rel="noopener">Rule based diagram</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/rule-based-diagram.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/rules/" target="_blank" rel="noopener">Rules</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/rules.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/rusting-iron/" target="_blank" rel="noopener">Rusting Iron</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/rusting-iron.png" width="150"></p>
+<h2 id="Page-18"><a href="#Page-18" class="headerlink" title="Page 18"></a><a href="http://www.texample.net/tikz/examples/all/?page=18" target="_blank" rel="noopener">Page 18</a></h2><p><a href="http://www.texample.net/tikz/examples/swan-wave-model/" target="_blank" rel="noopener">SWAN wave model</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/swan-wave-model.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/safe-fusion/" target="_blank" rel="noopener">Safe fusion</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/safe-fusion.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/sankey-diagram/" target="_blank" rel="noopener">Sankey diagram</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/sankey-diagram.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/scatterplot/" target="_blank" rel="noopener">Scatterplot</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/scatterplot.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/scenario-tree/" target="_blank" rel="noopener">Scenario tree</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/scenario-tree.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/labs-schema/" target="_blank" rel="noopener">Schema of Labs on a class</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/labs-schema.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/schemabloc/" target="_blank" rel="noopener">Schemabloc</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/schemabloc.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/fiber-coupler/" target="_blank" rel="noopener">Schematic of Wavelength Division Multiplexer (Optical Fiber Coupler)</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/fiber-coupler.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/euclid-algorithm/" target="_blank" rel="noopener">Scheme of Greatest Common Divisor (GCD)</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/euclid-algorithm.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/scientific-interactions/" target="_blank" rel="noopener">Scientific interactions</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/scientific-interactions.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/cylinder-segment/" target="_blank" rel="noopener">Segment of a Cylinder</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/cylinder-segment.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/seismic-focal-mechanism-in-3d-view/" target="_blank" rel="noopener">Seismic focal mechanism in 3D view.</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/seismic-focal-mechanism-in-3d-view.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/junction-diagram/" target="_blank" rel="noopener">Semiconductor pn junction diagram</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/junction-diagram.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/sequence-diagram/" target="_blank" rel="noopener">Sequence diagram</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/sequence-diagram.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/series-and-parallel-graph-diagrams/" target="_blank" rel="noopener">Series and parallel graph diagrams</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/series-and-parallel-graph-diagrams.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/set-operations-illustrated-with-venn-diagrams/" target="_blank" rel="noopener">Set operations illustrated with Venn diagrams</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/set-operations-illustrated-with-venn-diagrams.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/seven-segment-display/" target="_blank" rel="noopener">Seven-segment display</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/seven-segment-display.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/shake-rattle-pendulum/" target="_blank" rel="noopener">Shake and Rattle on a planar pendulum example</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/shake-rattle-pendulum.png" width="150"></p>
+<h2 id="Page-19"><a href="#Page-19" class="headerlink" title="Page 19"></a><a href="http://www.texample.net/tikz/examples/all/?page=19" target="_blank" rel="noopener">Page 19</a></h2><p><a href="http://www.texample.net/tikz/examples/shear-torsion/" target="_blank" rel="noopener">Shear torsion</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/shear-torsion.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/eratosthenes-sieve/" target="_blank" rel="noopener">Sieve of Eratosthenes</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/eratosthenes-sieve.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/sign-diagram/" target="_blank" rel="noopener">Sign diagram</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/sign-diagram.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/signal-flow-building-blocks/" target="_blank" rel="noopener">Signal flow building blocks</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/signal-flow-building-blocks.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/signpost/" target="_blank" rel="noopener">Signpost with loads applied</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/signpost.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/simple-circuit-schematics-symbols/" target="_blank" rel="noopener">Simple circuit schematics symbols</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/simple-circuit-schematics-symbols.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/simple-flow-chart/" target="_blank" rel="noopener">Simple flow chart</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/simple-flow-chart.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/hand-drawn-lines/" target="_blank" rel="noopener">Simulating hand-drawn lines with TikZ</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/hand-drawn-lines.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/simulation-abstraction/" target="_blank" rel="noopener">Simulation approaches versus abstraction levels</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/simulation-abstraction.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/sine-and-cosine-functions-animation/" target="_blank" rel="noopener">Sine and Cosine functions animation</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/sine-and-cosine-functions-animation.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/skype-topology/" target="_blank" rel="noopener">Skype network topology</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/skype-topology.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/smooth-maps/" target="_blank" rel="noopener">Smooth maps</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/smooth-maps.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/snake-lemma/" target="_blank" rel="noopener">Snake Lemma</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/snake-lemma.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/snowflakes/" target="_blank" rel="noopener">Snowflakes with TikZ</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/snowflakes.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/spherical-and-cartesian-grids/" target="_blank" rel="noopener">Spherical and cartesian grids</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/spherical-and-cartesian-grids.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/spherical-polar-pots-with-3dplot/" target="_blank" rel="noopener">Spherical polar pots with 3dplot</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/spherical-polar-pots-with-3dplot.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/spiderweb-diagram/" target="_blank" rel="noopener">Spiderweb diagram</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/spiderweb-diagram.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/hydrogen-splitting/" target="_blank" rel="noopener">Splitting of Hydrogen in different strong magnetic fields</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/hydrogen-splitting.png" width="200"></p>
+<h2 id="Page-20"><a href="#Page-20" class="headerlink" title="Page 20"></a><a href="http://www.texample.net/tikz/examples/all/?page=20" target="_blank" rel="noopener">Page 20</a></h2><p><a href="http://www.texample.net/tikz/examples/standard-deviation/" target="_blank" rel="noopener">Standard deviation</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/standard-deviation.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/model-physics/" target="_blank" rel="noopener">Standard model of physics</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/model-physics.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/star-graph/" target="_blank" rel="noopener">Star graph</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/star-graph.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/state-machine/" target="_blank" rel="noopener">State machine</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/state-machine.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/steradian-cone-sphere/" target="_blank" rel="noopener">Steradian cone in sphere</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/steradian-cone-sphere.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/map-projections/" target="_blank" rel="noopener">Stereographic and cylindrical map projections</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/map-projections.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/sudoku/" target="_blank" rel="noopener">Sudoku</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/sudoku.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/sudoku-3d-cube/" target="_blank" rel="noopener">Sudoku 3D cube</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/sudoku-3d-cube.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/phyllotaxy/" target="_blank" rel="noopener">Sunflower pattern (Phyllotaxy)</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/phyllotaxy.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/sunset/" target="_blank" rel="noopener">Sunset</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/sunset.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/supersonic-nozzle/" target="_blank" rel="noopener">Supersonic nozzle technical drawing</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/supersonic-nozzle.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/symmetries/" target="_blank" rel="noopener">Symmetries of the plane</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/symmetries.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/4-bit-counter/" target="_blank" rel="noopener">Synchronous 4-Bit counter circuit using JK-flip-flops</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/4-bit-counter.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/system-combination/" target="_blank" rel="noopener">System Combination</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/system-combination.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/tcp-state-machine/" target="_blank" rel="noopener">TCP state machine</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/tcp-state-machine.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/arrow-table/" target="_blank" rel="noopener">Table in the shape of an arrow</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/arrow-table.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/textronics-oscilloscope/" target="_blank" rel="noopener">TeXtronics oscilloscope</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/textronics-oscilloscope.png" width="150"></p>
+<h2 id="Page-21"><a href="#Page-21" class="headerlink" title="Page 21"></a><a href="http://www.texample.net/tikz/examples/all/?page=21" target="_blank" rel="noopener">Page 21</a></h2><p><a href="http://www.texample.net/tikz/examples/temperature-and-rain-sparklines/" target="_blank" rel="noopener">Temperature and rain sparklines</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/temperature-and-rain-sparklines.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/the-3dplot-package/" target="_blank" rel="noopener">The 3dplot package</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/the-3dplot-package.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/earth-orbit/" target="_blank" rel="noopener">The Earth’s orbit around the Sun</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/earth-orbit.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/the-olympic-rings/" target="_blank" rel="noopener">The Olympic rings</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/the-olympic-rings.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/the-perrin-jablonski-diagram/" target="_blank" rel="noopener">The Perrin - Jablonski diagram</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/the-perrin-jablonski-diagram.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/tex-workflow/" target="_blank" rel="noopener">The TeX work flow</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/tex-workflow.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/electric-dipole/" target="_blank" rel="noopener">The electric dipole moment (p) in the water molecule</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/electric-dipole.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/bridges-of-konigsberg/" target="_blank" rel="noopener">The seven bridges of Königsberg</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/bridges-of-konigsberg.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/tkz-2d/" target="_blank" rel="noopener">The tkz-2d package</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/tkz-2d.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/tkz-berge/" target="_blank" rel="noopener">The tkz-berge graph package</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/tkz-berge.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/three-link-manipulator/" target="_blank" rel="noopener">Three link manipulator</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/three-link-manipulator.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/pgf-version-2/" target="_blank" rel="noopener">TikZ and PGF version 2.00</a><br><img src="http://texample.net/media/tikz/examples/extra/pgf-version-2/mpgf2001.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/events/" target="_blank" rel="noopener">Time course of events in an experiment</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/events.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/timetable/" target="_blank" rel="noopener">Timetable</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/timetable.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/timing-diagram/" target="_blank" rel="noopener">Timing diagram</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/timing-diagram.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/tikz-timing/" target="_blank" rel="noopener">Timing diagram with the tikz-timing package</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/tikz-timing.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/title-graphics/" target="_blank" rel="noopener">Title graphics</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/title-graphics.png" width="150"></p>
+<h2 id="Page-22"><a href="#Page-22" class="headerlink" title="Page 22"></a><a href="http://www.texample.net/tikz/examples/all/?page=22" target="_blank" rel="noopener">Page 22</a></h2><p><a href="http://www.texample.net/tikz/examples/tkz-linknodes-examples/" target="_blank" rel="noopener">Tkz-linknodes examples</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/tkz-linknodes-examples.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/todo-notes/" target="_blank" rel="noopener">Todo notes</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/todo-notes.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/torn-paper/" target="_blank" rel="noopener">Torn paper with matching torn edges</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/torn-paper.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/towers-of-hanoi/" target="_blank" rel="noopener">Towers of Hanoi</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/towers-of-hanoi.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/transmission-electron-microscope/" target="_blank" rel="noopener">Transmission Electron Microscope System</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/transmission-electron-microscope.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/transparent-png-overlay/" target="_blank" rel="noopener">Transparent PNG overlay</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/transparent-png-overlay.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/transparent-shadows/" target="_blank" rel="noopener">Transparent shadows</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/transparent-shadows.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/transversal-loads/" target="_blank" rel="noopener">Transversal loads</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/transversal-loads.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/coin-flipping/" target="_blank" rel="noopener">Tree of probabilities - flipping a coin</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/coin-flipping.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/truncated-cone/" target="_blank" rel="noopener">Truncated Cone</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/truncated-cone.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/turing-machine-2/" target="_blank" rel="noopener">Turing Machine</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/turing-machine-2.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/turing-machine/" target="_blank" rel="noopener">Turing machine</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/turing-machine.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/pgf-umlsd/" target="_blank" rel="noopener">UML sequence diagrams</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/pgf-umlsd.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/ulam-spiral/" target="_blank" rel="noopener">Ulam spiral</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/ulam-spiral.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/unit-circle/" target="_blank" rel="noopener">Unit circle</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/unit-circle.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/contours-grids/" target="_blank" rel="noopener">Using signed distance functions to embed contours in discrete grids</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/contours-grids.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/valentine-heart/" target="_blank" rel="noopener">Valentine heart</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/valentine-heart.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/venn-diagram/" target="_blank" rel="noopener">Venn diagram</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/venn-diagram.png" width="200"></p>
+<h2 id="Page-23"><a href="#Page-23" class="headerlink" title="Page 23"></a><a href="http://www.texample.net/tikz/examples/all/?page=23" target="_blank" rel="noopener">Page 23</a></h2><p><a href="http://www.texample.net/tikz/examples/venn-diagram-with-magnifier/" target="_blank" rel="noopener">Venn diagram with magnifier</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/venn-diagram-with-magnifier.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/venn-diagram-blended/" target="_blank" rel="noopener">Venn diagramm with PGF 3.0 blend mode</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/venn-diagram-blended.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/complement/" target="_blank" rel="noopener">Visualisation of Two’s complement for a 4-bit-value</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/complement.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/weather-stations-data/" target="_blank" rel="noopener">Weather stations data</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/weather-stations-data.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/windshield-wiper/" target="_blank" rel="noopener">Windshield wiper</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/windshield-wiper.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/work-breakdown-structure/" target="_blank" rel="noopener">Work breakdown structures aka WBS diagrams</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/work-breakdown-structure.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/yellow-notes/" target="_blank" rel="noopener">Yellow notes</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/yellow-notes.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/yin-and-yang/" target="_blank" rel="noopener">Yin and yang</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/yin-and-yang.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/eps2pgf/" target="_blank" rel="noopener">eps2pgf</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/eps2pgf.png" width="150"></p>
+<p><a href="http://www.texample.net/tikz/examples/tikzdevice-demo/" target="_blank" rel="noopener">tikzDevice - TikZ output from R</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/tikzdevice-demo.png" width="200"></p>
+<p><a href="http://www.texample.net/tikz/examples/tkz-plot2d/" target="_blank" rel="noopener">tkz-plot2d</a><br><img src="http://www.texample.net/media/tikz/examples/PNG/tkz-plot2d.png" width="150"></p>
+<h2 id="Recommendations"><a href="#Recommendations" class="headerlink" title="Recommendations"></a>Recommendations</h2><p><a href="https://www.packtpub.com/hardware-and-creative/latex-cookbook" target="_blank" rel="noopener">LaTeX Cookbook</a><br><img src="https://www.packtpub.com/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/5/1/5148os_latex20cookbook.jpg" width="150"></p>
+<p><a href="https://www.packtpub.com/hardware-and-creative/latex-beginners-guide" target="_blank" rel="noopener">LaTeX Beginner’s Guide</a><br><img src="https://www.packtpub.com/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/9/8/9867_latex20cov.jpg" width="150"></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/LaTeX/" rel="tag"># LaTeX</a>
+          
+            <a href="/tags/Notes/" rel="tag"># Notes</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/2019-06-09-Server-Local-Ubuntu/" rel="next" title="远程服务器与本地机的使用 (Ubuntu 16.04)">
+                <i class="fa fa-chevron-left"></i> 远程服务器与本地机的使用 (Ubuntu 16.04)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/2019-06-10-Latex-Paper-Figures/" rel="prev" title="Tips of Tables and Figures in Papers (论文图表小技巧)">
+                Tips of Tables and Figures in Papers (论文图表小技巧) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80OTYwMS8yNjA5Mg=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/EustomaAqua.png"
+                alt="eustomaqua" />
+            
+              <p class="site-author-name" itemprop="name">eustomaqua</p>
+              <p class="site-description motion-element" itemprop="description">Once upon a time....</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">22</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/eustomaqua" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:yjbian92@gmail.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Resources"><span class="nav-number">1.</span> <span class="nav-text">Resources</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Beautiful-‘’Feather’’"><span class="nav-number">1.1.</span> <span class="nav-text">Beautiful ‘’Feather’’</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Awesome-‘’TEXamples’’"><span class="nav-number">1.2.</span> <span class="nav-text">Awesome ‘’TEXamples’’</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Features"><span class="nav-number">1.2.1.</span> <span class="nav-text">Features</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tags"><span class="nav-number">1.2.2.</span> <span class="nav-text">Tags</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Technical-areas-Scientific-and-technical-areas"><span class="nav-number">1.2.3.</span> <span class="nav-text">(Technical areas) Scientific and technical areas</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Non-technical-areas-Other-areas"><span class="nav-number">1.2.4.</span> <span class="nav-text">(Non-technical areas) Other areas</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Authors"><span class="nav-number">1.2.5.</span> <span class="nav-text">Authors</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TEXamples-All"><span class="nav-number">2.</span> <span class="nav-text">TEXamples (All)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Page-1"><span class="nav-number">2.1.</span> <span class="nav-text">Page 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Page-2"><span class="nav-number">2.2.</span> <span class="nav-text">Page 2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Page-3"><span class="nav-number">2.3.</span> <span class="nav-text">Page 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Page-4"><span class="nav-number">2.4.</span> <span class="nav-text">Page 4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Page-5"><span class="nav-number">2.5.</span> <span class="nav-text">Page 5</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Page-6"><span class="nav-number">2.6.</span> <span class="nav-text">Page 6</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Page-7"><span class="nav-number">2.7.</span> <span class="nav-text">Page 7</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Page-8"><span class="nav-number">2.8.</span> <span class="nav-text">Page 8</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Page-9"><span class="nav-number">2.9.</span> <span class="nav-text">Page 9</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Page-10"><span class="nav-number">2.10.</span> <span class="nav-text">Page 10</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Page-11"><span class="nav-number">2.11.</span> <span class="nav-text">Page 11</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Page-12"><span class="nav-number">2.12.</span> <span class="nav-text">Page 12</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Page-13"><span class="nav-number">2.13.</span> <span class="nav-text">Page 13</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Page-14"><span class="nav-number">2.14.</span> <span class="nav-text">Page 14</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Page-15"><span class="nav-number">2.15.</span> <span class="nav-text">Page 15</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Page-16"><span class="nav-number">2.16.</span> <span class="nav-text">Page 16</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Page-17"><span class="nav-number">2.17.</span> <span class="nav-text">Page 17</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Page-18"><span class="nav-number">2.18.</span> <span class="nav-text">Page 18</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Page-19"><span class="nav-number">2.19.</span> <span class="nav-text">Page 19</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Page-20"><span class="nav-number">2.20.</span> <span class="nav-text">Page 20</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Page-21"><span class="nav-number">2.21.</span> <span class="nav-text">Page 21</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Page-22"><span class="nav-number">2.22.</span> <span class="nav-text">Page 22</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Page-23"><span class="nav-number">2.23.</span> <span class="nav-text">Page 23</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Recommendations"><span class="nav-number">2.24.</span> <span class="nav-text">Recommendations</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-paper-plane"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">eustomaqua</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+  <div class="theme-info">
+    <div class="powered-by-post-count"></div>
+    <span class="post-count">Total 142.7k Words</span>
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.3.0</div>
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      Total
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      Visitors
+    </span>
+  
+
+  
+    <span class="site-pv">
+      Total
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      Views
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap')
+      $(e).after($wrap)
+      $wrap.append($('<button>').addClass('copy-btn').append('Copy').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text()
+        }).toArray().join('\n')
+        var ta = document.createElement('textarea')
+        document.body.appendChild(ta)
+        ta.style.position = 'absolute'
+        ta.style.top = '0px'
+        ta.style.left = '0px'
+        ta.value = code
+        ta.select()
+        ta.focus()
+        var result = document.execCommand('copy')
+        document.body.removeChild(ta)
+        
+          if(result)$(this).text('Copied')
+          else $(this).text('Copy failed')
+        
+        $(this).blur()
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn')
+        setTimeout(function () {
+          $b.text('Copy')
+        }, 300)
+      }).append(e)
+    })
+  </script>
+
+
+</body>
+</html>
