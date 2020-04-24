@@ -129,6 +129,71 @@ Type "help", "copyright", "credits" or "license" for more information.
 ~/software$ pip list
 ```
 
+## \* miniconda
+
+```shell
+$ whereis conda
+conda: /opt/miniconda/bin/conda
+$ ls /opt/miniconda | grep EPFO
+(yourenv) $ ls /opt/miniconda/envs | grep yourenv
+$ conda info
+
+     active environment : yourenv
+    active env location : /home/eustomaqua/.conda/envs/EPFD
+            shell level : 2
+       user config file : /home/eustomaqua/.condarc
+ populated config files :
+          conda version : 4.5.11
+    conda-build version : not installed
+         python version : 2.7.15.final.0
+       base environment : /opt/miniconda  (read only)
+           channel URLs : https://repo.anaconda.com/pkgs/main/linux-64
+                          https://repo.anaconda.com/pkgs/main/noarch
+                          https://repo.anaconda.com/pkgs/free/linux-64
+                          https://repo.anaconda.com/pkgs/free/noarch
+                          https://repo.anaconda.com/pkgs/r/linux-64
+                          https://repo.anaconda.com/pkgs/r/noarch
+                          https://repo.anaconda.com/pkgs/pro/linux-64
+                          https://repo.anaconda.com/pkgs/pro/noarch
+          package cache : /opt/miniconda/pkgs
+                          /home/eustomaqua/.conda/pkgs
+       envs directories : /home/eustomaqua/.conda/envs
+                          /opt/miniconda/envs
+               platform : linux-64
+             user-agent : conda/4.5.11 requests/2.18.4 CPython/2.7.15 Linux/2.6.32-754.14.2.el6.x86_64 centos/6.10 glibc/2.18
+                UID:GID : 504:504
+             netrc file : None
+           offline mode : False
+
+(yourenv) $
+(yourenv) $ conda env list
+# conda environments:
+#
+yourenv               *  /home/eustomaqua/.conda/envs/yourenv
+base                     /opt/miniconda
+python3                  /opt/miniconda/envs/python3
+```
+
+感觉非 root 用户使用系统的 miniconda 创建环境好像有点问题。
+- 比如说我创建了一个环境名叫 `yourenv` ，创建好之后，进入环境会发现 pip 已有的包跟 base 一样；
+- 然后从 `/opt/miniconda/envs` 路径去查看包会发现，并没有自己创建的这个环境；
+- 但是查找 `/home/eustomaqua/.conda/envs/yourenv/lib/python3.6/site-packages` 又会发现里面只有最基础的几个包，更不用说自己从本地文件夹安装的包了。
+
+我本是想查找在自己环境里从文件夹安装的模块会是个什么样，没想到根本找不到位置，凡是想和 `site-packages` 有关的地方好像都没找到，包括：
+- `/opt/miniconda/envs` *: 没有这个环境*
+- `~/.conda/envs` *: 根本就没有装相关包，纯白板*
+- `~/software/python35/lib/python3.5/site-packages` *: 虽然这个 pip 安装了自己的文件夹包，但是在这个文件夹里就是找不到，然后 `pip list` 的时候会出现安装文件夹的绝对地址*
+
+可能就是把安装的文件夹作为安装地址了吧，因为发现该文件夹里好像多了 `your-package.egg-info`，而且虽然我有写 `setup.py`，但是并没有像 Numpy 一般自己生成了 `version.py`
+
+*Reference:*  
+miniconda 家目录 环境地址  
+[告别窘迫：修改conda环境和缓存默认路径](https://www.jianshu.com/p/a5e9190b909c)  
+
+conda 环境 出现了别的环境的包  
+[conda的简单使用](http://lizhiqiang.me/conda/)  
+[conda建立虚拟环境并安装相应包](https://blog.csdn.net/CV_YOU/article/details/83074448)  
+
 ## 显卡驱动
 
 ```bash

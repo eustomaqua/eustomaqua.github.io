@@ -46,6 +46,26 @@ latex 数学符号: [常用数学符号的 LaTeX 表示方法](https://www.mohu.
 \end{enumerate}
 ```
 
+### 分支函数
+
+```latex
+\begin{enumerate}
+f(x) = 
+\begin{cases}
+1, & x>0\,;\\
+0, & x<0\,.
+\end{cases}
+\end{enumerate}
+```
+
+### 算法清单
+
+#### algorithm2e
+latex algorithm2e, state  
+[Latex之使用algorithm2e包来写算法](https://blog.csdn.net/yq_forever/article/details/89815562)  
+[latex 算法，算法包 algorithm， algorithm2e](https://blog.csdn.net/robert_chen1988/article/details/71512914?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1&utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1)  
+[algorithm2e document](https://download.nus.edu.sg/mirror/ctan/macros/latex/contrib/algorithm2e/doc/algorithm2e.pdf)  
+
 ## ?
 
 # LaTeX: Others
@@ -112,7 +132,13 @@ env:
   ```
 
 **公开仓库**  
-1. 暂略
+1. 打开主页 [https://travis-ci.org/](https://travis-ci.org/)
+2. 点击 页面左上方 `My Repositories` 的右侧的 `+` 加号，
+  然后可以看到许多仓库，都是公开的
+3. 选择相关仓库，如果找不到就先 ``Sync account``，还不行就在 `Legacy Services Integration` 中直接搜
+4. 打开该仓库的右侧开关，然后点击仓库名进入，此时仍显示 `build unknown` 
+5. 点击 Badge 本身就可获得它对应的代码；若想换成别的分支，把 master 改成相关的分支名就行。
+1. 其他类似。暂略
 
 **徽章:** 进入 build 页面，鼠标左键单击徽章，则可见 `Status Image`，选择 FORMAT 复制 RESULT 即可。
 
@@ -124,6 +150,13 @@ env:
 
 1. 用 GitHub 账号登入，点击左侧 `ADD REPOS`
 2. 选择仓库。若仓库显示不全，就点击右上角 `SYNC REPOS`
+
+3. `OFF --> ON` ，然后点击 repo 名进入该仓库 
+4. Click 左侧的 `Setting`
+5. `.coveralls.yml`
+```yaml
+repo_token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
 
 此时还是 `只支持公开仓库` 的状态；若想支持私有仓库 **[尝试失败]**，
 - 在页面最下方找到 Need to Access Un-Publicized Organization Memberships，
@@ -148,6 +181,8 @@ env:
 1. 使用 GitHub (/ GitLab / Bitbucket) 账号登入
 2. 右上角点击自己的头像，在新进入的页面点击右方 `Add new repository`  
 3. 页面 Choose a new repository below: 在下方选择仓库  
+  *Notice:* 如果想找的仓库不显示，就点击 `Add repository` 页面最下方的 `Sync team list` ，
+  即 "头像 -> Account -> Repositories -> Sync team repository list"
 4. 页面 Let's get your project covered  
   1. Copy Token, 把代码填入 `.travis.yml` 的 "env: global" 部分  
   ```yaml
@@ -349,5 +384,16 @@ ubuntu 查看目录权限
 [linux文件权限查看及修改-chmod ------入门的一些常识](https://blog.csdn.net/haydenwang8287/article/details/1753883)  
 [ubuntu 文件及子文件夹的权限的查看及修改](https://blog.csdn.net/qq_22605739/article/details/46722161)  
 
+
+## 出现问题
+有时候明明已经设置了 `authorized_keys` 文件，并加入了自己的公钥，但是仍然会一直提示输入密码信息。因为自己是非 root 用户，无法在服务器上改 ssh\_config 文件或是重启 ssh 服务，所以没有尝试下面这些所提出的解决方法。
+
+*References:*  
+ssh authorized_keys 不生效  
+[SSH authorized_keys 无效问题](https://blog.csdn.net/xexiyong/article/details/77742994)  
+[解决SSH免密登录配置成功后不生效问题](https://blog.csdn.net/lisongjia123/article/details/78513244)  
+ssh_config 文件  
+[使用 SSH config 文件](https://daemon369.github.io/ssh/2015/03/21/using-ssh-config-file)  
+[ssh配置文件ssh_config和sshd_config区别](https://www.cnblogs.com/xiaochina/p/5802008.html)  
 
 # \*References
