@@ -370,6 +370,13 @@ $ # Ctrl+C close on the same Terminal
 # PyTorch Debug
 ref: [点赞收藏：PyTorch常用代码段整理合集](https://yq.aliyun.com/articles/716950?spm=a2c4e.11153959.teamlist.33.4bd85a18ZHZchy)
 
+```bash
+$ pip install tensorboardX
+$ python
+>>> from tensorboardX import SummaryWriter
+```
+ref: [Pytorch使用tensorboardX可视化。超详细！！！](https://www.jianshu.com/p/46eb3004beca)
+
 
 # \* References
 
