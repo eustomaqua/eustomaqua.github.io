@@ -457,7 +457,7 @@
             <span class="post-letters-count">
               &nbsp; | &nbsp;
               <span title="post.wordcount">
-                2,585 words
+                2,658 words
               </span>
               &nbsp; | &nbsp;
               <span title="post.min2read">
@@ -669,6 +669,10 @@ Tag: Remote Server / Linux
 <p>也可以使用 <code>vim</code> 打开这个文件，然后把本地公钥内容粘贴到文件末端 (另起一行，粘贴公钥)</p>
 </li>
 </ol>
+<p><strong><em>出现问题:</em></strong><br>若配置了公钥之后本机 ssh 仍然提示需要输入密码的话，可以考虑给服务器上 ~/.ssh 目录加权限来解决</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ chmod 700 ~/.ssh</span><br><span class="line">$ chmod 600 ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>
+
+<p>参考 <a href="https://blog.csdn.net/lisongjia123/article/details/78513244" target="_blank" rel="noopener">解决SSH免密登录配置成功后不生效问题</a></p>
 <h3 id="内网穿透-暂略"><a href="#内网穿透-暂略" class="headerlink" title="内网穿透 (暂略)"></a>内网穿透 (暂略)</h3><p>使用 autossh 进行内网穿透<br>设想这样的场景，你在公司或者学校有一台用于炼丹的服务器，但是只能在内网访问。我在家里使用笔记本也想连接到远程的服务器中，这时我们应该怎么办呢。<br>答案是我们需要一台具有公网 ip 的服务器作为中继，使用 autossh 将公网服务器作为代理服务器。假设公网服务器为主机 A，内网炼丹炉为主机 B，我们的笔记本为 C 则</p>
 <h3 id="其它设置"><a href="#其它设置" class="headerlink" title="其它设置"></a>其它设置</h3><p><a href="https://sherlockgy.github.io/2018/09/01/%E8%AE%BE%E7%BD%AEVsCode%E8%87%AA%E5%8A%A8%E6%8D%A2%E8%A1%8C/" target="_blank" rel="noopener">设置VsCode自动换行</a>  </p>
 <h2 id="PyCharm"><a href="#PyCharm" class="headerlink" title="PyCharm"></a>PyCharm</h2><h2 id="Refs"><a href="#Refs" class="headerlink" title="Refs"></a>Refs</h2><p>vscode 远程 一直输入密码<br><a href="https://zhuanlan.zhihu.com/p/89662757" target="_blank" rel="noopener">使用vscode进行远程炼丹</a><br><a href="https://blog.csdn.net/hchhbbcxl/article/details/101429447" target="_blank" rel="noopener">vscode remote开发ssh免密登陆失败</a><br><a href="https://zhuanlan.zhihu.com/p/68577071" target="_blank" rel="noopener">VS Code Remote SSH配置</a>  </p>
