@@ -120,3 +120,8 @@ math:
     # src: custom_mathjax_source
     config:
       # MathJax config
+
+# aplayer:
+#   # enable: true
+#   meting: true
+#   asset_inject: false
