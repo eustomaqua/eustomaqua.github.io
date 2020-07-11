@@ -181,11 +181,14 @@ Less use
 [请问如何能将player居中 调整宽度后默认在左边](https://github.com/MoePlayer/hexo-tag-aplayer/issues/42)  
 [Aplayer搭配MetingJS音乐插件的使用](https://www.shuzhiduo.com/A/Gkz1wBp25R/)  
 [安装和使用Dplayer](https://blog.csdn.net/weixin_43360634/article/details/97392613)  
+[Hexo博客中插入音乐,视频](https://www.jianshu.com/p/26a7fc7cc185)  
 
 No use  
 [Hexo使用APlayer插入音乐](https://louisnie.github.io/2019/06/26/Hexo%20%E4%BD%BF%E7%94%A8%20APlayer%20%E6%8F%92%E5%85%A5%E9%9F%B3%E4%B9%90/)  
 [如何给博客加上音乐](https://juejin.im/post/5c7ba2b4e51d45619d255b1d)  
 [Hexo博客添加背景音乐和音乐歌单](http://blog.leroy.net.cn/2019/10/17/hexo-next-%E9%9F%B3%E4%B9%90/)  
+[Hexo博客中插入音乐](https://www.jianshu.com/p/6e41e3191963)  
+[hexo 中安装音乐播放器插件](https://www.zhyong.cn/posts/5d26/)  
 
 
 
@@ -199,4 +202,45 @@ $ # ps -ef | grep 4000
 $ # lsof -i:4000
 ```
 
+# Hexo: Search Error
+
+[Hexo博客无法搜索的终极解决方法](https://www.sqlsec.com/2017/12/hexosearch.html)  
+
+```bash
+$ cd eustomaqua.github.io/hexo-next
+$
+$ npm install hexo-generator-searchdb --save
+$
+$ hexo g
+$ hexo s
+$ hexo d
+```
+
+
+# Hexo: Speed up
+
+`themes/next/layout/_partials/head/external-fonts.swig`  
+```swig
+  {% if font_families !== '' %}
+    {% set font_families += '&subset=latin,latin-ext' %}
+    {% set font_host = font_config.host | default('//fonts.googleapis.com') %}
+    <link href="{{ font_host }}/css?family={{ font_families }}" rel="stylesheet" type="text/css">
+  {% endif %}
+```
+
+replace `fonts.googleapis.com` with
+```swig
+    {% set font_host = font_config.host | default('//fonts.useso.com') %}
+```
+
+[hexo next 主题打开博客过慢的解决办法](https://blog.csdn.net/justheretobe/article/details/52167068)  
+[Google 字体库引起的首页加载缓慢的解决方法](https://www.izhangheng.com/font-googleapis-themes-googleusercontent-com-slow/)  
+[hexo 首页总是转圈很久才显示？](https://www.zhihu.com/question/27125476)  
+[Hexo 页面加载性能优化](https://www.jianshu.com/p/c9d3a53fb8e3)  
+
+
+# Hexo: Others
+
+[加速 Hexo 博客的方法及遇到的问题](https://guanqr.com/tech/website/speed-up-hexo/)  
+[pjax导致无法初始化aplayer音乐播放器](https://yxyvpn.com/2020/04/15/pjax%E5%AF%BC%E8%87%B4%E6%97%A0%E6%B3%95%E5%88%9D%E5%A7%8B%E5%8C%96aplayer%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/)  
 
