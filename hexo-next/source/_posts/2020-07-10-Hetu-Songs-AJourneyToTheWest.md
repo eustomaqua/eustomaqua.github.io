@@ -13,12 +13,89 @@ meting: true
 
 
 
+- 河图 (Music)
+- 贰婶 (Video)
+
+<!-- more -->
+
+# Music Play List
+
+<!---->
+
+{% aplayerlist %}
+{
+    "narrow": false,
+    "autoplay": false,
+    "mode": "random",
+    "showlrc": 3,
+    "mutex": true,
+    "theme": "#e6d0b2",
+    "preload": "metadata",
+    "listmaxheight": "513px",
+    "width": "50%",
+    "music": [
+        {
+            "title": "六耳",
+            "author": "河图",
+            "url": "http://isure.stream.qqmusic.qq.com/C400003FJ0Vq22fAYu.m4a?guid=549827801&vkey=991663D13A4E78A929B33AF6EB031DD0486F6EB4D59F4DB28B03D35ABB23EB50C9C2B47C304A667C998B32F6E0C98F1DE69F7FEBA39BE3B9&uin=0&fromtag=66",
+            "pic": "https://y.gtimg.cn/music/photo_new/T002R300x300M000002W2mBC3rOQ8Y_1.jpg?max_age=2592000",
+            "lrc": "/music/河图-六耳.lrc"
+        },
+        {
+            "title": "沙悟净",
+            "author": "河图",
+            "url": "http://183.252.54.28/amobile.music.tc.qq.com/C400003Mxi8U27TrXt.m4a?guid=188825817&vkey=63393F77B44D5CA137F408E35092EF29AE7FBE4406F7447FC69649224BD963E0D688002CD2F633BE009252DB4E994A3386D2F528DBF57C8B&uin=0&fromtag=66",
+            "pic": "https://y.gtimg.cn/music/photo_new/T002R300x300M000000rhg7V0TUxVa_1.jpg?max_age=2592000",
+            "lrc": "/music/河图-沙悟净.lrc"
+        },
+        {
+            "title": "失空斩",
+            "author": "河图",
+            "url": "http://isure.stream.qqmusic.qq.com/C400000uYWng4Zpzph.m4a?guid=238892558&vkey=7070B830A00CF72A23712C1D71B51A08F6E32CACE3B618C77F3486DC976BC4E1686647E160D0A64F56E1718AF2F888CAFDD6F8BA6362F044&uin=0&fromtag=66",
+            "pic": "https://gss0.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/cefc1e178a82b90160c72fa6738da9773912ef39.jpg",
+            "lrc": "/music/河图-失空斩.lrc"
+        },
+        {
+            "title": "刻舟求剑",
+            "author": "河图",
+            "url": "http://isure.stream.qqmusic.qq.com/C400002GZ0WE3fZjZE.m4a?guid=150765751&vkey=3E48DF91EE95BC6B883D0270DB4690DFB192BF5A91B5D00FA43EF6753FF913D92AC1185CFF87B58C1B7CAAA2B3697D23F4EB10E5E68519D3&uin=0&fromtag=66",
+            "pic": "https://y.gtimg.cn/music/photo_new/T002R300x300M000000udVDE2IzNOk_1.jpg?max_age=2592000",
+            "lrc": "/music/河图,汐音社-刻舟求剑.lrc"
+        },
+        {
+            "title": "致陌生的你",
+            "author": "河图",
+            "url": "http://ws.stream.qqmusic.qq.com/C400001iwBKZ3WD4ZB.m4a?guid=774201651&vkey=F4A86EB7B339EC7752DF3D45AC92DEF033A19A93564EC6FB45E99A1AF412E09A49A79275624D151B5AABB38F2BAA627C764C3DF927E6C1E4&uin=0&fromtag=66",
+            "pic": "https://y.gtimg.cn/music/photo_new/T002R300x300M000002RarwU2obcLw_2.jpg?max_age=2592000",
+            "lrc": "/music/河图-致陌生的你.lrc"
+        },
+        {
+            "title": "是风动",
+            "author": "银临/河图",
+            "url": "http://isure.stream.qqmusic.qq.com/C400002CbLfC4TYikn.m4a?guid=805714160&vkey=4C0EDCEE5874716A053A845CA78F83651E81DDA39B40090B4ADEBC45A533F1757D07B62A16A0A2EF2C837FE8F3D33960D410FB710CB0C31F&uin=0&fromtag=66",
+            "pic": "https://y.gtimg.cn/music/photo_new/T002R300x300M000002SNEce3EOpoI_1.jpg?max_age=2592000",
+            "lrc": "/music/银临,河图-是风动.lrc"
+        }
+    ]
+}
+{% endaplayerlist %}
+
+<!---->
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=29769321&auto=1&height=66"></iframe>
+
+<!---->
+
+
 # 六耳
 
 Journey To The West  
 [https://y.qq.com/n/yqq/song/003FJ0Vq22fAYu.html](https://y.qq.com/n/yqq/song/003FJ0Vq22fAYu.html)
 
+<!--
 {% aplayer "六耳" "河图" "http://183.252.54.13/amobile.music.tc.qq.com/C400003FJ0Vq22fAYu.m4a?guid=987630570&vkey=E870E80B5594DBD9C117E8568F03A7E12948D4B243D00830504B1C89E76FDB318DA231A83F1E98E24475D25B9B0BE506AC1A14E5E94EEB43&uin=0&fromtag=66" "https://y.gtimg.cn/music/photo_new/T002R300x300M000002W2mBC3rOQ8Y_1.jpg?max_age=2592000" "width:340px" %}
+-->
+<!---->
 
 
 **六耳**
@@ -135,7 +212,10 @@ Journey To The West
 Journey To The West  
 [https://y.qq.com/n/yqq/song/003rB4jp4bccg1.html](https://y.qq.com/n/yqq/song/003rB4jp4bccg1.html)
 
+<!--
 {% aplayer "沙悟净" "河图" "http://183.252.54.28/amobile.music.tc.qq.com/C400003Mxi8U27TrXt.m4a?guid=188825817&vkey=63393F77B44D5CA137F408E35092EF29AE7FBE4406F7447FC69649224BD963E0D688002CD2F633BE009252DB4E994A3386D2F528DBF57C8B&uin=0&fromtag=66" "https://y.gtimg.cn/music/photo_new/T002R300x300M000000rhg7V0TUxVa_1.jpg?max_age=2592000" "width:340px" %}
+-->
+<!---->
 
 
 **沙悟净**
@@ -207,7 +287,11 @@ Romance of Three Kingdoms
 [https://music.163.com/#/song?id=508610293](https://music.163.com/#/song?id=508610293)  
 [https://y.qq.com/n/yqq/song/000uYWng4Zpzph.html](https://y.qq.com/n/yqq/song/000uYWng4Zpzph.html)
 
+<!--
 {% aplayer "失空斩" "河图" "http://isure.stream.qqmusic.qq.com/C400000uYWng4Zpzph.m4a?guid=238892558&vkey=7070B830A00CF72A23712C1D71B51A08F6E32CACE3B618C77F3486DC976BC4E1686647E160D0A64F56E1718AF2F888CAFDD6F8BA6362F044&uin=0&fromtag=66" "https://gss0.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/cefc1e178a82b90160c72fa6738da9773912ef39.jpg" "width:350px" %}
+-->
+
+<!---->
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=340px height=86px src="//music.163.com/outchain/player?type=2&id=508610293&auto=1&height=66"></iframe>
 
@@ -266,7 +350,11 @@ Romance of Three Kingdoms
 
 [https://y.qq.com/n/yqq/song/002GZ0WE3fZjZE.html](https://y.qq.com/n/yqq/song/002GZ0WE3fZjZE.html)
 
+<!--
 {% aplayer "刻舟求剑" "河图" "http://isure.stream.qqmusic.qq.com/C400002GZ0WE3fZjZE.m4a?guid=150765751&vkey=3E48DF91EE95BC6B883D0270DB4690DFB192BF5A91B5D00FA43EF6753FF913D92AC1185CFF87B58C1B7CAAA2B3697D23F4EB10E5E68519D3&uin=0&fromtag=66" "https://y.gtimg.cn/music/photo_new/T002R300x300M000000udVDE2IzNOk_1.jpg?max_age=2592000" "width:340px" %}
+-->
+
+<!---->
 
 
 **刻舟求剑 - 河图/汐音社**
@@ -323,7 +411,11 @@ Romance of Three Kingdoms
 
 [https://y.qq.com/n/yqq/song/001iwBKZ3WD4ZB.html](https://y.qq.com/n/yqq/song/001iwBKZ3WD4ZB.html)
 
+<!--
 {% aplayer "致陌生的你" "河图" "http://ws.stream.qqmusic.qq.com/C400001iwBKZ3WD4ZB.m4a?guid=774201651&vkey=F4A86EB7B339EC7752DF3D45AC92DEF033A19A93564EC6FB45E99A1AF412E09A49A79275624D151B5AABB38F2BAA627C764C3DF927E6C1E4&uin=0&fromtag=66" "https://y.gtimg.cn/music/photo_new/T002R300x300M000002RarwU2obcLw_2.jpg?max_age=2592000" "width:340px" %}
+-->
+
+<!---->
 
 
 **致陌生的你**
@@ -409,7 +501,11 @@ Romance of Three Kingdoms
 [https://music.163.com/#/song?id=504686859](https://music.163.com/#/song?id=504686859)  
 [https://y.qq.com/n/yqq/song/001gH5Ib2tlFDh.html](https://y.qq.com/n/yqq/song/001gH5Ib2tlFDh.html)  
 
+<!--
 {% aplayer "是风动" "银临/河图" "http://isure.stream.qqmusic.qq.com/C400002CbLfC4TYikn.m4a?guid=805714160&vkey=4C0EDCEE5874716A053A845CA78F83651E81DDA39B40090B4ADEBC45A533F1757D07B62A16A0A2EF2C837FE8F3D33960D410FB710CB0C31F&uin=0&fromtag=66" "https://y.gtimg.cn/music/photo_new/T002R300x300M000002SNEce3EOpoI_1.jpg?max_age=2592000" "width:340px" %}
+-->
+
+<!---->
 
 
 **是风动 - 银临/河图**
@@ -477,12 +573,18 @@ Romance of Three Kingdoms
 [https://music.163.com/#/song?id=29769321](https://music.163.com/#/song?id=29769321)  
 [https://www.bilibili.com/video/BV1mx411P7QR?from=search&seid=17657493056066552022](https://www.bilibili.com/video/BV1mx411P7QR?from=search&seid=17657493056066552022)  
 
+<!--
 {% aplayer "悟空" "\_CcccEs/贰婶" "http://m10.music.126.net/20200711181647/dd2dca2e55d93013e324165a5cd9e9e8/ymusic/dccb/3e87/f979/ba9b52f530c86479befc04456d393e5a.mp3" "https://img.rapzh.com/rapgod.swiftcarrot.com/70fd70150a8131ae6c6c448cc403aa1d50cf0621_400x400.jpg" "width:340px" %}
+-->
+
+<!---->
 
 <!--
     https://i.ytimg.com/vi/13qYhBSzNjU/hqdefault.jpg
     https://img.rapzh.com/rapgod.swiftcarrot.com/70fd70150a8131ae6c6c448cc403aa1d50cf0621_400x400.jpg
     -->
+
+<!---->
 
 
 **悟空**
@@ -535,5 +637,89 @@ Romance of Three Kingdoms
 腾云驾雾 驭电驰风 来不及相逢
 
 
+
+
+# Video Player List
+
+\_CcccEs/贰婶
+
 <iframe src="//player.bilibili.com/player.html?aid=1711338&bvid=BV1mx411P7QR&cid=2613005&page=1" width="750px" height="560px" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+
+<!---->
+
+<!---->
+
+
+# Codes
+
+Video
+```markdown
+<iframe src="//player.bilibili.com/player.html?aid=1711338&bvid=BV1mx411P7QR&cid=2613005&page=1" width="750px" height="560px" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+```
+
+Music
+```markdown
+{% aplayer "六耳" "河图" "http://183.252.54.13/amobile.music.tc.qq.com/C400003FJ0Vq22fAYu.m4a?guid=987630570&vkey=E870E80B5594DBD9C117E8568F03A7E12948D4B243D00830504B1C89E76FDB318DA231A83F1E98E24475D25B9B0BE506AC1A14E5E94EEB43&uin=0&fromtag=66" "https://y.gtimg.cn/music/photo_new/T002R300x300M000002W2mBC3rOQ8Y_1.jpg?max_age=2592000" "width:340px" %}
+```
+
+```markdown
+{% aplayerlist %}
+{
+    "narrow": false,
+    "autoplay": false,
+    "mode": "random",
+    "showlrc": 3,
+    "mutex": true,
+    "theme": "#e6d0b2",
+    "preload": "metadata",
+    "listmaxheight": "513px",
+    "width": "50%",
+    "music": [
+        {
+            "title": "六耳",
+            "author": "河图",
+            "url": "http://isure.stream.qqmusic.qq.com/C400003FJ0Vq22fAYu.m4a?guid=549827801&vkey=991663D13A4E78A929B33AF6EB031DD0486F6EB4D59F4DB28B03D35ABB23EB50C9C2B47C304A667C998B32F6E0C98F1DE69F7FEBA39BE3B9&uin=0&fromtag=66",
+            "pic": "https://y.gtimg.cn/music/photo_new/T002R300x300M000002W2mBC3rOQ8Y_1.jpg?max_age=2592000",
+            "lrc": "/music/河图-六耳.lrc"
+        },
+        {
+            "title": "沙悟净",
+            "author": "河图",
+            "url": "http://183.252.54.28/amobile.music.tc.qq.com/C400003Mxi8U27TrXt.m4a?guid=188825817&vkey=63393F77B44D5CA137F408E35092EF29AE7FBE4406F7447FC69649224BD963E0D688002CD2F633BE009252DB4E994A3386D2F528DBF57C8B&uin=0&fromtag=66",
+            "pic": "https://y.gtimg.cn/music/photo_new/T002R300x300M000000rhg7V0TUxVa_1.jpg?max_age=2592000",
+            "lrc": "/music/河图-沙悟净.lrc"
+        },
+        {
+            "title": "失空斩",
+            "author": "河图",
+            "url": "http://isure.stream.qqmusic.qq.com/C400000uYWng4Zpzph.m4a?guid=238892558&vkey=7070B830A00CF72A23712C1D71B51A08F6E32CACE3B618C77F3486DC976BC4E1686647E160D0A64F56E1718AF2F888CAFDD6F8BA6362F044&uin=0&fromtag=66",
+            "pic": "https://gss0.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/cefc1e178a82b90160c72fa6738da9773912ef39.jpg",
+            "lrc": "/music/河图-失空斩.lrc"
+        },
+        {
+            "title": "刻舟求剑",
+            "author": "河图",
+            "url": "http://isure.stream.qqmusic.qq.com/C400002GZ0WE3fZjZE.m4a?guid=150765751&vkey=3E48DF91EE95BC6B883D0270DB4690DFB192BF5A91B5D00FA43EF6753FF913D92AC1185CFF87B58C1B7CAAA2B3697D23F4EB10E5E68519D3&uin=0&fromtag=66",
+            "pic": "https://y.gtimg.cn/music/photo_new/T002R300x300M000000udVDE2IzNOk_1.jpg?max_age=2592000",
+            "lrc": "/music/河图,汐音社-刻舟求剑.lrc"
+        },
+        {
+            "title": "致陌生的你",
+            "author": "河图",
+            "url": "http://ws.stream.qqmusic.qq.com/C400001iwBKZ3WD4ZB.m4a?guid=774201651&vkey=F4A86EB7B339EC7752DF3D45AC92DEF033A19A93564EC6FB45E99A1AF412E09A49A79275624D151B5AABB38F2BAA627C764C3DF927E6C1E4&uin=0&fromtag=66",
+            "pic": "https://y.gtimg.cn/music/photo_new/T002R300x300M000002RarwU2obcLw_2.jpg?max_age=2592000",
+            "lrc": "/music/河图-致陌生的你.lrc"
+        },
+        {
+            "title": "是风动",
+            "author": "银临/河图",
+            "url": "http://isure.stream.qqmusic.qq.com/C400002CbLfC4TYikn.m4a?guid=805714160&vkey=4C0EDCEE5874716A053A845CA78F83651E81DDA39B40090B4ADEBC45A533F1757D07B62A16A0A2EF2C837FE8F3D33960D410FB710CB0C31F&uin=0&fromtag=66",
+            "pic": "https://y.gtimg.cn/music/photo_new/T002R300x300M000002SNEce3EOpoI_1.jpg?max_age=2592000",
+            "lrc": "/music/银临,河图-是风动.lrc"
+        }
+    ]
+}
+{% endaplayerlist %}
+```
 

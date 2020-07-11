@@ -165,11 +165,70 @@ lrc:xxx：可选，前缀lrc:，LRC文件url
 
 ## DPlayer
 
+# Problems
+
+## aplayer list
+
+更正：直接用复制的代码修改，不要自己写；且只能写六首，加到第七首就不行了  
+
+ref: [Hexo使用 hexo-tag-aplayer 播放音乐](https://helloblack2017.github.io/2018/04/22/use-hexo-tag-aplayer/)
+
+Error Messages
+```bash
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ hexo g
+INFO  DPlayer.min.css is not found in this version of dplayer, skip it.
+INFO  Start processing
+SyntaxError: Unexpected token _ in JSON at position 2814
+    at JSON.parse (<anonymous>)
+    at APlayerListTag.parse (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/hexo-tag-aplayer/lib/tag/playerList.js:40:15)
+    at new APlayerListTag (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/hexo-tag-aplayer/lib/tag/playerList.js:27:28)
+    at Object.hexo.extend.tag.register.ends (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/hexo-tag-aplayer/index.js:148:15)
+    at NunjucksBlock.NunjucksTag._run (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/hexo/lib/extend/tag.js:170:18)
+    at NunjucksBlock.run (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/hexo/lib/extend/tag.js:194:15)
+    at Template.root [as rootRenderFunc] (eval at _compile (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/nunjucks/src/environment.js:631:18), <anonymous>:9:71)
+    at Template.render (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/nunjucks/src/environment.js:550:10)
+    at Environment.renderString (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/nunjucks/src/environment.js:378:17)
+    at Promise.fromCallback.cb (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/hexo/lib/extend/tag.js:120:48)
+    at tryCatcher (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/util.js:16:23)
+    at Function.Promise.fromNode.Promise.fromCallback (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/promise.js:209:30)
+    at Tag.render (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/hexo/lib/extend/tag.js:120:18)
+    at Object.onRenderEnd (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/hexo/lib/hexo/post.js:291:22)
+    at Promise.then.then.result (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/hexo/lib/hexo/render.js:79:21)
+    at tryCatcher (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/promise.js:547:31)
+    at Promise._settlePromise (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/promise.js:604:18)
+    at Promise._settlePromise0 (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/promise.js:649:10)
+    at Promise._settlePromises (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/promise.js:729:18)
+    at _drainQueueStep (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/async.js:93:12)
+    at _drainQueue (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/async.js:86:9)
+    at Async._drainQueues (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/async.js:102:5)
+    at Immediate.Async.drainQueues [as _onImmediate] (/home/ubuntu/eustomaqua.github.io/hexo-next/node_modules/bluebird/js/release/async.js:15:14)
+    at runCallback (timers.js:696:18)
+    at tryOnImmediate (timers.js:667:5)
+    at processImmediate (timers.js:649:5)
+INFO  Files loaded in 5.15 s
+```
+
+## dplayer
+
+Error Messages
+```bash
+ubuntu@ubuntu-VirtualBox:~/eustomaqua.github.io/hexo-next$ hexo g
+INFO  DPlayer.min.css is not found in this version of dplayer, skip it.
+INFO  Start processing
+WARN  [hexo-tag-aplayer]: <head> not found in /home/ubuntu/eustomaqua.github.io/hexo-next/source/_posts/2020-03-23-Matplotlib-Tutorial-Query.md, unable to inject script (like 'APlayer.js') in this page.
+INFO  Files loaded in 7.61 s
+```
+
+
 # Summary
+
+直接用 netease/bilibili 的外链，或者用 aplayer/dplayer 插件
 
 [音乐直链搜索工具](https://music.liuzhijin.cn/)  
 [Hexo全局添加APlayer音乐播放器](https://linbei.top/Hexo%E5%85%A8%E5%B1%80%E6%B7%BB%E5%8A%A0APlayer%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/)  
 [hexo 插入音乐与视频](http://eternalzttz.com/hexoMV.html)  
+[Hexo使用 hexo-tag-aplayer 播放音乐](https://helloblack2017.github.io/2018/04/22/use-hexo-tag-aplayer/)  
 
 
 # References
@@ -189,6 +248,7 @@ No use
 [Hexo博客添加背景音乐和音乐歌单](http://blog.leroy.net.cn/2019/10/17/hexo-next-%E9%9F%B3%E4%B9%90/)  
 [Hexo博客中插入音乐](https://www.jianshu.com/p/6e41e3191963)  
 [hexo 中安装音乐播放器插件](https://www.zhyong.cn/posts/5d26/)  
+[引入Aplayer播放音乐(踩坑向)](https://akilarlxh.github.io/post/3afa069a.html)  
 
 
 
