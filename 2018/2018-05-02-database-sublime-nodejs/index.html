@@ -529,7 +529,7 @@
 </ul>
 </blockquote>
 <p>简单示例：<br><img src="/images/2018-07/05_02_lmdb_img1.png" height="60%" width="60%"><br><img src="/images/2018-07/05_02_lmdb_img2.png" height="60%" width="60%"></p>
-<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p><font color="Magenta"> important </font><br><a href="https://www.jianshu.com/p/66496c8726a1" target="_blank" rel="noopener">Python操作SQLite/MySQL/LMDB/LevelDB</a>  </p>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p><font color=Magenta> important </font><br><a href="https://www.jianshu.com/p/66496c8726a1" target="_blank" rel="noopener">Python操作SQLite/MySQL/LMDB/LevelDB</a>  </p>
 <p><a href="http://www.voidcn.com/article/p-badyeacd-ty.html" target="_blank" rel="noopener">lmdb 安装</a><br><a href="https://blog.csdn.net/yuanchheneducn/article/details/52934746" target="_blank" rel="noopener">lmdb 安装</a><br><a href="http://www.voidcn.com/article/p-uvbflary-bes.html" target="_blank" rel="noopener">Python lmdb</a><br><a href="http://www.voidcn.com/article/p-qeyubiym-dq.html" target="_blank" rel="noopener">lmdb – python</a><br><a href="http://www.voidcn.com/article/p-npjzqwyd-sc.html" target="_blank" rel="noopener">python lmdb 使用</a>  </p>
 <p><a href="https://www.jianshu.com/p/yzFf8j" target="_blank" rel="noopener">lmdb 简介</a><br><a href="https://www.zhihu.com/question/41854215" target="_blank" rel="noopener">caffe 为什么要使用 lmdb 数据库？</a>  </p>
 <h1 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h1><p>ref: <a href="http://www.runoob.com/mongodb/mongodb-intro.html" target="_blank" rel="noopener">MongoDB 简介</a>  </p>
@@ -595,36 +595,28 @@
 
 <h3 id="2-获取数据库-database"><a href="#2-获取数据库-database" class="headerlink" title="(2) 获取数据库 (database)"></a>(2) 获取数据库 (database)</h3><p>在 MongoDB 中一个实例能够支持多个独立的数据库，你可以用点取属性的方式来获取数据库，或者通过字典的方式获取：  </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">db = Client.test_database</span><br><span class="line">db = Client[<span class="string">'test_database'</span>]</span><br></pre></td></tr></table></figure>
-
 <p>(注：’test’ 可以换成你想要用的名字，比如 “python_database”)</p>
 <h3 id="3-获取-Collection"><a href="#3-获取-Collection" class="headerlink" title="(3) 获取 Collection"></a>(3) 获取 Collection</h3><p>Collection 是存储在 MongoDB 中的一组文件，同获取 database 一样，你可以用点取属性的方式或者字典的方法获取：  </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">collection = db.test_collection</span><br><span class="line">collection = db[<span class="string">'test_collection'</span>]</span><br></pre></td></tr></table></figure>
 
 <h3 id="4-存储数据"><a href="#4-存储数据" class="headerlink" title="(4) 存储数据"></a>(4) 存储数据</h3><p>在 MongoDB 中，数据是以 BSON 的类型存储的。见下面的 post:  </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line">post = [<span class="string">'type'</span>:<span class="string">'BSON'</span>,</span><br><span class="line">           <span class="string">'date'</span>:datetime.datetime.utcnow()]</span><br></pre></td></tr></table></figure>
-
 <p>了解完 MongoDB 的数据格式后，你可以通过以下的方式插入数据 (其中 .inserted_id 将返回 ObjectId 对象)：  </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">document1 = ｛<span class="string">'x'</span>:<span class="number">1</span>｝</span><br><span class="line">document2 = ｛<span class="string">'x'</span>:<span class="number">2</span>｝</span><br><span class="line">posts = db.posts     <span class="comment">#你也可以不这样做，每次通过 db.posts 调用</span></span><br><span class="line">post_1 = posts.insert_one(document1).inserted_id</span><br><span class="line">post_2 = posts.insert_one(document2).inserted_id</span><br></pre></td></tr></table></figure>
-
 <p>每个插入的数据对应一个 ObjectId，可直接查看：  </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>post_1</span><br><span class="line">ObjectId(...)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>post_2</span><br><span class="line">ObjectId(...)</span><br></pre></td></tr></table></figure>
-
 <p>你还可以用 insert_many() 插入多个文档：  </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">new_document = [&#123;<span class="string">'x'</span>:<span class="number">3</span>&#125;,</span><br><span class="line">                             &#123;<span class="string">'x'</span>:<span class="number">4</span>&#125;]</span><br><span class="line">result = posts.insert_many(new_document)</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>result.inserted_ids</span><br><span class="line">[ObjectId(...),ObjectId(...)]</span><br></pre></td></tr></table></figure>
 
 <h3 id="5-从-MongoDB-中调用数据"><a href="#5-从-MongoDB-中调用数据" class="headerlink" title="(5) 从 MongoDB 中调用数据"></a>(5) 从 MongoDB 中调用数据</h3><p>find_one() 函数能够从数据库中调出已存储的数据：  </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>posts.find_one()</span><br><span class="line">[<span class="string">'x'</span>:<span class="string">'1'</span>]</span><br></pre></td></tr></table></figure>
-
 <p>但用 find_one() 的方法只能获取一个数据，如果数据库中存在多个数据时，它返回的是第一个的值。你也可以通过 ObjectId 来请求数据，效果和上面是一样的。如果你想打印出全部数据，可以通过迭代的方式获取：  </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> data <span class="keyword">in</span> posts.find():</span><br><span class="line">            data</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line">&#123;<span class="string">u'x'</span>:<span class="number">1</span>,</span><br><span class="line"><span class="string">u'x'</span>:<span class="number">2</span>,</span><br><span class="line"><span class="string">u'x'</span>:<span class="number">3</span>,</span><br><span class="line"><span class="string">u'x'</span>:<span class="number">4</span>&#125;</span><br></pre></td></tr></table></figure>
-
 <p>你也可以加入限制性因素来获取特定的数据：  </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> post <span class="keyword">in</span> posts.find(&#123;<span class="string">'x'</span>:<span class="number">1</span>&#125;):</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>     post</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">&#123;<span class="string">u'x'</span>:<span class="number">1</span>&#125;</span><br></pre></td></tr></table></figure>
-
 <p>查找条件中也可以用正则匹配来匹配 value。</p>
 <h3 id="6-更新数据"><a href="#6-更新数据" class="headerlink" title="(6) 更新数据"></a>(6) 更新数据</h3><p>在 pymongo 中可以用 update_one() 来更新数据：  </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>posts.update_one(&#123;<span class="string">'x'</span>:<span class="number">4</span>&#125;,&#123;<span class="string">'$set'</span>:&#123;<span class="string">'x'</span>:<span class="number">3</span>&#125;&#125;)</span><br></pre></td></tr></table></figure>
-
 <p>其中传入的第一个参数是你想要更新的数据，第二个是你想要更新的最新数据。其中 $set 部分是必要元素，如果没有会报出错误。除了 $set 外还有很多其它的比如 $inc，对应着不同的功能，在此先不赘述。<br>上面只是更新匹配到的第一个数据，同样地，也可以用 update_many() 一次更新多个值。</p>
 <h3 id="7-删除数据"><a href="#7-删除数据" class="headerlink" title="(7) 删除数据"></a>(7) 删除数据</h3><p>同上，可以用 delete_one() 和 delete_many() 方法来删除数据，括号中是筛选条件：  </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>posts.delete_one(&#123;<span class="string">'x'</span>:<span class="number">3</span>&#125;)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>posts.delete_one(&#123;<span class="string">'x'</span>:<span class="number">2</span>&#125;)</span><br></pre></td></tr></table></figure>
@@ -632,13 +624,13 @@
 <h3 id="8-计数"><a href="#8-计数" class="headerlink" title="(8) 计数"></a>(8) 计数</h3><p>如果想知道 collection 中有多少文档，可以用 .count() 请求来获取符合条件的文档。  </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>posts.count()</span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>posts.find(&#123;<span class="string">'x'</span>:<span class="number">1</span>&#125;)</span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
 
+
 <h1 id="Sublime-Text-3-插件配置"><a href="#Sublime-Text-3-插件配置" class="headerlink" title="Sublime Text 3 插件配置"></a>Sublime Text 3 插件配置</h1><p>ref: <a href="https://www.zhihu.com/question/23427839" target="_blank" rel="noopener">左侧显示目录树</a>  </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(1) Open folder</span><br><span class="line">(2) 安装 SideBarEnhancements 插件后，View -&gt; Side Bar -&gt; Show Side Bar</span><br></pre></td></tr></table></figure>
 
 <p>安装 Sublime text 3 插件很方便，可以直接下载安装包解压到 Packages 目录 (菜单 -&gt; Preferences -&gt; Browse Packages)；也可以安装 package control 组件，然后直接在线安装。</p>
 <h2 id="安装-package-control"><a href="#安装-package-control" class="headerlink" title="安装 package control"></a>安装 package control</h2><p>按 Ctrl+`(此符号位于 tab 按键上面)调出 console (注：避免热键冲突)<br>粘贴以下代码到命令行并回车：  </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import urllib.request,os; pf = <span class="string">'Package Control.sublime-package'</span>; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), <span class="string">'wb'</span>).write(urllib.request.urlopen( <span class="string">'http://sublime.wbond.net/'</span> + pf.replace(<span class="string">' '</span>,<span class="string">'%20'</span>)).<span class="built_in">read</span>())</span><br></pre></td></tr></table></figure>
-
 <p>下载完成之后重启 Sublime Text 3。<br>如果在 Perferences -&gt; 中看到 package control 这一项，则安装成功。</p>
 <p><strong>用 Package Control 安装插件的方法</strong><br>按下 Ctrl+Shift+P 调出命令面板；<br>输入 install 调出 Install Package 选项并回车，然后在列表中选中要安装的插件。</p>
 <p><strong>安装 常用插件</strong><br>utf8<br>EMMET<br>sidebarenhancements<br>ctags  自动补全代码  </p>
@@ -656,7 +648,6 @@
 <h3 id="2-代码自动补全-Anaconda"><a href="#2-代码自动补全-Anaconda" class="headerlink" title="(2) 代码自动补全:  Anaconda"></a>(2) 代码自动补全:  Anaconda</h3><p>功能：<br>(1) 代码的自动补全<br>(2) 显示 python 类、方法或者函数的使用方法<br>(3) 检查导入模块是否有效<br>(4) 按照 PEP8 规范自动化格式我们的代码<br>(5) 可以跳转到函数的定义或者类的定义<br>(6) ……</p>
 <p><strong>Install the Anaconda Package</strong><br>安装同上，重启后生效。<br>简单配置：  </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"anaconda_linting"</span>: false,</span><br><span class="line">  <span class="string">"pep8"</span>: false,</span><br><span class="line">  <span class="string">"python_interpreter"</span>: <span class="string">"/usr/bin/python3"</span>,</span><br><span class="line">  <span class="string">"suppress_word_completions"</span>: true,</span><br><span class="line">  <span class="string">"suppress_explicit_completions"</span>: true,</span><br><span class="line">  <span class="string">"complete_parameters"</span>: false,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>上述配置是因为这个插件和 flake8 插件的功能相互冲突，这里最好使用 flake8 的配置就可以了</p>
 <h2 id="建立新的运行环境"><a href="#建立新的运行环境" class="headerlink" title="建立新的运行环境"></a>建立新的运行环境</h2><p>ref: <a href="https://www.jianshu.com/p/d612f8da3ffa" target="_blank" rel="noopener">Ubuntu 16.04下指定Sublime Text 3 默认python编译版本</a></p>
 <p>### <strong>安装 PackageResourceViewer 插件</strong></p>
@@ -677,14 +668,12 @@
 </ol>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"shell_cmd"</span>: <span class="string">"python3 -u \"$file\""</span>, //指定python3为.py默认编译器</span><br><span class="line"><span class="string">"shell_cmd"</span>: <span class="string">"python2 -u \"$file\""</span>, //指定python2为.py默认编译器</span><br><span class="line"><span class="string">"shell_cmd"</span>: <span class="string">"python -u \"$file\""</span>, //根据Ubuntu系统设置，看/usr/bin/python链接哪儿(ln)</span><br><span class="line"><span class="string">"shell_cmd"</span>: <span class="string">"指定版本python的绝对路径 -u \"$file\""</span>, //指定路径下的python编译器</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <ol start="5">
 <li>使用 python3 的配置文件示例 (Python.sublime-build)  </li>
 </ol>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  //<span class="string">"shell_cmd"</span>:<span class="string">"python -u \"$file\""</span>,</span><br><span class="line">  <span class="string">"shell_cmd"</span>:<span class="string">"python3 -u \"$file\""</span>,  //指定python3为.py默认编译器</span><br><span class="line">  <span class="string">"file_regex"</span>:<span class="string">"^[ ]*File \"(...*?)\", line ([0-9]*)"</span>,</span><br><span class="line">  <span class="string">"selector"</span>:<span class="string">"source.python"</span>,</span><br><span class="line">  <span class="string">"env"</span>:&#123;<span class="string">"PYTHONIOENCODING"</span>:<span class="string">"utf-8"</span>&#125;,</span><br><span class="line">  <span class="string">"variants"</span>:[&#123;</span><br><span class="line">      <span class="string">"name"</span>:<span class="string">"Syntax Check"</span>,</span><br><span class="line">      <span class="string">"shell_cmd"</span>:<span class="string">"python -m py_compile \"$&#123;file&#125;\""</span>,</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <ol start="6">
 <li>Ctrl+S 保存配置文件<br>注：有关 .sublime-build 的配置信息说明，可参见  </li>
@@ -693,7 +682,7 @@
 </ol>
 </blockquote>
 <p>### <strong>与其他方法的使用比较</strong></p>
-<p>网上也有其他变通方法，可参考以下链接<br><a href>ubuntu 下 sublime text 3 加入 python3 环境支持</a><br><a href="http://www.cnblogs.com/vingi/articles/2997043.html" target="_blank" rel="noopener">指定 ubuntu 下的 python 运行版本</a></p>
+<p>网上也有其他变通方法，可参考以下链接<br><a href="">ubuntu 下 sublime text 3 加入 python3 环境支持</a><br><a href="http://www.cnblogs.com/vingi/articles/2997043.html">指定 ubuntu 下的 python 运行版本</a></p>
 <p>前者，每次编译时选择麻烦<br>后者，改系统默认配置，可能引发其他依赖异常<br>本文 ctrl+b 可直接编译运行，又不改系统默认配置，简单方便，是合适的解决办法</p>
 <h2 id="Tools-gt-Build-System-gt-Python2-3"><a href="#Tools-gt-Build-System-gt-Python2-3" class="headerlink" title="Tools &gt; Build System &gt; Python2/3"></a>Tools &gt; Build System &gt; Python2/3</h2><p>安装 Package Control<br><img src="/images/2018-07/07_sublime_img1.png" height="60%" width="60%">  </p>
 <p>更改 Python.sublime-build<br><img src="/images/2018-07/07_sublime_img2.png" height="60%" width="60%">  </p>
@@ -707,11 +696,9 @@
 <p>什么情况下 Node.js 是个非常好的选择？<br>对于前端程序员，不懂得像 PHP、Python 或 Ruby 等动态编程语言，但是想创建自己的服务，……<br>对于后端程序员，想部署一些高性能的服务，……</p>
 <p>## <strong>安装 (failed)</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install nodejs</span><br><span class="line">$ sudo apt-get install npm</span><br><span class="line">$ nodejs --version</span><br><span class="line">v4.2.6</span><br><span class="line">$ npm --version</span><br><span class="line">3.5.2</span><br></pre></td></tr></table></figure>
-
 <p>但是这个版本太低了，安装 electron 失败。</p>
 <p>于是升级。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install npm@latest -g</span><br><span class="line">$ sudo apt-get install node-legacy</span><br><span class="line">$ node --version         <span class="comment">#$ node -v</span></span><br><span class="line">v4.2.6</span><br><span class="line">$ sudo npm install -g n  <span class="comment">#failed!</span></span><br><span class="line">$ sudo n stable          <span class="comment">#找不到命令</span></span><br></pre></td></tr></table></figure>
-
 <p>但是这个还是原来的旧版本，没有升级成功。</p>
 <p>## <strong>安装</strong> </p>
 <p>ref: <a href="https://nodejs.org/zh-cn/download/package-manager/#debian-and-ubuntu-based-linux-distributions" target="_blank" rel="noopener">官网说明</a></p>
@@ -1020,7 +1007,7 @@
 
   <div class="theme-info">
     <div class="powered-by-post-count"></div>
-    <span class="post-count">Total 136.4k Words</span>
+    <span class="post-count">Total 137.6k Words</span>
   </div>
   <span class="post-meta-divider">|</span>
   <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v4.2.1</div>

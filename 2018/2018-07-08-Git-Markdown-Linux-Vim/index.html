@@ -493,7 +493,6 @@
 <p>不能采用通用配置时，就要单独设置每个项目的 git 配置。</p>
 <p>(a). 每个 git 项目下都会有一个隐藏的 .git 文件夹 ，<br>将终端的工作目录设置到相应的项目根目录下，执行 ls -a 命令，显示所有文件，即可看到 .git 的隐藏文件夹。<br>通过 cd .git 进入该目录，发现该目录下有个 config 文件，采用 open config 命令打开，添加如下配置：  </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[user]</span><br><span class="line">    name = XXX(自己的名称英文)</span><br><span class="line">    email = XXXX(邮箱)</span><br></pre></td></tr></table></figure>
-
 <p>保存，command+s 即可。<br>这时候就为该项目配置了独立的用户名和邮箱。提交代码时，提交日志上显示的就是设置的名称，当然 github 这种会根据设置的邮箱来设置对应的用户名。</p>
 <p>(b). 通过命令行的方式 (即要去掉 –global 参数) 去设置单独的 git 配置，只需要在 .git 文件夹下。 例如执行如下命令，就可以修改当前项目提交代码时用到的用户名。  </p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git  config  user.name  "xxxxx"</span><br></pre></td></tr></table></figure>
@@ -502,7 +501,6 @@
 <p>### <strong>^X 离开</strong></p>
 <p>ref: <a href="https://blog.csdn.net/YQXLLWY/article/details/55214943" target="_blank" rel="noopener">sudo 简介</a></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -a</span><br></pre></td></tr></table></figure>
-
 <p>出现问题，该界面无法离开<br><img src="/images/2018-07/09_git_commit_a.png"></p>
 <p>这些命令的执行方式是：Esc，然后命令中的 ^ 代表 Alt，如离开 ^X ，就需要依次按 Esc, Alt x ，这样才会退出，有点像 vim。</p>
 <p>### <strong>next</strong></p>
@@ -536,6 +534,13 @@
 
 <h3 id="十、其他"><a href="#十、其他" class="headerlink" title="十、其他"></a>十、其他</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 生成一个可供发布的压缩包</span></span><br><span class="line">$ git archive</span><br></pre></td></tr></table></figure>
 
+
+
+
+
+
+
+
 <h1 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a>Markdown</h1><p><strong>编辑器</strong><br><a href="https://atom.io/" target="_blank" rel="noopener">Atom</a><br><a href="http://25.io/mou/" target="_blank" rel="noopener">Mou</a><br><a href="https://typora.io/" target="_blank" rel="noopener">typora</a></p>
 <p><strong>png 图片在线压缩</strong><br><a href="https://compresspng.com/zh/" target="_blank" rel="noopener">PNG压缩</a><br><a href="https://www.iloveimg.com/zh-cn/resize-image" target="_blank" rel="noopener">调整单个图像文件</a><br><a href="https://www.yasuotu.com/png" target="_blank" rel="noopener">压缩图</a></p>
 <h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><p>参考<br><a href="http://einverne.github.io/markdown-style-guide/zh.html" target="_blank" rel="noopener">Markdown 书写风格指南</a><br><a href="http://xianbai.me/learn-md/article/extension/code-blocks-and-highlighting.html" target="_blank" rel="noopener">Intro to Markdown, 代码块和语法高亮</a><br><a href="https://sspai.com/post/37271" target="_blank" rel="noopener">Markdown 书写建议</a></p>
@@ -554,39 +559,31 @@
 <p>(2) 标题<br>Setext 形式 (多个 = 或 -，分别支持 h1,h2 两种标题)<br>atx 形式 (#: 对称形式，或只在左边使用)，注意 # 左侧不可有任何空白，内侧可以</p>
 <p>(3) 引用<br>引用内容：段落或内容前使用 &gt; 符号<br>多行引用：每行前加，或仅在第一行使用 (后面相邻行可省略)；如需换行，可行尾添加两个空格，或在引用内容中加一个空行<br>嵌套使用：</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;也可以在引用中</span><br><span class="line">&gt;&gt;使用嵌套的引用</span><br></pre></td></tr></table></figure>
-
 <p>其他 Markdown：引用中可使用其他任何 Markdown 语法</p>
 <p>(4) 列表<br>无序列表项的开始：符号(‘*‘, ‘+‘, 或 ‘-‘) 空格；<br>有序列表项的开始：数字 . 空格；<br>空格至少为一个，多个空格将被解析为一个，如果仅需要在行前显示数字和 ‘.’ ：  </p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">05\. 可以使用：数字\. 来取消显示为列表</span><br></pre></td></tr></table></figure>
-
 <p>嵌套的列表：</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1. </span>第一层</span><br><span class="line"><span class="bullet">  + </span>1-1</span><br><span class="line"><span class="bullet">  + </span>1-2</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>* 的语法专门用来显示 Markdown 语法中使用的特殊字符，参考 <a href="http://xianbai.me/learn-md/article/syntax/blackslash-escapes.html" target="_blank" rel="noopener">字符转义</a></p>
 </blockquote>
 <p>(5) 代码  </p>
 <p>(6) 分隔线<br>一行内使用三个或更多，增加分隔线 (&lt;hr&gt;)  </p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="emphasis">***</span></span><br><span class="line">------</span><br><span class="line"><span class="emphasis">___</span> 	//下划线</span><br></pre></td></tr></table></figure>
-
 <p>多个字符之间可以有空格 (空白符)，但不能有其他字符  </p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">* </span><span class="emphasis">* *</span></span><br><span class="line"><span class="bullet">- </span>- -</span><br></pre></td></tr></table></figure>
 
 <p>(7) 超链接<br>行内式：title 可以使用 ‘ 或 “  </p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">title text</span>](<span class="link">URL 'link text'</span>)</span><br></pre></td></tr></table></figure>
-
 <p>参考式：(1) 能尽量保持文章结构的简单，也方便统一管理 URL； (2) 优点：可以在多个不同的位置引用同一个 URL  </p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">Google</span>][<span class="symbol">link</span>]</span><br><span class="line">[<span class="symbol">link</span>]: <span class="link">http://www.google.com/ "Google"</span></span><br><span class="line">识别符可以是字母、数字、空白或标点符号，不区分大小写</span><br><span class="line">格式：  [识别符]: URL 'title'</span><br><span class="line"></span><br><span class="line">[<span class="string">Google</span>][<span class="symbol"></span>]</span><br><span class="line">[<span class="symbol">Google</span>]: <span class="link">http://scholar.google.com/ "Google"</span></span><br><span class="line">省略识别符，使用链接文本作为识别符</span><br></pre></td></tr></table></figure>
-
 <p>自动链接：适合行内较短的链接，会使用 URL 作为链接文字。邮箱地址会自动编码，以逃避抓取机器人。</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">http:</span>//<span class="attr">www.google.com</span>/&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">123@email.com</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 
 <p>(8) 图片  </p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">Name</span>](<span class="link">https://...</span>)</span><br></pre></td></tr></table></figure>
-
 <p>同插入超链接的语法基本一致，也分行内式和参考式两种  </p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">GitHub</span>](<span class="link">https://avatars2.githubusercontent.com/u/3265208?v=3&amp;s=100 "GitHub,Social Coding"</span>)</span><br><span class="line">方括号中的部分是图片的替代文本，括号中的 'title' 部分和链接一样，是可选的。</span><br><span class="line"></span><br><span class="line">![<span class="string">GitHub</span>][<span class="symbol">github</span>]</span><br><span class="line">[<span class="symbol">github</span>]: <span class="link">https://avatars2.githubusercontent.com/u/3265208?v=3&amp;s=100 "GitHub,Social Coding"</span></span><br></pre></td></tr></table></figure>
-
 <p>指定图片的显示大小  </p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Markdown 不支持指定图片的显示大小，不过可以通过直接插入<span class="tag">&lt;<span class="name">img</span> /&gt;</span>标签来指定相关属性：</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"https://avatars2.githubusercontent.com/u/3265208?v=3&amp;s=100"</span> <span class="attr">alt</span>=<span class="string">"GitHub"</span> <span class="attr">title</span>=<span class="string">"GitHub,Social Coding"</span> <span class="attr">width</span>=<span class="string">"50"</span> <span class="attr">height</span>=<span class="string">"50"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -595,7 +592,6 @@
 <p>### <strong>扩展语法</strong></p>
 <p>(1) 删除线</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">这就是 \~~删除线\~~</span><br><span class="line">这就是 ~~删除线~~</span><br></pre></td></tr></table></figure>
-
 <p>这就是 <del>删除线</del></p>
 <p>(2) 代码块和语法高亮</p>
 <p>(3) 表格 和对齐</p>
@@ -603,6 +599,10 @@
 
 <p>(4) Task List</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">- </span>[ ] Eat</span><br><span class="line"><span class="bullet">- </span>[x] Code</span><br><span class="line"><span class="bullet">  - </span>[x] HTML</span><br><span class="line"><span class="bullet">  - </span>[x] CSS</span><br><span class="line"><span class="bullet">  - </span>[x] JavaScript</span><br><span class="line"><span class="bullet">- </span>[ ] Sleep</span><br></pre></td></tr></table></figure>
+
+
+
+
 
 <h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><p>### <strong>代码块加入行号和支持语言</strong></p>
 <p>加入行号只需用三个 “`” 框入即可</p>
@@ -614,7 +614,6 @@
 <p>### <strong>显示 颜色块</strong></p>
 <p>ref:<br><a href="https://www.zhihu.com/question/22504694" target="_blank" rel="noopener">为什么 markdown 不支持字号和字体颜色？</a><br><a href="https://blog.csdn.net/u010177286/article/details/50358720" target="_blank" rel="noopener">Markdown 使用技巧总结</a>  </p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">red</span>&gt;</span>内容<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span><span class="tag">&lt;<span class="name">tr</span>&gt;</span><span class="tag">&lt;<span class="name">td</span> <span class="attr">bgcolor</span>=<span class="string">orange</span>&gt;</span>背景色是：orange<span class="tag">&lt;/<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">tr</span>&gt;</span><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <p>但是字体颜色和颜色块都显示不出来</p>
 <h1 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h1><ul>
 <li>参考手册：Linux 命令大全  </li>
@@ -975,7 +974,7 @@
 
   <div class="theme-info">
     <div class="powered-by-post-count"></div>
-    <span class="post-count">Total 136.4k Words</span>
+    <span class="post-count">Total 137.6k Words</span>
   </div>
   <span class="post-meta-divider">|</span>
   <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v4.2.1</div>

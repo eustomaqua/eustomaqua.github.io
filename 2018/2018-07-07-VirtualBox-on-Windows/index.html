@@ -571,6 +571,8 @@ Edited on 24 Mar 2020 10:02:16
 <p>查看 Ubuntu 的内核和发行版本号</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/issue</span><br><span class="line">sudo lsb_release -a</span><br></pre></td></tr></table></figure>
 
+
+
 <h1 id="Ubuntu-16-04-下-Python-的使用"><a href="#Ubuntu-16-04-下-Python-的使用" class="headerlink" title="Ubuntu 16.04 下 Python 的使用"></a>Ubuntu 16.04 下 Python 的使用</h1><h2 id="默认"><a href="#默认" class="headerlink" title="默认"></a>默认</h2><p>ref:  <a href="https://blog.csdn.net/jenyzhang/article/details/49646641" target="_blank" rel="noopener">linux 查看python安装路径,版本号</a> </p>
 <p>Ubuntu 16.04 自带两个版本的 Python，分别为 2.7 和 3.5 。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">python2</span><br><span class="line">python3</span><br><span class="line">python  //默认为 2</span><br></pre></td></tr></table></figure>
@@ -755,6 +757,7 @@ Edited on 24 Mar 2020 10:02:16
 <p>即  </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake -D CMAKE_BUILD_TYPE=RELEASE  -D CMAKE_INSTALL_PREFIX=/usr/<span class="built_in">local</span>  -D INSTALL_C_EXAMPLES=ON  -D INSTALL_PYTHON_EXAMPLES=ON  -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules  -D BUILD_EXAMPLES=ON ..</span><br></pre></td></tr></table></figure>
 
+
 <h3 id="卸载重装"><a href="#卸载重装" class="headerlink" title="卸载重装"></a>卸载重装</h3><p>ref: <a href="https://www.cnblogs.com/txg198955/p/5990295.html" target="_blank" rel="noopener">ubuntu卸载opencv并重装opencv3.0.0</a></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">一、 卸载opencv2.4.9： Going to the <span class="string">"build"</span> folder directory of opencv from terminal, and execute the following：</span><br><span class="line">1. $ sudo make uninstall</span><br><span class="line">2. $ <span class="built_in">cd</span> ..</span><br><span class="line">3. $ sudo rm -r build</span><br><span class="line">4. $ sudo rm -r /usr/<span class="built_in">local</span>/include/opencv2 /usr/<span class="built_in">local</span>/include/opencv /usr/include/opencv /usr/include/opencv2 /usr/<span class="built_in">local</span>/share/opencv /usr/<span class="built_in">local</span>/share/OpenCV /usr/share/opencv /usr/share/OpenCV /usr/<span class="built_in">local</span>/bin/opencv* /usr/<span class="built_in">local</span>/lib/libopencv*</span><br></pre></td></tr></table></figure>
 
@@ -787,6 +790,7 @@ Edited on 24 Mar 2020 10:02:16
 
 <p>(12) 步骤 12:<br>恭喜 ! 你完成了在 Ubuntu 上安装 OpenCV 3.0 和 Python 2.7+<br>所有剩下的就是验证一下啦：   </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ workon cv</span><br><span class="line">$ python</span><br><span class="line">&gt;&gt;&gt; import cv2</span><br><span class="line">&gt;&gt;&gt; cv2.__version__</span><br><span class="line">&gt;&gt;&gt; <span class="string">'3.0.0'</span></span><br></pre></td></tr></table></figure>
+
 
 <p>参考<br><a href="https://blog.csdn.net/yudiemiaomiao/article/details/72780790" target="_blank" rel="noopener">ubuntu 16.04 安装opencv 3.2.0</a><br><a href="http://nooverfit.com/wp/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%EF%BC%8C%E5%9C%A8ubuntu%E4%B8%8A%E5%AE%89%E8%A3%85opencv-3-0-%E5%92%8C-python-2-7/" target="_blank" rel="noopener">手把手教你，在Ubuntu上安装OpenCV 3.0 和 Python 2.7+</a><br><a href="https://www.jianshu.com/p/44ab75fbaef2" target="_blank" rel="noopener">python 虚拟环境[virtualenv/virtualenvwrapper]设置</a><br><a href="https://www.cnblogs.com/txg198955/p/5990295.html" target="_blank" rel="noopener">ubuntu卸载opencv并重装opencv3.0.0</a><br><a href="https://blog.csdn.net/u013453604/article/details/49781771" target="_blank" rel="noopener">Ubuntu下安装opencv 2.4.11</a></p>
 <h2 id="spyder-切换环境"><a href="#spyder-切换环境" class="headerlink" title="spyder 切换环境"></a>spyder 切换环境</h2><p>cd VirtualEnv</p>
@@ -1102,7 +1106,7 @@ Edited on 24 Mar 2020 10:02:16
 
   <div class="theme-info">
     <div class="powered-by-post-count"></div>
-    <span class="post-count">Total 136.4k Words</span>
+    <span class="post-count">Total 137.6k Words</span>
   </div>
   <span class="post-meta-divider">|</span>
   <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v4.2.1</div>
