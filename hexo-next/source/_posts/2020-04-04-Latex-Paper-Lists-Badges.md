@@ -109,6 +109,14 @@ $ git push
 $ git checkout [branch-name]
 ```
 
+```bash
+# 查看配置信息:  system级别, global 用户级别, 和local 当前仓库
+# 设置先从 system->global->local  底层配置会覆盖顶层配置
+$ git config --local --list
+$ git config --global --list
+$ git config --system --list
+```
+
 ## 徽章 / CI bots
 
 ### Travis CI (build passing)
