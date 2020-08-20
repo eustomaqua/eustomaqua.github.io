@@ -37,7 +37,7 @@ meting: true
         {
             "title": "六耳",
             "author": "河图",
-            "url": "http://isure.stream.qqmusic.qq.com/C400003FJ0Vq22fAYu.m4a?guid=549827801&vkey=991663D13A4E78A929B33AF6EB031DD0486F6EB4D59F4DB28B03D35ABB23EB50C9C2B47C304A667C998B32F6E0C98F1DE69F7FEBA39BE3B9&uin=0&fromtag=66",
+            "url": "http://music.163.com/outchain/player?type=2&id=1444687632",
             "pic": "https://y.gtimg.cn/music/photo_new/T002R300x300M000002W2mBC3rOQ8Y_1.jpg?max_age=2592000",
             "lrc": "/music/河图-六耳.lrc"
         },
@@ -51,14 +51,14 @@ meting: true
         {
             "title": "失空斩",
             "author": "河图",
-            "url": "http://isure.stream.qqmusic.qq.com/C400000uYWng4Zpzph.m4a?guid=238892558&vkey=7070B830A00CF72A23712C1D71B51A08F6E32CACE3B618C77F3486DC976BC4E1686647E160D0A64F56E1718AF2F888CAFDD6F8BA6362F044&uin=0&fromtag=66",
+            "url": "http://music.163.com/outchain/player?type=2&id=508610293",
             "pic": "https://gss0.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/cefc1e178a82b90160c72fa6738da9773912ef39.jpg",
             "lrc": "/music/河图-失空斩.lrc"
         },
         {
             "title": "刻舟求剑",
             "author": "河图",
-            "url": "http://isure.stream.qqmusic.qq.com/C400002GZ0WE3fZjZE.m4a?guid=150765751&vkey=3E48DF91EE95BC6B883D0270DB4690DFB192BF5A91B5D00FA43EF6753FF913D92AC1185CFF87B58C1B7CAAA2B3697D23F4EB10E5E68519D3&uin=0&fromtag=66",
+            "url": "http://music.163.com/outchain/player?type=2&id=1388149647",
             "pic": "https://y.gtimg.cn/music/photo_new/T002R300x300M000000udVDE2IzNOk_1.jpg?max_age=2592000",
             "lrc": "/music/河图,汐音社-刻舟求剑.lrc"
         },
@@ -72,7 +72,7 @@ meting: true
         {
             "title": "是风动",
             "author": "银临/河图",
-            "url": "http://isure.stream.qqmusic.qq.com/C400002CbLfC4TYikn.m4a?guid=805714160&vkey=4C0EDCEE5874716A053A845CA78F83651E81DDA39B40090B4ADEBC45A533F1757D07B62A16A0A2EF2C837FE8F3D33960D410FB710CB0C31F&uin=0&fromtag=66",
+            "url": "http://music.163.com/outchain/player?type=2&id=504686859",
             "pic": "https://y.gtimg.cn/music/photo_new/T002R300x300M000002SNEce3EOpoI_1.jpg?max_age=2592000",
             "lrc": "/music/银临,河图-是风动.lrc"
         }
@@ -82,7 +82,11 @@ meting: true
 
 <!---->
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=29769321&auto=1&height=66"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="//music.163.com/outchain/player?type=2&id=1440690498&auto=1&height=66"></iframe>
+
+https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtVkxzS0RjSlRwWTNvLXlE.mp3
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=29769321&auto=0&height=66"></iframe>
 
 <!---->
 
@@ -652,6 +656,58 @@ Romance of Three Kingdoms
 <!---->
 
 <!---->
+
+
+# 天光
+
+
+作曲 : 小宇Cosmos/檀烧
+作词 : 江眉妩
+天光【朱一龙·2020原创生贺应援曲】
+
+策划：青霂
+作词：江眉妩
+作编曲：小宇Cosmos
+和编：丢子
+演唱/和声：檀烧
+分轨：千纸
+剪辑：北海道面包
+字幕：墨棋羽
+美工：江小草
+文案：择荇
+
+你眼中应有破云而出的天光
+一路跋涉过金黄的麦浪
+你灵魂应有磨砺十年的锋芒
+在鲜花烈火中一如既往
+
+你还要去体验诸多人的一生
+他们或许平淡或许跌宕
+你将会赋予它们鲜活和思想
+如你的一生，还有很长
+
+如果我须以笔写下你的以往
+被提及的语言都显得莽撞
+我要你不必桎梏在这一点爱意
+要你尽情无畏拥抱日月与海洋
+要你不必局限这一方天地
+要你淋漓去感受人间和风浪
+岁月洪流里 你是我期待的天光
+
+
+如果要我轻易形容你为信仰
+也依然显得不那么恰当
+只是你的每一步都将有回响
+我的反馈也被你收藏
+
+如果我须以笔写下你的以往
+被提及的语言都显得莽撞
+我要你不必桎梏在这一点爱意
+要你尽情无畏拥抱日月与海洋
+要你不必局限这一方天地
+要你淋漓去感受人间和风浪
+爱你并非沧海拾遗
+只是遇见恰好得如愿以偿
 
 
 # Codes
