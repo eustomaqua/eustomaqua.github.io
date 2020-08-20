@@ -460,7 +460,7 @@
             <span class="post-letters-count">
               &nbsp; | &nbsp;
               <span title="post.wordcount">
-                2.5k words
+                2.6k words
               </span>
               &nbsp; | &nbsp;
               <span title="post.min2read">
@@ -504,6 +504,8 @@ Tag: Remote Server / Linux
 <h2 id=""><a href="#" class="headerlink" title="?"></a>?</h2><h1 id="LaTeX-Others"><a href="#LaTeX-Others" class="headerlink" title="LaTeX: Others"></a>LaTeX: Others</h1><h1 id="GitHub-repos"><a href="#GitHub-repos" class="headerlink" title="GitHub repos"></a>GitHub repos</h1><h2 id="using-git-to-control-versions"><a href="#using-git-to-control-versions" class="headerlink" title="using git to control versions"></a>using git to control versions</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> [repo-address]</span><br><span class="line">$ <span class="built_in">cd</span> [repo-name]</span><br><span class="line"></span><br><span class="line">$ git config user.name eustomaqua</span><br><span class="line">$ git config user.email [your-email-address]</span><br><span class="line">$ git config push.default simple</span><br><span class="line"><span class="comment">#                         simple  </span></span><br><span class="line"><span class="comment">## only pushes the current branch to the corresponding</span></span><br><span class="line"><span class="comment">## remote branch that 'git pull' uses to update the </span></span><br><span class="line"><span class="comment">## current branch</span></span><br><span class="line"><span class="comment">#$ git config push.default matching</span></span><br><span class="line"></span><br><span class="line">$ git <span class="built_in">help</span> config</span><br><span class="line"><span class="comment"># q: quit</span></span><br></pre></td></tr></table></figure>
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line"></span><br><span class="line"><span class="comment"># to begin with</span></span><br><span class="line">$ git checkout -b adanet</span><br><span class="line">$ git push --<span class="built_in">set</span>-upstream origin adanet</span><br><span class="line"></span><br><span class="line"><span class="comment"># next</span></span><br><span class="line">$ git status</span><br><span class="line">$ git add .</span><br><span class="line">$ git commit -m <span class="string">"messages"</span></span><br><span class="line">$ git push</span><br><span class="line"></span><br><span class="line"><span class="comment"># switch over</span></span><br><span class="line">$ git checkout [branch-name]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看配置信息:  system级别, global 用户级别, 和local 当前仓库</span></span><br><span class="line"><span class="comment"># 设置先从 system-&gt;global-&gt;local  底层配置会覆盖顶层配置</span></span><br><span class="line">$ git config --<span class="built_in">local</span> --list</span><br><span class="line">$ git config --global --list</span><br><span class="line">$ git config --system --list</span><br></pre></td></tr></table></figure>
 
 <h2 id="徽章-CI-bots"><a href="#徽章-CI-bots" class="headerlink" title="徽章 / CI bots"></a>徽章 / CI bots</h2><h3 id="Travis-CI-build-passing"><a href="#Travis-CI-build-passing" class="headerlink" title="Travis CI (build passing)"></a>Travis CI (build passing)</h3><p>#### Public <a href="https://travis-ci.org/" target="_blank" rel="noopener">https://travis-ci.org/</a><br>#### Private <a href="https://travis-ci.com/" target="_blank" rel="noopener">https://travis-ci.com/</a>  </p>
 <p><strong>私有仓库</strong>  </p>
@@ -962,7 +964,7 @@ Tag: Remote Server / Linux
 
   <div class="theme-info">
     <div class="powered-by-post-count"></div>
-    <span class="post-count">Total 137.6k Words</span>
+    <span class="post-count">Total 138.2k Words</span>
   </div>
   <span class="post-meta-divider">|</span>
   <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v4.2.1</div>
