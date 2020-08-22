@@ -1,7 +1,7 @@
 ---
 title: 河图 之 西游记 related
-date: 2020-07-10 20:57:56
-updated: 2020-07-11 10:45:56
+date: 2020-08-20 19:52:56
+updated: 2020-08-20 19:52:56
 categories:
   - Favorite
 tags:
@@ -10,6 +10,11 @@ tags:
 mathjax: false
 meting: true
 ---
+
+<!--
+date: 2020-07-10 20:57:56
+updated: 2020-07-11 10:45:56
+    -->
 
 
 
@@ -25,7 +30,7 @@ meting: true
 {% aplayerlist %}
 {
     "narrow": false,
-    "autoplay": false,
+    "autoplay": true,
     "mode": "random",
     "showlrc": 3,
     "mutex": true,
@@ -37,56 +42,64 @@ meting: true
         {
             "title": "六耳",
             "author": "河图",
-            "url": "http://music.163.com/outchain/player?type=2&id=1444687632",
+            "url": "https://link.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtVXh1ZVRyd2dnVnJGclpO.mp3",
             "pic": "https://y.gtimg.cn/music/photo_new/T002R300x300M000002W2mBC3rOQ8Y_1.jpg?max_age=2592000",
             "lrc": "/music/河图-六耳.lrc"
         },
         {
             "title": "沙悟净",
             "author": "河图",
-            "url": "http://183.252.54.28/amobile.music.tc.qq.com/C400003Mxi8U27TrXt.m4a?guid=188825817&vkey=63393F77B44D5CA137F408E35092EF29AE7FBE4406F7447FC69649224BD963E0D688002CD2F633BE009252DB4E994A3386D2F528DBF57C8B&uin=0&fromtag=66",
+            "url": "https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtVTBKeXRCQkpYZGtFdkll.mp3",
             "pic": "https://y.gtimg.cn/music/photo_new/T002R300x300M000000rhg7V0TUxVa_1.jpg?max_age=2592000",
             "lrc": "/music/河图-沙悟净.lrc"
         },
         {
             "title": "失空斩",
             "author": "河图",
-            "url": "http://music.163.com/outchain/player?type=2&id=508610293",
+            "url": "https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtVTZtSlBxU3QxbWVoVnFU.mp3",
             "pic": "https://gss0.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/cefc1e178a82b90160c72fa6738da9773912ef39.jpg",
             "lrc": "/music/河图-失空斩.lrc"
         },
         {
             "title": "刻舟求剑",
             "author": "河图",
-            "url": "http://music.163.com/outchain/player?type=2&id=1388149647",
+            "url": "https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtVkU0NHNjeWpnaVE2T1k4.mp3",
             "pic": "https://y.gtimg.cn/music/photo_new/T002R300x300M000000udVDE2IzNOk_1.jpg?max_age=2592000",
             "lrc": "/music/河图,汐音社-刻舟求剑.lrc"
         },
         {
             "title": "致陌生的你",
             "author": "河图",
-            "url": "http://ws.stream.qqmusic.qq.com/C400001iwBKZ3WD4ZB.m4a?guid=774201651&vkey=F4A86EB7B339EC7752DF3D45AC92DEF033A19A93564EC6FB45E99A1AF412E09A49A79275624D151B5AABB38F2BAA627C764C3DF927E6C1E4&uin=0&fromtag=66",
+            "url": "https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtVkRiVXhnM3BNOS1mcDN5.mp3",
             "pic": "https://y.gtimg.cn/music/photo_new/T002R300x300M000002RarwU2obcLw_2.jpg?max_age=2592000",
             "lrc": "/music/河图-致陌生的你.lrc"
         },
         {
             "title": "是风动",
             "author": "银临/河图",
-            "url": "http://music.163.com/outchain/player?type=2&id=504686859",
+            "url": "https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtVk5MUU1HdHhVcWFVYlFH.mp3",
             "pic": "https://y.gtimg.cn/music/photo_new/T002R300x300M000002SNEce3EOpoI_1.jpg?max_age=2592000",
             "lrc": "/music/银临,河图-是风动.lrc"
+        },
+        {
+            "title": "天光",
+            "author": "檀烧",
+            "url": "https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtVkxzS0RjSlRwWTNvLXlE.mp3",
+            "pic": "https://y.gtimg.cn/music/photo_new/T002R300x300M000003uE2Ng0bMgKQ_1.jpg?max_age=2592000",
+            "lrc": "/music/檀烧-天光.lrc"
+        },
+        {
+            "title": "悟空",
+            "author": "贰婶(蔡翊昇)",
+            "url": "https://link.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtVlQ0WC1SSktHc0t3V0pQ.mp3",
+            "pic": "https://p2.music.126.net/rSx4R91Q-ijl83W1WI_Rlg==/18877515137594552.jpg?size=320x320&imageView&thumbnail=580x0",
+            "lrc": "/music/蔡翊昇-悟空.lrc"
         }
     ]
 }
 {% endaplayerlist %}
 
 <!---->
-
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="//music.163.com/outchain/player?type=2&id=1440690498&auto=1&height=66"></iframe>
-
-https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtVkxzS0RjSlRwWTNvLXlE.mp3
-
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=29769321&auto=0&height=66"></iframe>
 
 <!---->
 
@@ -712,6 +725,14 @@ Romance of Three Kingdoms
 
 # Codes
 
+利用 OneDrive 共享的直链获取工具  
+[OneDrive直链获取工具v1.3](https://onedrive.gimhoy.com/)  
+[为内容创作者解决文件分享的难题](https://zhuanlan.zhihu.com/p/41344556)  
+[网盘直链获取工具v1.5](https://link.gimhoy.com/)  
+
+[歌曲LRC滚动歌词在线生成制作编辑器软件](https://www.yuanchuangyinyue.com/3027.html)  
+
+
 Video
 ```markdown
 <iframe src="//player.bilibili.com/player.html?aid=1711338&bvid=BV1mx411P7QR&cid=2613005&page=1" width="750px" height="560px" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -780,5 +801,11 @@ Music
     ]
 }
 {% endaplayerlist %}
+```
+
+```markdown
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="//music.163.com/outchain/player?type=2&id=1440690498&auto=1&height=66"></iframe>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=29769321&auto=0&height=66"></iframe>
 ```
 
