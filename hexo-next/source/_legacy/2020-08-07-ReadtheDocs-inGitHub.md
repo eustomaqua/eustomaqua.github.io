@@ -346,4 +346,73 @@ You should consider upgrading via the 'pip install --upgrade pip' command.
 ```
 
 
+# MkDocs
+
+```shell
+(py36env) ubuntu@ubuntu-VirtualBox:~$ pip install mkdocs
+Collecting mkdocs
+  Downloading https://files.pythonhosted.org/packages/5d/89/ed04b217404bbba031c4e2e084f36ef840b8663fce0b80302b547e651e4d/mkdocs-1.1.2-py3-none-any.whl (6.4MB)
+    100% |████████████████████████████████| 6.4MB 232kB/s 
+Collecting Markdown>=3.2.1 (from mkdocs)
+  Downloading https://files.pythonhosted.org/packages/a4/63/eaec2bd025ab48c754b55e8819af0f6a69e2b1e187611dd40cbbe101ee7f/Markdown-3.2.2-py3-none-any.whl (88kB)
+    100% |████████████████████████████████| 92kB 288kB/s 
+Collecting PyYAML>=3.10 (from mkdocs)
+  Downloading https://files.pythonhosted.org/packages/64/c2/b80047c7ac2478f9501676c988a5411ed5572f35d1beff9cae07d321512c/PyYAML-5.3.1.tar.gz (269kB)
+    100% |████████████████████████████████| 276kB 322kB/s 
+Collecting lunr[languages]==0.5.8 (from mkdocs)
+  Downloading https://files.pythonhosted.org/packages/15/a4/3043c019613a1d60abb6e150b7665761bdd236a0d915d447d21c4415fddd/lunr-0.5.8-py2.py3-none-any.whl (2.3MB)
+    100% |████████████████████████████████| 2.3MB 135kB/s 
+Collecting tornado>=5.0 (from mkdocs)
+  Downloading https://files.pythonhosted.org/packages/95/84/119a46d494f008969bf0c775cb2c6b3579d3c4cc1bb1b41a022aa93ee242/tornado-6.0.4.tar.gz (496kB)
+    100% |████████████████████████████████| 501kB 178kB/s 
+Collecting click>=3.3 (from mkdocs)
+  Downloading https://files.pythonhosted.org/packages/d2/3d/fa76db83bf75c4f8d338c2fd15c8d33fdd7ad23a9b5e57eb6c5de26b430e/click-7.1.2-py2.py3-none-any.whl (82kB)
+    100% |████████████████████████████████| 92kB 134kB/s 
+Requirement already satisfied: Jinja2>=2.10.1 in ./VirtualEnv/py36env/lib/python3.6/site-packages (from mkdocs) (2.11.2)
+Collecting livereload>=2.5.1 (from mkdocs)
+  Downloading https://files.pythonhosted.org/packages/bd/60/6640b819e858562ef6684abac60593b7369fe0a8a064df426d3ab0ab894d/livereload-2.6.3.tar.gz
+Collecting importlib-metadata; python_version < "3.8" (from Markdown>=3.2.1->mkdocs)
+  Downloading https://files.pythonhosted.org/packages/8e/58/cdea07eb51fc2b906db0968a94700866fc46249bdc75cac23f9d13168929/importlib_metadata-1.7.0-py2.py3-none-any.whl
+Requirement already satisfied: six>=1.11.0 in ./VirtualEnv/py36env/lib/python3.6/site-packages (from lunr[languages]==0.5.8->mkdocs) (1.12.0)
+Collecting future>=0.16.0 (from lunr[languages]==0.5.8->mkdocs)
+  Downloading https://files.pythonhosted.org/packages/45/0b/38b06fd9b92dc2b68d58b75f900e97884c45bedd2ff83203d933cf5851c9/future-0.18.2.tar.gz (829kB)
+    100% |████████████████████████████████| 829kB 168kB/s 
+Collecting nltk>=3.2.5; python_version > "2.7" and extra == "languages" (from lunr[languages]==0.5.8->mkdocs)
+  Downloading https://files.pythonhosted.org/packages/92/75/ce35194d8e3022203cca0d2f896dbb88689f9b3fce8e9f9cff942913519d/nltk-3.5.zip (1.4MB)
+    100% |████████████████████████████████| 1.4MB 279kB/s 
+Requirement already satisfied: MarkupSafe>=0.23 in ./VirtualEnv/py36env/lib/python3.6/site-packages (from Jinja2>=2.10.1->mkdocs) (1.1.1)
+Collecting zipp>=0.5 (from importlib-metadata; python_version < "3.8"->Markdown>=3.2.1->mkdocs)
+  Downloading https://files.pythonhosted.org/packages/b2/34/bfcb43cc0ba81f527bc4f40ef41ba2ff4080e047acb0586b56b3d017ace4/zipp-3.1.0-py3-none-any.whl
+Collecting joblib (from nltk>=3.2.5; python_version > "2.7" and extra == "languages"->lunr[languages]==0.5.8->mkdocs)
+  Downloading https://files.pythonhosted.org/packages/51/dd/0e015051b4a27ec5a58b02ab774059f3289a94b0906f880a3f9507e74f38/joblib-0.16.0-py3-none-any.whl (300kB)
+    100% |████████████████████████████████| 307kB 238kB/s 
+Collecting regex (from nltk>=3.2.5; python_version > "2.7" and extra == "languages"->lunr[languages]==0.5.8->mkdocs)
+  Downloading https://files.pythonhosted.org/packages/3e/eb/85f375a102e95cde14a184ee985a35e1a20c4ceb3fe7f57fa128a9326283/regex-2020.7.14-cp36-cp36m-manylinux1_x86_64.whl (660kB)
+    100% |████████████████████████████████| 665kB 229kB/s 
+Collecting tqdm (from nltk>=3.2.5; python_version > "2.7" and extra == "languages"->lunr[languages]==0.5.8->mkdocs)
+  Downloading https://files.pythonhosted.org/packages/28/7e/281edb5bc3274dfb894d90f4dbacfceaca381c2435ec6187a2c6f329aed7/tqdm-4.48.2-py2.py3-none-any.whl (68kB)
+    100% |████████████████████████████████| 71kB 214kB/s 
+Building wheels for collected packages: PyYAML, tornado, livereload, future, nltk
+  Running setup.py bdist_wheel for PyYAML ... done
+  Stored in directory: /home/ubuntu/.cache/pip/wheels/a7/c1/ea/cf5bd31012e735dc1dfea3131a2d5eae7978b251083d6247bd
+  Running setup.py bdist_wheel for tornado ... done
+  Stored in directory: /home/ubuntu/.cache/pip/wheels/93/84/2f/409c7b2bb3afc3aa727f7ee8787975e0793f74d1165f4d0104
+  Running setup.py bdist_wheel for livereload ... done
+  Stored in directory: /home/ubuntu/.cache/pip/wheels/f2/a1/fa/00775311351a48f78b4a0e40588eefdd6f2731cc8115d6957d
+  Running setup.py bdist_wheel for future ... done
+  Stored in directory: /home/ubuntu/.cache/pip/wheels/8b/99/a0/81daf51dcd359a9377b110a8a886b3895921802d2fc1b2397e
+  Running setup.py bdist_wheel for nltk ... done
+  Stored in directory: /home/ubuntu/.cache/pip/wheels/ae/8c/3f/b1fe0ba04555b08b57ab52ab7f86023639a526d8bc8d384306
+Successfully built PyYAML tornado livereload future nltk
+Installing collected packages: zipp, importlib-metadata, Markdown, PyYAML, future, click, joblib, regex, tqdm, nltk, lunr, tornado, livereload, mkdocs
+  Found existing installation: Markdown 3.0.1
+    Uninstalling Markdown-3.0.1:
+      Successfully uninstalled Markdown-3.0.1
+Successfully installed Markdown-3.2.2 PyYAML-5.3.1 click-7.1.2 future-0.18.2 importlib-metadata-1.7.0 joblib-0.16.0 livereload-2.6.3 lunr-0.5.8 mkdocs-1.1.2 nltk-3.5 regex-2020.7.14 tornado-6.0.4 tqdm-4.48.2 zipp-3.1.0
+You are using pip version 18.1, however version 20.2.2 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+(py36env) ubuntu@ubuntu-VirtualBox:~$ 
+```
+
+
 # References
