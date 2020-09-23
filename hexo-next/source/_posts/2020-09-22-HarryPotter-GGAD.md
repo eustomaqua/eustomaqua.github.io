@@ -473,3 +473,131 @@ Be my soldier, soldier
 永恒了下一个我
 
 
+
+# Young And Beautiful
+
+单曲： Young And Beautiful
+歌手： Lana Del Rey
+
+所属专辑： Triple J Hottest 100 Vol 21
+
+<!--
+
+I've seen the world
+我已看遍世间繁华
+Done it all, had my cake now
+歷经沧桑，享受甜美果实
+Diamonds, brilliant, and Bel-Air now
+如今有钻石珠宝，名声显赫，坐拥豪宅
+Hot summer nights, mid-July
+七月中旬，炎热的夏日夜晚
+When you and I were forever wild
+过去你和我放荡不羈无止尽
+The crazy days, the city lights
+疯狂的日子，在城市霓虹下
+The way you'd play with me like a child
+你像是小孩子一般和我嬉戏
+Will you still love me when I'm no longer young and beautiful
+当我年华老去、容顏凋零，你还会爱我吗？
+Will you still love me when I got nothing but my aching soul
+当我所剩的只是受伤灵魂，你还会爱我吗？
+I know you will, I know you will
+我知道你会、我知道你会
+I know that you will
+我知道你会
+Will you still love me when I'm no longer beautiful
+当我不再美丽，你还会爱我吗？
+I've seen the world, lit it up as my stage now
+我已看遍世间繁华，如今点亮舞台
+Channeling angels in the new age now
+指引天使们前进，新世纪到来
+Hot summer days, rock and roll
+炎炎夏日，来点摇滚乐
+The way you'd play for me at your show
+你愿意為我来点不一样的演出
+And all the ways I got to know
+而我所知道的是
+Your pretty face and electric soul
+你那漂亮的脸蛋和令人触动的灵魂
+Will you still love me when I'm no longer young and beautiful
+当我年华老去、容顏凋零，你还会爱我吗？
+Will you still love me when I got nothing but my aching soul
+当我所剩的只是受伤灵魂，你还会爱我吗？
+I know you will, I know you will
+我知道你会、我知道你会
+I know that you will
+我知道你会
+Will you still love me when I'm no longer beautiful
+当我不再美丽，你还会爱我吗？
+Dear lord when I get to heaven
+亲爱的主阿！当我来到天堂
+Please let me bring my man
+请容许我带著我的男人一起
+When he comes tell me that you'll let me
+请告诉我你会让他与我相聚
+Father tell me if you can
+天父啊！如果可以请告诉我
+Oh that grace, oh that body
+如此恩典、难以抗拒的身材
+Oh that face makes me wanna party
+迷人脸庞让我想要狂欢一下
+He's my sun, he makes me shine like diamonds
+他是我的太阳，使我如钻石般闪耀
+Will you still love me when I'm no longer young and beautiful
+当我年华老去、容顏凋零，你还会爱我吗？
+Will you still love me when I got nothiyg but my aching soul
+当我所剩的只是受伤灵魂，你还会爱我吗？
+I know you will, I know you will
+我知道你会、我知道你会
+I know that you will
+我知道你会
+Will you still love me when I'm no longer beautiful
+当我不再美丽，你还会爱我吗？
+Will you still love me when I'm no longer beautiful
+当我不再美丽，你还会爱我吗？
+Will you still love me when I'm no longer young and beautiful
+当我年华老去、容顏凋零，你还会爱我吗？
+
+-->
+
+I've seen the world
+Done it all, had my cake now
+Diamonds, brilliant, and Bel-Air now
+Hot summer nights, mid-July
+When you and I were forever wild
+The crazy days, the city lights
+The way you'd play with me like a child
+Will you still love me when I'm no longer young and beautiful
+Will you still love me when I got nothing but my aching soul
+I know you will, I know you will
+I know that you will
+Will you still love me when I'm no longer beautiful
+
+I've seen the world, lit it up as my stage now
+Channeling angels in the new age now
+Hot summer days, rock and roll
+The way you'd play for me at your show
+And all the ways I got to know
+Your pretty face and electric soul
+Will you still love me when I'm no longer young and beautiful
+Will you still love me when I got nothing but my aching soul
+I know you will, I know you will
+I know that you will
+Will you still love me when I'm no longer beautiful
+
+Dear lord when I get to heaven
+Please let me bring my man
+When he comes tell me that you'll let me
+Father tell me if you can
+Oh that grace, oh that body
+Oh that face makes me wanna party
+He's my sun, he makes me shine like diamonds
+Will you still love me when I'm no longer young and beautiful
+Will you still love me when I got nothiyg but my aching soul
+I know you will, I know you will
+I know that you will
+Will you still love me when I'm no longer beautiful
+Will you still love me when I'm no longer beautiful
+Will you still love me when I'm no longer young and beautiful
+
+
