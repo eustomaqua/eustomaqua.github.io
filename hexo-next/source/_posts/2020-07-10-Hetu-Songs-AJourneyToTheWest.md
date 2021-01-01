@@ -682,6 +682,8 @@ Romance of Three Kingdoms
 
 # 天光
 
+https://music.163.com/#/song?id=1440690498
+https://y.qq.com/n/yqq/song/0002gwQb3aOmgG.html
 
 作曲 : 小宇Cosmos/檀烧
 作词 : 江眉妩

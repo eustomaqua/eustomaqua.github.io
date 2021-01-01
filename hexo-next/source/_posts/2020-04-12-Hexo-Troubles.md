@@ -1437,7 +1437,7 @@ e.g.,
 
 ```markdown
 {% gp r-c %}
-<img src=""> x n
+<img src="/images/?.png"> x n
 {% endgp %}
 ```
 

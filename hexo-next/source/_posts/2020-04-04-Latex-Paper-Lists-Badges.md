@@ -1,7 +1,7 @@
 ---
 title: Tips of LaTeX and Badges, Remote Server
 date: 2020-04-03 23:44:18
-updated: 2020-04-03 23:44:18
+updated: 2021-01-01 20:58:34
 categories:
   - Writing
 tags: 
@@ -26,10 +26,21 @@ Tag: Remote Server / Linux
 \# Tips of Lists and Codes in Papers (列表 etc.)  
 latex 数学符号: [常用数学符号的 LaTeX 表示方法](https://www.mohu.org/info/symbols/symbols.htm)
 
+[MATLAB: 绘制出版级论文插图的经验](https://zhuanlan.zhihu.com/p/85068748)  
+[Beamer Theme Matrix](https://hartwork.org/beamer-theme-matrix/)  
+
+Useful:  
+[Adobe Color 取色器](https://color.adobe.com/zh/create/color-wheel)  
+[RGB 十六进制 常用对照表](https://tool.oschina.net/commons?type=3)  
+[Color 颜色渐变主题](https://uigradients.com/#Rastafari)  
+[RGB颜色值与十六进制颜色码转换工具](https://www.sioe.cn/yingyong/yanse-rgb-16/)  
+
 
 # LaTeX: Functions
 
-## eumerate, itemize
+## 分条列举
+
+### eumerate, itemize
 
 ### enumerate 起始编号定义
 [Latex,enumerate环境下起始编号定义(How can I make an enumerate list](http://blog.sina.com.cn/s/blog_a0e53bf70102vtwz.html)
@@ -46,7 +57,7 @@ latex 数学符号: [常用数学符号的 LaTeX 表示方法](https://www.mohu.
 \end{enumerate}
 ```
 
-### 分支函数
+## 分支函数
 
 ```latex
 \begin{enumerate}
@@ -58,17 +69,318 @@ f(x) =
 \end{enumerate}
 ```
 
-### 算法清单
+## 算法清单
 
-#### algorithm2e
+{% gp 1-2 %}
+<img src="/images/2021-01/0101_algorithmic.png">
+<img src="/images/2021-01/0101_algorithm2e.png">
+{% endgp %}
+
+### algorithmic
+
+```markdown
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}} %输入
+\renewcommand{\algorithmicensure}{\textbf{Output:}} %输出
+
+\begin{algorithm}[H]
+\caption{Caption 算法标题}
+\label{alg:my_label}
+\begin{algorithmic}[1]
+\REQUIRE 输入参数
+\ENSURE 输出参数
+\STATE 执行命令
+\FORALL{0 < i < n}
+    \IF{a > b}
+        \STATE a += 1;
+        \STATE b -= 1;
+    \ELSE
+        \STATE a = 3;
+    \ENDIF
+\ENDFOR
+\end{algorithmic}
+\end{algorithm}
+```
+
+### algorithm2e
+
+```markdown
+\usepackage[ruled,linesnumbered]{algorithm2e}
+
+\begin{algorithm}[H]
+\caption{Caption 算法标题}
+\label{alg:my_label}
+\LinesNumbered
+\KwIn{输入参数}
+\KwOut{输出参数}
+\For{i = 1 : n}{
+    \eIf{a > b}{
+        a += 1;\\
+        b -= 1;
+    }{
+        j++;
+    }
+}
+\end{algorithm}
+```
+
+# LaTeX: Packages
+
+[beamer 的常见设置汇总](http://blog.sina.com.cn/s/blog_6aee843a0101l2vu.html)  
+[LaTeX Beamer数理报告设计精通：主题制作](https://www.liangye.site/2019/10/25/latex-beamer-theme-tutorial/)  
+
+## 论文其他, i.e., Article
+
+公式
+```markdown
+% *** MATH PACKAGES ***
+\usepackage{bm}
+\usepackage{amsmath}
+\usepackage{amssymb} %\mathbf{}
+\usepackage{amsthm}
+\newtheorem{thm}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{defin}{Definition}
+\newtheorem{axiom}{Axiom}
+\newtheorem{prop}{Proposition}
+\newtheorem{corol}{Corollary}
+\newtheorem{remark}{Remark}
+\usepackage{rotating}
+
+% \newtheorem{thm}{Theorem}
+\newenvironment{thmbis}[1]
+  {\renewcommand{\thethm}{\ref{#1}$'$}%
+   \addtocounter{thm}{-1}%
+   \begin{thm}}
+  {\end{thm}}
+
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\minimize}{minimize}
+\DeclareMathOperator*{\maximize}{maximize}
+\newcommand{\defineq}{\overset{\text{def}}{=}} % \hat{=}
+```
+
+算法
+```markdown
+% *** SPECIALIZED LIST PACKAGES ***
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+\usepackage{color} % /xcolor
+\usepackage{enumerate}
+```
+
+列表
+```markdown
+% *** SPECIALIZED LIST PACKAGES ***
+\usepackage{booktabs} %三线表
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+
+% *** ALIGNMENT PACKAGES ***
+\usepackage{array}
+\usepackage{threeparttable}
+\usepackage{multirow}
+```
+
+画图
+```markdown
+% *** GRAPHICS RELATED PACKAGES ***
+\ifCLASSINFOpdf
+  \usepackage[pdftex]{graphicx}
+\else
+  \usepackage[dvips]{graphicx}
+\fi
+
+% *** SUBFIGURE PACKAGES ***
+\ifCLASSOPTIONcompsoc
+  \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+\else
+  \usepackage[caption=false,font=footnotesize]{subfig}
+\fi
+\graphicspath{{imgs/}{newfigs/}}
+
+\usepackage{tikz}
+```
+
+引用
+```markdown
+% *** CITATION PACKAGES ***
+\usepackage{cite}
+
+% *** FLOAT PACKAGES ***
+% *** PDF, URL AND HYPERLINK PACKAGES ***
+\usepackage{url}
+
+\newcommand{\citet}[1]{\citeauthor{#1} \shortcite{#1}}
+\newcommand{\citep}{\cite} 
+\newcommand{\citealp}[1]{\citeauthor{#1} \citeyear{#1}}
+
+\def\etal{\emph{et al.}}
+\def\ie{i.e.,}
+\def\eg{e.g.,}
+```
+
+特殊
+```markdown
+\def\sign{\mathop{\rm{sign}}}
+\newcommand{\entitle}{Title of This Paper}
+\newcommand{\full}{????}
+\newcommand{\abbr}{\emph{????}}
+```
+
+## 报告设置, i.e., Beamer
+
+```markdown
+% 主题颜色
+% \usetheme{default}% Madrid}
+% \usecolortheme{dove}
+
+\usepackage{xeCJK} %支持中文，须用 XeLaTeX 编译
+% \usefonttheme[onlymath]{serif} %数学公式字体
+\usefonttheme{professionalfonts} %%公式里的字体
+
+% 相关编号
+% \setbeamertemplate{theorems}[numbered] %定理编号
+\setbeamertemplate{caption}[numbered] %图表编号
+
+\usepackage[numbers,sort&compress]{natbib} %参考文献
+\usepackage{hyperref} %让文档支持超链接
+```
+
+```markdown
+% 行文颜色
+\usepackage{xcolor}
+\textcolor{red}{Hello}
+% 系统定义好的颜色
+% red/blue/green/black/white/cyan/magenta/yellow
+
+% 定义颜色
+\definecolor{aggiemaroon}{cmyk}{1.0,0.8,0,0}
+\definecolor{blendothers}{rgb}{0.7,0.2,0.2} %[0-1]
+\definecolor{blendremind}{RGB}{0,97,255} %[0,255]
+```
+
+改变列表编号计数器
+```markdown
+\begin{enumerate}
+    \addtocounter{enumi}{3}  % 改变列表标号计数器
+  \item[在这里输入你的符号] test
+\end{enumerate}
+```
+
+## Beamer 本地编译
+
+```markdown
+%\usepackage[UTF8]{ctex}    %中文
+\usepackage{xeCJK}    %中文
+
+\setCJKmainfont{楷体}   %字体
+\setmainfont{Times New Roman}
+
+\usepackage{xcolor}   %颜色
+\usepackage{hyperref}   %书签
+%\usepackage[colorlinks]{hyperref}      %书签目录
+\usepackage[numbers, sort&compress]{natbib} %参考文献
+```
+
+```markdown
+%\usepackage{indentfirst} %添加首行缩进，两个字符
+%\setlength{\parindent}{2em}
+\def\indent{\hspace{2em}}
+
+\usepackage{multimedia} %让文档支持多媒体
+%\usepackage{graphics}  %让文档支持图片
+\usepackage{subfig}
+\usepackage{hyperref} %让文档支持超链接
+\hypersetup{CJKbookmarks=true}
+```
+
+```markdown
+\setbeamertemplate{navigation symbols}{} % 取消导航条
+%\setbeamertemplate{footline}[frame number]{}   %右下角显示页码
+%\setbeamertemplate{footline}{\insertframenumber/\inserttotalframenumber} %左下角
+
+% \logo{\includegraphics[height=0.25\textwidth]{../ustc_logo_fig_new.eps}}
+% \titlegraphic{\includegraphics[scale=0.5]{simtlogo.png}} %仅标题页
+
+\definecolor{beamer@blendedblue}{rgb}{0.2,0.2,0.7} % use structure theme to change
+\definecolor{mycolor}{rgb}{0.75,0.75,1.0}
+\definecolor{mytitle}{rgb}{0.6,0.6,0.9}
+%定制区块环境
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamercolor{block title}{fg=white,bg=blue!40}%beamer@blendedblue}
+\setbeamercolor{block body}{bg=blue!5}%mycolor}
+```
+
+## 改变字体 (固定了主题结构)
+
+```markdown
+%\usetheme{default}
+\usetheme{Madrid}
+\definecolor{aggiemaroon}{cmyk}{1.0,0.8,0,0}
+\usecolortheme[named=aggiemaroon]{structure}
+\useoutertheme{shadow}
+\useinnertheme{rounded}
+\setbeamertemplate{navigation symbols}{} %取消导航条
+\setbeamerfont{structure}{family=\rmfamily,series=\bfseries}
+\usefonttheme{serif}
+```
+
+## 定理环境 (影响标题背景色)
+
+设定结构的前景色
+```markdown
+% uiGradients: Blu
+\definecolor{myblues}{RGB}{0,65,106}
+\definecolor{mywhite}{RGB}{228,229,230}
+\setbeamercolor{structure}{fg=myblues}
+\setbeamercolor{structure}{bg=mywhite}
+```
+使用继承方式来批量改变block标题颜色和block主干颜色，利用“<颜色>!<数字>!<颜色>”来进行混合
+```markdown
+\setbeamercolor{block title}{use=structure,fg=structure.fg,bg=structure.fg!20!bg}
+\setbeamercolor{block title alerted}{use=alerted text,fg=alerted text.fg,bg=alerted text.fg!20!bg}
+\setbeamercolor{block title example}{use=example text,fg=example text.fg,bg=example text.fg!20!bg}
+\setbeamercolor{block body}{parent=normal text,use=block title,bg=block title.bg!50!bg}
+\setbeamercolor{block body alerted}{parent=normal text,use=block title alerted,bg=block title alerted.bg!50!bg}
+\setbeamercolor{block body example}{parent=normal text,use=block title example,bg=block title example.bg!50!bg}
+\setbeamercolor{titlelike}{parent=structure,bg=white!90!red}
+```
+
+
+# LaTeX: Others
+
+## ?
+
+## Refs
+
+[Beamer Theme Gallery](https://deic-web.uab.cat/~iblanes/beamer_gallery/index.html)  
+[在 Beamer 中添加计时器和 Logo](https://amito.me/2019/Adding-Timer-and-Logo-in-Beamer/)  
+[Time clock with XeLaTeX](https://tex.stackexchange.com/questions/219415/time-clock-at-the-footline-of-a-beamer-slide-is-not-adjusted-in-the-middle-if-co/407730#407730)  
+[LaTeX笔记|基本功能（七）](https://zhuanlan.zhihu.com/p/24841513)  
+[beamer模板设计（七）titlepage、logo和目录页](https://zhuanlan.zhihu.com/p/137427360)  
+
 latex algorithm2e, state  
 [Latex之使用algorithm2e包来写算法](https://blog.csdn.net/yq_forever/article/details/89815562)  
 [latex 算法，算法包 algorithm， algorithm2e](https://blog.csdn.net/robert_chen1988/article/details/71512914?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1&utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1)  
 [algorithm2e document](https://download.nus.edu.sg/mirror/ctan/macros/latex/contrib/algorithm2e/doc/algorithm2e.pdf)  
 
-## ?
+beamer 数学公式字体  
+[在 Beamer 中如何使用标准数学字体](http://sealhuang.github.io/beamer-math-font)  
+[Beamer中数学符号字体](https://blog.csdn.net/cclethe/article/details/78866721)  
+[Latex中Beamer修改公式字体以及文本半透明显示技巧](https://blog.csdn.net/weixin_30613433/article/details/97109011)  
 
-# LaTeX: Others
+beamer 定理环境  
+[beamer模板设计（九）beamer中的列表和环境](https://zhuanlan.zhihu.com/p/138021900)  
+beamer 字体颜色  
+[Latex中如何设置字体颜色（三种方式）](https://www.cnblogs.com/tsingke/p/7457236.html)  
+latex beamer 设置字体族  
+[LaTeX制作幻灯片](https://www.jianshu.com/p/e1746a64aa04)  
+
 
 
 # GitHub repos
