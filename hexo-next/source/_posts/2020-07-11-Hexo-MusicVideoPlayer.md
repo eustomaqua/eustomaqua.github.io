@@ -230,6 +230,9 @@ INFO  Files loaded in 7.61 s
 [hexo 插入音乐与视频](http://eternalzttz.com/hexoMV.html)  
 [Hexo使用 hexo-tag-aplayer 播放音乐](https://helloblack2017.github.io/2018/04/22/use-hexo-tag-aplayer/)  
 
+歌曲LRC滚动歌词在线生成制作编辑器软件  
+[歌词LRC在线制作 | 淘歌音乐](https://www.yuanchuangyinyue.com/3027.html)
+
 
 # References
 

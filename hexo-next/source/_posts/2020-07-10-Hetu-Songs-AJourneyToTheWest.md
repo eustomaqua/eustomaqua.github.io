@@ -1,11 +1,11 @@
 ---
-title: 河图 之 西游记 related
+title: 西游记
 date: 2020-08-20 19:52:56
 updated: 2020-08-20 19:52:56
 categories:
-  - Favorite
+  - 似此星辰
 tags:
-  - HeTu
+  - 河图
   - Music
 mathjax: false
 meting: true
@@ -14,6 +14,15 @@ meting: true
 <!--
 date: 2020-07-10 20:57:56
 updated: 2020-07-11 10:45:56
+
+updated: 2021-01-01 0:08:40
+title: 河图 之 西游记 related
+tags:  - HeTu
+categories: - Favorite
+    最爱, Cherish, 心爱
+    凤凰涅槃, Albus Dumbledore, Gellert Grindelwald (vald)
+    微光，荒丘，逆流
+    似此星辰非昨夜，为谁风露立中宵 (黯然销魂/栖凰/九万字)
     -->
 
 
@@ -730,6 +739,7 @@ Romance of Three Kingdoms
 [为内容创作者解决文件分享的难题](https://zhuanlan.zhihu.com/p/41344556)  
 [网盘直链获取工具v1.5](https://link.gimhoy.com/)  
 
+Summary:  
 [歌曲LRC滚动歌词在线生成制作编辑器软件](https://www.yuanchuangyinyue.com/3027.html)  
 
 
