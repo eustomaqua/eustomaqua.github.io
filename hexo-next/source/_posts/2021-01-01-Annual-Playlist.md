@@ -31,7 +31,7 @@ meting: true
         {
             "title": "归程",
             "author": "齐栾",
-            "url": "https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtWGN4Z1IwM3NvXzEtR3hiP2U9b3J4ZVdS.mp3",
+            "url": "https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtWGN4Z1IwM3NvXzEtR3hiP2U9QnlkTlVI.mp3",
             "pic": "/images/2021-01/齐栾-归程.png",
             "lrc": "/music/齐栾-归程.lrc"
         },
@@ -41,6 +41,13 @@ meting: true
             "url": "https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtWGdOdWU2ZWJzcFhvdzB4.mp3",
             "pic": "https://y.gtimg.cn/music/photo_new/T002R300x300M0000001Jmcu2wxNLR_1.jpg?max_age=2592000",
             "lrc": "/music/三无Marblue-栖凰.lrc"
+        },
+        {
+            "title": "黯然销魂",
+            "author": "玄觞",
+            "url": "https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtZ1Bab2lhOW44ckRVdzdvP2U9YmVaa1J2.mp3",
+            "pic": "https://www.djdj5.com/zb_users/upload/2020/04/202004122014282770140.jpg",
+            "lrc": "/music/玄觞-黯然销魂.lrc"
         },
         {
             "title": "茫茫",
@@ -73,7 +80,7 @@ meting: true
         {
             "title": "奋不顾身",
             "author": "檀烧",
-            "url": "https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtZ0xsZGZqU0c3LS15ZVpJP2U9OGZCVHhs.mp3",
+            "url": "https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtZ0xsZGZqU0c3LS15ZVpJP2U9WVpDZ1ZG.mp3",
             "pic": "https://wsingbssdl.kugou.com/58ef07b499454e5e93c32f3b43b949e8.jpg_188x188.jpg",
             "lrc": "/music/檀烧-奋不顾身.lrc"
         },

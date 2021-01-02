@@ -78,7 +78,7 @@ f(x) =
 
 ### algorithmic
 
-```markdown
+```latex
 \usepackage{algorithm}
 \usepackage{algorithmic}
 \renewcommand{\algorithmicrequire}{\textbf{Input:}} %输入
@@ -105,7 +105,7 @@ f(x) =
 
 ### algorithm2e
 
-```markdown
+```latex
 \usepackage[ruled,linesnumbered]{algorithm2e}
 
 \begin{algorithm}[H]
@@ -133,7 +133,7 @@ f(x) =
 ## 论文其他, i.e., Article
 
 公式
-```markdown
+```latex
 % *** MATH PACKAGES ***
 \usepackage{bm}
 \usepackage{amsmath}
@@ -163,7 +163,7 @@ f(x) =
 ```
 
 算法
-```markdown
+```latex
 % *** SPECIALIZED LIST PACKAGES ***
 \usepackage{algorithm}
 \usepackage{algorithmic}
@@ -175,7 +175,7 @@ f(x) =
 ```
 
 列表
-```markdown
+```latex
 % *** SPECIALIZED LIST PACKAGES ***
 \usepackage{booktabs} %三线表
 \newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
@@ -187,7 +187,7 @@ f(x) =
 ```
 
 画图
-```markdown
+```latex
 % *** GRAPHICS RELATED PACKAGES ***
 \ifCLASSINFOpdf
   \usepackage[pdftex]{graphicx}
@@ -207,7 +207,7 @@ f(x) =
 ```
 
 引用
-```markdown
+```latex
 % *** CITATION PACKAGES ***
 \usepackage{cite}
 
@@ -225,7 +225,7 @@ f(x) =
 ```
 
 特殊
-```markdown
+```latex
 \def\sign{\mathop{\rm{sign}}}
 \newcommand{\entitle}{Title of This Paper}
 \newcommand{\full}{????}
@@ -234,14 +234,14 @@ f(x) =
 
 ## 报告设置, i.e., Beamer
 
-```markdown
+```latex
 % 主题颜色
 % \usetheme{default}% Madrid}
 % \usecolortheme{dove}
 
 \usepackage{xeCJK} %支持中文，须用 XeLaTeX 编译
 % \usefonttheme[onlymath]{serif} %数学公式字体
-\usefonttheme{professionalfonts} %%公式里的字体
+\usefonttheme{professionalfonts} %公式里的字体
 
 % 相关编号
 % \setbeamertemplate{theorems}[numbered] %定理编号
@@ -251,7 +251,7 @@ f(x) =
 \usepackage{hyperref} %让文档支持超链接
 ```
 
-```markdown
+```latex
 % 行文颜色
 \usepackage{xcolor}
 \textcolor{red}{Hello}
@@ -265,7 +265,7 @@ f(x) =
 ```
 
 改变列表编号计数器
-```markdown
+```latex
 \begin{enumerate}
     \addtocounter{enumi}{3}  % 改变列表标号计数器
   \item[在这里输入你的符号] test
@@ -274,7 +274,7 @@ f(x) =
 
 ## Beamer 本地编译
 
-```markdown
+```latex
 %\usepackage[UTF8]{ctex}    %中文
 \usepackage{xeCJK}    %中文
 
@@ -287,7 +287,7 @@ f(x) =
 \usepackage[numbers, sort&compress]{natbib} %参考文献
 ```
 
-```markdown
+```latex
 %\usepackage{indentfirst} %添加首行缩进，两个字符
 %\setlength{\parindent}{2em}
 \def\indent{\hspace{2em}}
@@ -299,7 +299,7 @@ f(x) =
 \hypersetup{CJKbookmarks=true}
 ```
 
-```markdown
+```latex
 \setbeamertemplate{navigation symbols}{} % 取消导航条
 %\setbeamertemplate{footline}[frame number]{}   %右下角显示页码
 %\setbeamertemplate{footline}{\insertframenumber/\inserttotalframenumber} %左下角
@@ -318,7 +318,7 @@ f(x) =
 
 ## 改变字体 (固定了主题结构)
 
-```markdown
+```latex
 %\usetheme{default}
 \usetheme{Madrid}
 \definecolor{aggiemaroon}{cmyk}{1.0,0.8,0,0}
@@ -333,7 +333,7 @@ f(x) =
 ## 定理环境 (影响标题背景色)
 
 设定结构的前景色
-```markdown
+```latex
 % uiGradients: Blu
 \definecolor{myblues}{RGB}{0,65,106}
 \definecolor{mywhite}{RGB}{228,229,230}
@@ -341,7 +341,7 @@ f(x) =
 \setbeamercolor{structure}{bg=mywhite}
 ```
 使用继承方式来批量改变block标题颜色和block主干颜色，利用“<颜色>!<数字>!<颜色>”来进行混合
-```markdown
+```latex
 \setbeamercolor{block title}{use=structure,fg=structure.fg,bg=structure.fg!20!bg}
 \setbeamercolor{block title alerted}{use=alerted text,fg=alerted text.fg,bg=alerted text.fg!20!bg}
 \setbeamercolor{block title example}{use=example text,fg=example text.fg,bg=example text.fg!20!bg}
@@ -470,7 +470,6 @@ env:
 
 1. 用 GitHub 账号登入，点击左侧 `ADD REPOS`
 2. 选择仓库。若仓库显示不全，就点击右上角 `SYNC REPOS`
-
 3. `OFF --> ON` ，然后点击 repo 名进入该仓库 
 4. Click 左侧的 `Setting`
 5. `.coveralls.yml`
