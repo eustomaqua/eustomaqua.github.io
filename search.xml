@@ -2578,6 +2578,7 @@ CUDA Version 10.0.130
         <tag>Configure</tag>
         <tag>Linux</tag>
         <tag>NVIDIA TensorRT</tag>
+        <tag>NVIDIA CUDA</tag>
       </tags>
   </entry>
   <entry>
@@ -6837,6 +6838,431 @@ Options of <code>r-c</code>s<table>
       </categories>
       <tags>
         <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>深度学习框架常用命令</title>
+    <url>/2021/2021-01-03-DeepLearning-Commands/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="CUDA"><a href="#CUDA" class="headerlink" title="CUDA"></a>CUDA</h1><p>查看本机是否能使用GPU</p>
+<h2 id="TensorFlow"><a href="#TensorFlow" class="headerlink" title="TensorFlow"></a>TensorFlow</h2><p>tensorflow 1.x</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line">sess = tf.Session(config=tf.ConfigProto(log_device_placement=<span class="literal">True</span>))</span><br><span class="line"><span class="comment"># 查看日志信息若包含gpu信息，就是使用了gpu。</span></span><br></pre></td></tr></table></figure>
+
+<p>tensorflow 2.x</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line">tf.test.is_gpu_available()</span><br><span class="line"><span class="comment"># True if 可用</span></span><br></pre></td></tr></table></figure>
+
+<p>测试时若想禁用 GPU</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">os.environ[<span class="string">"CUDA_VISIBLE_DEVICES"</span>]=<span class="string">"-1"</span>    </span><br><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br></pre></td></tr></table></figure>
+
+<p><strong>Refs:</strong><br><a href="https://blog.csdn.net/sunshine2124ch/article/details/103127551" target="_blank" rel="noopener">Tensorflow中查看gpu是否可用</a><br><a href="https://blog.csdn.net/castle_cc/article/details/78389082" target="_blank" rel="noopener">检测tensorflow是否使用gpu进行计算</a><br><a href="https://blog.csdn.net/renhaofan/article/details/81987728" target="_blank" rel="noopener">查看tensorflow是否支持GPU，以及测试程序</a><br><a href="https://blog.csdn.net/qq_35203425/article/details/92579381" target="_blank" rel="noopener">tensorflow-gpu版禁用GPU</a><br><a href="https://blog.csdn.net/freewebsys/article/details/81277857" target="_blank" rel="noopener">TensorFlow（5）：使用tensorflow-gpu版本测试下学习速度，cpu（3分钟） vs gpu（4秒）</a>  </p>
+<h2 id="PyTorch"><a href="#PyTorch" class="headerlink" title="PyTorch"></a>PyTorch</h2><p>pytorch</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line">torch.cuda.is_available()  <span class="comment">#   # cuda是否可用</span></span><br><span class="line">torch.cuda.device_count()  <span class="comment">#   # 返回gpu数量</span></span><br><span class="line">torch.cuda.get_device_name(<span class="number">0</span>)  <span class="comment"># 返回gpu名字，设备索引默认从0开始</span></span><br><span class="line"><span class="comment"># torch.cuda.get_device_capability()</span></span><br><span class="line">torch.cuda.current_device()  <span class="comment"># # 返回当前设备索引</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Refs:</strong><br><a href="https://blog.csdn.net/nima1994/article/details/83001910" target="_blank" rel="noopener">pytorch中查看gpu信息</a>  </p>
+<p>为什么将数据转移至GPU的方法叫做.cuda而不是.gpu，就像将数据转移至CPU调用的方法是.cpu？这是因为GPU的编程接口采用CUDA，而目前并不是所有的GPU都支持CUDA，只有部分Nvidia的GPU才支持。PyTorch未来可能会支持AMD的GPU，而AMD GPU的编程接口采用OpenCL，因此PyTorch还预留着.cl方法，用于以后支持AMD等的GPU。</p>
+<h2 id="NVIDIA-环境变量-desktop"><a href="#NVIDIA-环境变量-desktop" class="headerlink" title="NVIDIA + 环境变量 desktop"></a>NVIDIA + 环境变量 desktop</h2><p>跑计算量大的代码，通过 nvidia-smi 命令查看gpu的内存使用量。</p>
+<p>Windows 下需在 <code>path</code> 中添加如下路径 (<code>C:\Program Files\NVIDIA Corporation\NVSMI</code>) 才可以直接在 cmd 中使用 <code>nvidia-smi</code>, <code>nvdebugdump --list</code>, <code>nvidia-smi -h</code> 等命令，最后一个命令用来查看更多使用方式。  </p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">λ nvdebugdump --list</span><br><span class="line">Found 1 NVIDIA devices</span><br><span class="line">    Device ID:          0</span><br><span class="line">    Device name:        GeForce RTX 2060 (*PrimaryCard)</span><br><span class="line">    GPU internal ID:    GPU-????????-????-????-????-????????????</span><br><span class="line">λ nvidia-smi</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>Fan</code>：显示风扇转速，数值在0到100%之间，是计算机的期望转速，如果计算机不是通过风扇冷却或者风扇坏了，显示出来就是N/A；</li>
+<li><code>Temp</code>：显卡内部的温度，单位是摄氏度；</li>
+<li><code>Perf</code>：表征性能状态，从P0到P12，P0表示最大性能，P12表示状态最小性能；</li>
+<li><code>Pwr</code>：能耗表示；</li>
+<li><code>Bus-Id</code>：涉及GPU总线的相关信息；</li>
+<li><code>Disp.A</code>：是Display Active的意思，表示GPU的显示是否初始化；</li>
+<li><code>Memory Usage</code>：显存的使用率；</li>
+<li><code>Volatile GPU-Util</code>：浮动的GPU利用率；</li>
+<li><code>Compute M</code>：计算模式；</li>
+</ul>
+<p><strong>Refs:</strong><br><a href="https://blog.csdn.net/nima1994/article/details/79698102" target="_blank" rel="noopener">windows使用nvidia-smi查看gpu信息</a>  </p>
+<p>在实际中，我添加的环境变量分别如下：</p>
+<ul>
+<li>系统变量 Path<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\bin</span><br><span class="line">C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\libnvvp</span><br><span class="line">C:\Program Files (x86)\NVIDIA\Corporation\PhysX\Common</span><br><span class="line">C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR</span><br><span class="line">C:\Program Files\NVIDIA Corporation\Nsight Compute 2019.4.0\</span><br><span class="line"></span><br><span class="line">C:\Program Files\Java\jdk-15.0.1\bin</span><br><span class="line">C:\Program Files\Common Files\Oracle\Java\javapath</span><br><span class="line">C:\Program Files (x86)\Common Files\Oracle\Java\javapath</span><br><span class="line">C:\Program Files\Java\jre1.8.0_271\bin</span><br><span class="line">C:\Program Files\Java\jre1.8.0_271\jre\bin</span><br><span class="line"></span><br><span class="line">C:\Windows\System32\OpenSSH\</span><br><span class="line">C:\Program Files (x86)\Bitvise SSH Client</span><br><span class="line">C:\Program Files\Git\cmd</span><br></pre></td></tr></table></figure></li>
+<li>用户变量 Path<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">C:\Users\Lenovo\AppData\Local\Anaconda3</span><br><span class="line">C:\Users\Lenovo\AppData\Local\Anaconda3\Library\mingw-w64\bin</span><br><span class="line">C:\Users\Lenovo\AppData\Local\Anaconda3\Library\usr\bin</span><br><span class="line">C:\Users\Lenovo\AppData\Local\Anaconda3\Library\bin</span><br><span class="line">C:\Users\Lenovo\AppData\Local\Anaconda3\Scripts</span><br><span class="line"></span><br><span class="line"><span class="meta">%</span><span class="bash">USERPROFILE%\AppData\Local\Microsoft\WindowsApps</span></span><br><span class="line">C:\Users\Lenovo\AppData\Local\cmder</span><br><span class="line"><span class="meta">%</span><span class="bash">PyCharm Community Edition%</span></span><br><span class="line">C:\Users\Lenovo\AppData\Local\Programs\Microsoft VS Code\bin</span><br><span class="line"></span><br><span class="line">D:\Software\mingw64\bin</span><br><span class="line">D:\Software\cmake-3.19.1\bin</span><br><span class="line">D:\Software\opencv\build\x64\vc15\bin</span><br><span class="line">D:\Software\opencv\build_x64_mingw\bin</span><br><span class="line">D:\Software\opencv\build_x64_mingw\install\x64\mingw\bin</span><br><span class="line">D:\Software\opencv\build_x64_mingw\install\include</span><br></pre></td></tr></table></figure></li>
+<li>系统变量 其他<ul>
+<li><code>CLASSPATH</code>: <code>.;%JAVA_HOME%\bin;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar</code></li>
+<li><code>JAVA_HOME</code>: <code>C:\Program Files\Java\jre1.8.0_271</code></li>
+<li><code>CUDA_PATH</code>: <code>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1</code></li>
+<li><code>CUDA_PATH_V10_1</code>: <code>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1</code></li>
+<li><code>DriverData</code>: <code>C:\Windows\System32\Drivers\DriverData</code></li>
+<li><code>NVCUDASAMPLES_ROOT</code>: <code>C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.1</code></li>
+<li><code>NVCUDASAMPLES10_1_ROOT</code>: <code>C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.1</code></li>
+<li><code>NVTOOLSEXT_PATH</code>: <code>C:\Program Files\NVIDIA Corporation\NvToolsExt\</code></li>
+</ul>
+</li>
+<li>用户变量 其他<ul>
+<li><code>PyCharm Community Edition</code>: <code>C:\Program Files\JetBrains\PyCharm Community Edition 2020.3\bin;</code></li>
+<li><code>TEMP</code>: <code>C:\Users\Lenovo\AppData\Local\Temp</code></li>
+<li><code>TMP</code>: <code>C:\Users\Lenovo\AppData\Local\Temp</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="查看CUDA版本"><a href="#查看CUDA版本" class="headerlink" title="查看CUDA版本"></a>查看CUDA版本</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">λ nvcc --version</span><br><span class="line">λ nvcc -V</span><br><span class="line"></span><br><span class="line">nvcc: NVIDIA (R) Cuda compiler driver</span><br><span class="line">Copyright (c) 2005-2019 NVIDIA Corporation</span><br><span class="line">Built on Sun_Jul_28_19:12:52_Pacific_Daylight_Time_2019</span><br><span class="line">Cuda compilation tools, release 10.1, V10.1.243</span><br></pre></td></tr></table></figure>
+
+<p><strong>Refs:</strong><br><a href="https://blog.csdn.net/huplion/article/details/80919579" target="_blank" rel="noopener">Windows查看CUDA版本</a>  </p>
+<h2 id="Match-TF-with-CUDA"><a href="#Match-TF-with-CUDA" class="headerlink" title="Match TF with CUDA"></a>Match TF with CUDA</h2><p><a href="https://www.tensorflow.org/install/source_windows?hl=zh_cn#tensorflow_2x" target="_blank" rel="noopener">Tensorflow 从源代码构建</a><br>经过测试的构建配置 (第2-4列中的空白说明与同列上一行相同)  </p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Python</th>
+<th>Compiler</th>
+<th>构建工具</th>
+<th>cuDNN</th>
+<th>CUDA</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>TFGpu 1.0.0</td>
+<td>3.5</td>
+<td>MSVC 2015 update 3</td>
+<td>Cmake v3.6.3</td>
+<td>5.1</td>
+<td>8</td>
+</tr>
+<tr>
+<td>TFGpu 1.1.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td>5.1</td>
+<td>8</td>
+</tr>
+<tr>
+<td>TFGpu 1.2.0</td>
+<td>3.5-3.6</td>
+<td></td>
+<td></td>
+<td>5.1</td>
+<td>8</td>
+</tr>
+<tr>
+<td>TFGpu 1.3.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td>6</td>
+<td>8</td>
+</tr>
+<tr>
+<td>TFGpu 1.4.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td>6</td>
+<td>8</td>
+</tr>
+<tr>
+<td>TFGpu 1.5.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td>7</td>
+<td>9</td>
+</tr>
+<tr>
+<td>TFGpu 1.6.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td>7</td>
+<td>9</td>
+</tr>
+<tr>
+<td>TFGpu 1.7.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td>7</td>
+<td>9</td>
+</tr>
+<tr>
+<td>TFGpu 1.8.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td>7</td>
+<td>9</td>
+</tr>
+<tr>
+<td>TFGpu 1.9.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td>7</td>
+<td>9</td>
+</tr>
+<tr>
+<td>TFGpu 1.10.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td>7</td>
+<td>9</td>
+</tr>
+<tr>
+<td>TFGpu 1.11.0</td>
+<td></td>
+<td></td>
+<td>Bazel 0.15.0</td>
+<td>7</td>
+<td>9</td>
+</tr>
+<tr>
+<td>TFGpu 1.12.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td>7</td>
+<td>9</td>
+</tr>
+<tr>
+<td>TFGpu 1.13.0</td>
+<td>3.5-3.7</td>
+<td></td>
+<td>Bazel 0.19.0-0.21.0</td>
+<td>7.4</td>
+<td>10</td>
+</tr>
+<tr>
+<td>TFGpu 1.14.0</td>
+<td></td>
+<td>MSVC 2017</td>
+<td>Bazel 0.24.1-0.25.2</td>
+<td>7.4</td>
+<td>10</td>
+</tr>
+<tr>
+<td>TFGpu 1.15.0</td>
+<td></td>
+<td></td>
+<td>Bazel 0.26.1</td>
+<td>7.4</td>
+<td>10</td>
+</tr>
+<tr>
+<td>TFGpu 2.0.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td>7.4</td>
+<td>10</td>
+</tr>
+<tr>
+<td>TFGpu 2.1.0</td>
+<td></td>
+<td>MSVC 2019</td>
+<td>Bazel 0.27.1-0.29.1</td>
+<td>7.4</td>
+<td>10.1</td>
+</tr>
+<tr>
+<td>TFGpu 2.2.0</td>
+<td>3.5-3.8</td>
+<td></td>
+<td>Bazel 2.0.0</td>
+<td>7.4</td>
+<td>10.1</td>
+</tr>
+<tr>
+<td>TFGpu 2.3.0</td>
+<td></td>
+<td></td>
+<td>Bazel 3.1.0</td>
+<td>7.4</td>
+<td>10.1</td>
+</tr>
+</tbody></table>
+<h2 id="Windows-10-下卸载重装"><a href="#Windows-10-下卸载重装" class="headerlink" title="Windows 10 下卸载重装"></a>Windows 10 下卸载重装</h2><h3 id="查看-CUDA-cuDNN-的版本"><a href="#查看-CUDA-cuDNN-的版本" class="headerlink" title="查看 CUDA+cuDNN 的版本"></a>查看 CUDA+cuDNN 的版本</h3><p><strong>Windows 10</strong>  </p>
+<ul>
+<li>进入 CUDA 安装目录, 即 <code>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA</code><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nvcc --version</span><br><span class="line"><span class="meta">#</span><span class="bash"> nvcc -V</span></span><br></pre></td></tr></table></figure></li>
+<li>查看 cuDNN, 进入 <code>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\include\cudnn.h</code>, ctrl+F 检索 CUDNN_MAJOR </li>
+</ul>
+<p><strong>Ubuntu</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ~/Software/cuda-10.?</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> cat version.txt</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> cat include/cudnn.h | grep CUDNN_MAJOR -A2</span></span><br></pre></td></tr></table></figure>
+
+<p>或使用 <strong>PyTorch</strong> 查看</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">import torch</span><br><span class="line">print(torch.__version__)</span><br><span class="line">print(torch.version.cuda)</span><br><span class="line">print(torch.backends.cudnn.version())</span><br></pre></td></tr></table></figure>
+
+<p>Comparison</p>
+<table>
+<thead>
+<tr>
+<th>Operation System</th>
+<th>CUDA</th>
+<th>cuDNN</th>
+<th>TensorFlow-GPU</th>
+<th>Dont work</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Windows 10 laptop</td>
+<td>10.0.130</td>
+<td>7.4.1</td>
+<td>tf 2.0.0</td>
+<td>tf 2.1.0</td>
+</tr>
+<tr>
+<td>Windows10 laptop*</td>
+<td>10.1.243</td>
+<td>7.6.5</td>
+<td>tf 2.0.0, 2.1.0</td>
+<td></td>
+</tr>
+<tr>
+<td>Windows 10 desktop</td>
+<td>10.1.243</td>
+<td>7.6.5</td>
+<td>tf 2.1.0</td>
+<td></td>
+</tr>
+<tr>
+<td>Ubuntu 16.04/18.04</td>
+<td>10.0.130</td>
+<td>7.6.4</td>
+<td>tf 2.1.0, 1.14.0</td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li>tensorflow-gpu 2.0.0<ul>
+<li>Python 3.6.5 (Anaconda3 5.2.0 64-bit)</li>
+<li>CUDA 10.0 + cuDNN 7.4.1</li>
+<li>tensorboard 2.0.2</li>
+<li>tensorflow-estimator 2.0.1</li>
+<li>tensorflow-gpu 2.0.0</li>
+<li>UPDATE: after cuda 10.1, cudnn 7.6.5<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; import tensorflow as tf</span></span><br><span class="line">C:\Users\Lenovo\Anaconda3\lib\site-packages\numpy\_distributor_init.py:32: UserWarning: loaded more than 1 DLL from .libs:</span><br><span class="line">C:\Users\Lenovo\Anaconda3\lib\site-packages\numpy\.libs\libopenblas.NOIJJG62EMASZI6NYURL6JBKM4EVBGM7.gfortran-win_amd64.dll</span><br><span class="line">C:\Users\Lenovo\Anaconda3\lib\site-packages\numpy\.libs\libopenblas.PYQHXLVVQ7VESDPUVUADXEVJOBGHJPAY.gfortran-win_amd64.dll</span><br><span class="line">stacklevel=1)</span><br><span class="line">2021-01-05 13:24:03.251532: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'cudart64_100.dll'; dlerror: cudart64_100.dll not found</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; tf.__version__</span></span><br><span class="line">'2.0.0'</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; ^Z</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>tensorflow-gpu 2.1.0<ul>
+<li>Python 3.7.0 (Anaconda3 5.3.1 64-bit)</li>
+<li>CUDA 10.1 + cuDNN 7.6.5</li>
+<li>tensorboard 2.1.1</li>
+<li>tensorflow-gpu 2.1.0</li>
+<li>tensorflow-gpu-estimator 2.1.0<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; import tensorflow as tf</span></span><br><span class="line">2021-01-05 16:28:30.524528: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cudart64_101.dll</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; tf.test.is_gpu_available()</span></span><br><span class="line">WARNING:tensorflow:From &lt;stdin&gt;:1: is_gpu_available (from tensorflow.python.framework.test_util) is deprecated and will be removed in a future version.</span><br><span class="line">Instructions for updating:</span><br><span class="line">Use `tf.config.list_physical_devices('GPU')` instead.</span><br><span class="line">....</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<p>注意 TF2.1 在 Win10+ CUDA 10.1+cuDNN 7.6.5 下又出幺蛾子了，</p>
+<ul>
+<li>安装后会出现一个 <code>ImportError: DLL load failed: 找不到指定的模块</code> 的报错，这是因为没有安装 VS2019 的两个组件，不用安装整个 VS2019 community ，只要安装两个就行，即<ul>
+<li>Microsoft Visual C++ 2015-2019 Redistributable (x64)</li>
+<li>Microsoft Visual C++ 2015-2019 Redistributable (x64)</li>
+</ul>
+</li>
+<li>解决方法：在 <a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads" target="_blank" rel="noopener">官网</a> 下载 <code>Visual Studio 2015, 2017 and 2019</code>，即<ul>
+<li>x86: <code>vc_redist.x86.exe</code></li>
+<li>x64: <code>vc_redist.x64.exe</code></li>
+</ul>
+</li>
+</ul>
+<p>第一次测试 TF2.1 是否能用 GPU 时，会卡在 Add to gpu 类似的一个语句处很长时间。我查阅资料据说这是第一次执行的正常情况，耐心等待即可。<br>我曾试过用 pytorch 检查，但是 pip install pytorch 1.7<code>.{1?0}</code> 之后发现 <code>torch.cuda.is_available()</code> 结果是 False，尝试安装 1.6.0 一直因网络问题报错，所以最后使用了 conda 来安装 1.4.0 ，安装语句为 </p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">λ conda install pytorch==1.4.0 torchvision==0.5.0 cudatoolkit=10.1 -c pytorch</span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="comment"># conda update &lt;package-name&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>安装过程中尝试了 TF2.1 的测试，成功，随后测试 torch，结果为 True。</p>
+<h3 id="CUDA-cuDNN-卸载重装"><a href="#CUDA-cuDNN-卸载重装" class="headerlink" title="CUDA, cuDNN 卸载重装"></a>CUDA, cuDNN 卸载重装</h3><p>cuDNN本来就只是将文件拷贝进CUDA的安装目录，故删除即可（卸载CUDA后直接删除整个文件夹也可以）<br>CUDA的卸载：控制面板-卸载程序（不要用360等杀毒软件，找不到对应程序的），按照安装时间排序，最上面这几个带版本号的，就是刚才安装的CUDA了，挨个卸载即可<br><img src="https://img-blog.csdnimg.cn/20190407161507623.png" width="80%"><br><img src="/images/2021-01/0105_CUDA10.0_reinstall.png" width="80%"></p>
+<p>CUDA 10.0 我好像是默认选项装的全部。<br>所以刚才卸载时把 2020/1/18 安装的所有 NVIDIA 相关全部删了。<br>除了这两个 <code>NVIDIA 图形驱动程序</code> 和 <code>NVIDIA PhysX 系统软件</code> 之外，其他都删掉，如图所示<br><img src="https://img-blog.csdnimg.cn/20200307194357123.png" width="80%"><br>之后可以清理下注册表，保险起见可以重启，但好像不重启也挺好？</p>
+<p><strong>Important!</strong><br><a href="https://blog.csdn.net/HollrayChan/article/details/96310636" target="_blank" rel="noopener">Windows版本CUDA、CUDNN与英伟达驱动安装教程</a><br><a href="https://blog.csdn.net/XunCiy/article/details/89070315" target="_blank" rel="noopener">Win10中CUDA、cuDNN的安装与卸载</a>  </p>
+<p><strong>0. Preparation</strong></p>
+<ul>
+<li>(1) 检查 NVIDIA 显卡驱动<br>检查显卡驱动是否安装及其版本，避免与 CUDA 不兼容而安装失败。<ul>
+<li>(1a) 在 NVIDIA 官网下载显卡驱动并安装</li>
+<li>(1b) 在桌面点击鼠标右键，打开 NVIDIA 控制面板，界面如下<img src="/images/2021-01/0105_NVIDIA_control.png" width="80%">
+这个代表电脑显卡能支持的 cuda 最大版本</li>
+</ul>
+</li>
+<li>(2) 下载 CUDA 和 cuDNN<br>下载相应的 CUDA (包含的 patch 补丁最好全部都下载), 以及对应的 cuDNN (cuDNN 是 CUDA 的扩展加速库，说白了还是补丁), cuDNN 需要注册 NVIDIA 账号。<br>CUDA： <a href="https://developer.nvidia.com/cuda-toolkit-archive" target="_blank" rel="noopener">https://developer.nvidia.com/cuda-toolkit-archive</a><br>cudnn：<a href="https://developer.nvidia.com/rdp/cudnn-download" target="_blank" rel="noopener">https://developer.nvidia.com/rdp/cudnn-download</a><br>安装步骤<ul>
+<li>(2a) 先安装 CUDA，然后按照顺序安装补丁，期间按照提示重启电脑</li>
+<li>(2b) 安装完之后打开 cuDNN，把其中的文件复制到如下文件夹，使得 CUDA 可以调用到 cuDNN 加速库，路径如下 (尽量按照默认，否则文件一乱之后难以管理)<br><code>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\bin</code><br><code>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\include</code><br><code>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\lib\x64</code></li>
+<li>(2c) 将 <code>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\bin</code>, 即安装后的 bin 路径添加到环境变量，输入 <code>nvcc -V</code> 检测安装情况，成功后会提示版本</li>
+</ul>
+</li>
+</ul>
+<p><strong>1. 安装 CUDA</strong></p>
+<ul>
+<li>(4) cuda 安装选项不要选默认的“精简”，因为这是所有的全家桶。<br>主要是因为里面有一个东西的安装会一直导致安装失败。<img src="https://img-blog.csdnimg.cn/2019040715251354.png" width="60%">
+特别是这个 Visual Studio Integration 千万不能选！
+<img src="https://img-blog.csdnimg.cn/2019040715270168.png" width="60%">
+选择以下的安装就够了
+<img src="https://img-blog.csdnimg.cn/20190407152642126.png" width="60%">
+安装到 C 盘即可，方便以后的路径等
+<img src="https://img-blog.csdnimg.cn/20190407152738412.png" width="60%"></li>
+<li>(5) 安装成功<img src="https://img-blog.csdnimg.cn/20190407152806986.png" width="60%">
+<img src="https://img-blog.csdnimg.cn/2019040715282075.png" width="60%"></li>
+<li>Launch Samples: <code>C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.1</code><br>Launch Documents: <code>file:///C:/Program%20Files/NVIDIA%20GPU%20Computing%20Toolkit/CUDA/v10.1/doc/html/index.html</code></li>
+<li>(6) 验证安装成功<ul>
+<li>(6a) 环境变量应该已经自动加载好了<br>即系统变量中的 <code>CUDA_PATH</code>, <code>CUDA_PATH_v10_1</code></li>
+<li>(6b) cmd 里查看版本信息，<code>nvcc -V</code>, 得到 <code>release 10.1, V10.1.105</code><br>使用 CUDA 10.1 Update 2 会得到 <code>Cuda compilation tools, release 10.1, V10.1.243</code></li>
+<li>(6c) 进入到路径下后查看GPU运行时的监测界面<br>此时提示 <code>&#39;nvidia-smi&#39; 不是内部或外部命令，也不是可运行的程序或批处理文件。</code><br>说明需要修改环境变量，见上，修改系统环境变量 Path 后可能需要重启才能生效</li>
+</ul>
+</li>
+</ul>
+<p><strong>2. 安装 cuDNN</strong></p>
+<p>cuDNN 称不上安装，只需要将下载下来的压缩包解压后，将对应文件夹的文件放到 CUDA 安装路径下的对应文件夹里即可</p>
+<p>系统环境变量</p>
+<ul>
+<li>删掉 <code>CUDA_BIN_PATH</code>: <code>%CUDA_PATH%\bin</code></li>
+<li>删掉 <code>CUDA_LIB_PATH</code>: <code>%CUDA_PATH%\lib\x64</code></li>
+<li>发现/保留 <code>CUDA_PATH</code>: <code>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1</code></li>
+<li>发现/保留 <code>CUDA_PATH</code>: <code>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1</code></li>
+<li>发现/保留 <code>DriverData</code>: <code>C:\Windows\System32\Drivers\DriverData</code></li>
+<li>删除 <code>CUDA_SDK_BIN_PATH</code>: <code>%CUDA_SDK_PATH%\bin\win64</code></li>
+<li>删除 <code>CUDA_SDK_LIB_PATH</code>: <code>%CUDA_SDK_PATH%\common\lib\x64</code></li>
+<li>删除 <code>CUDA_SDK_PATH</code>: <code>C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0</code></li>
+<li>发现/保留 <code>NUMBER_OF_PROCESSORS</code>: <code>4</code> // <code>20</code> on desktop</li>
+<li>发现/保留 <code>NVCUDASAMPLES_ROOT</code>: <code>C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.1</code></li>
+<li>发现/保留 <code>NVCUDASAMPLES10_1_ROOT</code>: <code>C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.1</code></li>
+<li>仅台式机 <code>NVTOOLSEXT_PATH</code>: <code>C:\Program Files\NVIDIA Corporation\NvToolsExt\</code><br>系统环境变量 Path</li>
+<li>发现/保留 <code>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\bin</code></li>
+<li>发现/保留 <code>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\libnvvp</code></li>
+<li>删除 <code>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\lib\x64</code></li>
+<li>删除 <code>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\common\lib\x64</code></li>
+<li>发现/保留 <code>C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common</code></li>
+<li>笔记本增加 <code>C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR</code></li>
+<li>发现/保留 <code>C:\Program Files\NVIDIA Corporation\Nsight Compute 2019.4.0\</code></li>
+</ul>
+<p>发现还是没有解决，于是在系统变量 Path 中</p>
+<ul>
+<li>增加 <code>C:\Program Files\NVIDIA Corporation\NVSMI</code> </li>
+<li>重启系统后生效</li>
+</ul>
+<p>找到 CUDA 的安装路径，即 <code>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1</code><br>cuDNN 解压后是一个文件夹，即 <code>cuda</code>，把里面的三个文件夹和一个文件分别移动到对应位置即可</p>
+<h3 id="ImageNet-2012"><a href="#ImageNet-2012" class="headerlink" title="ImageNet 2012"></a>ImageNet 2012</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> wget &lt;imagenet-url&gt;</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> axel -n 10 &lt;imagenet-url&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>ImageNet 2010</p>
+<ul>
+<li>Connection 7 finished<br>Downloaded 123.9 Gigabyte in 35:37:10 hour(s). (1013.31 KB/s)  </li>
+<li>Connection 0 finished<br>Downloaded 5.0 Gigabyte in 7:08:54 hour(s). (204.80 KB/s)  </li>
+<li>Connection 8 finished<br>Downloaded 15.3 Gigabyte in 9:12:42 hour(s). (483.26 KB/s)  </li>
+</ul>
+<p>ImageNet 2012</p>
+<h3 id="Search-Refs"><a href="#Search-Refs" class="headerlink" title="Search Refs"></a>Search Refs</h3><p><a href="https://blog.csdn.net/XunCiy/article/details/89070315" target="_blank" rel="noopener">Win10中CUDA、cuDNN的安装与卸载</a><br>cuda win 卸载后重启<br><a href="https://blog.csdn.net/BigData_Mining/article/details/104720481" target="_blank" rel="noopener">Win10卸载原有CUDA+安装新CUDA+cudnn</a><br><a href="https://www.geek-share.com/detail/2775909001.html" target="_blank" rel="noopener">win10 Nvidia CUDA 安装与再安装</a><br>win适用 cuda版本<br><a href="https://www.daimajiaoliu.com/daima/479568ec7900400" target="_blank" rel="noopener">Windows系统下安装多个版本cuda、cudnn，以及切换使用</a>  </p>
+<p>cuda 补丁 安装 win<br><a href="https://blog.csdn.net/HollrayChan/article/details/96310636" target="_blank" rel="noopener">Windows版本CUDA、CUDNN与英伟达驱动安装教程</a>  </p>
+<p>windows 查看 cuda cudnn 版本<br><a href="https://blog.csdn.net/m511655654/article/details/88419965" target="_blank" rel="noopener">查看cuda和cudnn版本win&amp;linux</a><br><a href="https://www.cnblogs.com/wuliytTaotao/p/11453265.html" target="_blank" rel="noopener">Linux 和 Windows 查看 CUDA 和 cuDNN 版本</a><br><a href="https://blog.csdn.net/wangpan007/article/details/106788268" target="_blank" rel="noopener">Windows 系统查看 CUDA 和 cuDNN 版本</a>  </p>
+<p>nvidia-smi 不是内部或外部命令<br><a href="https://blog.csdn.net/qq_41185868/article/details/108302470" target="_blank" rel="noopener">成功解决 nvidia-smi 不是内部或外部命令 也不是可运行的程序 或批处理文件</a><br><a href="https://blog.csdn.net/qq_40212975/article/details/89963016" target="_blank" rel="noopener">windows下直接输入nvidia-smi显示不是内部或外部命令也不是可运行的程序</a>  </p>
+<p>tensorflow 2.1, win, ImportError: DLL load failed: 找不到指定的模块。<br><a href="https://www.jianshu.com/p/9453e3aee05a" target="_blank" rel="noopener">Win10 安装 TensorFlow 2.1 出现 ImportError: DLL load failed 问题的解决</a><br><a href="https://github.com/tensorflow/tensorflow/issues/35749" target="_blank" rel="noopener">TensorFlow 2.1: ImportError: DLL load failed: The specified module could not be found.</a><br><a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads" target="_blank" rel="noopener">The latest supported Visual C++ downloads</a><br><a href="https://www.pianshen.com/article/37381440114/" target="_blank" rel="noopener">安装TensorFlow后ImportError: DLL load failed: 找不到指定的模块。</a>  </p>
+<p>Adding visible gpu devices: 0<br>[tensorflow-gpu运行测试代码，卡在 I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu](<a href="https://blog.csdn.net/Msjiangmei/article/details/90695696" target="_blank" rel="noopener">https://blog.csdn.net/Msjiangmei/article/details/90695696</a>)<br><a href="https://github.com/tensorflow/tensorflow/issues/18652" target="_blank" rel="noopener">Bug: tensorflow-gpu takes long time before beginning to compute</a>  </p>
+<h1 id="PyPI-安装包"><a href="#PyPI-安装包" class="headerlink" title="PyPI 安装包"></a>PyPI 安装包</h1><h2 id="切换conda源"><a href="#切换conda源" class="headerlink" title="切换conda源"></a>切换conda源</h2><p>切换 pip 源：<br>如果遇到网络问题，可以使用清华大学的镜像：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 设为默认</span></span><br><span class="line">pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line"><span class="meta">#</span><span class="bash"> 临时设置</span></span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br></pre></td></tr></table></figure>
+
+<p><strong>Refs:</strong><br><a href="https://mirrors.ustc.edu.cn/help/pypi.html" target="_blank" rel="noopener">PyPI 镜像源使用帮助</a><br><a href="https://mirrors.tuna.tsinghua.edu.cn/help/pypi/" target="_blank" rel="noopener">pypi 镜像使用帮助</a>  </p>
+<h2 id="pip下载超时"><a href="#pip下载超时" class="headerlink" title="pip下载超时"></a>pip下载超时</h2><p>报错信息为</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ReadTimeoutError: HTTPSConnectionPool(host='pypi.tuna.tsinghua.edu.cn', port=443): Read timed out.</span><br></pre></td></tr></table></figure>
+
+<p>解决之一：<br>手动换源，注意后面要有 <code>/simple/</code> 目录</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install numpy==1.15.1 -i https://pypi.tuna.tsinghua.edu.cn/simple/</span><br></pre></td></tr></table></figure>
+
+<p><strong>Refs:</strong><br><a href="https://www.jianshu.com/p/8e042b7e91b6" target="_blank" rel="noopener">解决pip超时的问题</a><br><a href="https://www.jianshu.com/p/02b053b8143a" target="_blank" rel="noopener">anaconda清华源可以暂弃了</a>  </p>
+<h1 id="TensorFlow-1"><a href="#TensorFlow-1" class="headerlink" title="TensorFlow"></a>TensorFlow</h1><h1 id="PyTorch-1"><a href="#PyTorch-1" class="headerlink" title="PyTorch"></a>PyTorch</h1><h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1>]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>TensorFlow</tag>
+        <tag>Notes</tag>
+        <tag>PyTorch</tag>
+        <tag>NVIDIA CUDA</tag>
       </tags>
   </entry>
 </search>
