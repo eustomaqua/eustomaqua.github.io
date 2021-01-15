@@ -3,7 +3,7 @@ title: Logging in Python (日志处理)
 date: 2018-09-18 16:26:21
 updated: 2018-09-18 16:26:21
 categories:
-  - Programming
+  - Coding
 tags:
   - Commands
   - Python
@@ -11,6 +11,10 @@ tags:
 ---
 
 [comment]: <> (title: Python 之日志处理 —— Logging;  tags: Python)
+<!--
+2021/1/15 14:47pm Fri
+Category: Programming
+-->
 
 
 

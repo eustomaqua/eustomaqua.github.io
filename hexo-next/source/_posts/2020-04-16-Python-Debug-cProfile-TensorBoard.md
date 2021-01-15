@@ -3,7 +3,7 @@ title: Debug Tips - cProfile in Python, TensorBoard
 date: 2020-04-16 05:08:51
 updated: 
 categories:
-  - Programming
+  - Coding
 tags:
   - Debug
   - Python
@@ -13,6 +13,9 @@ mathjax: true
 
 <!--
 date: 2020-04-16 05:08:51
+
+2021/1/15 14:49pm Fri
+Category: Programming
 -->
 
 

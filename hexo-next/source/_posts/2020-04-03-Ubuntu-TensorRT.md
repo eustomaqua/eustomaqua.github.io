@@ -7,11 +7,16 @@ categories:
 tags: 
   - Configure
   - Linux
-  - NVIDIA TensorRT
+  - NVIDIA
 ---
 
 <!--
 Created: 2020-04-03 02:31:04
+
+2021/1/15 14:43pm Fri
+Tag:
+  - NVIDIA TensorRT
+  - NVIDIA CUDA
 -->
 
 

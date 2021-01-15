@@ -80,7 +80,7 @@ meting: true
         {
             "title": "奋不顾身",
             "author": "檀烧",
-            "url": "https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtZ0xsZGZqU0c3LS15ZVpJP2U9WVpDZ1ZG.mp3",
+            "url": "https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtZ0xsZGZqU0c3LS15ZVpJP2U9Y2JSN1hV.mp3",
             "pic": "https://wsingbssdl.kugou.com/58ef07b499454e5e93c32f3b43b949e8.jpg_188x188.jpg",
             "lrc": "/music/檀烧-奋不顾身.lrc"
         },
