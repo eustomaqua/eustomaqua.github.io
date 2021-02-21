@@ -3,7 +3,7 @@ title: 好用的科研小工具 (个人喜好)
 date: 2021-01-21 20:01:28
 updated: 2021-01-21 20:01:28
 categories:
-  - Productivity
+  - Efficiency
 tags:
   - Kindle
 mathjax: false
@@ -13,6 +13,8 @@ mathjax: false
 极简之梦中情“屋”
 tags: Life,
 tags: iOS, Windows
+
+2021/1/31 17:04pm Sun, Productivity
 -->
 
 
@@ -20,7 +22,7 @@ tags: iOS, Windows
 
 不用讲了吧，磕盐民工码文必备利器。本地机用的是 texlive + texstudio, 其中 texstudio 可以配置语法自动检查，提示高亮。以前配置过，当时没记录。不过我现在都转到 overleaf 然后云端备份了。  
 
-Overleaf 里我建了几个不同的文件夹，感觉它的文件夹相当于是标签，一个项目可以同时属于两个标签。比如说为了方便分类，可以用 In Progress / Under Review / Reject & Resubmit / Prepare A Major Revision / Accepted 等来区分。Overleaf 文件夹的颜色是默认生成的，无法自定义改变，觉得颜色不满意只能删掉重新创建了，碰运气看能不能碰出个喜欢的。
+Overleaf 里我建了几个不同的文件夹，感觉它的文件夹相当于是标签，一个项目可以同时属于两个标签。比如说为了方便分类，可以用 In Progress / Under Review / Reject & Resubmit / Prepare A Major Revision / Accepted 等来区分。Overleaf 文件夹的颜色是默认生成的，无法自定义改变，觉得颜色不满意只能删掉重新创建了，碰运气看能不能碰出个喜欢的。此外 overleaf 时不时就会来个掉线也是有点烦
 
 参考文献用 .bib ，整理时推荐使用 JabRef 3.8.2, 表用最新版 5.2, 不好使。安装后设置：
 - Perferences

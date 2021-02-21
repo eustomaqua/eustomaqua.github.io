@@ -441,6 +441,415 @@ Adding visible gpu devices: 0
 [Bug: tensorflow-gpu takes long time before beginning to compute](https://github.com/tensorflow/tensorflow/issues/18652)  
 
 
+## Ubuntu 安装多版本 CUDA
+
+### 准备
+
+Ubuntu 查看版本信息 [ref](ubuntu如何查看版本信息？)
+```shell
+$ cat /proc/version
+$ uname -a
+$ lsb_release -a
+```
+
+1. proc 目录下记录的当前系统运行的各种数据，包括 gcc 版本
+2. 显示 linux 的内核版本和系统是多少位的，"X86\_64" 代表系统是 64 位
+3. 显示信息
+  - Distributor ID: 类别是 Ubuntu
+  - Description: 16年3月发布的稳定版本，LTS代表 Long Term Support 长时间支持
+  - Release: 发行日期或者是发行版本号
+  - Codename: ubuntu 的代号名称
+
+```shell
+$ cd Software
+$ wget https://developer.download.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda_10.1.243_418.87.00_linux.run
+$ # sudo sh cuda_10.1.243_418.87.00_linux.run
+```
+
+nvidia-smi type什么意思 
+[What do G and C types mean in nvidia-smi?](https://stackoverflow.com/questions/54750627/what-do-g-and-c-types-mean-in-nvidia-smi) 
+- They are both for GPU
+  - C = compute = CUDA or OpenCL
+  - G = graphics = DirectX or OpenGL
+- **C** = Compute, which defines the processes that use the compute mode of Nvidia GPUs which use CUDA libraries, used in deep learning training and inferencing using Tensorflow-GPU, Pytorch, etc
+- **G** = Graphics, which defines the processes that use the graphics mode of Nvidia GPUs used by professional 3D graphics, gnome-shell (Ubuntu's GUI environment), Games, etc for the rendering of graphics or videos
+- **C+G** = Compute + Graphics, which defines the processes that use both the contexts defined above.
+
+wget 加速
+[Linux下载加速，比Wget好太多了（CentOS、Debain都有）](https://blog.csdn.net/xzknet/article/details/105405078)
+
+- 安装 yum-axelget 插件，安装该插件后，yum会使用多线程下载。
+  ```shell
+  yum -y install yum-axelget
+  ```
+- 安装后可以使用axel进行并行下载，使用例子如下
+  ```shell
+  $ axel -a -n 10 <url-of-the-file-to-be-downloaded>
+  ```
+- 使用参数
+  - 一般使用：axel url（下载文件地址）；
+  - 限速使用：加上 -s 参数，如 -s 10240，即每秒下载的字节数，这里是 10 Kb；
+  - 限制连接数：加上 -n 参数，如 -n 10，即打开10个连接。
+- 更改默认线程数
+  - 设置线程数为32线程，或者设置成更多（默认为10线程）
+    ```shell
+    vim /usr/lib/yum-plugins/axelget.py
+    ```
+  - 修改如下，将10改为32，两个位置：
+    <img src="https://img-blog.csdnimg.cn/20200409104116584.png" width="80%">
+    <img src="https://img-blog.csdnimg.cn/20200409104130470.png" width="80%">
+
+### 下载
+
+```shell
+$ cd ~/Software
+$ axel -a -n 10 https://developer.download.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda_10.1.243_418.87.00_linux.run
+$ axel -a -n 10 https://developer.nvidia.com/compute/machine-learning/cudnn/secure/7.6.5.32/Production/10.1_20191031/cudnn-10.1-linux-x64-v7.6.5.32.tgz
+```
+
+- cuda\_10.1.105\_418.39\_linux.run
+- cudnn-10.1-linux-x64-v7.6.5.32.tgz
+
+
+`perf` 工具: 安装后有助于缓和 ps 的延迟, 就 ps 和 top 慢
+
+scp 使用  
+[Linux scp命令](https://www.runoob.com/linux/linux-comm-scp.html)  
+[scp 跨机远程拷贝](https://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/scp.html)  
+```shell
+$ scp -P 9019 remote@www.runoob.com:/usr/local/sin.sh /home/administrator
+$ scp -P 9019 <upload-file> remote@www.runoob.com:/home/username
+```
+
+
+### 安装
+
+```shell
+$ cd ~/Software
+$ sh cuda_10.1.105_418.39_linux.run
+
+Do you accept the above EULA? (accept/decline/quit)
+accept
+
+CUDA Installer
+- [X] Driver
+     [X] 418.39
++ [X] CUDA Toolkit 10.1
+  [X] CUDA Samples 10.1
+  [X] CUDA Demo Suite 10.1
+  [X] CUDA Documentation 10.1
+  Install
+  Options
+Up/Down: Move | Left/Right: Expand | 'Enter':Select | 'A': Advanced options
+
+Cancel the chosen Driver, and Install
+
+Permission denied. Unable to write to /usr/local/cuda-10.1/
+OK
+
+$
+$ chmod +x cuda_10.1.105_418.39_linux.run
+$ ./cuda_10.1.105_418.39_linux.run
+
+accept
+Options:
+  Root install path: /home/eustomaqua/Software/cuda-10.1
+
+ Completed with errors. See log at /tmp/cuda-installer.log for details.
+$ cat /tmp/cuda-installer.log
+```
+
+```shell
+$ cd ~/Software
+$ chmod +x cuda_10.1.243_418.87.00_linux.run
+$ ./cuda_10.1.243_418.87.00_linux.run
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ CUDA Installer                                                               │
+│ - [ ] Driver                                                                 │
+│      [ ] 418.87.00                                                           │
+│ + [X] CUDA Toolkit 10.1                                                      │
+│   [X] CUDA Samples 10.1                                                      │
+│   [X] CUDA Demo Suite 10.1                                                   │
+│   [X] CUDA Documentation 10.1                                                │
+│   Options                                                                    │
+│   Install                                                                    │
+│                                                                              │
+│ Up/Down: Move | Left/Right: Expand | 'Enter': Select | 'A': Advanced options │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+'Enter' + 'A'
+
+CUDA Driver
+│   [ ] Do not install any of the OpenGL-related driver files                  │
+│   [ ] Do not install the nvidia-drm kernel module                            │
+│   [ ] Update the system X config file to use the NVIDIA X driver             │
+│   Change directory containing the kernel source files
+
+CUDA Toolkit
+  Change Toolkit Install Path: /home/eustomaqua/Software/cuda-10.1
+  [ ] Create symbolic link from /usr/local/cuda
+- [ ] Create desktop menu shortcuts
+     [X] Yes
+  [ ] Install manpage documents to /usr/share/man
+
+Samples Options
+  Change Writeable Samples Install Path: /home/eustomaqua/Software/cuda-samples-101
+
+Library install path (Blank for system default)
+  # /home/eustomaqua/Software/cuda-library-10.1
+  # Leave it as blank (as it should be)
+
+
+
+# Library install path: /home/eustomaqua/Software/cuda-10.1
+$
+
+
+
+eustomaqua@loae-ws:~/Software$ chmod +x cuda_10.1.243_418.87.00_linux.run
+eustomaqua@loae-ws:~/Software$ ./cuda_10.1.243_418.87.00_linux.run
+===========
+= Summary =
+===========
+
+Driver:   Not Selected
+Toolkit:  Installed in /home/eustomaqua/Software/cuda-10.1/
+Samples:  Installed in /home/eustomaqua/Software/cuda-samples-101/, but missing recommended libraries
+
+Please make sure that
+ -   PATH includes /home/eustomaqua/Software/cuda-10.1/bin
+ -   LD_LIBRARY_PATH includes /home/eustomaqua/Software/cuda-10.1/lib64, or, add /home/eustomaqua/Software/cuda-10.1/lib64 to /etc/ld.so.conf and run ldconfig as root
+
+To uninstall the CUDA Toolkit, run cuda-uninstaller in /home/eustomaqua/Software/cuda-10.1/bin
+
+Please see CUDA_Installation_Guide_Linux.pdf in /home/eustomaqua/Software/cuda-10.1/doc/pdf for detailed information on setting up CUDA.
+***WARNING: Incomplete installation! This installation did not install the CUDA Driver. A driver of version at least 418.00 is required for CUDA 10.1 functionality to work.
+To install the driver using this installer, run the following command, replacing <CudaInstaller> with the name of this run file:
+    sudo <CudaInstaller>.run --silent --driver
+
+Logfile is /tmp/cuda-installer.log
+eustomaqua@loae-ws:~/Software$
+```
+
+### 失败
+
+```shell
+$ ls /tmp/ | grep cuda
+$ sudo rm -r /tmp/cuda-installer.log
+$ cd ~/Software
+$ sudo rm -r cuda-10.1 cuda-library-10.1 cuda-samples-101
+$ ./cuda_10.1.243_418.87.00_linux.run
+
+Options
+Change Toolkit Install Path: /home/eustomaqua/Software/cuda-10.1/
+[ ] Create symbolic link from /usr/local/cuda
+[ ] Install manpage documents to /usr/share/man
+Change Writeable Samples Install Path: /home/eustomaqua/Software/cuda-samples-101/
+Library install path (Blank for system default): <dont-leave-it-blank>
+  # /home/eustomaqua/Software/cuda-10.1/lib64/
+
+Install
+
+$ head /tmp/cuda-installer.log -n 30
+$ # tail # cat
+
+
+
+yjbian@loae-ws:~/Software$ ./cuda_10.1.243_418.87.00_linux.run
+===========
+= Summary =
+===========
+
+Driver:   Not Selected
+Toolkit:  Installed in /home/yjbian/Software/cuda-10.1/
+Samples:  Installed in /home/yjbian/Software/cuda-samples-101/, but missing recommended libraries
+
+Please make sure that
+ -   PATH includes /home/yjbian/Software/cuda-10.1/bin
+ -   LD_LIBRARY_PATH includes /home/yjbian/Software/cuda-10.1/lib64, or, add /home/yjbian/Software/cuda-10.1/lib64 to /etc/ld.so.conf and run ldconfig as root
+
+To uninstall the CUDA Toolkit, run cuda-uninstaller in /home/yjbian/Software/cuda-10.1/bin
+
+Please see CUDA_Installation_Guide_Linux.pdf in /home/yjbian/Software/cuda-10.1/doc/pdf for detailed information on setting up CUDA.
+***WARNING: Incomplete installation! This installation did not install the CUDA Driver. A driver of version at least 418.00 is required for CUDA 10.1 functionality to work.
+To install the driver using this installer, run the following command, replacing <CudaInstaller> with the name of this run file:
+    sudo <CudaInstaller>.run --silent --driver
+
+Logfile is /tmp/cuda-installer.log
+yjbian@loae-ws:~/Software$
+
+
+
+$ vim ~/.bashrc
+
+# added by Anaconda3 installer
+# export PATH="/home/yjbian/anaconda3/bin:$PATH"
+# self added for Nvidia
+# export PATH=$HOME/anaconda3/bin:$HOME/Software/cuda-10.0/bin:$PATH
+export PATH=$HOME/anaconda3/bin:$PATH
+# export LD_LIBRARY_PATH=$HOME/Software/cuda-10.0/lib64:$LD_LIBRARY_PATiH
+# TensorRT
+# export LD_LIBRARY_PATH=$HOME/Software/cuda-10.0/lib64:$HOME/Software/TensorRT-6.0.1.5/lib:$LD_LIBRARY_PATH
+# export CUDA_INSTALL_DIR=$HOME/Software/cuda-10.0
+# export CUDNN_INSTALL_DIR=$HOME/Software/cuda-10.0
+# multiple CUDA
+export PATH=$HOME/Software/cuda-10.1/bin:$PATH
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/Software/cuda-10.1/lib64
+
+$ source ~/.bashrc
+$ source activate adapruning
+$ python
+>>> import tensorflow.compat.v1 as tf
+>>> tf.test.is_gpu_available()
+
+$ dpkg -L libcublas10  # 显示一个包安装到系统里面的文件目录信息
+$ sudo apt-get install libcublas10
+```
+
+注意 `LD_LIBRARY_PATH` 不能写成 `.../cuda-10.1/lib64/`
+
+```shell
+$ cd ~/Software
+$ tar -xzvf cudnn-10.1-linux-x64-v7.6.5.32.tgz
+cuda/include/cudnn.h
+cuda/NVIDIA_SLA_cuDNN_Support.txt
+cuda/lib64/libcudnn.so
+cuda/lib64/libcudnn.so.7
+cuda/lib64/libcudnn.so.7.6.5
+cuda/lib64/libcudnn_static.a
+# in the folder named `cuda`
+
+$ ls cuda
+include  lib64  NVIDIA_SLA_cuDNN_Support.txt
+$ mv cuda/include/cudnn.h ~/Software/cuda-10.1/include/
+$ mv cuda/lib64/libcudnn* ~/Software/cuda-10.1/lib64/
+$ chmod a+r ~/Software/cuda-10.1/include/cudnn.h ~/Software/cuda-10.1/lib64/libcudnn*
+$ rm -r cuda
+
+$ nvcc -V
+$ cat ~/Software/cuda-10.1/version.txt
+$ cat ~/Software/cuda-10.1/include/cudnn.h | grep CUDNN_MAJOR -A5
+
+$ source activate adapruning
+$ pip list
+numba                0.38.0
+numpy                1.17.2
+Pillow               5.1.0
+scipy                1.1.0
+tensorboard          2.1.1
+tensorflow-estimator 2.1.0
+tensorflow-gpu       2.1.0
+tensorrt             6.0.1.5
+$ pip install tensorflow-gpu==2.1.0
+$ pip install numpy==1.18.2
+$ pip install numba==0.52.0 --ignore-installed llvmlite
+$ pip install scipy==1.4.1
+$ pip install pillow==8.1.0
+
+$ pip install 'pycuda>=2017.1.1'
+$ cd Software/TensorRT-6.0.1.5
+$ cd python
+$ pip install tensorrt-6.0.1.5-cp36-none-linux_x86_64.whl
+$ cd ../uff
+$ pip install uff-0.6.5-py2.py3-none-any.whl
+```
+
+```txt
+# self added for Nvidia
+# export PATH=$HOME/anaconda3/bin:$HOME/Software/cuda-10.0/bin:$PATH
+export PATH=$HOME/anaconda3/bin:$HOME/Software/cuda-10.1/bin:$PATH
+# export LD_LIBRARY_PATH=$HOME/Software/cuda-10.0/lib64:$LD_LIBRARY_PATiH
+export LD_LIBRARY_PATH=$HOME/Software/cuda-10.1/lib64:$LD_LIBRARY_PATH
+# TensorRT
+export LD_LIBRARY_PATH=$HOME/Software/cuda-10.1/lib64:$HOME/Software/TensorRT-6.0.1.5/lib:$LD_LIBRARY_PATH
+export CUDA_INSTALL_DIR=$HOME/Software/cuda-10.1
+export CUDNN_INSTALL_DIR=$HOME/Software/cuda-10.1
+# multiple CUDA
+```
+
+### 成功
+
+```shell
+$ cd Software
+$ sudo rm -r cuda-10.1 cuda-samples-101
+$ ./cuda_10.1.105_418.39_linux.run
+
+Options:
+CUDA Toolkit
+  Change Toolkit Install Path: /home/eustomaqua/Software/cuda-10.1/
+  [ ] Create symbolic link from /usr/local/cuda
+- [X] Create desktop menu shortcuts
+     [ ] All users
+     [X] Yes
+     [ ] No
+  [ ] Install manpage documents to /usr/share/man
+CUDA Samples
+  Change Sample Install Path: /home/eustomaqua/Software/cuda-samples-101/
+Root install path: /home/eustomaqua/Software/cuda-10.1/
+
+
+===========
+= Summary =
+===========
+
+Driver:   Not Selected
+Toolkit:  Installed in /home/yjbian/Software/cuda-10.1/
+Samples:  Installed in /home/yjbian/Software/cuda-samples-101/, but missing recommended libraries
+
+Please make sure that
+ -   PATH includes /home/yjbian/Software/cuda-10.1/bin
+ -   LD_LIBRARY_PATH includes /home/yjbian/Software/cuda-10.1/lib64, or, add /home/yjbian/Software/cuda-10.1/lib64 to /etc/ld.so.conf and run ldconfig as root
+
+To uninstall the CUDA Toolkit, run cuda-uninstaller in /home/yjbian/Software/cuda-10.1/bin
+
+Please see CUDA_Installation_Guide_Linux.pdf in /home/yjbian/Software/cuda-10.1/doc/pdf for detailed information on setting up CUDA.
+***WARNING: Incomplete installation! This installation did not install the CUDA Driver. A driver of version at least 418.00 is required for CUDA 10.1 functionality to work.
+To install the driver using this installer, run the following command, replacing <CudaInstaller> with the name of this run file:
+    sudo <CudaInstaller>.run --silent --driver
+
+Logfile is /tmp/cuda-installer.log
+
+
+$ vim ~/.bashrc
+$ tar -xvf cudnn-10.1-linux-x64-v7.6.5.32.tgz
+$ mv cuda/include/cudnn.h ~/Software/cuda-10.1/include/
+$ mv cuda/lib64/libcudnn* ~/Software/cuda-10.1/lib64/
+$ chmod a+r ~/Software/cuda-10.1/include/cudnn.h ~/Software/cuda-10.1/lib64/libcudnn*
+$ rm -r cuda
+
+$ rm -r TensorRT-6.0.1.5
+$ tar -xvf TensorRT-6.0.1.5.Ubuntu-18.04.x86_64-gnu.cuda-10.1.cudnn7.6.tar.gz
+$ cd TensorRT-6.0.1.5
+$ cd python
+$ pip install tensorrt-6.0.1.5-cp36-none-linux_x86_64.whl
+$ cd ../uff
+$ pip install uff-0.6.5-py2.py3-none-any.whl
+$ cd ~/anaconda3/envs/adapruning/
+$ cd ~/anaconda3/lib/python3.6/site-packages
+$ cd ~/anaconda3/envs/adapruning/lib/python3.6/site-packages
+$ cd uff/converters/tensorflow/
+$ vim conversion_helpers.py
+
+# from tensorflow import GraphDef
+from tensorflow.compat.v1 import GraphDef
+
+$ python
+>>> import tensorrt
+>>> import uff
+>>> import tensorflow as tf
+>>> tf.test.is_gpu_available()
+>>> import tensorflow.compat.v1 as tf
+>>> tf.test.is_gpu_available()
+```
+
+[cublas for 10.1 is missing](https://forums.developer.nvidia.com/t/cublas-for-10-1-is-missing/71015/20)  
+[Cannot convert Tensorflow protobuf to uff](https://github.com/NVIDIA/TensorRT/issues/184)  
+[Anaconda site-packages](https://stackoverflow.com/questions/31003994/anaconda-site-packages)  
+
+
+### Succeed
+
 # PyPI 安装包
 
 ## 切换conda源
