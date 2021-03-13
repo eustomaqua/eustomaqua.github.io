@@ -156,12 +156,12 @@
 
 
 
-  <meta name="description" content="Python日志功能详解Python中的logging模块 Why: 为什么要使用 logging?代码调试时常使用 print 函数输出一些中间变量的值或者相关信息，这样虽然简便，但是在程序调试完之后需要逐个删除或注释 print 语句，比较麻烦。logging 模块能很好地解决这个问题，通过设置 severity level，容易控制在控制台打印的信息，也可以同时把日志信息输出到多个目的地，如">
+  <meta name="description" content="Python日志功能详解Python中的logging模块 Why: 为什么要使用 logging?代码调试时常使用 print 函数输出一些中间变量的值或者相关信息，这样虽然简便，但是在程序调试完之后需要逐个删除或注释 print 语句，比较麻烦。logging 模块能很好地解决这个问题，通过设置 severity level，容易控制在控制台打印的信息，也可以同时把日志信息输出到多个目">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Logging in Python (日志处理)">
 <meta property="og:url" content="https://eustomaqua.github.io/2018/2018-09-18-Python-Logging/index.html">
 <meta property="og:site_name" content="Aqua Eustoma">
-<meta property="og:description" content="Python日志功能详解Python中的logging模块 Why: 为什么要使用 logging?代码调试时常使用 print 函数输出一些中间变量的值或者相关信息，这样虽然简便，但是在程序调试完之后需要逐个删除或注释 print 语句，比较麻烦。logging 模块能很好地解决这个问题，通过设置 severity level，容易控制在控制台打印的信息，也可以同时把日志信息输出到多个目的地，如">
+<meta property="og:description" content="Python日志功能详解Python中的logging模块 Why: 为什么要使用 logging?代码调试时常使用 print 函数输出一些中间变量的值或者相关信息，这样虽然简便，但是在程序调试完之后需要逐个删除或注释 print 语句，比较麻烦。logging 模块能很好地解决这个问题，通过设置 severity level，容易控制在控制台打印的信息，也可以同时把日志信息输出到多个目">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://eustomaqua.github.io/images/2018-09/logging_flow.png">
 <meta property="article:published_time" content="2018-09-18T21:26:21.000Z">
@@ -432,7 +432,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Programming/" itemprop="url" rel="index"><span itemprop="name">Programming</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Coding/" itemprop="url" rel="index"><span itemprop="name">Coding</span></a></span>
 
                 
                 
@@ -480,7 +480,14 @@
       
 
       
-        <p><a href="https://blog.igevin.info/posts/python-log/" target="_blank" rel="noopener">Python日志功能详解</a><br><a href="http://python.jobbole.com/86887/" target="_blank" rel="noopener">Python中的logging模块</a></p>
+        <!--
+2021/1/15 14:47pm Fri
+Category: Programming
+-->
+
+
+
+<p><a href="https://blog.igevin.info/posts/python-log/" target="_blank" rel="noopener">Python日志功能详解</a><br><a href="http://python.jobbole.com/86887/" target="_blank" rel="noopener">Python中的logging模块</a></p>
 <h1 id="Why-为什么要使用-logging"><a href="#Why-为什么要使用-logging" class="headerlink" title="Why: 为什么要使用 logging?"></a>Why: 为什么要使用 logging?</h1><p>代码调试时常使用 print 函数输出一些中间变量的值或者相关信息，这样虽然简便，但是在程序调试完之后需要逐个删除或注释 print 语句，比较麻烦。<br>logging 模块能很好地解决这个问题，通过设置 severity level，容易控制在控制台打印的信息，也可以同时把日志信息输出到多个目的地，如控制台、日志文件、网络位置等。  </p>
 <h1 id="How-怎么使用-logging"><a href="#How-怎么使用-logging" class="headerlink" title="How: 怎么使用 logging?"></a>How: 怎么使用 logging?</h1><h2 id="日志基本用法"><a href="#日志基本用法" class="headerlink" title="日志基本用法"></a>日志基本用法</h2><h3 id="默认"><a href="#默认" class="headerlink" title="默认"></a>默认</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/local/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"></span><br><span class="line">logging.debug(<span class="string">'debug message'</span>)</span><br><span class="line">logging.info(<span class="string">'info message'</span>)</span><br><span class="line">logging.warn(<span class="string">'warn message'</span>)</span><br><span class="line"><span class="comment">#or logging.warning('warn message')</span></span><br><span class="line">logging.error(<span class="string">'error message'</span>)</span><br><span class="line">logging.critical(<span class="string">'critical message'</span>)</span><br><span class="line"><span class="comment"># 注意：debug, info 不会输出结果</span></span><br></pre></td></tr></table></figure>
 
@@ -818,7 +825,7 @@
               
                 <div class="site-state-item site-state-posts">
                   <a href="/archives">
-                    <span class="site-state-item-count">28</span>
+                    <span class="site-state-item-count">30</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -900,9 +907,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">22</span>
+                    <span class="site-state-item-count">21</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -992,7 +997,7 @@
 
   <div class="theme-info">
     <div class="powered-by-post-count"></div>
-    <span class="post-count">Total 150.9k Words</span>
+    <span class="post-count">Total 155.4k Words</span>
   </div>
   <span class="post-meta-divider">|</span>
   <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v4.2.1</div>

@@ -3,7 +3,15 @@
   <entry>
     <title>好用的效率小软件 (个人喜好)</title>
     <url>/2019/2019-07-06-Apps-for-Productivity-on-iOS/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Used-frequently"><a href="#Used-frequently" class="headerlink" title="Used frequently"></a>Used frequently</h1><h2 id="ATracker-PRO"><a href="#ATracker-PRO" class="headerlink" title="ATracker PRO"></a>ATracker PRO</h2><p>强烈推荐。用于时间追踪和管理。是我觉得同类别中最美观简捷的应用。<br>免费版最多只有五个类别，其实也够用了，只分大类就行。<br>付费版可以用分类来对标签进行筛选，不过我其实大多数也只看大类时间，从这个角度讲跟免费版区别不大。<br>报表部分既有柱状图也有饼形图，一目了然每个时间段的工作时间变化趋势。<br>另外付费版多了数据备份功能。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><!--
+2021/1/15 14:36pm Fri
+Productivity
+
+2021/1/21 18:29pm Thu
+此去经年
+-->
+
+<h1 id="Used-frequently"><a href="#Used-frequently" class="headerlink" title="Used frequently"></a>Used frequently</h1><h2 id="ATracker-PRO"><a href="#ATracker-PRO" class="headerlink" title="ATracker PRO"></a>ATracker PRO</h2><p>强烈推荐。用于时间追踪和管理。是我觉得同类别中最美观简捷的应用。<br>免费版最多只有五个类别，其实也够用了，只分大类就行。<br>付费版可以用分类来对标签进行筛选，不过我其实大多数也只看大类时间，从这个角度讲跟免费版区别不大。<br>报表部分既有柱状图也有饼形图，一目了然每个时间段的工作时间变化趋势。<br>另外付费版多了数据备份功能。</p>
 <h2 id="Evernote-印象笔记"><a href="#Evernote-印象笔记" class="headerlink" title="Evernote / 印象笔记"></a>Evernote / 印象笔记</h2><p>笔记类应用里我最喜欢印象笔记，可惜免费版用户同一账号只能同时登录两台设备，我采取的方式是：实验室电脑和笔记本用同一个账号，手机用另一个账号，然后需要用的时候开网页版复制过去。<br>印象笔记比有道云、为知笔记都好看。我印象为知功能比有道云强大些，这两个好像单月流量几乎都跟没限制一样，不确定我记错没有。印象笔记除了流量这个问题，其他我都是很喜欢的，不过如果只用文字保存的话，流量是够的，如果想保存网页或者公众号文章的话就需要注意一下。</p>
 <h2 id="Calendars"><a href="#Calendars" class="headerlink" title="Calendars"></a>Calendars</h2><p>我用来同步的是 Google 日历，因为国内 Google Calendar 直接用起来有点问题。<br>我用的是免费版，付费版可以设置周期任务 (不过这个直接在 Google Calendar 中设置好然后同步过来就行。我日常本来就是直接在 Google 日历中直接设置的，如果在 Calendars 中设置想要反向同步到 Google 日历有时候会出现同步不过去任务丢失的情况，不知道原因)<br>Calendars 的周视图我觉得比 Google Calendar 做得要好，手机上我一般用周视图 (月视图太小，天视图只能看到当天任务，不能提前看下近期任务)；不过 Google Calendar 多了一个 “3 天” 视图，我个人比较偏向日程模式，如果用手机 Google 日历的话，手机 Google 日历唯一多的好处应该是可以设置循环任务吧，嗯还有颜值也是够的，不过 Calendars 的简洁我也是很喜欢的。</p>
 <h1 id="Used-sometimes-some-are-not-beautiful"><a href="#Used-sometimes-some-are-not-beautiful" class="headerlink" title="Used sometimes, (some are not beautiful)"></a>Used sometimes, (some are not beautiful)</h1><h2 id="Wunderlist-奇妙清单"><a href="#Wunderlist-奇妙清单" class="headerlink" title="Wunderlist 奇妙清单"></a>Wunderlist 奇妙清单</h2><p>颜值比滴答清单高，用起来还行，不过感觉用于时间管理来说，对我的效果一般。使用效果与滴答清单基本持平，靠颜值略高一丢丢。类似的还有 Any.do ，相比之下我更愿意选择奇妙清单</p>
@@ -18,7 +26,7 @@
 <h2 id="Days-Matter-倒数日"><a href="#Days-Matter-倒数日" class="headerlink" title="Days Matter (倒数日)"></a>Days Matter (倒数日)</h2><p>可以设置某目标/任务 Due Date，能够看到还剩多少天或者过期了多少天。<br>还有一个功能是可以计算日期之间相隔多少天。<br>登录可以同步数据。缺点是难看，难看，真的难看…… 所以我不怎么用</p>
 ]]></content>
       <categories>
-        <category>Productivity</category>
+        <category>Efficiency</category>
       </categories>
       <tags>
         <tag>iOS</tag>
@@ -27,7 +35,14 @@
   <entry>
     <title>Kindle 跌过的坑要反复地爬 T_T</title>
     <url>/2019/2019-07-20-Kindle-SignIn-WordWise/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>美亚买了一个 Kindle 新出的 pw4 ，本来很是欢喜，结果好景不长，手贱换了一下中亚账号……于是，凉了……</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><!--
+2021/1/15 14:36 Fri
+Productivity
+-->
+
+
+
+<p>美亚买了一个 Kindle 新出的 pw4 ，本来很是欢喜，结果好景不长，手贱换了一下中亚账号……于是，凉了……</p>
 <p>问题一开始无法再登录美亚账号，开手机热点翻了一下能登了，但是 Word Wise 不正常了。错误情况有两种：一种是右下角根本不提示 Word Wise，变成了 Location 的百分比；另一种是一直在 “Downloading Word Wise…” / “Downloading Paused” 中切换，间或出现 “Word Wise”，看似正常，实际上根本没下载下来。<br>中间 restart, deregister 数次无果，reset 了</p>
 <p>登录账号时候，美亚每次都要验证 code，一开始貌似没有 <a href="http://www.amazon.com/code" target="_blank" rel="noopener">www.amazon.com/code</a> 这个，如果用 amazon.cn 验证就是中亚了，所以翻了一下试试，结果成功了。第一次换中亚也有 code 验证。不过目前为止最后一次中亚 (即测试 Word Wise 是否正常) 不用 code 验证了，美亚最后一次没翻，也是 amazon.com 验证的 code，均登录成功。</p>
 <p>期间 Amazon Customer Service 提供的解决方案包括：  </p>
@@ -46,7 +61,7 @@
 <p><strong>UPDATE</strong><br>我以前总是觉得 Kindle Oasis 很丑，又不对称，拿着并不舒适，直到我在深圳机场看到了实体……是正方形的，所以看起来比 pw4 还要小巧，带壳拿起来也并不觉得不对称或者奇怪什么的，然后当时我就觉得“哇，并不像我想象的那么差吗，反而还更好些呢”，然后我就兴奋而激动地拿着翻了几页，有一种当初在实体店里看到 pw4 的喜悦感（后来每次我和室友逛 Target 我都要去看一眼……），有点后悔当时也许可以选个 Oasis 来买的，毕竟它的性价比幅度可是大大超过了 pw4……。后来我查了下资料，意识到那是 Oasis 1代，从2代开始屏幕就更大了，可能就不是我想要的了，因为我不是很喜欢大屏，6寸的小屏刚好，7寸总觉得略大</p>
 ]]></content>
       <categories>
-        <category>Productivity</category>
+        <category>此去经年</category>
       </categories>
       <tags>
         <tag>Kindle</tag>
@@ -525,6 +540,9 @@ Tag: Remote Server / Linux
     <url>/2020/2020-04-16-Python-Debug-cProfile-TensorBoard/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><!--
 date: 2020-04-16 05:08:51
+
+2021/1/15 14:49pm Fri
+Category: Programming
 -->
 
 
@@ -807,7 +825,7 @@ fact:
 <h1 id="References"><a href="#References" class="headerlink" title="* References"></a>* References</h1><p><a href="https://my.oschina.net/antsky/blog/1475173" target="_blank" rel="noopener">Github 中 Markdown 锚点链接如何写</a>  </p>
 ]]></content>
       <categories>
-        <category>Programming</category>
+        <category>Coding</category>
       </categories>
       <tags>
         <tag>Debug</tag>
@@ -1381,7 +1399,14 @@ Edited on 24 Mar 2020 10:02:16
   <entry>
     <title>Logging in Python (日志处理)</title>
     <url>/2018/2018-09-18-Python-Logging/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><a href="https://blog.igevin.info/posts/python-log/" target="_blank" rel="noopener">Python日志功能详解</a><br><a href="http://python.jobbole.com/86887/" target="_blank" rel="noopener">Python中的logging模块</a></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><!--
+2021/1/15 14:47pm Fri
+Category: Programming
+-->
+
+
+
+<p><a href="https://blog.igevin.info/posts/python-log/" target="_blank" rel="noopener">Python日志功能详解</a><br><a href="http://python.jobbole.com/86887/" target="_blank" rel="noopener">Python中的logging模块</a></p>
 <h1 id="Why-为什么要使用-logging"><a href="#Why-为什么要使用-logging" class="headerlink" title="Why: 为什么要使用 logging?"></a>Why: 为什么要使用 logging?</h1><p>代码调试时常使用 print 函数输出一些中间变量的值或者相关信息，这样虽然简便，但是在程序调试完之后需要逐个删除或注释 print 语句，比较麻烦。<br>logging 模块能很好地解决这个问题，通过设置 severity level，容易控制在控制台打印的信息，也可以同时把日志信息输出到多个目的地，如控制台、日志文件、网络位置等。  </p>
 <h1 id="How-怎么使用-logging"><a href="#How-怎么使用-logging" class="headerlink" title="How: 怎么使用 logging?"></a>How: 怎么使用 logging?</h1><h2 id="日志基本用法"><a href="#日志基本用法" class="headerlink" title="日志基本用法"></a>日志基本用法</h2><h3 id="默认"><a href="#默认" class="headerlink" title="默认"></a>默认</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/local/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"></span><br><span class="line">logging.debug(<span class="string">'debug message'</span>)</span><br><span class="line">logging.info(<span class="string">'info message'</span>)</span><br><span class="line">logging.warn(<span class="string">'warn message'</span>)</span><br><span class="line"><span class="comment">#or logging.warning('warn message')</span></span><br><span class="line">logging.error(<span class="string">'error message'</span>)</span><br><span class="line">logging.critical(<span class="string">'critical message'</span>)</span><br><span class="line"><span class="comment"># 注意：debug, info 不会输出结果</span></span><br></pre></td></tr></table></figure>
 
@@ -1591,7 +1616,7 @@ Edited on 24 Mar 2020 10:02:16
 </ul>
 ]]></content>
       <categories>
-        <category>Programming</category>
+        <category>Coding</category>
       </categories>
       <tags>
         <tag>Python</tag>
@@ -2381,6 +2406,11 @@ categories: - Favorite
     <url>/2020/2020-04-03-Ubuntu-TensorRT/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><!--
 Created: 2020-04-03 02:31:04
+
+2021/1/15 14:43pm Fri
+Tag:
+  - NVIDIA TensorRT
+  - NVIDIA CUDA
 -->
 
 
@@ -2577,8 +2607,7 @@ CUDA Version 10.0.130
       <tags>
         <tag>Configure</tag>
         <tag>Linux</tag>
-        <tag>NVIDIA TensorRT</tag>
-        <tag>NVIDIA CUDA</tag>
+        <tag>NVIDIA</tag>
       </tags>
   </entry>
   <entry>
@@ -6525,9 +6554,12 @@ The botton you used were: 1 1</code></pre></blockquote>
 Productivity
 tag: 逆光
 categories: Backlighting
+
+2021/1/15 14:34 Category 逆光
+2021/2/23 11:16am Tue, 一点都不紧密
  -->
 
-<p>可能是我老了，iOS 14 让我巨想吐槽。。。。那屏幕下方固定的一圈，就不能跟原来似的直接拉到边缘吗，现在和屏幕边缘还有空隙，我的天哪，这谁设计的啊，审美是被吃了吗。还有下拉通知，原来两屏现在只有一屏，然后辅助功能里通知中心永远右上方有个小白点，就跟QQ微信提醒新消息似的，我强迫症，看得难受死。还有输入键的这个底色这个质感，真是塑料，我现在万分庆幸当年一直没升系统，又万分痛心现在降不回去了。还有那些个 APP，跟着全面屏的趋势跑，你好歹做好看点啊，边缘都不考虑下的吗，你东西在边缘可都显示不全的啊，虽然我是可以上下滑动看到内容，但是整体看上去就是很难看啊。还有这些 APP 之间的空隙也太大了吧，一点都不紧密，空间利用率真差。不是我说，界面做得这么丑，屏幕利用不到位就不要上全面屏啊，还不如原来方形屏幕呢，我现在超级后悔没换 SE2……还有耳机孔无话可说，蓝牙声音最低档也太大，转接头也并没有好用到哪里去，真是醉了。另外指纹解锁不比面部识别好使多了，每次走在路上戴口罩和躺床上刷不开就很烦躁，感觉就跟没设置似的，反正都是得输密码。至于音量键做这么大的长条不是小圆点关机键不在顶上放右边我就不吐槽了吧。还有那个截屏浮现，为什么不能关啊，我不需要对每一张截图都编辑啊，每次都划一下很烦的啊，不划开等它自动消失又很久，这是什么脑子进水的思路哦。还有屏幕底端的那一横杠，难看死</p>
+<p>可能是我老了，iOS 14 让我巨想吐槽。。。。那屏幕下方固定的一圈，就不能跟原来似的直接拉到边缘吗，现在和屏幕边缘还有空隙，我的天哪，这谁设计的啊，审美是被吃了吗。还有下拉通知，原来两屏现在只有一屏，然后辅助功能里通知中心永远右上方有个小白点，就跟QQ微信提醒新消息似的，我强迫症，看得难受死。还有输入键的这个底色这个质感，真是塑料，我现在万分庆幸当年一直没升系统，又万分痛心现在降不回去了。还有那些个 APP，跟着全面屏的趋势跑，你好歹做好看点啊，边缘都不考虑下的吗，你东西在边缘可都显示不全的啊，虽然我是可以上下滑动看到内容，但是整体看上去就是很难看啊。还有这些 APP 之间的空隙也太大了吧，一点都不紧凑，空间利用率真差。不是我说，界面做得这么丑，屏幕利用不到位就不要上全面屏啊，还不如原来方形屏幕呢，我现在超级后悔没换 SE2……还有耳机孔无话可说，蓝牙声音最低档也太大，转接头也并没有好用到哪里去，真是醉了。另外指纹解锁不比面部识别好使多了，每次走在路上戴口罩和躺床上刷不开就很烦躁，感觉就跟没设置似的，反正都是得输密码。至于音量键做这么大的长条不是小圆点关机键不在顶上放右边我就不吐槽了吧。还有那个截屏浮现，为什么不能关啊，我不需要对每一张截图都编辑啊，每次都划一下很烦的啊，不划开等它自动消失又很久，这是什么脑子进水的思路哦。还有屏幕底端的那一横杠，难看死</p>
 <p>而且啊，我原来特喜欢的 ATracker PRO 也变了，你加一个 Calendar 我勉为其难当没看见吧，其实根本用不到，还有啊，你上面加一栏固定的干吗啊，丑到爆……还有 Report 部分，我的天啊饼形图来个 Today / 7 days / 30 days/ Week / Month / Range，明明四列就能搞定的东西非得列六个，而且那个按钮啊，你原来的美貌程度去哪里了……不仅岁月是把杀猪刀，更新也是……原版美观程度可称之为艺术，现在已经死于流俗……痛心疾首</p>
 <!--可以称之为是-->
 
@@ -6542,9 +6574,12 @@ categories: Backlighting
 <p>算了，说点稍微开心点的事吧。我答完辩把 HPFB 重看了一遍，然后发现好些个好看的男演员。再然后我就开始走上了补他们电影的漫漫长路……Sean Biggerstaff 其他作品不多, Toby Regbo 看了无姓之人和疼痛是福。Mr. Nobody 感觉男主跟他其实还有点点像，我当时就觉得男主长得不错呀（顺便说一句，我觉得女主安娜有点像方瑜），后来别人推荐我也看了 Jared Leto 的亚历山大大帝，意外发现 Alexander 是 Colin Farrell 演的，不过我第一次对他有印象是 FB1 的 Grindelwald / Percival Graves。至于日后此痛为你用，嗯怎么讲呢，可能我还是比较喜欢有剧情的吧，毕竟即使有 Toby 颜值巅峰的脸我也没能看完，掩面……后来意外我又发现了 Freddie Highmore, 吐司和家庭作业里面我比较喜欢吐司，包括良医也是，看完返回来还是觉得吐司里面最好看，感觉我喜欢有少年感的。不过也有两个例外是 Jude Law 和 Johnny Depp，其实我对他们都是从 FB2 开始的，理发师陶德是我看的第一部恐怖片……其实我还蛮喜欢里面那首 The worst pie in London 的，蛮巧的，Sweeney Todd 和 Toast 都有 Helena Bonham Carter (Bellatrix Lestrange)，话说 Sweeney Todd 收集了好多 HP 系列的 villains，不过我最开始去看它是因为大小格林德沃，Jamie Campbell Bower 长得真是格林德沃本沃。一个挺有趣的事是我看王尔德之后发现 Wilde 是由 Stephen Fry 饰演的，他读了一版 HP 有声书还挺有名的，还有安娜卡列尼娜我还没来得及看，主要是我见过裘德·洛在这里的一个剧照我觉得挺好看的，惊奇队长就不说了，女主很飒我喜欢。加勒比海盗我现在只看完两部，更喜欢第一部，里面发现了莱戈拉斯和 Keira Knightley (凯拉·奈特莉，演过模仿游戏和傲慢与偏见)，王尔德的妻子扮演者也演过 BBC 版迷你剧傲慢与偏见的伊丽莎白呢，我居然没有脸盲地认出了她和莱戈拉斯，可能是我现在看多了所以能辨别了，毕竟当时看巴比伦柏林的时候，我的妈呀脸盲 it’s all over again。</p>
 <p>嗯，其实后半年感觉我过得还挺倒霉的，上海是我的倒霉地，可惜没有后悔药，不知道明年会不会好一点儿。</p>
 <p>然后我上次跟别人吐槽，我发现我喜欢一个男演员是英国的，又喜欢一个男演员怎么又是英国的，可惜英国男人多秃顶，这是一个悲伤的故事，还有就是他们好多都演过同性恋，然后就听说了句英 gay 兰我差点笑死……其实我不腐，不过唯一例外是 GGAD，他们俩是不一样的，不世天才宿命的相遇，势均力敌。可惜 Grindelvald 演员换了，我好担心罗琳剧本被改成她没想过的样子，要是她肯出书就好了，书里的情节可比电影丰富多了。但是我仔细想想，可能是因为除了美剧我看的电影大多都和 HP 有关吧，毕竟 HP 全员都是英国演员，然后再跟着看别的很大概率也是啊。不过我喜欢的男演员里也有美国的。我再想想当时看 Hot in Cleveland 时我就很喜欢 Joy，饰演她的 Jane Leeves 也是英国演员，可能是个潜意识吧，所以碰到其他男演员后我就觉得怎么我喜欢的演员都是英国的。</p>
-]]></content>
+<!--
+2021/1/23 -- 2021/1/24 12:25pm Sun
+GGAD，他们俩是不一样的，不世天才宿命般的相遇，势均力敌。可惜
+-->]]></content>
       <categories>
-        <category>逆光</category>
+        <category>此去经年</category>
       </categories>
       <tags>
         <tag>iOS</tag>
@@ -6561,10 +6596,10 @@ categories: Backlighting
 <a id="more"></a>
 
 
-        <div id="aplayer-tLZRFyfM" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>
+        <div id="aplayer-sWhnygjh" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>
 			  <script>
-				  var options = {"narrow":false,"autoplay":true,"showlrc":3,"mode":"random","mutex":true,"theme":"#e6d0b2","preload":"metadata","listmaxheight":"513px","width":"50%","music":[{"title":"归程","author":"齐栾","url":"https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtWGN4Z1IwM3NvXzEtR3hiP2U9QnlkTlVI.mp3","pic":"/images/2021-01/齐栾-归程.png","lrc":"/music/齐栾-归程.lrc"},{"title":"栖凰","author":"三无MarBlue","url":"https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtWGdOdWU2ZWJzcFhvdzB4.mp3","pic":"https://y.gtimg.cn/music/photo_new/T002R300x300M0000001Jmcu2wxNLR_1.jpg?max_age=2592000","lrc":"/music/三无Marblue-栖凰.lrc"},{"title":"黯然销魂","author":"玄觞","url":"https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtZ1Bab2lhOW44ckRVdzdvP2U9YmVaa1J2.mp3","pic":"https://www.djdj5.com/zb_users/upload/2020/04/202004122014282770140.jpg","lrc":"/music/玄觞-黯然销魂.lrc"},{"title":"茫茫","author":"河图","url":"https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtWG4zbV9EQVBEc1lYNG5PP2U9OVVJUkQ4.mp3","pic":"https://y.gtimg.cn/music/photo_new/T002R300x300M000002lZ5G70LEBIM_1.jpg?max_age=2592000","lrc":"/music/汐音社-茫茫.lrc"},{"title":"白马入芦花","author":"河图","url":"https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtWHBhYmNqQ2htMzR1ZXN5P2U9WnNlU2pj.mp3","pic":"https://y.gtimg.cn/music/photo_new/T002R300x300M000000BQx3u1M0SVw_1.jpg?max_age=2592000","lrc":"/music/河图-白马入芦花.lrc"},{"title":"混沌","author":"流月Ryutsuki","url":"https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtWHVzRHNKVDRDZTlDLU1ZP2U9VUY3Tzkz.mp3","pic":"https://wsingbssdl.kugou.com/a2d0807ef7509eb80e1b8f399226d965.jpg_100x100.jpg","lrc":"/music/流月Ryutsuki-混沌.lrc"},{"title":"号钟","author":"梦璟SAYA","url":"https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtWHpmSU1YVS1fM0NVMlFUP2U9cFhYNmFS.mp3","pic":"https://p1.ssl.qhimg.com/dmsmty/1080_1047_/t01fc042dffee048ca5.jpg","lrc":"/music/梦璟SAYA-号钟.lrc"},{"title":"奋不顾身","author":"檀烧","url":"https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtZ0xsZGZqU0c3LS15ZVpJP2U9WVpDZ1ZG.mp3","pic":"https://wsingbssdl.kugou.com/58ef07b499454e5e93c32f3b43b949e8.jpg_188x188.jpg","lrc":"/music/檀烧-奋不顾身.lrc"},{"title":"旧情","author":"檀烧","url":"https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtZ0Z4SFlzSUVwNi1ySUJpP2U9OXE1dVhN.mp3","pic":"https://wsingbssdl.kugou.com/58ef07b499454e5e93c32f3b43b949e8.jpg_188x188.jpg","lrc":"/music/檀烧-旧情.lrc"}]};
-				  options.element = document.getElementById("aplayer-tLZRFyfM");
+				  var options = {"narrow":false,"autoplay":true,"showlrc":3,"mode":"random","mutex":true,"theme":"#e6d0b2","preload":"metadata","listmaxheight":"513px","width":"50%","music":[{"title":"归程","author":"齐栾","url":"https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtWGN4Z1IwM3NvXzEtR3hiP2U9QnlkTlVI.mp3","pic":"/images/2021-01/齐栾-归程.png","lrc":"/music/齐栾-归程.lrc"},{"title":"栖凰","author":"三无MarBlue","url":"https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtWGdOdWU2ZWJzcFhvdzB4.mp3","pic":"https://y.gtimg.cn/music/photo_new/T002R300x300M0000001Jmcu2wxNLR_1.jpg?max_age=2592000","lrc":"/music/三无Marblue-栖凰.lrc"},{"title":"黯然销魂","author":"玄觞","url":"https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtZ1Bab2lhOW44ckRVdzdvP2U9YmVaa1J2.mp3","pic":"https://www.djdj5.com/zb_users/upload/2020/04/202004122014282770140.jpg","lrc":"/music/玄觞-黯然销魂.lrc"},{"title":"茫茫","author":"河图","url":"https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtWG4zbV9EQVBEc1lYNG5PP2U9OVVJUkQ4.mp3","pic":"https://y.gtimg.cn/music/photo_new/T002R300x300M000002lZ5G70LEBIM_1.jpg?max_age=2592000","lrc":"/music/汐音社-茫茫.lrc"},{"title":"白马入芦花","author":"河图","url":"https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtWHBhYmNqQ2htMzR1ZXN5P2U9WnNlU2pj.mp3","pic":"https://y.gtimg.cn/music/photo_new/T002R300x300M000000BQx3u1M0SVw_1.jpg?max_age=2592000","lrc":"/music/河图-白马入芦花.lrc"},{"title":"混沌","author":"流月Ryutsuki","url":"https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtWHVzRHNKVDRDZTlDLU1ZP2U9VUY3Tzkz.mp3","pic":"https://wsingbssdl.kugou.com/a2d0807ef7509eb80e1b8f399226d965.jpg_100x100.jpg","lrc":"/music/流月Ryutsuki-混沌.lrc"},{"title":"号钟","author":"梦璟SAYA","url":"https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtWHpmSU1YVS1fM0NVMlFUP2U9cFhYNmFS.mp3","pic":"https://p1.ssl.qhimg.com/dmsmty/1080_1047_/t01fc042dffee048ca5.jpg","lrc":"/music/梦璟SAYA-号钟.lrc"},{"title":"奋不顾身","author":"檀烧","url":"https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtZ0xsZGZqU0c3LS15ZVpJP2U9Y2JSN1hV.mp3","pic":"https://wsingbssdl.kugou.com/58ef07b499454e5e93c32f3b43b949e8.jpg_188x188.jpg","lrc":"/music/檀烧-奋不顾身.lrc"},{"title":"旧情","author":"檀烧","url":"https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtZ0Z4SFlzSUVwNi1ySUJpP2U9OXE1dVhN.mp3","pic":"https://wsingbssdl.kugou.com/58ef07b499454e5e93c32f3b43b949e8.jpg_188x188.jpg","lrc":"/music/檀烧-旧情.lrc"}]};
+				  options.element = document.getElementById("aplayer-sWhnygjh");
 				  var ap = new APlayer(options);
 			    window.aplayers || (window.aplayers = []);
 				  window.aplayers.push(ap);
@@ -6843,7 +6878,13 @@ Options of <code>r-c</code>s<table>
   <entry>
     <title>深度学习框架常用命令</title>
     <url>/2021/2021-01-03-DeepLearning-Commands/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="CUDA"><a href="#CUDA" class="headerlink" title="CUDA"></a>CUDA</h1><p>查看本机是否能使用GPU</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><!--
+2021/1/15 14:42pm Fri
+Tag: NVIDIA CUDA
+Category: Programming
+-->
+
+<h1 id="CUDA"><a href="#CUDA" class="headerlink" title="CUDA"></a>CUDA</h1><p>查看本机是否能使用GPU</p>
 <h2 id="TensorFlow"><a href="#TensorFlow" class="headerlink" title="TensorFlow"></a>TensorFlow</h2><p>tensorflow 1.x</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line">sess = tf.Session(config=tf.ConfigProto(log_device_placement=<span class="literal">True</span>))</span><br><span class="line"><span class="comment"># 查看日志信息若包含gpu信息，就是使用了gpu。</span></span><br></pre></td></tr></table></figure>
 
@@ -7237,13 +7278,97 @@ Options of <code>r-c</code>s<table>
 <li>Connection 8 finished<br>Downloaded 15.3 Gigabyte in 9:12:42 hour(s). (483.26 KB/s)  </li>
 </ul>
 <p>ImageNet 2012</p>
+<ul>
+<li>Connection 7 finished<br>Download 137.7 Gigabyte in 45:10:02 hour(s). (888.25 KB/s)</li>
+<li>Connection 1 finished<br>Download 6.3 Gigabyte in 9:23:27 hour(s). (194.83 KB/s)</li>
+<li>Connection 8 finished<br>Download 12.7 Gigabyte in 17:01:50 hour(s). (217.99 KB/s)</li>
+<li>Downloaded<ul>
+<li>ILSVRC2012_img_test_v10102019.tar</li>
+<li>ILSVRC2012_img_val.tar</li>
+<li>ILSVRC2012_img_train.tar</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> GitHubLab <span class="comment"># ls</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> vim ILSVRC2012.sh</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> chmod +x ILSVRC2012.sh</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ./ILSVRC2012.sh</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> vim proprocess_imagenet_validation_data.py</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> vim build_imagenet_data.py</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="Search-Refs"><a href="#Search-Refs" class="headerlink" title="Search Refs"></a>Search Refs</h3><p><a href="https://blog.csdn.net/XunCiy/article/details/89070315" target="_blank" rel="noopener">Win10中CUDA、cuDNN的安装与卸载</a><br>cuda win 卸载后重启<br><a href="https://blog.csdn.net/BigData_Mining/article/details/104720481" target="_blank" rel="noopener">Win10卸载原有CUDA+安装新CUDA+cudnn</a><br><a href="https://www.geek-share.com/detail/2775909001.html" target="_blank" rel="noopener">win10 Nvidia CUDA 安装与再安装</a><br>win适用 cuda版本<br><a href="https://www.daimajiaoliu.com/daima/479568ec7900400" target="_blank" rel="noopener">Windows系统下安装多个版本cuda、cudnn，以及切换使用</a>  </p>
 <p>cuda 补丁 安装 win<br><a href="https://blog.csdn.net/HollrayChan/article/details/96310636" target="_blank" rel="noopener">Windows版本CUDA、CUDNN与英伟达驱动安装教程</a>  </p>
 <p>windows 查看 cuda cudnn 版本<br><a href="https://blog.csdn.net/m511655654/article/details/88419965" target="_blank" rel="noopener">查看cuda和cudnn版本win&amp;linux</a><br><a href="https://www.cnblogs.com/wuliytTaotao/p/11453265.html" target="_blank" rel="noopener">Linux 和 Windows 查看 CUDA 和 cuDNN 版本</a><br><a href="https://blog.csdn.net/wangpan007/article/details/106788268" target="_blank" rel="noopener">Windows 系统查看 CUDA 和 cuDNN 版本</a>  </p>
 <p>nvidia-smi 不是内部或外部命令<br><a href="https://blog.csdn.net/qq_41185868/article/details/108302470" target="_blank" rel="noopener">成功解决 nvidia-smi 不是内部或外部命令 也不是可运行的程序 或批处理文件</a><br><a href="https://blog.csdn.net/qq_40212975/article/details/89963016" target="_blank" rel="noopener">windows下直接输入nvidia-smi显示不是内部或外部命令也不是可运行的程序</a>  </p>
 <p>tensorflow 2.1, win, ImportError: DLL load failed: 找不到指定的模块。<br><a href="https://www.jianshu.com/p/9453e3aee05a" target="_blank" rel="noopener">Win10 安装 TensorFlow 2.1 出现 ImportError: DLL load failed 问题的解决</a><br><a href="https://github.com/tensorflow/tensorflow/issues/35749" target="_blank" rel="noopener">TensorFlow 2.1: ImportError: DLL load failed: The specified module could not be found.</a><br><a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads" target="_blank" rel="noopener">The latest supported Visual C++ downloads</a><br><a href="https://www.pianshen.com/article/37381440114/" target="_blank" rel="noopener">安装TensorFlow后ImportError: DLL load failed: 找不到指定的模块。</a>  </p>
 <p>Adding visible gpu devices: 0<br>[tensorflow-gpu运行测试代码，卡在 I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu](<a href="https://blog.csdn.net/Msjiangmei/article/details/90695696" target="_blank" rel="noopener">https://blog.csdn.net/Msjiangmei/article/details/90695696</a>)<br><a href="https://github.com/tensorflow/tensorflow/issues/18652" target="_blank" rel="noopener">Bug: tensorflow-gpu takes long time before beginning to compute</a>  </p>
-<h1 id="PyPI-安装包"><a href="#PyPI-安装包" class="headerlink" title="PyPI 安装包"></a>PyPI 安装包</h1><h2 id="切换conda源"><a href="#切换conda源" class="headerlink" title="切换conda源"></a>切换conda源</h2><p>切换 pip 源：<br>如果遇到网络问题，可以使用清华大学的镜像：</p>
+<h2 id="Ubuntu-安装多版本-CUDA"><a href="#Ubuntu-安装多版本-CUDA" class="headerlink" title="Ubuntu 安装多版本 CUDA"></a>Ubuntu 安装多版本 CUDA</h2><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>Ubuntu 查看版本信息 <a href="ubuntu如何查看版本信息？">ref</a></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> cat /proc/version</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> uname -a</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> lsb_release -a</span></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>proc 目录下记录的当前系统运行的各种数据，包括 gcc 版本</li>
+<li>显示 linux 的内核版本和系统是多少位的，”X86_64” 代表系统是 64 位</li>
+<li>显示信息<ul>
+<li>Distributor ID: 类别是 Ubuntu</li>
+<li>Description: 16年3月发布的稳定版本，LTS代表 Long Term Support 长时间支持</li>
+<li>Release: 发行日期或者是发行版本号</li>
+<li>Codename: ubuntu 的代号名称</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> Software</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> wget https://developer.download.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda_10.1.243_418.87.00_linux.run</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="comment"># sudo sh cuda_10.1.243_418.87.00_linux.run</span></span></span><br></pre></td></tr></table></figure>
+
+<p>nvidia-smi type什么意思<br><a href="https://stackoverflow.com/questions/54750627/what-do-g-and-c-types-mean-in-nvidia-smi" target="_blank" rel="noopener">What do G and C types mean in nvidia-smi?</a> </p>
+<ul>
+<li>They are both for GPU<ul>
+<li>C = compute = CUDA or OpenCL</li>
+<li>G = graphics = DirectX or OpenGL</li>
+</ul>
+</li>
+<li><strong>C</strong> = Compute, which defines the processes that use the compute mode of Nvidia GPUs which use CUDA libraries, used in deep learning training and inferencing using Tensorflow-GPU, Pytorch, etc</li>
+<li><strong>G</strong> = Graphics, which defines the processes that use the graphics mode of Nvidia GPUs used by professional 3D graphics, gnome-shell (Ubuntu’s GUI environment), Games, etc for the rendering of graphics or videos</li>
+<li><strong>C+G</strong> = Compute + Graphics, which defines the processes that use both the contexts defined above.</li>
+</ul>
+<p>wget 加速<br><a href="https://blog.csdn.net/xzknet/article/details/105405078" target="_blank" rel="noopener">Linux下载加速，比Wget好太多了（CentOS、Debain都有）</a></p>
+<ul>
+<li>安装 yum-axelget 插件，安装该插件后，yum会使用多线程下载。<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yum -y install yum-axelget</span><br></pre></td></tr></table></figure></li>
+<li>安装后可以使用axel进行并行下载，使用例子如下<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> axel -a -n 10 &lt;url-of-the-file-to-be-downloaded&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>使用参数<ul>
+<li>一般使用：axel url（下载文件地址）；</li>
+<li>限速使用：加上 -s 参数，如 -s 10240，即每秒下载的字节数，这里是 10 Kb；</li>
+<li>限制连接数：加上 -n 参数，如 -n 10，即打开10个连接。</li>
+</ul>
+</li>
+<li>更改默认线程数<ul>
+<li>设置线程数为32线程，或者设置成更多（默认为10线程）<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim /usr/lib/yum-plugins/axelget.py</span><br></pre></td></tr></table></figure></li>
+<li>修改如下，将10改为32，两个位置：<img src="https://img-blog.csdnimg.cn/20200409104116584.png" width="80%">
+<img src="https://img-blog.csdnimg.cn/20200409104130470.png" width="80%">
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ~/Software</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> axel -a -n 10 https://developer.download.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda_10.1.243_418.87.00_linux.run</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> axel -a -n 10 https://developer.nvidia.com/compute/machine-learning/cudnn/secure/7.6.5.32/Production/10.1_20191031/cudnn-10.1-linux-x64-v7.6.5.32.tgz</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>cuda_10.1.105_418.39_linux.run</li>
+<li>cudnn-10.1-linux-x64-v7.6.5.32.tgz</li>
+</ul>
+<p><code>perf</code> 工具: 安装后有助于缓和 ps 的延迟, 就 ps 和 top 慢</p>
+<p>scp 使用<br><a href="https://www.runoob.com/linux/linux-comm-scp.html" target="_blank" rel="noopener">Linux scp命令</a><br><a href="https://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/scp.html" target="_blank" rel="noopener">scp 跨机远程拷贝</a>  </p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> scp -P 9019 remote@www.runoob.com:/usr/<span class="built_in">local</span>/sin.sh /home/administrator</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> scp -P 9019 &lt;upload-file&gt; remote@www.runoob.com:/home/username</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ~/Software</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sh cuda_10.1.105_418.39_linux.run</span></span><br><span class="line"></span><br><span class="line">Do you accept the above EULA? (accept/decline/quit)</span><br><span class="line">accept</span><br><span class="line"></span><br><span class="line">CUDA Installer</span><br><span class="line">- [X] Driver</span><br><span class="line">     [X] 418.39</span><br><span class="line">+ [X] CUDA Toolkit 10.1</span><br><span class="line">  [X] CUDA Samples 10.1</span><br><span class="line">  [X] CUDA Demo Suite 10.1</span><br><span class="line">  [X] CUDA Documentation 10.1</span><br><span class="line">  Install</span><br><span class="line">  Options</span><br><span class="line">Up/Down: Move | Left/Right: Expand | 'Enter':Select | 'A': Advanced options</span><br><span class="line"></span><br><span class="line">Cancel the chosen Driver, and Install</span><br><span class="line"></span><br><span class="line">Permission denied. Unable to write to /usr/local/cuda-10.1/</span><br><span class="line">OK</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> chmod +x cuda_10.1.105_418.39_linux.run</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ./cuda_10.1.105_418.39_linux.run</span></span><br><span class="line"></span><br><span class="line">accept</span><br><span class="line">Options:</span><br><span class="line">  Root install path: /home/eustomaqua/Software/cuda-10.1</span><br><span class="line"></span><br><span class="line"> Completed with errors. See log at /tmp/cuda-installer.log for details.</span><br><span class="line"><span class="meta">$</span><span class="bash"> cat /tmp/cuda-installer.log</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ~/Software</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> chmod +x cuda_10.1.243_418.87.00_linux.run</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ./cuda_10.1.243_418.87.00_linux.run</span></span><br><span class="line"></span><br><span class="line">┌──────────────────────────────────────────────────────────────────────────────┐</span><br><span class="line">│ CUDA Installer                                                               │</span><br><span class="line">│ - [ ] Driver                                                                 │</span><br><span class="line">│      [ ] 418.87.00                                                           │</span><br><span class="line">│ + [X] CUDA Toolkit 10.1                                                      │</span><br><span class="line">│   [X] CUDA Samples 10.1                                                      │</span><br><span class="line">│   [X] CUDA Demo Suite 10.1                                                   │</span><br><span class="line">│   [X] CUDA Documentation 10.1                                                │</span><br><span class="line">│   Options                                                                    │</span><br><span class="line">│   Install                                                                    │</span><br><span class="line">│                                                                              │</span><br><span class="line">│ Up/Down: Move | Left/Right: Expand | 'Enter': Select | 'A': Advanced options │</span><br><span class="line">└──────────────────────────────────────────────────────────────────────────────┘</span><br><span class="line"></span><br><span class="line">'Enter' + 'A'</span><br><span class="line"></span><br><span class="line">CUDA Driver</span><br><span class="line">│   [ ] Do not install any of the OpenGL-related driver files                  │</span><br><span class="line">│   [ ] Do not install the nvidia-drm kernel module                            │</span><br><span class="line">│   [ ] Update the system X config file to use the NVIDIA X driver             │</span><br><span class="line">│   Change directory containing the kernel source files</span><br><span class="line"></span><br><span class="line">CUDA Toolkit</span><br><span class="line">  Change Toolkit Install Path: /home/eustomaqua/Software/cuda-10.1</span><br><span class="line">  [ ] Create symbolic link from /usr/local/cuda</span><br><span class="line">- [ ] Create desktop menu shortcuts</span><br><span class="line">     [X] Yes</span><br><span class="line">  [ ] Install manpage documents to /usr/share/man</span><br><span class="line"></span><br><span class="line">Samples Options</span><br><span class="line">  Change Writeable Samples Install Path: /home/eustomaqua/Software/cuda-samples-101</span><br><span class="line"></span><br><span class="line">Library install path (Blank for system default)</span><br><span class="line"><span class="meta">  #</span><span class="bash"> /home/eustomaqua/Software/cuda-library-10.1</span></span><br><span class="line"><span class="meta">  #</span><span class="bash"> Leave it as blank (as it should be)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Library install path: /home/eustomaqua/Software/cuda-10.1</span></span><br><span class="line"><span class="meta">$</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">eustomaqua@loae-ws:~/Software$ chmod +x cuda_10.1.243_418.87.00_linux.run</span><br><span class="line">eustomaqua@loae-ws:~/Software$ ./cuda_10.1.243_418.87.00_linux.run</span><br><span class="line">===========</span><br><span class="line">= Summary =</span><br><span class="line">===========</span><br><span class="line"></span><br><span class="line">Driver:   Not Selected</span><br><span class="line">Toolkit:  Installed in /home/eustomaqua/Software/cuda-10.1/</span><br><span class="line">Samples:  Installed in /home/eustomaqua/Software/cuda-samples-101/, but missing recommended libraries</span><br><span class="line"></span><br><span class="line">Please make sure that</span><br><span class="line"> -   PATH includes /home/eustomaqua/Software/cuda-10.1/bin</span><br><span class="line"> -   LD_LIBRARY_PATH includes /home/eustomaqua/Software/cuda-10.1/lib64, or, add /home/eustomaqua/Software/cuda-10.1/lib64 to /etc/ld.so.conf and run ldconfig as root</span><br><span class="line"></span><br><span class="line">To uninstall the CUDA Toolkit, run cuda-uninstaller in /home/eustomaqua/Software/cuda-10.1/bin</span><br><span class="line"></span><br><span class="line">Please see CUDA_Installation_Guide_Linux.pdf in /home/eustomaqua/Software/cuda-10.1/doc/pdf for detailed information on setting up CUDA.</span><br><span class="line">***WARNING: Incomplete installation! This installation did not install the CUDA Driver. A driver of version at least 418.00 is required for CUDA 10.1 functionality to work.</span><br><span class="line">To install the driver using this installer, run the following command, replacing &lt;CudaInstaller&gt; with the name of this run file:</span><br><span class="line">    sudo &lt;CudaInstaller&gt;.run --silent --driver</span><br><span class="line"></span><br><span class="line">Logfile is /tmp/cuda-installer.log</span><br><span class="line">eustomaqua@loae-ws:~/Software$</span><br></pre></td></tr></table></figure>
+
+<h3 id="失败"><a href="#失败" class="headerlink" title="失败"></a>失败</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ls /tmp/ | grep cuda</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo rm -r /tmp/cuda-installer.log</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ~/Software</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo rm -r cuda-10.1 cuda-library-10.1 cuda-samples-101</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ./cuda_10.1.243_418.87.00_linux.run</span></span><br><span class="line"></span><br><span class="line">Options</span><br><span class="line">Change Toolkit Install Path: /home/eustomaqua/Software/cuda-10.1/</span><br><span class="line">[ ] Create symbolic link from /usr/local/cuda</span><br><span class="line">[ ] Install manpage documents to /usr/share/man</span><br><span class="line">Change Writeable Samples Install Path: /home/eustomaqua/Software/cuda-samples-101/</span><br><span class="line">Library install path (Blank for system default): &lt;dont-leave-it-blank&gt;</span><br><span class="line"><span class="meta">  #</span><span class="bash"> /home/eustomaqua/Software/cuda-10.1/lib64/</span></span><br><span class="line"></span><br><span class="line">Install</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> head /tmp/cuda-installer.log -n 30</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="comment"># tail # cat</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">yjbian@loae-ws:~/Software$ ./cuda_10.1.243_418.87.00_linux.run</span><br><span class="line">===========</span><br><span class="line">= Summary =</span><br><span class="line">===========</span><br><span class="line"></span><br><span class="line">Driver:   Not Selected</span><br><span class="line">Toolkit:  Installed in /home/yjbian/Software/cuda-10.1/</span><br><span class="line">Samples:  Installed in /home/yjbian/Software/cuda-samples-101/, but missing recommended libraries</span><br><span class="line"></span><br><span class="line">Please make sure that</span><br><span class="line"> -   PATH includes /home/yjbian/Software/cuda-10.1/bin</span><br><span class="line"> -   LD_LIBRARY_PATH includes /home/yjbian/Software/cuda-10.1/lib64, or, add /home/yjbian/Software/cuda-10.1/lib64 to /etc/ld.so.conf and run ldconfig as root</span><br><span class="line"></span><br><span class="line">To uninstall the CUDA Toolkit, run cuda-uninstaller in /home/yjbian/Software/cuda-10.1/bin</span><br><span class="line"></span><br><span class="line">Please see CUDA_Installation_Guide_Linux.pdf in /home/yjbian/Software/cuda-10.1/doc/pdf for detailed information on setting up CUDA.</span><br><span class="line">***WARNING: Incomplete installation! This installation did not install the CUDA Driver. A driver of version at least 418.00 is required for CUDA 10.1 functionality to work.</span><br><span class="line">To install the driver using this installer, run the following command, replacing &lt;CudaInstaller&gt; with the name of this run file:</span><br><span class="line">    sudo &lt;CudaInstaller&gt;.run --silent --driver</span><br><span class="line"></span><br><span class="line">Logfile is /tmp/cuda-installer.log</span><br><span class="line">yjbian@loae-ws:~/Software$</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> vim ~/.bashrc</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> added by Anaconda3 installer</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">export</span> PATH=<span class="string">"/home/yjbian/anaconda3/bin:<span class="variable">$PATH</span>"</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> self added <span class="keyword">for</span> Nvidia</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">export</span> PATH=<span class="variable">$HOME</span>/anaconda3/bin:<span class="variable">$HOME</span>/Software/cuda-10.0/bin:<span class="variable">$PATH</span></span></span><br><span class="line">export PATH=$HOME/anaconda3/bin:$PATH</span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">export</span> LD_LIBRARY_PATH=<span class="variable">$HOME</span>/Software/cuda-10.0/lib64:<span class="variable">$LD_LIBRARY_PATiH</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> TensorRT</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">export</span> LD_LIBRARY_PATH=<span class="variable">$HOME</span>/Software/cuda-10.0/lib64:<span class="variable">$HOME</span>/Software/TensorRT-6.0.1.5/lib:<span class="variable">$LD_LIBRARY_PATH</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">export</span> CUDA_INSTALL_DIR=<span class="variable">$HOME</span>/Software/cuda-10.0</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">export</span> CUDNN_INSTALL_DIR=<span class="variable">$HOME</span>/Software/cuda-10.0</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> multiple CUDA</span></span><br><span class="line">export PATH=$HOME/Software/cuda-10.1/bin:$PATH</span><br><span class="line">export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/Software/cuda-10.1/lib64</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">source</span> ~/.bashrc</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">source</span> activate adapruning</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> python</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; import tensorflow.compat.v1 as tf</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; tf.test.is_gpu_available()</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> dpkg -L libcublas10  <span class="comment"># 显示一个包安装到系统里面的文件目录信息</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo apt-get install libcublas10</span></span><br></pre></td></tr></table></figure>
+
+<p>注意 <code>LD_LIBRARY_PATH</code> 不能写成 <code>.../cuda-10.1/lib64/</code></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ~/Software</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> tar -xzvf cudnn-10.1-linux-x64-v7.6.5.32.tgz</span></span><br><span class="line">cuda/include/cudnn.h</span><br><span class="line">cuda/NVIDIA_SLA_cuDNN_Support.txt</span><br><span class="line">cuda/lib64/libcudnn.so</span><br><span class="line">cuda/lib64/libcudnn.so.7</span><br><span class="line">cuda/lib64/libcudnn.so.7.6.5</span><br><span class="line">cuda/lib64/libcudnn_static.a</span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="keyword">in</span> the folder named `cuda`</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> ls cuda</span></span><br><span class="line">include  lib64  NVIDIA_SLA_cuDNN_Support.txt</span><br><span class="line"><span class="meta">$</span><span class="bash"> mv cuda/include/cudnn.h ~/Software/cuda-10.1/include/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> mv cuda/lib64/libcudnn* ~/Software/cuda-10.1/lib64/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> chmod a+r ~/Software/cuda-10.1/include/cudnn.h ~/Software/cuda-10.1/lib64/libcudnn*</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> rm -r cuda</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> nvcc -V</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> cat ~/Software/cuda-10.1/version.txt</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> cat ~/Software/cuda-10.1/include/cudnn.h | grep CUDNN_MAJOR -A5</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">source</span> activate adapruning</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> pip list</span></span><br><span class="line">numba                0.38.0</span><br><span class="line">numpy                1.17.2</span><br><span class="line">Pillow               5.1.0</span><br><span class="line">scipy                1.1.0</span><br><span class="line">tensorboard          2.1.1</span><br><span class="line">tensorflow-estimator 2.1.0</span><br><span class="line">tensorflow-gpu       2.1.0</span><br><span class="line">tensorrt             6.0.1.5</span><br><span class="line"><span class="meta">$</span><span class="bash"> pip install tensorflow-gpu==2.1.0</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> pip install numpy==1.18.2</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> pip install numba==0.52.0 --ignore-installed llvmlite</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> pip install scipy==1.4.1</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> pip install pillow==8.1.0</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> pip install <span class="string">'pycuda&gt;=2017.1.1'</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> Software/TensorRT-6.0.1.5</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> python</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> pip install tensorrt-6.0.1.5-cp36-none-linux_x86_64.whl</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ../uff</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> pip install uff-0.6.5-py2.py3-none-any.whl</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># self added for Nvidia</span><br><span class="line"># export PATH&#x3D;$HOME&#x2F;anaconda3&#x2F;bin:$HOME&#x2F;Software&#x2F;cuda-10.0&#x2F;bin:$PATH</span><br><span class="line">export PATH&#x3D;$HOME&#x2F;anaconda3&#x2F;bin:$HOME&#x2F;Software&#x2F;cuda-10.1&#x2F;bin:$PATH</span><br><span class="line"># export LD_LIBRARY_PATH&#x3D;$HOME&#x2F;Software&#x2F;cuda-10.0&#x2F;lib64:$LD_LIBRARY_PATiH</span><br><span class="line">export LD_LIBRARY_PATH&#x3D;$HOME&#x2F;Software&#x2F;cuda-10.1&#x2F;lib64:$LD_LIBRARY_PATH</span><br><span class="line"># TensorRT</span><br><span class="line">export LD_LIBRARY_PATH&#x3D;$HOME&#x2F;Software&#x2F;cuda-10.1&#x2F;lib64:$HOME&#x2F;Software&#x2F;TensorRT-6.0.1.5&#x2F;lib:$LD_LIBRARY_PATH</span><br><span class="line">export CUDA_INSTALL_DIR&#x3D;$HOME&#x2F;Software&#x2F;cuda-10.1</span><br><span class="line">export CUDNN_INSTALL_DIR&#x3D;$HOME&#x2F;Software&#x2F;cuda-10.1</span><br><span class="line"># multiple CUDA</span><br></pre></td></tr></table></figure>
+
+<h3 id="成功"><a href="#成功" class="headerlink" title="成功"></a>成功</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> Software</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo rm -r cuda-10.1 cuda-samples-101</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ./cuda_10.1.105_418.39_linux.run</span></span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line">CUDA Toolkit</span><br><span class="line">  Change Toolkit Install Path: /home/eustomaqua/Software/cuda-10.1/</span><br><span class="line">  [ ] Create symbolic link from /usr/local/cuda</span><br><span class="line">- [X] Create desktop menu shortcuts</span><br><span class="line">     [ ] All users</span><br><span class="line">     [X] Yes</span><br><span class="line">     [ ] No</span><br><span class="line">  [ ] Install manpage documents to /usr/share/man</span><br><span class="line">CUDA Samples</span><br><span class="line">  Change Sample Install Path: /home/eustomaqua/Software/cuda-samples-101/</span><br><span class="line">Root install path: /home/eustomaqua/Software/cuda-10.1/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">===========</span><br><span class="line">= Summary =</span><br><span class="line">===========</span><br><span class="line"></span><br><span class="line">Driver:   Not Selected</span><br><span class="line">Toolkit:  Installed in /home/yjbian/Software/cuda-10.1/</span><br><span class="line">Samples:  Installed in /home/yjbian/Software/cuda-samples-101/, but missing recommended libraries</span><br><span class="line"></span><br><span class="line">Please make sure that</span><br><span class="line"> -   PATH includes /home/yjbian/Software/cuda-10.1/bin</span><br><span class="line"> -   LD_LIBRARY_PATH includes /home/yjbian/Software/cuda-10.1/lib64, or, add /home/yjbian/Software/cuda-10.1/lib64 to /etc/ld.so.conf and run ldconfig as root</span><br><span class="line"></span><br><span class="line">To uninstall the CUDA Toolkit, run cuda-uninstaller in /home/yjbian/Software/cuda-10.1/bin</span><br><span class="line"></span><br><span class="line">Please see CUDA_Installation_Guide_Linux.pdf in /home/yjbian/Software/cuda-10.1/doc/pdf for detailed information on setting up CUDA.</span><br><span class="line">***WARNING: Incomplete installation! This installation did not install the CUDA Driver. A driver of version at least 418.00 is required for CUDA 10.1 functionality to work.</span><br><span class="line">To install the driver using this installer, run the following command, replacing &lt;CudaInstaller&gt; with the name of this run file:</span><br><span class="line">    sudo &lt;CudaInstaller&gt;.run --silent --driver</span><br><span class="line"></span><br><span class="line">Logfile is /tmp/cuda-installer.log</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> vim ~/.bashrc</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> tar -xvf cudnn-10.1-linux-x64-v7.6.5.32.tgz</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> mv cuda/include/cudnn.h ~/Software/cuda-10.1/include/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> mv cuda/lib64/libcudnn* ~/Software/cuda-10.1/lib64/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> chmod a+r ~/Software/cuda-10.1/include/cudnn.h ~/Software/cuda-10.1/lib64/libcudnn*</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> rm -r cuda</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> rm -r TensorRT-6.0.1.5</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> tar -xvf TensorRT-6.0.1.5.Ubuntu-18.04.x86_64-gnu.cuda-10.1.cudnn7.6.tar.gz</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> TensorRT-6.0.1.5</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> python</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> pip install tensorrt-6.0.1.5-cp36-none-linux_x86_64.whl</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ../uff</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> pip install uff-0.6.5-py2.py3-none-any.whl</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ~/anaconda3/envs/adapruning/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ~/anaconda3/lib/python3.6/site-packages</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ~/anaconda3/envs/adapruning/lib/python3.6/site-packages</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> uff/converters/tensorflow/</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> vim conversion_helpers.py</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> from tensorflow import GraphDef</span></span><br><span class="line">from tensorflow.compat.v1 import GraphDef</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> python</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; import tensorrt</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; import uff</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; import tensorflow as tf</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; tf.test.is_gpu_available()</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; import tensorflow.compat.v1 as tf</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; tf.test.is_gpu_available()</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://forums.developer.nvidia.com/t/cublas-for-10-1-is-missing/71015/20" target="_blank" rel="noopener">cublas for 10.1 is missing</a><br><a href="https://github.com/NVIDIA/TensorRT/issues/184" target="_blank" rel="noopener">Cannot convert Tensorflow protobuf to uff</a><br><a href="https://stackoverflow.com/questions/31003994/anaconda-site-packages" target="_blank" rel="noopener">Anaconda site-packages</a>  </p>
+<h3 id="Succeed"><a href="#Succeed" class="headerlink" title="Succeed"></a>Succeed</h3><h1 id="PyPI-安装包"><a href="#PyPI-安装包" class="headerlink" title="PyPI 安装包"></a>PyPI 安装包</h1><h2 id="切换conda源"><a href="#切换conda源" class="headerlink" title="切换conda源"></a>切换conda源</h2><p>切换 pip 源：<br>如果遇到网络问题，可以使用清华大学的镜像：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 设为默认</span></span><br><span class="line">pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line"><span class="meta">#</span><span class="bash"> 临时设置</span></span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br></pre></td></tr></table></figure>
 
 <p><strong>Refs:</strong><br><a href="https://mirrors.ustc.edu.cn/help/pypi.html" target="_blank" rel="noopener">PyPI 镜像源使用帮助</a><br><a href="https://mirrors.tuna.tsinghua.edu.cn/help/pypi/" target="_blank" rel="noopener">pypi 镜像使用帮助</a>  </p>
@@ -7254,15 +7379,217 @@ Options of <code>r-c</code>s<table>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install numpy==1.15.1 -i https://pypi.tuna.tsinghua.edu.cn/simple/</span><br></pre></td></tr></table></figure>
 
 <p><strong>Refs:</strong><br><a href="https://www.jianshu.com/p/8e042b7e91b6" target="_blank" rel="noopener">解决pip超时的问题</a><br><a href="https://www.jianshu.com/p/02b053b8143a" target="_blank" rel="noopener">anaconda清华源可以暂弃了</a>  </p>
-<h1 id="TensorFlow-1"><a href="#TensorFlow-1" class="headerlink" title="TensorFlow"></a>TensorFlow</h1><h1 id="PyTorch-1"><a href="#PyTorch-1" class="headerlink" title="PyTorch"></a>PyTorch</h1><h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1>]]></content>
+<h1 id="TensorFlow-1"><a href="#TensorFlow-1" class="headerlink" title="TensorFlow"></a>TensorFlow</h1><h1 id="PyTorch-1"><a href="#PyTorch-1" class="headerlink" title="PyTorch"></a>PyTorch</h1><h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> chmod +x ?*.sh</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> nohup ./?.sh</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> du -h --max-depth=1</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ps -ef | grep ?.sh</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> watch -n 10 nvidia-smi  <span class="comment"># ctrl+z</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> python  <span class="comment"># ctrl+z in Ubuntu</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> python  <span class="comment"># ctrl+c in cmder of Windows</span></span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>Programming</category>
+        <category>Coding</category>
       </categories>
       <tags>
         <tag>TensorFlow</tag>
         <tag>Notes</tag>
         <tag>PyTorch</tag>
-        <tag>NVIDIA CUDA</tag>
+        <tag>NVIDIA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>好用的科研小工具 (个人喜好)</title>
+    <url>/2021/2021-01-21-JabRef-Research/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><!--
+极简之梦中情“屋”
+tags: Life,
+tags: iOS, Windows
+
+2021/1/31 17:04pm Sun, Productivity
+-->
+
+
+<h1 id="LaTeX"><a href="#LaTeX" class="headerlink" title="LaTeX"></a>LaTeX</h1><p>不用讲了吧，磕盐民工码文必备利器。本地机用的是 texlive + texstudio, 其中 texstudio 可以配置语法自动检查，提示高亮。以前配置过，当时没记录。不过我现在都转到 overleaf 然后云端备份了。  </p>
+<p>Overleaf 里我建了几个不同的文件夹，感觉它的文件夹相当于是标签，一个项目可以同时属于两个标签。比如说为了方便分类，可以用 In Progress / Under Review / Reject &amp; Resubmit / Prepare A Major Revision / Accepted 等来区分。Overleaf 文件夹的颜色是默认生成的，无法自定义改变，觉得颜色不满意只能删掉重新创建了，碰运气看能不能碰出个喜欢的。此外 overleaf 时不时就会来个掉线也是有点烦</p>
+<p>参考文献用 .bib ，整理时推荐使用 JabRef 3.8.2, 表用最新版 5.2, 不好使。安装后设置：</p>
+<ul>
+<li>Perferences<ul>
+<li>Groups: Initially show groups tree expanded 取消勾选</li>
+<li>Entry editor: 勾选 Show BibTeX source by default</li>
+<li>Entry table columns: 勾选 Show priority (将之移动到 ranking 之前)</li>
+</ul>
+</li>
+<li>点选图标使之显示 groups tree</li>
+<li>Groups Setting<ul>
+<li>选择 Intersection</li>
+<li>选择 Hide non-hits</li>
+<li>勾选 Show number of elements contained in each group</li>
+<li>勾选 Automatically assign new entry to selected groups</li>
+</ul>
+</li>
+</ul>
+<p>JabRef 3.8.2 有个缺点是重新安装后 groups tree 不会自动生成，但是可以 move to group; 相比之下 JabRef 5.2 不停提示有别的程序改动文件，且 saving library 极慢，不能自如移动分组 (只能手动输入)，不能显示颜色等问题烦人得多了。所以我最后又卸了最新版回到了 3.8.2. 其实早些年我用 3.8.2 也存在有点反应迟钝的问题，但是我记不太清楚是当时版本是 4 的问题，还是 3.8 也有，不过现在基本已经没有反应迟钝了。而且 3.8.2 还可以自动提示有重复项 (方便合并)。我最新装的是 Java 8, 其实以前也是，不知道有没有关系。而且老版搜索、添加项、合并项等都十分方便，反而衬得最新版界面胖得有些臃肿，搜索和添加项都不是很顺手。最关键的是保存实在是太烦人了。</p>
+<p>习惯 latex 之后再看 word 就十分不顺眼，可能我太过强迫症…… 所以这就遗留下一个问题就是我得学会怎么写 .cls 格式，不然用 word 真的又烦又难看</p>
+<h1 id="Servers"><a href="#Servers" class="headerlink" title="Servers"></a>Servers</h1><p>推荐 Bitvise SSH Client 和 Cmder 结合使用，当然要在本地配好 ssh 免密登录。<br>Bitvise SSH Client 方便查看服务器端代码执行后产生的结果，下载文件也不会影响其最后修改时间。否则就只能在服务器端 zip 压缩文件后下载本地再解压。<br>Cmder 更方便于直接 ssh 免密登录，这样不过需要在服务器上执行命令的话，不需要每次都用 Bitvise SSH Client 客户端。</p>
+<p>调试代码的话，可以直接用 VSCode 连接到服务器上调试，我认为这种方法 debug 起来是最方便的。PyCharm 可以在本地写好测试完，自动上传到服务器，也可以远程调试 (但是方便程度略有不如)。<br>也可以用 git, 在本地改好代码后 git push 上传，然后在服务器端 git pull, 最后用 .sh 脚本执行命令。</p>
+<p>代码执行过程中常用的命令有：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> htop</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> watch -n 10 nvidia-smi</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ps -ef | grep xxxx</span></span><br></pre></td></tr></table></figure>
+
+<p>实验数据结果推荐用 Google Docs 里的表格存储到 Google Drive, 我一般会用 Google Slices 记录下工作进度和计划等，都放到一个文件夹里，方便日后查阅。<br>每一次新提交的论文，实验结果等相关资料都创建一个新的文件夹，overleaf 创建一个新的项目，这样相当于人工分成若干个分支，便于后续查找不同的版本记录。</p>
+<h1 id="Chrome"><a href="#Chrome" class="headerlink" title="Chrome"></a>Chrome</h1><p>插件我推荐这些</p>
+<ul>
+<li>Pinned<ul>
+<li>AdBlock: 屏蔽广告</li>
+<li>OneTab: 存储希望关掉的页面以备后续查看</li>
+<li>Google Gmail Checker</li>
+<li>Google Calendar</li>
+<li>Worldtime: 跨时区查看时间, 可同时显示</li>
+<li>FireShot - Capture page: 捕捉网页截图</li>
+</ul>
+</li>
+<li>Enabled<ul>
+<li>Find Code for Research Papers - CatalyzeX</li>
+<li>Free Download Manager</li>
+<li>Google 文档的离线功能</li>
+<li>// Google 翻译</li>
+<li>// Google 学术搜索按钮</li>
+<li>Keepa - Amazon Price Tracker</li>
+<li>Proxy SwitchyOmega</li>
+</ul>
+</li>
+</ul>
+<p>应用 url <code>chrome://apps</code></p>
+<ul>
+<li>Awesome<ul>
+<li>马克飞象</li>
+<li>Google 绘图</li>
+<li>Google Keep</li>
+</ul>
+</li>
+<li>Laptop<ul>
+<li>Any.do</li>
+<li>Readium</li>
+<li>Google Keep</li>
+<li>Evernote Web</li>
+<li>StackEdit</li>
+<li>Gantter</li>
+<li>Google 协作平台</li>
+</ul>
+</li>
+<li>Desktop<ul>
+<li>有道云笔记网页版</li>
+<li>Telegram</li>
+<li>Google Drive</li>
+<li>TensorFlow</li>
+<li>Asana</li>
+</ul>
+</li>
+</ul>
+<h1 id="Kindle"><a href="#Kindle" class="headerlink" title="Kindle"></a>Kindle</h1><p>打开 Goodreads, 记录阅读进度。<br>自己邮箱传送的电子书，除非是非常好的书籍可以反复阅读的，其他的读完后全部永久删除。备份邮箱都有，不需要额外占用空间，找起书来也麻烦。<br>购买的免费书可以适当删除，真金白银买的书就最好删掉本地文件就可以了，想再阅读时再下载。</p>
+]]></content>
+      <categories>
+        <category>Efficiency</category>
+      </categories>
+      <tags>
+        <tag>Kindle</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Wonderful U</title>
+    <url>/2021/2021-03-13-LittleWomen/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1803528331&auto=1&height=66"></iframe>
+
+
+<p><strong>Wonderful U</strong><br><em>Singer: AGA</em></p>
+<p>I never knew.<br>When the clock stopped and I’m looking at you<br>I never thought I’ll miss someone like you<br>Someone I thought that I knew</p>
+<p>I never knew.<br>I should have known something wouldn’t be true<br>Baby you know that I’m so into you<br>More than I know I should do</p>
+<p>So why? why? why?<br>Why should we waited?<br>And I, I, I, I should be waiting<br>Waiting for someone new<br>Even though that it wasn’t you</p>
+<p>But I know that it’s, Wonderful.<br>Incredible, Baby irrational<br>I never knew it was obsessional<br>And I never knew it was with you oooh…<br>Baby if it’s just, Wonderful.<br>Incredible, Baby irrational<br>I never knew it was so sad, just so sad<br>I’m so sorry.<br>Even now I just cannot feel you feel me<br>hmmm….hmmm….</p>
+<p>So why? why? why?<br>Why should we waited?<br>And I, I, I, I should be waiting<br>Waiting for someone new<br>Even though that it wasn’t you</p>
+<p>But I know that it’s, Wonderful.<br>Incredible, Baby irrational<br>I never knew it was obsessional<br>And I never knew it was with you oooh…<br>Baby if it’s just, Wonderful.<br>Incredible, Baby irrational<br>I never knew it was so sad, just so sad<br>I’m so sorry.<br>Even now I just cannot feel you fall</p>
+<p>I don’t even know now.<br>I’m sure you’ll wait for me<br>Even now I just cannot deny.<br>I just hold on so tight<br>Until you and I never could breathe</p>
+<p>Oh, Wonderful.<br>Incredible, Baby irrational<br>I never knew it was obsessional<br>And I never knew it was with you until you tell me to<br>Baby if it’s just, Wonderful.<br>Incredible, Baby irrational<br>I never knew it was so sad, just so sad<br>I’m so sorry.<br>Even now I just cannot feel you feel me</p>
+<!--
+作词 : AGA
+作曲 : AGA
+编曲 : AGA 江海迦
+
+
+我从未知晓
+当我凝望你之时 时间恍若戛然而止
+我未曾想过会对你如此念念不忘
+那个我曾认为对其一切都了如指掌的人
+我也从不知道
+或许我早该明白有些事并非能够得偿所愿
+亲爱的 你应知我是多么沉醉痴迷于你
+逾越我应保持冷静的界线
+
+所以为何
+我们为何苦苦等待
+或许我本就应在此等候
+昂首期盼新人而至
+即便那人并不是你
+
+我也会知道这是多么美妙的事情
+令人难以置信 亲爱的 这甚至有些捉摸不透
+我从未想过会深陷这无法抗拒的感受之中
+我也从未想过是与你相伴
+亲爱的 这种感觉精妙绝伦
+令人难以置信 亲爱的 这甚至有些捉摸不透
+而我却从不知这会如此令人悲恸欲绝
+我对此深表歉意
+甚至如今我都无法感受你所感知我爱的温热
+
+
+所以为何
+我们为何苦苦等待
+或许我本就应在此等候
+昂首期盼新人而至
+即便那人并不是你
+
+我也会知道这是多么美妙的事情
+令人难以置信 亲爱的 这甚至有些捉摸不透
+我从未想过会深陷这无法抗拒的感受之中
+我也从未想过是与你相伴
+亲爱的 这种感觉精妙绝伦
+令人难以置信 亲爱的 这甚至有些捉摸不透
+而我却从不知这会如此令人悲恸欲绝
+我对此深表歉意
+甚至如今我都无法感受到你已深深沦陷
+
+
+我甚至都不知道
+也不确定是否你将为我等候
+即便如今 我也不可否认
+只是紧紧将你拥入怀中
+直至我们气咽声丝于这依偎间
+.
+精妙绝伦
+令人难以置信 亲爱的 这甚至有些捉摸不透
+我从未想过会深陷这无法抗拒的感受之中
+我也从未想过是与你相伴直至你告知于我
+亲爱的 这种感觉精妙绝伦
+令人难以置信 亲爱的 这甚至有些捉摸不透
+而我却从不知这会如此令人悲恸欲绝
+我对此深表歉意
+甚至如今我都无法感受你所感知我爱的温热
+
+
+监制 : 舒文@Zoo Music
+-->
+
+
+<p><strong>Little Women</strong></p>
+<p>Laurie and Jo walked through the woods together, as they had done for years. And then Laurie told her how he felt about her all the time, as he said, “We’ve got to have it out.” He said, “I’ve loved you ever since I’ve known you Jo – I couldn’t help it, and you’ve been so good to me – I’ve tried to show it but you wouldn’t let me; now I’m going to make you hear and give me an answer because… I can’t go on like this any longer. I’ve worked hard to please you, and I gave up billiards and everything you didn’t like, and waited and never complained because… I figured you’d love me, Jo, … I can’t love anyone else, Jo. I only love you. … though I’m not half good enough – I’d be a perfect saint…”</p>
+<p>He said “Is there anything more?” after she turned him down, devastated, depressed. Yet he turned back and walked up to her hearing her saying “except that…”, like a desperate person who happened to get driftwood. The only thing he got is her saying “I don’t believe I will ever marry. I’m happy as I am, and I love my liberty too well to be in any hurry to give it up.” He refused to believe that, “I think you’re wrong. I think you will marry, Jo. I think you’ll find someone and love him, and you will live and die for him because that’s your way, and you will… (a long pause) And I’ll watch.” He walked away, heartbreaking, even including us.</p>
+<p>After Beth’s death, Jo told her mother, “I care more to be loved. I want to be loved.” even though she already knew that was not the same as loving. She said, “I just… I just feel… I just feel like… Women, they… They have minds and they have souls, as well as just hearts. And they’ve got ambition and they’ve got talent, as well as just beauty. And I’m so sick of people saying that love is just all a woman is fit for. I’m so sick of it!… But I’m… I’m so lonely.” She cried, with my tears of empathy. Every time I heard about this. Like Jo said, “If I was a girl in a book, this would all be so easy. Just give up the world happily.”</p>
+<p>Afterward, when Friedrich came and found her, Laurie stood by, asking several times: “Who is this, who are you?”, “Can someone tell me who this man is?”, “I’m Laurie, who are you?” He finally watched another man walking into Jo’s life. Although I insist he was still in love with her, otherwise why would he care most about this? I don’t know. Maybe he had moved on, saying that just as a friend? I don’t know about this sort of thing at all. Too sad to let it go.</p>
+<p>I noticed Timothee Chalamet because of the DUNE trailer I saw around one or two months ago, although I adored more Freddie Highmore then starting to watch many of his conversations as an actor. I never thought I would feel so regretful for Timothee Chalamet (to be specific, Laurie and Jo) since his good-looking isn’t quite of my type actually. Blaise returned to save Noah at the cost of his life after Noah died for saving him, which hit me deeply. Cyclically, endlessly, this tragedy.</p>
+<!--
+循环往复，无休无止
+after a long pause
+-->
+
+<p>Now I’d like to make a wish, a wish that might never come true.</p>
+]]></content>
+      <categories>
+        <category>似此星辰</category>
+      </categories>
+      <tags>
+        <tag>Music</tag>
       </tags>
   </entry>
 </search>
