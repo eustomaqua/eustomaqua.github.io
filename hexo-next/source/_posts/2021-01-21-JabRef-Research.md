@@ -40,6 +40,9 @@ JabRef 3.8.2 有个缺点是重新安装后 groups tree 不会自动生成，但
 
 习惯 latex 之后再看 word 就十分不顺眼，可能我太过强迫症…… 所以这就遗留下一个问题就是我得学会怎么写 .cls 格式，不然用 word 真的又烦又难看
 
+**UPDATE:** <!-- 2021/5/13 19:18pm Thu 棒/赞 -->
+现在 JabRef 3.8.2 好像打开新的 bib 文件也可以自动显示 groups tree 了，赞
+
 
 # Servers
 
