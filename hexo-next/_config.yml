@@ -102,7 +102,8 @@ social:
 
 deploy:
   type: git
-  repo: https://github.com/eustomaqua/eustomaqua.github.io.git
+  # repo: https://github.com/eustomaqua/eustomaqua.github.io.git
+  repo: git@github.com:eustomaqua/eustomaqua.github.io.git
   branch: master
   message: updated on {{ now("ddd, MM/DD/YYYY") }}
   # message: updated at {{ now("YYYY-MM-DD") }}
