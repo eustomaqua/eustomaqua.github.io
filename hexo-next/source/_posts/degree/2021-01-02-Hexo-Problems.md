@@ -57,7 +57,7 @@ Scheme: Pisces
 Scheme: Gemini
 
 ### Backup 援引
-援引 {% post_link 2020-04-12-Hexo-Troubles %}
+援引 {% post_link degree/2020-04-12-Hexo-Troubles %}
 
 - 引用博文
   e.g., 引用文件夹 `_post/hello` 下的文件 `HelloWorld.md`

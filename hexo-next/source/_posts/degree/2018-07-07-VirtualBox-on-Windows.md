@@ -5,12 +5,13 @@ updated: 2018-07-07 16:51:10
 categories:
   - Records
 tags:
-  - Configure
+  - Configuration
   - Linux
 ---
 <!--
 updated:
 Edited on 24 Mar 2020 10:02:16
+Configure on 4 Dec 2021 15:20:59
 -->
 
 

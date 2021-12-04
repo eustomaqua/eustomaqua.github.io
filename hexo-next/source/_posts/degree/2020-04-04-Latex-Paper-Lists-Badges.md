@@ -7,7 +7,7 @@ categories:
 tags: 
   - LaTeX
   - Git
-  - Configure
+  - Configuration
   - Remote Server
 ---
 
@@ -20,6 +20,7 @@ Updated:
 
 Tips of LaTeX and Badges, Usage of Remote Server
 Tag: Remote Server / Linux
+Configure: 4 Dec 2021, 15:23:38
 -->
 
 

@@ -630,7 +630,7 @@ INFO  0 files generated in 10 s
 ### Attempt 1: Failed
 
 1. 安装插件，切换到根目录
-  (早在搭建博客时已安装，详见 {% post_link 2018-07-14-Hexo-NexT Build_up_your_website %} )
+  (早在搭建博客时已安装，详见 {% post_link degree/2018-07-14-Hexo-NexT Build_up_your_website %} )
   ```bash
   $ npm install hexo-wordcount --save
   ```

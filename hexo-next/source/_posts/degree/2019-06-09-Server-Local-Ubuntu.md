@@ -5,7 +5,7 @@ updated: 2019-06-09 23:02:59
 categories: 
   - Records
 tags: 
-  - Configure
+  - Configuration
   - Linux
   - Git
   - Remote Server
@@ -15,6 +15,7 @@ date: 2019-06-09 23:02:59
 updated: 
 
 Modified: 24 Mar 2020 10:05:57
+Configure: 4 Dec 2021 15:22:08
 -->
 
 

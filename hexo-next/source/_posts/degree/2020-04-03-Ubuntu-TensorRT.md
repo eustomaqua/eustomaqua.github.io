@@ -5,7 +5,7 @@ updated: 2020-04-03 08:21:30
 categories:
   - Records
 tags: 
-  - Configure
+  - Configuration
   - Linux
   - NVIDIA
 ---
@@ -17,6 +17,8 @@ Created: 2020-04-03 02:31:04
 Tag:
   - NVIDIA TensorRT
   - NVIDIA CUDA
+
+Configure: 4 Dec 2021 15:23:06
 -->
 
 
