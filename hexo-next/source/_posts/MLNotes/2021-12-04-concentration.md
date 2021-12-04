@@ -21,13 +21,25 @@ Declaimer:
 -->
 
 
-***Chapter 2. Concentration of Measure Inequalities***
+***Chapter 2. Concentration of Measure Inequalities***  
 NB. This note is based on [Machine Learning at DIKU](https://sites.google.com/diku.edu/machine-learning-courses/ml).
 
 
-<iframe src="/pdf/concentration.pdf" type="application/pdf" width="100%" height="677px"></iframe>
+<!--more-->
+
+
+<embed src="/pdf/concentration.pdf" type="application/pdf" width="100%" height="677px"></embed>
+
 
 <!--
+worked locally!
+
+<iframe src="/pdf/concentration.pdf" type="application/pdf" width="100%" height="677px"></iframe>
+-->
+
+<!--
+doesn't work
+
 <embed></embed>
 <embed>
 
