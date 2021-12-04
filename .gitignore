@@ -1,0 +1,5 @@
+node_modules/
+package.json
+package-lock.json
+hexo-next/package.json
+hexo-next/package-lock.json
