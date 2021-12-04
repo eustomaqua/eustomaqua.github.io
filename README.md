@@ -113,6 +113,35 @@ https://hexo.io/docs/troubleshooting.html
 [listen EADDRINUSE: address already in use :::4000](https://github.com/the-couch/slater/issues/84)  
 [address already in use :::4000](https://stackoverflow.com/questions/65506937/error-listen-eaddrinuse-address-already-in-use-4000)  
 
+```shell
+$ sudo n 10.6.0
+[sudo] ubuntu 的密码： 
+  installing : node-v10.6.0
+       mkdir : /usr/local/n/versions/node/10.6.0
+       fetch : https://nodejs.org/dist/v10.6.0/node-v10.6.0-linux-x64.tar.xz
+   installed : v10.6.0 (with npm 6.1.0)
+
+$ vim ~/.bashrc
+$ source ~/.bashrc
+$ cd hexo-next
+$ git init
+
+$ hexo g
+$ hexo s
+$ hexo d
+
+$ node -v
+v10.6.0
+$ npm -v
+6.1.0
+
+$ rm -r .git
+$ cd ..
+$ git status
+```
+
+[部署Hexo踩过的坑—node14.0配置hexo](https://zhuanlan.zhihu.com/p/136552969)  
+
 
 
 ## Node.js
