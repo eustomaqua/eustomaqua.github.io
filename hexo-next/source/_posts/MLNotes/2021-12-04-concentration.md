@@ -1,13 +1,13 @@
 ---
-title: Concentration of Measure Inequalities
+title: Concentration of Measure Inequalities (A)
 date: 2021-12-04 14:34:52
-updated: 
+updated: 2021-12-05 14:37:57
 categories:
   - Reading
 tags:
   - Mathematics
   - Probability Theory
-mathjax: true
+mathjax: false
 ---
 
 <!--
@@ -18,6 +18,9 @@ phd/2021-01-02-Hexo-Problems.md
 Configure, (Configurate,) Configuration
 Declaimer:
   - Machine Learning
+
+mathjax: true
+Markov's and Chebyshev's inequalities
 -->
 
 
@@ -28,7 +31,18 @@ NB. This note is based on [Machine Learning at DIKU](https://sites.google.com/di
 <!--more-->
 
 
-<embed src="/pdf/concentration.pdf" type="application/pdf" width="100%" height="677px"></embed>
+# Markov's and Chebyshev's inequalities
+
+<embed src="/pdf/concentration_a.pdf" type="application/pdf" width="100%" height="677px"></embed>
+
+# Hoeffding's inequality
+
+<embed src="/pdf/concentration_b.pdf" type="application/pdf" width="100%" height="677px"></embed>
+
+## Understanding Hoeffding's inequality
+
+<embed src="/pdf/concentration_c.pdf" type="application/pdf" width="100%" height="677px"></embed>
+
 
 
 <!--
