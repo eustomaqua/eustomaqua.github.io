@@ -40,5 +40,6 @@ NB. This note is based on [Machine Learning at DIKU](https://sites.google.com/di
 
 # Sampling Without Replacement
 
+TBC
 
 
