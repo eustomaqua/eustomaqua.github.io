@@ -1,5 +1,18 @@
 # Personal Blog
 
+Summary  
+[OneDrive直链获取工具v1.3](https://onedrive.gimhoy.com/)  
+[歌曲LRC滚动歌词在线生成制作编辑器软件](https://www.yuanchuangyinyue.com/3027.html)  
+```shell
+$ cd hexo-next
+$ hexo g
+$ hexo s
+$ hexo d
+```
+
+
+# Personal Blog
+
 ```shell
 $ cd eustomaqua.github.io
 $ npm install --save hexo-pdf
