@@ -12,14 +12,12 @@ mathjax: false
 meting: true
 ---
 
-- 古风
 - 流行
-
-
-Match in the rain
-
+- 古风
 
 <!--
+Match in the rain
+
 作词: Finale
 作曲: 丢子
 歌手：zhucool
@@ -37,63 +35,59 @@ https://y.qq.com/n/ryqq/songDetail/004UcK164NDJ6N
 - 欧美
 **Match In The Rain**
 Alec Benjamin
+&ab_channel=AlecBenjamin
 -->
+
+<!--more-->
+
+
+{% aplayerlist %}
+{
+    "narrow": false,
+    "autoplay": true,
+    "mode": "random",
+    "showlrc": 3,
+    "mutex": true,
+    "theme": "#e6d0b2",
+    "preload": "metadata",
+    "listmaxheight": "513px",
+    "width": "50%",
+    "music": [
+        {
+            "title": "Match In The Rain",
+            "author": "Alec Benjamin",
+            "pic": "https://i0.wp.com/hiphopmore.com/wp-content/uploads/2021/09/Alec-Benjamin-Im-Not-A-Cynic-scaled-Hip-Hop-More-1.jpg?resize=300%2C300&ssl=1",
+            "url": "https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtZzQ2QWVjV0F5S2xJaldHP2U9ZGZSQ3Vn.mp3",
+            "lrc": "/music/AlecBenjamin-MatchInTheRain.lrc"
+        },{
+            "title": "谁应帝王",
+            "author": "zhucool",
+            "url": "https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtZ3VtVWQ5RExHd1l0UHA3P2U9cjdSOFB4.mp3",
+            "pic": "https://y.qq.com/music/photo_new/T002R300x300M000000Y1sfF1jKBWq_1.jpg?max_age=2592000",
+            "lrc": "/music/zhucool-谁应帝王,剧情版.lrc"
+        },
+        {
+            "title": "大雪寄家书",
+            "author": "河图",
+            "url": "https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtZzA2QnZWaXdjV2I1aXhxP2U9aE9qMUow.mp3",
+            "pic": "https://y.qq.com/music/photo_new/T002R300x300M000003VOmzu1dws4q_1.jpg?max_age=2592000",
+            "lrc": "/music/河图-大雪寄家书.lrc"
+        }
+    ]
+}
+{% endaplayerlist %}
 
 
 # 流行
 
 by (亚历克·本杰明) Alec Benjamin
 
-## Match in the rain
+## Match In The Rain
+
+Official Music Video https://www.youtube.com/watch?v=uLIvpzsZhi0
+Official Lyric Video https://www.youtube.com/watch?v=FY8RD2sz-CE
 https://music.163.com/#/song?id=1450971635
 https://y.qq.com/n/ryqq/songDetail/003T7IFm1aX7Nn
-
-Seems you've been changing lately
-I can feel the distance in your touch
-There's two people in this hallway
-But there's only one of us
-That's tryna keep this fire going
-Should I just give up?
-I sense trouble on the horizon
-I'm afraid our time is up
-
-The clouds are rolling in, I feel you drifting away
-And though my intuition tells me that it's too late
-That in these conditions, tryna bring back the flame is like
-Tryna light a match in the rain
-
-I still want to make you love me, make you love me again
-Even though my intuition tells me that it's the end
-That in these conditions tryna bring back the flame is like
-Tryna light a match in the rain
-
-Yeah, I can taste it, it's the end
-This love's impossible to save
-Though you embrace it, I can't face it
-So I look the other way
-There's trouble in your eyes
-But I pretend that we're okay
-I wish that we could compromise
-But there's just nothin' left to say
-
-The clouds are rolling in, I feel you drifting away
-And though my intuition tells me that it's too late
-That in these conditions, tryna bring back the flame is like
-Tryna light a match in the rain
-
-I still want to make you love me, make you love me again
-Even though my intuition tells me that it's the end
-That in these conditions tryna bring back the flame is like
-Tryna light a match in the rain
-
-Tryna light a match in the rain
-Like flyin' a kite in a hurricane
-Like ridin' a bike with no air chain
-On a broken road, it's a losing game
-Tryna light a match in the rain
-Like flyin' a kite in a hurricane
-Like ridin' a bike with no air chain
-On a broken road, it's a losing game
 
 The clouds are rolling in, I feel you drifting away
 And though my intuition tells me that it's too late
@@ -106,143 +100,30 @@ That in these conditions tryna bring back the flame is like
 Tryna light a match in the rain
 
 ## Outrunning Karma
+
+Official Music Video 
+Official Lyric Video https://www.youtube.com/watch?v=e4vD2S5vQMM
 https://music.163.com/#/song?id=1312435002
 https://y.qq.com/n/ryqq/songDetail/000b6Och0IvOFM
 
-Outrunning karma, that boy
-He's such a charmer, all the
-Bugs and their larva follow
-Him out to Colorado
-Ten-dozen hearts in a bag
-Their bodies lyin', he'll drag
-Them down to Colorado
-A modern desperado
-
-And he'll race for miles through the night
-He runs because he knows he cannot hide
-
-He's never gonna make it, all the
-Poor people he's forsaken, karma
-Is always gonna chase him for his lies
-It's just a game of waiting from the
-Church steeple down to Satan karma
-There's really no escape until he dies
-
-Outrunning karma, that boy
-Can't run no farther, it's the
-Last days of Sparta, follow
-Him down to meet Apollo
-
-And he'll brace for battle in the night
-He'll fight because he knows he cannot hide
-
-He's never gonna make it, all the
-Poor people he's forsaken, karma
-Is always gonna chase him for his lies
-It's just a game of waiting from the
-Church steeple down to Satan karma
-There's really no escape until he dies
-
-La-la-la, la la, la-la-la, la la
-La-la-la, la la, la la
-La-la-la, la la, la-la-la, la la
-La-la-la, la la, la la
-
-He's never gonna make it, all the
-Poor people he's forsaken, karma
-Is always gonna chase him for his lies
-It's just a game of waiting from the
-Church steeple down to Satan karma
-There's really no escape until he dies
-
-La-la-la, la la, la-la-la, la la
-La-la-la, la la, la la
-
 ## Gotta Be A Reason
+
+Official Music Video 
+Official Lyric Video https://www.youtube.com/watch?v=E6Iu4GUhIFE
 https://music.163.com/#/song?id=1325349674
 https://y.qq.com/n/ryqq/songDetail/003znNpv2zELiB
 
-There's gotta be a reason that I'm here on Earth
-Gotta be a reason for the dust and the dirt
-The changing of the seasons never changed my hurt
-So what's it worth? What's it worth?
-Worth another shot of whiskey and another sip of gin
-Another drop of poison that is slowly sinkin' in
-If we're going down together, better take another hit
-We won't be here forever so let's make the best of it
-
-Ooh-ooh-ooh, ooh-ooh-ooh-ooh-ooh
-Ooh-ooh-ooh, ooh-ooh-ooh-ooh-ooh
-
-Walking down to the burial ground
-With a sad song in his brain
-General Cloud is an old man now
-But it feels like yesterday
-He was on the front lines, stranded on the beach
-Crawling to his best friend, floatin' in the sea
-But he didn't make it, he still can't believe
-How arbitrary fate is, he says
-
-There's gotta be a reason that I'm here on Earth
-Gotta be a reason for the dust and the dirt
-The changing of the seasons never changed my hurt
-So what's it worth? What's it worth?
-Worth another shot of whiskey and another sip of gin
-Another drop of poison that is slowly sinkin' in
-If we're going down together, better take another hit
-We won't be here forever so let's make the best of it
-
-Ooh-ooh-ooh, ooh-ooh-ooh-ooh-ooh
-Ooh-ooh-ooh, ooh-ooh-ooh-ooh-ooh
-
-She went down to her job in town
-With a sad song in her heart
-33 with a wasted dream
-To become a movie star
-Living out a suitcase, serving at a bar
-Saving up some pennies working after dark
-Is she gonna make it? She still can't believe
-How arbitrary fate is, she says
-
-There's gotta be a reason that I'm here on Earth
-Gotta be a reason for the dust and the dirt
-The changing of the seasons never changed my hurt
-So what's it worth? What's it worth?
-Worth another shot of whiskey and another sip of gin
-Another drop of poison that is slowly sinkin' in
-If we're going down together, better take another hit
-We won't be here forever so let's make the best of it
-
-Ooh-ooh-ooh, ooh-ooh-ooh-ooh-ooh
-Ooh-ooh-ooh, ooh-ooh-ooh-ooh-ooh
-
-There's gotta be a reason that I'm here on Earth
-Gotta be a reason for the dust and the dirt
-The changing of the seasons never changed my hurt
-So what's it worth? What's it worth?
-Worth another shot of whiskey and another sip of gin
-Another drop of poison that is slowly sinkin' in
-If we're going down together, better take another hit
-We won't be here forever so let's make the best of it
-
-Ooh-ooh-ooh, ooh-ooh-ooh-ooh-ooh
-Ooh-ooh-ooh, ooh-ooh-ooh-ooh-ooh
-
 ## Boy In The Bubble
 
-Official Music Video https://www.youtube.com/watch?v=8WvKFL_LIB8&ab_channel=AlecBenjamin
-Official Lyric Video https://www.youtube.com/watch?v=gK7y3gVad98&ab_channel=AlecBenjamin
-
+Official Music Video https://www.youtube.com/watch?v=8WvKFL_LIB8
+Official Lyric Video https://www.youtube.com/watch?v=gK7y3gVad98
 https://music.163.com/#/song?id=1325349672
 https://y.qq.com/n/ryqq/songDetail/001rbjHu3CN4fV
 
-
-
 ## Mind Is A Prison
 
-Official Music Video https://www.youtube.com/watch?v=bcvsE4C1JnU&ab_channel=AlecBenjamin
-Official Lyric Video https://www.youtube.com/watch?v=Hmw2E7bKJeo&ab_channel=AlecBenjamin
-
+Official Music Video https://www.youtube.com/watch?v=bcvsE4C1JnU
+Official Lyric Video https://www.youtube.com/watch?v=Hmw2E7bKJeo
 https://music.163.com/#/song?id=1408605161
 https://y.qq.com/n/ryqq/songDetail/001ZFPzO4SAMVL
 
@@ -253,6 +134,41 @@ I won't give up on hope
 Secure another rope
 And try for another day
 
+## If I Killed Someone For You
+
+Official Music Video https://www.youtube.com/watch?v=Leiyfqe28tM
+Official Lyric Video https://www.youtube.com/watch?v=GLHAcAkdB8M
+https://music.163.com/#/song?id=1325349675
+https://y.qq.com/n/ryqq/songDetail/000NU52u2Fav0w
+
+## Water Fountain
+
+Official Music Video https://www.youtube.com/watch?v=5ado75KpV9w
+Official Lyric Video https://www.youtube.com/watch?v=6uFWshoWTLU
+https://music.163.com/#/song?id=1325350637
+https://y.qq.com/n/ryqq/songDetail/001ofXxo3xlJEN
+
+## Older
+
+Official Music Video https://www.youtube.com/watch?v=XDhevwYp-g4
+Official Lyric Video 
+https://music.163.com/#/song?id=1872385516
+https://y.qq.com/n/ryqq/songDetail/0028wIZ03I3Ojk
+
+## Paper Crown
+
+Official Music Video https://www.youtube.com/watch?v=mzmjdntlRJk
+Official Lyric Video 
+https://music.163.com/#/song?id=31090494
+https://y.qq.com/n/ryqq/songDetail/001zFPet0TPFJZ
+
+## The Way You Felt
+
+Official Music Video 
+Official Lyric Video 
+The Words https://www.youtube.com/watch?v=Ut85dWwrTV8
+https://music.163.com/#/song?id=1840502945
+https://y.qq.com/n/ryqq/songDetail/004RXaDt05rVYY
 
 
 # 古风
@@ -363,43 +279,11 @@ https://y.qq.com/n/ryqq/songDetail/000urqSU2erZNX
 谁应帝王名
 
 
-# 流行
 
 
 
-{% aplayerlist %}
-{
-    "narrow": false,
-    "autoplay": true,
-    "mode": "random",
-    "showlrc": 3,
-    "mutex": true,
-    "theme": "#e6d0b2",
-    "preload": "metadata",
-    "listmaxheight": "513px",
-    "width": "50%",
-    "music": [
-        {
-            "title": "谁应帝王",
-            "author": "zhucool",
-            "url": "https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtZ3VtVWQ5RExHd1l0UHA3P2U9cjdSOFB4.mp3",
-            "pic": "https://y.qq.com/music/photo_new/T002R300x300M000000Y1sfF1jKBWq_1.jpg?max_age=2592000",
-            "lrc": "/music/zhucool-谁应帝王,剧情版.lrc"
-        },
-        {
-            "title": "大雪寄家书",
-            "author": "河图",
-            "url": "https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtZzA2QnZWaXdjV2I1aXhxP2U9aE9qMUow.mp3",
-            "pic": "https://y.qq.com/music/photo_new/T002R300x300M000003VOmzu1dws4q_1.jpg?max_age=2592000",
-            "lrc": "/music/河图-大雪寄家书.lrc"
-        },
-        {
-            "title": "Match In The Rain",
-            "author": "Alec Benjamin",
-            "pic": "https://i0.wp.com/hiphopmore.com/wp-content/uploads/2021/09/Alec-Benjamin-Im-Not-A-Cynic-scaled-Hip-Hop-More-1.jpg?resize=300%2C300&ssl=1",
-            "url": "https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtZzQ2QWVjV0F5S2xJaldHP2U9ZGZSQ3Vn.mp3",
-            "lrc": "/music/AlecBenjamin-MatchInTheRain.lrc"
-        },
+<!--
+,
         {
             "title": "Outrunning Karma",
             "author": "Alec Benjamin",
@@ -435,12 +319,7 @@ https://y.qq.com/n/ryqq/songDetail/000urqSU2erZNX
             "url": "",
             "lrc": "/music/.lrc"
         }
-    ]
-}
-{% endaplayerlist %}
 
-
-<!--
 ,
         {
             "title": "国境四方",
