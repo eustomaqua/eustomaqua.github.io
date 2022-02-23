@@ -60,6 +60,24 @@ Alec Benjamin
             "url": "https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtZzQ2QWVjV0F5S2xJaldHP2U9ZGZSQ3Vn.mp3",
             "lrc": "/music/AlecBenjamin-MatchInTheRain.lrc"
         },{
+            "title": "If I Killed Someone for You",
+            "author": "Alec Benjamin",
+            "pic": "https://y.qq.com/music/photo_new/T002R300x300M000000tbUOR1IftQX_1.jpg?max_age=2592000",
+            "url": "https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtZ19XZW1hSVFGdzNBZmdFP2U9WEkzNjB2.jpg",
+            "lrc": "/music/AlecBenjamin-IfIKilledSomeoneForYou.lrc"
+        },{
+            "title": "Let Me Down Slowly",
+            "author": "Alec Benjamin",
+            "pic": "https://y.qq.com/music/photo_new/T002R300x300M0000000WF4R0CGw6v_1.jpg?max_age=2592000",
+            "url": "https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtaEh3ZXMxTF84MHk0ZS1lP2U9OG4xSVF3.jpg",
+            "lrc": "/music/AlecBenjamin-LetMeDownSlowly.lrc"
+        },{
+            "title": "Let Me Down Slowly (feat. Alessia Cara)",
+            "author": "Alec Benjamin",
+            "pic": "https://y.qq.com/music/photo_new/T002R300x300M0000004HAPE3xOzIy_1.jpg?max_age=2592000",
+            "url": "https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtaEFrSjNERzg5VldTOTZrP2U9UkJ0RmZx.jpg",
+            "lrc": "/music/AlecBenjamin - LetMeDownSlowly feat.AlessiaCara.lrc"
+        },{
             "title": "谁应帝王",
             "author": "zhucool",
             "url": "https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtZ3VtVWQ5RExHd1l0UHA3P2U9cjdSOFB4.mp3",
@@ -89,6 +107,15 @@ Official Lyric Video https://www.youtube.com/watch?v=FY8RD2sz-CE
 https://music.163.com/#/song?id=1450971635
 https://y.qq.com/n/ryqq/songDetail/003T7IFm1aX7Nn
 
+Seems you've been changing lately
+I can feel the distance in your touch
+There's two people in this hallway
+But there's only one of us
+That's tryna keep this fire going
+Should I just give up?
+I sense trouble on the horizon
+I'm afraid our time is up
+
 The clouds are rolling in, I feel you drifting away
 And though my intuition tells me that it's too late
 That in these conditions, tryna bring back the flame is like
@@ -99,40 +126,43 @@ Even though my intuition tells me that it's the end
 That in these conditions tryna bring back the flame is like
 Tryna light a match in the rain
 
-## Outrunning Karma
+Yeah, I can taste it, it's the end
+This love's impossible to save
+Though you embrace it, I can't face it
+So I look the other way
+There's trouble in your eyes
+But I pretend that we're okay
+I wish that we could compromise
+But there's just nothin' left to say
 
-Official Music Video 
-Official Lyric Video https://www.youtube.com/watch?v=e4vD2S5vQMM
-https://music.163.com/#/song?id=1312435002
-https://y.qq.com/n/ryqq/songDetail/000b6Och0IvOFM
+The clouds are rolling in, I feel you drifting away
+And though my intuition tells me that it's too late
+That in these conditions, tryna bring back the flame is like
+Tryna light a match in the rain
 
-## Gotta Be A Reason
+I still want to make you love me, make you love me again
+Even though my intuition tells me that it's the end
+That in these conditions tryna bring back the flame is like
+Tryna light a match in the rain
 
-Official Music Video 
-Official Lyric Video https://www.youtube.com/watch?v=E6Iu4GUhIFE
-https://music.163.com/#/song?id=1325349674
-https://y.qq.com/n/ryqq/songDetail/003znNpv2zELiB
+Tryna light a match in the rain
+Like flyin' a kite in a hurricane
+Like ridin' a bike with no air chain
+On a broken road, it's a losing game
+Tryna light a match in the rain
+Like flyin' a kite in a hurricane
+Like ridin' a bike with no air chain
+On a broken road, it's a losing game
 
-## Boy In The Bubble
+The clouds are rolling in, I feel you drifting away
+And though my intuition tells me that it's too late
+That in these conditions, tryna bring back the flame is like
+Tryna light a match in the rain
 
-Official Music Video https://www.youtube.com/watch?v=8WvKFL_LIB8
-Official Lyric Video https://www.youtube.com/watch?v=gK7y3gVad98
-https://music.163.com/#/song?id=1325349672
-https://y.qq.com/n/ryqq/songDetail/001rbjHu3CN4fV
-
-## Mind Is A Prison
-
-Official Music Video https://www.youtube.com/watch?v=bcvsE4C1JnU
-Official Lyric Video https://www.youtube.com/watch?v=Hmw2E7bKJeo
-https://music.163.com/#/song?id=1408605161
-https://y.qq.com/n/ryqq/songDetail/001ZFPzO4SAMVL
-
-Said even if it's true
-No matter what I do
-I'm never gonna escape
-I won't give up on hope
-Secure another rope
-And try for another day
+I still want to make you love me, make you love me again
+Even though my intuition tells me that it's the end
+That in these conditions tryna bring back the flame is like
+Tryna light a match in the rain
 
 ## If I Killed Someone For You
 
@@ -141,26 +171,52 @@ Official Lyric Video https://www.youtube.com/watch?v=GLHAcAkdB8M
 https://music.163.com/#/song?id=1325349675
 https://y.qq.com/n/ryqq/songDetail/000NU52u2Fav0w
 
-## Water Fountain
+I'm sorry that I did this
+The blood is on my hands
+I stare at my reflection
+I don't know who I am
+Practice my confession
+In case I take the stand
+I'll say I learned my lesson
+I'll be a better man
 
-Official Music Video https://www.youtube.com/watch?v=5ado75KpV9w
-Official Lyric Video https://www.youtube.com/watch?v=6uFWshoWTLU
-https://music.163.com/#/song?id=1325350637
-https://y.qq.com/n/ryqq/songDetail/001ofXxo3xlJEN
+I'm packing up my things
+And I'm wiping down the walls
+I'm rinsing off my clothes
+And I'm walking through the halls
+I did it all for her
+So I felt nothing at all
+I don't know what she'll say
+So I'll ask her when she calls
 
-## Older
+Can't you see I'm running?
+Said I need a place to hide
+I've gotta ask you something
+Could you please let me inside?
+Just let me explain
+No, I wouldn't tell you lies
+I know you'll understand
+If you let me stay the night
 
-Official Music Video https://www.youtube.com/watch?v=XDhevwYp-g4
+You have to understand that
+The one I killed is me
+Changing what I was
+For what you wanted me to be
+I followed your direction
+Did everything you asked
+I hope that makes you happy
+'Cause there's just no turning back
+
+## Let Me Down Slowly
+
+**Let Me Down Slowly**
+Official Music Video https://www.youtube.com/watch?v=50VNCymT-Cs
 Official Lyric Video 
-https://music.163.com/#/song?id=1872385516
-https://y.qq.com/n/ryqq/songDetail/0028wIZ03I3Ojk
 
-## Paper Crown
-
-Official Music Video https://www.youtube.com/watch?v=mzmjdntlRJk
-Official Lyric Video 
-https://music.163.com/#/song?id=31090494
-https://y.qq.com/n/ryqq/songDetail/001zFPet0TPFJZ
+**Let Me Down Slowly (feat. Alessia Cara)**
+Official Music Video https://www.youtube.com/watch?v=PKonqhZ5PsA
+Official Lyric Video https://www.youtube.com/watch?v=gEo8IrFbecM
+Acoustic Video https://www.youtube.com/watch?v=HMSUh-h6qo8
 
 ## The Way You Felt
 
@@ -169,6 +225,147 @@ Official Lyric Video
 The Words https://www.youtube.com/watch?v=Ut85dWwrTV8
 https://music.163.com/#/song?id=1840502945
 https://y.qq.com/n/ryqq/songDetail/004RXaDt05rVYY
+
+The way you felt in my arms
+Our chemistry was sacred
+Oh, I fell for your charm
+I was so infatuated
+But you left me in the dark
+And my heart completely vacant
+Now I don't know oh oh oh oh oh oh oh
+
+How you could look me in the eye
+And tell me that you love me
+When you knew it was a lie
+I was headed for Kentucky
+When you called to say goodbye
+How did I not see it coming?
+Now I don't know oh oh oh oh oh oh oh
+
+I can take rejection
+But you gave the impression
+That this was the inception
+Of something real
+
+## Mind Is A Prison
+
+Official Music Video https://www.youtube.com/watch?v=bcvsE4C1JnU
+Official Lyric Video https://www.youtube.com/watch?v=Hmw2E7bKJeo
+https://music.163.com/#/song?id=1408605161
+https://y.qq.com/n/ryqq/songDetail/001ZFPzO4SAMVL
+
+I don't live in California
+I'll inform ya
+That's not where I reside
+I'm just a tenant payin' rent
+Inside this body and I
+Got two windows
+And those windows
+Well, I call them my eyes
+I'm just goin' where the wind blows
+I don't get to decide
+
+Then I tied up my linen with
+Five strips of ribbon I found
+Scaled the side of the buildin'
+I ran to the hills 'til they found me
+And they put me back in my cell
+All by myself
+Alone with my thoughts again
+Guess my mind is a prison and
+I'm never gonna get out
+
+Said even if it's true
+No matter what I do
+I'm never gonna escape
+I won't give up on hope
+Secure another rope
+And try for another day
+
+## Outrunning Karma
+
+Official Music Video 
+Official Lyric Video https://www.youtube.com/watch?v=e4vD2S5vQMM
+https://music.163.com/#/song?id=1312435002
+https://y.qq.com/n/ryqq/songDetail/000b6Och0IvOFM
+
+Outrunning karma, that boy
+He's such a charmer, all the
+Bugs and their larva follow
+Him out to Colorado
+Ten-dozen hearts in a bag
+Their bodies lyin', he'll drag
+Them down to Colorado
+A modern desperado
+
+And he'll race for miles through the night
+He runs because he knows he cannot hide
+
+He's never gonna make it, all the
+Poor people he's forsaken, karma
+Is always gonna chase him for his lies
+It's just a game of waiting from the
+Church steeple down to Satan karma
+There's really no escape until he dies
+
+
+
+
+
+## Hits
+
+<!--
+2022/2/23 19:26pm Wed
+Best hits
+
+Water fountain: I was too young
+done 2022/2/23 21:21pm Wed
+-->
+
+**Older**
+Official Music Video https://www.youtube.com/watch?v=XDhevwYp-g4
+Official Lyric Video 
+The Words https://www.youtube.com/watch?v=2v7djBZFrfE
+https://music.163.com/#/song?id=1872385516
+https://y.qq.com/n/ryqq/songDetail/0028wIZ03I3Ojk
+
+**Water Fountain**
+Official Music Video https://www.youtube.com/watch?v=5ado75KpV9w
+Official Lyric Video https://www.youtube.com/watch?v=6uFWshoWTLU
+https://music.163.com/#/song?id=1325350637
+https://y.qq.com/n/ryqq/songDetail/001ofXxo3xlJEN
+
+**Gotta Be A Reason**
+Official Music Video 
+Official Lyric Video https://www.youtube.com/watch?v=E6Iu4GUhIFE
+https://music.163.com/#/song?id=1325349674
+https://y.qq.com/n/ryqq/songDetail/003znNpv2zELiB
+
+**Boy In The Bubble**
+Official Music Video https://www.youtube.com/watch?v=8WvKFL_LIB8
+Official Lyric Video https://www.youtube.com/watch?v=gK7y3gVad98
+https://music.163.com/#/song?id=1325349672
+https://y.qq.com/n/ryqq/songDetail/001rbjHu3CN4fV
+
+**Paper Crown**
+Official Music Video https://www.youtube.com/watch?v=mzmjdntlRJk
+Official Lyric Video 
+Paper Crown (Remix) https://www.youtube.com/watch?v=0CsEeXN8WMQ
+https://music.163.com/#/song?id=31090494
+https://y.qq.com/n/ryqq/songDetail/001zFPet0TPFJZ
+
+**Must Have Been The Wind**
+Official Music Video https://www.youtube.com/watch?v=9upOrq9G-bs
+Official Lyric Video https://www.youtube.com/watch?v=emgDoBuFcMw
+https://music.163.com/#/song?id=1370897539
+https://y.qq.com/n/ryqq/songDetail/000I6VPU0VH7E1
+
+**Jesus in LA**
+Official Music Video https://www.youtube.com/watch?v=eNbUNSNdYu4
+Official Lyric Video https://www.youtube.com/watch?v=nM8JCwoYz2o
+https://music.163.com/#/song?id=1377700719
+https://music.163.com/#/song?id=1450971636
+https://y.qq.com/n/ryqq/songDetail/000OMWPG0uAin4
 
 
 # 古风
