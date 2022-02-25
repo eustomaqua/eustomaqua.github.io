@@ -1,7 +1,7 @@
 ---
 title: 大雪寄家书
-date: 2022-02-19 18:22:59
-updated: 2022-02-19 18:22:59
+date: 2022-02-26 08:22:59
+updated: 2022-02-26 08:22:59
 categories:
   - 似此星辰
 tags:
@@ -54,6 +54,12 @@ Alec Benjamin
     "width": "50%",
     "music": [
         {
+            "title": "Shadow of Mine",
+            "author": "Alec Benjamin",
+            "pic": "https://y.qq.com/music/photo_new/T002R300x300M000000MPZjo3nZHXz_1.jpg?max_age=2592000",
+            "url": "https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtaElVZ0MzbVNITEh6VGxOP2U9ZHdoazQz.mp3",
+            "lrc": "/music/AlecBenjamin-ShadowOfMine.lrc"
+        },{
             "title": "Match In The Rain",
             "author": "Alec Benjamin",
             "pic": "https://i0.wp.com/hiphopmore.com/wp-content/uploads/2021/09/Alec-Benjamin-Im-Not-A-Cynic-scaled-Hip-Hop-More-1.jpg?resize=300%2C300&ssl=1",
@@ -63,19 +69,19 @@ Alec Benjamin
             "title": "If I Killed Someone for You",
             "author": "Alec Benjamin",
             "pic": "https://y.qq.com/music/photo_new/T002R300x300M000000tbUOR1IftQX_1.jpg?max_age=2592000",
-            "url": "https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtZ19XZW1hSVFGdzNBZmdFP2U9WEkzNjB2.jpg",
+            "url": "https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtZ19XZW1hSVFGdzNBZmdFP2U9VnZIcDdv.mp3",
             "lrc": "/music/AlecBenjamin-IfIKilledSomeoneForYou.lrc"
         },{
             "title": "Let Me Down Slowly",
             "author": "Alec Benjamin",
             "pic": "https://y.qq.com/music/photo_new/T002R300x300M0000000WF4R0CGw6v_1.jpg?max_age=2592000",
-            "url": "https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtaEh3ZXMxTF84MHk0ZS1lP2U9OG4xSVF3.jpg",
+            "url": "https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtaEh3ZXMxTF84MHk0ZS1lP2U9cm1sTXln.mp3",
             "lrc": "/music/AlecBenjamin-LetMeDownSlowly.lrc"
         },{
             "title": "Let Me Down Slowly (feat. Alessia Cara)",
             "author": "Alec Benjamin",
             "pic": "https://y.qq.com/music/photo_new/T002R300x300M0000004HAPE3xOzIy_1.jpg?max_age=2592000",
-            "url": "https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtaEFrSjNERzg5VldTOTZrP2U9UkJ0RmZx.jpg",
+            "url": "https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtaEFrSjNERzg5VldTOTZrP2U9MmoxTkxW.mp3",
             "lrc": "/music/AlecBenjamin - LetMeDownSlowly feat.AlessiaCara.lrc"
         },{
             "title": "谁应帝王",
@@ -99,6 +105,101 @@ Alec Benjamin
 # 流行
 
 by (亚历克·本杰明) Alec Benjamin
+
+## Shadow Of Mine
+
+Official Music Video https://www.youtube.com/watch?v=g5T2tu3Yky4
+Official Lyric Video 
+https://music.163.com/#/song?id=1923248521
+https://y.qq.com/n/ryqq/songDetail/004QXwOT15RuZn
+
+Booked a trip to Texas
+Thought I'd start again
+Switched all my addresses
+And ghosted all my friends
+Thought I could escape but I could not transcend
+Found myself back in the same old place again
+
+Everywhere I go my shadow, it follows behind
+Doesn't matter where I travel, my shadow, it finds me
+Something that I've come to realise after all this time
+I can't escape my shadow, I can't escape my shadow
+
+Maybe on the nexus, the common thread that binds
+The problems in my head and the world that lives outside
+I thought I could escape but it's fate I've come to find
+My devil is the devil that's inside
+
+Everywhere I go my shadow, it follows behind
+Doesn't matter where I travel, my shadow, it finds me
+Something that I've come to realise after all this time
+I can't escape my shadow, I can't escape my shadow
+
+It won't ever let me go
+It goes everywhere I go
+It won't ever let me go
+This shadow, this shadow of mine (Shadow of mine)
+We grapple, we battle
+But we are shackled for eternity
+We grapple, we battle
+We're shackled, we're shackled, we're shackled
+
+Everywhere I go my shadow, it follows behind
+Doesn't matter where I travel, my shadow, it finds me
+Something that I've come to realise after all this time
+I can't escape my shadow, I can't escape my shadow
+
+It won't ever let me go
+It goes everywhere I go
+It won't ever let me go
+This shadow, this shadow of mine (Shadow of mine)
+
+<!--
+at 2022/2/26 7:49am Sat
+date: 2022-02-19 18:22:59
+updated: 2022-02-19 18:22:59
+
+预定好去德州的旅行
+本以为能重头来过
+把旧地址全都换掉
+断掉和所有朋友的联系
+还以为能溜走 看来还是不够格
+最终却还是回到起点
+
+不论我身在何处 影子都紧紧跟随
+无论我人在哪里 影子都能找到我
+过了许久 我才意识到
+我无法摆脱自己的影子
+
+那段错综复杂的关系中 存在着条主线
+将我脑海中的困扰 同外边的世界所连接
+本以为能逃 但造化弄人 我难以遁形
+不知那恶魔 早已深深扎根在我心底
+
+不论我身在何处 影子都紧紧跟随
+无论我人在哪里 影子都能找到我
+过了许久 我才意识到
+我无法摆脱自己的影子
+
+我无处隐藏
+如影随形
+我无处隐藏
+我的身影 我的影子 (我的影子)
+我与影子搏斗
+却都被永恒封印
+我与影子搏斗
+却都终被封印
+
+不论我身在何处 影子都紧紧跟随
+无论我人在哪里 影子都能找到我
+过了许久 我才意识到
+我无法摆脱自己的影子
+
+我无处隐藏
+如影随形
+我无处隐藏
+我的身影 我的影子 (我的影子)
+-->
 
 ## Match In The Rain
 
