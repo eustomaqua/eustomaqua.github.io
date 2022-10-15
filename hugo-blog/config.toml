@@ -3,7 +3,8 @@ baseurl = "/"
 languageCode = 'en-us'
 paginate = "20" # Number of posts per page
 title = 'eustomaqua'
-theme = 'mainroad'
+theme = "mainroad" # ["hugo-notice", 'mainroad']
+## theme = 'next'
 disqusShortname = "" # Enable comments by entering your Disqus shortname
 googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 
@@ -22,6 +23,33 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
   post_meta = ["date", "categories", "translations"] # Order of post meta information
   mainSections = ["post", "docs", "blog", "news"]
   menu = ["main", "side", "footer"]
+
+  toc = true # enableTOC = true
+  comment = true
+  livereUID = "MTAyMC80OTYwMS8yNjA5Mg"
+  moreMeta = true # 字数统计和预计时间,来必力评论
+  busuanzi = true
+  page_view_conter = true
+  hasCJKLanguage = true
+  reading_progress = true
+  # pygmentsUseClasses = true
+  ## PygmentsCodeFences = true
+  ## PygmentsCodefencesGuessSyntax = true
+  ## PygmentsOptions = "linenos=table"
+
+#[markup.highlight]
+#  codeFences = true
+#  guessSyntax = false # true
+#  h1_Lines = ""
+#  lineNoStart = 1
+#  lineNos = true
+#  lineNumbersInTable = false
+#  noClasses = true
+#  # style = "github"
+#  tabWidth = 2 # 4
+[markup.tableOfContents]
+  endLevel = 2 # 4
+  startLevel = 1
 
 [Params.style.vars]
   # highlightColor = "#1BEAA3" # Override highlight color
@@ -49,7 +77,12 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
   single = true   # Configure layout for single pages
   # Enable widgets in given order
   widgets = ["search", "recent", "categories", "taglist", "social", "languages"]
+  b2t = true # 返回顶部按钮
+  scrollpercent = true # 返回顶部按钮的百分比
 
 [Params.widgets]
   recent_num = 4 # Set the number of articles in the "Recent articles" widget
   tags_counter = false # Enable counter for each tag in "Tags" widget
+
+[Params.math]
+  enable = true
