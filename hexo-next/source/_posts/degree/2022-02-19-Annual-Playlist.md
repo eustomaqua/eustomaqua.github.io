@@ -15,6 +15,50 @@ meting: true
 - 流行
 - 古风
 
+{{< music server="netease" type="song" id="1868553" >}}
+
+{{< music url="https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtaElVZ0MzbVNITEh6VGxOP2U9ZHdoazQz.mp3" name="Shadow of Mine" artist="Alec Benjamin" cover="https://y.qq.com/music/photo_new/T002R300x300M000000MPZjo3nZHXz_1.jpg?max_age=2592000" lrc="/music/AlecBenjamin-ShadowOfMine.lrc" >}}
+
+<playlist type="music">
+    <music url="https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtaElVZ0MzbVNITEh6VGxOP2U9ZHdoazQz.mp3" name="Shadow of Mine" artist="Alec Benjamin" cover="https://y.qq.com/music/photo_new/T002R300x300M000000MPZjo3nZHXz_1.jpg?max_age=2592000" lrc="/music/AlecBenjamin-ShadowOfMine.lrc"></music>
+    <music url="https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtaElVZ0MzbVNITEh6VGxOP2U9ZHdoazQz.mp3" name="Shadow of Mine" artist="Alec Benjamin" cover="https://y.qq.com/music/photo_new/T002R300x300M000000MPZjo3nZHXz_1.jpg?max_age=2592000" lrc="/music/AlecBenjamin-ShadowOfMine.lrc"></music>
+</playlist>>
+
+
+{{< audio src="ttps://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtaElVZ0MzbVNITEh6VGxOP2U9ZHdoazQz.mp3" >}}
+
+
+{{< imgcap src="https://ttfou.com/images/2020/02/20/75294917c54568d991f5e2e0581dafb8.jpg" title="陪安东尼度过漫长岁月" width="98%" >}}
+
+{{< notice info >}}
+这是引言
+{{< /notice >}}
+{{< notice tip >}}
+这是小贴示
+{{< /notice >}}
+{{< notice note >}}
+这是注释
+{{< /notice >}}
+{{< notice warning >}}
+这是告诫! 请注意!
+{{< /notice >}}
+
+
+
+
+<!--
+<audio controls="controls">
+    <source src="https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBZ0VUZ25NRjhfQlZtaElVZ0MzbVNITEh6VGxOP2U9ZHdoazQz.mp3" type="audio/mp3" />
+</audio>
+
+{{< music auto="https://music.163.com/#/album?id=xxxxxx" >}}
+<div style="position: relative; padding: 32% 45%;">
+    <iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" 
+    src="//player.bilibili.com/player.html?bvid=BV1Ci4y1c7D8&page=1&as_wide=1&high_quality=1&danmaku=1" 
+    scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+</div>
+-->
+
 <!--
 Match in the rain
 

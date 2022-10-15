@@ -4,4 +4,5 @@ package-lock.json
 hexo-next/package.json
 hexo-next/package-lock.json
 
-themes/
+# themes/
+hugo-blog/public/
