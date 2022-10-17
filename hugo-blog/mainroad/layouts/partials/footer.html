@@ -1,0 +1,98 @@
+<footer class="footer">
+	<div class="container footer__container flex">
+		{{ partial "footer_links.html" . }}
+		<div class="footer__copyright">
+			&copy; {{ now.Format "2006" }} {{ .Site.Params.copyright | default .Site.Title }}.
+			<span class="footer__copyright-credits">{{ T "footer_credits" | safeHTML }}</span>
+		</div>
+		<div>
+			<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+			<i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span> visitors | <i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span> views in total<!-- Total |
+			<i class="fa fa-word"></i> <span id=""></span>-->
+			<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+			<!--
+			<span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+			<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			<i class="fa fa-user"></i> <span id="busuanzi_value_site_pv"></span> views | <i class="fa fa-eye"></i> <span id="busuanzi_value_site_uv"></span> visitors in total
+			-->
+		</div>
+	</div>
+	<!--
+	<div>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<i class="fa fa-user"></i>  <span id="busuanzi_value_site_pv"></span>|
+		<i class="fa fa-eye"></i> <span id="busuanzi_value_site_uv"></span>人次
+	</div>
+	-->
+</footer>
+
+<!--
+<script type="text/javascript">
+	var e = document.querySelectorAll("pre code");
+	var i;
+	for (i = 0; i < e.length; i++) {
+		e[i].innerHTML = "<ul><li>" + e[i].innerHTML.replace(/\n/g, "\n</li><li>") + "\n</li></ul>";
+		$("code ul li").last().remove();
+	}
+</script>
+-- >< !--
+< !-- 设置滚动条和进度比例 -- >
+<div class="back-to-top" id="back_to_top">
+	< !-- 箭头-- >
+	< !-- https://www.toptal.com/designers/htmlarrows/-- >
+	< !-- 箭头 <span>&#8593;</span> -- >
+	<span><i class="fas fa-arrow-up"></i></span>
+	< !-- 需要FontAwesome支持，参见文末-- >
+	< !-- 进度比例 -- >
+	<span class="scrollpercent">
+		<span id="back_to_top_text">0</span>%
+	</span>
+</div>
+<script>
+	let sideBarOpen = 'sidebar-open';
+	let body = document.body;
+	let back2Top = document.querySelector('#back_to_top'),
+		back2TopText = document.querySelector('#back_to_top_text'),
+		drawerBox = document.querySelector('#drawer_box'),
+		rightSideBar = document.querySelector('.sidebar'),
+		viewport = document.querySelector('body');
+
+	function scrollAnimation(currentY, targetY) {
+		let needScrollTop = targetY - currentY
+		let _currentY = currentY
+		setTimeout(() => {
+			const dist = Math.ceil(needScrollTop / 10)
+			_currentY += dist
+			window.scrollTo(_currentY, currentY)
+			if (needScrollTop > 10 || needScrollTop < -10) {
+				scrollAnimation(_currentY, targetY)
+			} else {
+				window.scrollTo(_currentY, targetY)
+			}
+		}, 1)
+	}
+
+	back2Top.addEventListener("click", function (e) {
+		scrollAnimation(document.scrollingElement.scrollTop, 0);
+		e.stopPropagation();
+		return false;
+	});
+
+	window.addEventListener('scroll', function (e) {
+		let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+		if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
+			back2Top.classList.add('back-top-active');
+		}
+		if (percent == 0) {
+			back2Top.classList.remove('back-top-active');
+		}
+		if (back2TopText) {
+			back2TopText.textContent = Math.floor(percent);
+		}
+	});
+	let hasCacu = false;
+	window.onresize = function () {
+		calcuHeight();
+	}
+</script>
+-->

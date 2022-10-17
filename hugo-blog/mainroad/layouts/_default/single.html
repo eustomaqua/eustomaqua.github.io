@@ -1,0 +1,35 @@
+{{ define "main" }}
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">{{ .Title }}</h1>
+			{{- with .Params.lead }}
+			<p class="post__lead">{{ . }}</p>
+			{{- end }}
+			{{ with partial "post_meta.html" . -}}
+			<div class="post__meta meta">{{ . }}</div>
+			{{- end }}
+			<!--
+			<span id="busuanzi_container_page_pv"> 阅读量 <span id="busuanzi_value_page_pv"></span>次</span>
+			views,visits,
+			-->
+			<span class="post-word-count"> {{ .WordCount }} words,</span>
+			<span class="more-meta"> {{ .ReadingTime  }} minutes,
+			<span id="busuanzi_value_page_pv"></span> views
+		</header>
+		{{ partial "post_thumbnail.html" (dict "class" "post" "page" .) }}
+		{{- partial "post_toc.html" . -}}
+		<div class="content post__content clearfix">
+			{{ .Content }}
+		</div>
+		{{- if .Params.tags }}
+		<footer class="post__footer">
+			{{ partial "post_tags.html" . }}
+		</footer>
+		{{- end }}
+	</article>
+</main>
+{{ partial "authorbox.html" . }}
+{{ partial "pager.html" . }}
+{{ partial "comments.html" . }}
+{{ end }}
