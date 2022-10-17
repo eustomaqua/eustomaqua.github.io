@@ -5,4 +5,4 @@ hexo-next/package.json
 hexo-next/package-lock.json
 
 # themes/
-hugo-blog/public/
+public/

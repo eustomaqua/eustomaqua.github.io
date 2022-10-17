@@ -83,6 +83,14 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 [Params.widgets]
   recent_num = 4 # Set the number of articles in the "Recent articles" widget
   tags_counter = false # Enable counter for each tag in "Tags" widget
+  categories_counter = false
+[Params.widgets.social]
+  # email = "yjbian92@hotmail.com" # "yjbian@mail.ustc.edu.cn"
+  github = "eustomaqua"
+# [[Params.widgets.social.custom]]
+#   title = "Youtube"
+#   url = "https://youtube.com/user/username"
+#   icon = "youtube.svg"
 
 [Params.math]
   enable = true
