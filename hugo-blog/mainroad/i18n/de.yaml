@@ -92,3 +92,13 @@
     "<b>Tipp:</b> Mit dem \
     <b><a href=\"https://gohugo.io/functions/where/#mainsections\" rel=\"nofollow noopener\" target=\"_blank\">mainSections</a></b> \
     Parameter lassen sich beliebig viele weitere Gruppen konfigurieren."
+
+
+- id: warning
+  translation: "Warnung"
+- id: note
+  translation: "Anmerkung"
+- id: info
+  translation: "Info"
+- id: tip
+  translation: "Hinweis"

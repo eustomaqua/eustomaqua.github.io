@@ -90,3 +90,13 @@
   translation:
     "<b>Aviso:</b> Puedes mostrar tantas secciones como gustes con el parámetro de configuración \
     <b><a href=\"https://gohugo.io/functions/where/#mainsections\" rel=\"nofollow noopener\" target=\"_blank\">mainSections</a></b>."
+
+
+- id: warning
+  translation: "Aviso"
+- id: note
+  translation: "Nota"
+- id: info
+  translation: "Información"
+- id: tip
+  translation: "Consejo"

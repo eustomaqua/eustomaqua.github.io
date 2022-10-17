@@ -91,3 +91,13 @@
   translation:
     "<b>Dica:</b> Você pode mostrar quantas seções você quiser com o parâmetro de configuração \
     <b><a href=\"https://gohugo.io/functions/where/#mainsections\" rel=\"nofollow noopener\" target=\"_blank\">mainSections</a></b>."
+
+
+- id: warning
+  translation: "Aviso"
+- id: note
+  translation: "Nota"
+- id: info
+  translation: "Informa莽茫o"
+- id: tip
+  translation: "Dica"

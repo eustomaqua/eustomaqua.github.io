@@ -93,3 +93,13 @@
   translation:
     "<b>Совет:</b> Вы можете отображать сколько угодно разделов с помощью параметра конфигурации \
     <b><a href=\"https://gohugo.io/functions/where/#mainsections\" rel=\"nofollow noopener\" target=\"_blank\">mainSections</a></b>."
+
+
+- id: warning
+  translation: "Внимание!"
+- id: note
+  translation: "Заметка"
+- id: info
+  translation: "Информация"
+- id: tip
+  translation: "Совет"

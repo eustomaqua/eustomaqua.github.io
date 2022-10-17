@@ -90,3 +90,13 @@
     "<b>提示:</b> 您可以通过 \
     <b><a href=\"https://gohugo.io/functions/where/#mainsections\" rel=\"nofollow noopener\" target=\"_blank\">mainSections</a></b> \
     参数来控制展示您想要展示的板块内容。"
+
+
+- id: warning
+  translation: "警告"
+- id: note
+  translation: "注释"
+- id: info
+  translation: "信息"
+- id: tip
+  translation: "提示"

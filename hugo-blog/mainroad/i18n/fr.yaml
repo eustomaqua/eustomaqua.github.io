@@ -91,3 +91,13 @@
   translation:
     "<b>Astuce:</b> Vous pouvez afficher autant de sections que vous voulez avec le paramètre de configuration \
     <b><a href=\"https://gohugo.io/functions/where/#mainsections\" rel=\"nofollow noopener\" target=\"_blank\">mainSections</a></b>."
+
+
+- id: warning
+  translation: "Avertissement"
+- id: note
+  translation: "Remarque"
+- id: info
+  translation: "Information"
+- id: tip
+  translation: "Astuce"

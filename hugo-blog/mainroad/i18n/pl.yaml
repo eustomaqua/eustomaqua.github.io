@@ -1,0 +1,8 @@
+- id: warning
+  translation: "Ostrze偶enie!"
+- id: note
+  translation: "Uwaga"
+- id: info
+  translation: "Info"
+- id: tip
+  translation: "Wskaz贸wka"

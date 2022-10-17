@@ -92,3 +92,13 @@
     "<b>Tip:</b> You can show as many sections as you like with \
     <b><a href=\"https://gohugo.io/functions/where/#mainsections\" rel=\"nofollow noopener\" target=\"_blank\">mainSections</a></b> \
     config parameter."
+
+
+- id: warning
+  translation: "Warning"
+- id: note
+  translation: "Note"
+- id: info
+  translation: "Info"
+- id: tip
+  translation: "Tip"

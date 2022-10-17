@@ -92,3 +92,13 @@
   translation:
     "<b>Suggerimento:</b> Puoi mostrare quante sezioni vuoi con il parametro \
     <b><a href=\"https://gohugo.io/functions/where/#mainsections\" rel=\"nofollow noopener\" target=\"_blank\">mainSections</a></b>."
+
+
+- id: warning      
+  translation: "Attenzione"  
+- id: note
+  translation: "Nota"
+- id: info
+  translation: "Informazione"
+- id: tip
+  translation: "Consiglio"

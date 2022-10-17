@@ -4,6 +4,7 @@ languageCode = 'en-us'
 paginate = "20" # Number of posts per page
 title = 'eustomaqua'
 theme = "mainroad" # ["hugo-notice", 'mainroad']
+# theme = ["hugo-notice", "mainroad"]
 ## theme = 'next'
 disqusShortname = "" # Enable comments by entering your Disqus shortname
 googleAnalytics = "" # Enable Google Analytics by entering your tracking id

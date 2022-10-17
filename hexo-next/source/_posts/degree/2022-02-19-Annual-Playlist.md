@@ -34,13 +34,15 @@ meting: true
 这是引言
 {{< /notice >}}
 {{< notice tip >}}
-这是小贴示
+这是小贴示  
+这是小贴士这是小贴士
 {{< /notice >}}
 {{< notice note >}}
 这是注释
 {{< /notice >}}
 {{< notice warning >}}
-这是告诫! 请注意!
+这是告诫! 请注意!  
+这是告诫! 请注意!这是告诫! 请注意!
 {{< /notice >}}
 
 
