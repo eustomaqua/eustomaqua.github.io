@@ -7,3 +7,5 @@ hexo-next/package-lock.json
 # themes/
 public/
 mainroad/
+.DS_Store
+hugo-blog/themes/

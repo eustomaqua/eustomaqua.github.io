@@ -47,6 +47,9 @@ $ cd hugo-blog
 $ git clone https://github.com/vimux/mainroad.git themes/mainroad
 $ # git clone git clone https://github.com/xtfly/hugo-theme-next.git themes/next
 $ git clone https://github.com/martignoni/hugo-notice.git themes/hugo-notice
+$ # git clone https://github.com/CaiJimmy/hugo-theme-stack-starter themes/stack
+$ git clone https://github.com/roninro/hugo-theme-puppet.git themes/puppet
+$ git clone https://github.com/pfadfinder-konstanz/hugo-dpsg themes/dpsg
 $ hugo
 $ hugo server
 
