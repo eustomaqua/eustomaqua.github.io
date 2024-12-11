@@ -1,13 +1,13 @@
 *.DS_Store
-# themes/
-themes/*/languages
-themes/*/layout
-themes/*/scripts
-themes/*/source
-themes/*/gitattributes
-themes/*/.gitignore
-themes/*/LICENSE
-themes/*/README
+themes/
+# themes/*/languages
+# themes/*/layout
+# themes/*/scripts
+# themes/*/source
+# themes/*/gitattributes
+# themes/*/.gitignore
+# themes/*/LICENSE
+# themes/*/README
 
 node_modules/
 package.json

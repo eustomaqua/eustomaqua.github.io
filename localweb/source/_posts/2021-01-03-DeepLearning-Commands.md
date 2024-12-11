@@ -504,8 +504,10 @@ wget 加速
     vim /usr/lib/yum-plugins/axelget.py
     ```
   - 修改如下，将10改为32，两个位置：
-    <img src="https://img-blog.csdnimg.cn/20200409104116584.png" width="80%">
-    <img src="https://img-blog.csdnimg.cn/20200409104130470.png" width="80%">
+    <!-- <img src="https://img-blog.csdnimg.cn/20200409104116584.png" width="80%">
+    <img src="https://img-blog.csdnimg.cn/20200409104130470.png" width="80%"> -->
+    <img src="/images/2024-12/20200409104116584.png" width="80%">
+    <img src="/images/2024-12/20200409104130470.png" width="80%">
 
 ### 下载
 

@@ -99,9 +99,9 @@ ignore:
 ## Themes: https://hexo.io/themes/
 # theme: landscape
 # theme: next
+theme: Chic
 # theme: laughing
 # theme: dashed
-theme: Chic
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
