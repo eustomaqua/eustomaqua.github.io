@@ -97,9 +97,58 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next  # landscape
+# theme: landscape
+# theme: next
+# theme: laughing
+# theme: dashed
+theme: Chic
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
+# deploy:
+#   type: ''
+
+
+
+
+# EustomaAqua.png
+# local search
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+
+social:
+  GitHub: https://github.com/eustomaqua || github 
+  ## E-mail: yjbian92@gmail.com
+  ## <a href="mailto:yjbian92@gmail.com"> # yjbian92 AT gmail dot com</a>
+  ## Email: yjbian92@gmail.com
+  E-Mail: mailto:yjbian92@gmail.com || envelope 
+
 deploy:
-  type: ''
+  type: git
+  # repo: https://github.com/eustomaqua/eustomaqua.github.io.git
+  repo: git@github.com:eustomaqua/eustomaqua.github.io.git
+  branch: master
+  message: updated on {{ now("ddd, MM/DD/YYYY") }}
+  # message: updated at {{ now("YYYY-MM-DD") }}
+
+word_count: true #true|false  #开启/关闭字数统计
+# post_wordcount:
+#   item_text: true
+#   wordcount: true # 单篇 字数统计
+#   min2read: true  # 单篇 阅读时长
+#   totalcount: true  # 网站 字数统计
+
+math:
+  engine: 'mathjax' # or 'katex'
+  mathjax:
+    # src: custom_mathjax_source
+    config:
+      # MathJax config
+
+# aplayer:
+#   # enable: true
+#   meting: true
+#   asset_inject: false

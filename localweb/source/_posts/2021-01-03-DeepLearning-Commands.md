@@ -283,13 +283,15 @@ $ # conda update <package-name>
 
 cuDNN本来就只是将文件拷贝进CUDA的安装目录，故删除即可（卸载CUDA后直接删除整个文件夹也可以）  
 CUDA的卸载：控制面板-卸载程序（不要用360等杀毒软件，找不到对应程序的），按照安装时间排序，最上面这几个带版本号的，就是刚才安装的CUDA了，挨个卸载即可  
-<img src="https://img-blog.csdnimg.cn/20190407161507623.png" width="80%">
+<!-- <img src="https://img-blog.csdnimg.cn/20190407161507623.png" width="80%"> -->
+<img src="/images/2024-12/20190407161507623.png" width="80%">
 <img src="/images/2021-01/0105_CUDA10.0_reinstall.png" width="80%">
 
 CUDA 10.0 我好像是默认选项装的全部。  
 所以刚才卸载时把 2020/1/18 安装的所有 NVIDIA 相关全部删了。  
 除了这两个 `NVIDIA 图形驱动程序` 和 `NVIDIA PhysX 系统软件` 之外，其他都删掉，如图所示
-<img src="https://img-blog.csdnimg.cn/20200307194357123.png" width="80%">
+<!-- <img src="https://img-blog.csdnimg.cn/20200307194357123.png" width="80%"> -->
+<img src="/images/2024-12/20200307194357123.png" width="80%">
 之后可以清理下注册表，保险起见可以重启，但好像不重启也挺好？
 
 **Important!**  
@@ -320,16 +322,22 @@ CUDA 10.0 我好像是默认选项装的全部。
 
 - (4) cuda 安装选项不要选默认的“精简”，因为这是所有的全家桶。
   主要是因为里面有一个东西的安装会一直导致安装失败。
-  <img src="https://img-blog.csdnimg.cn/2019040715251354.png" width="60%">
+  <!-- <img src="https://img-blog.csdnimg.cn/2019040715251354.png" width="60%"> -->
+  <img src="/images/2024-12/2019040715251354.png" width="60%">
   特别是这个 Visual Studio Integration 千万不能选！
-  <img src="https://img-blog.csdnimg.cn/2019040715270168.png" width="60%">
+  <!-- <img src="https://img-blog.csdnimg.cn/2019040715270168.png" width="60%"> -->
+  <img src="/images/2024-12/2019040715270168.png" width="60%">
   选择以下的安装就够了
-  <img src="https://img-blog.csdnimg.cn/20190407152642126.png" width="60%">
+  <!-- <img src="https://img-blog.csdnimg.cn/20190407152642126.png" width="60%"> -->
+  <img src="/images/2024-12/20190407152642126.png" width="60%">
   安装到 C 盘即可，方便以后的路径等
-  <img src="https://img-blog.csdnimg.cn/20190407152738412.png" width="60%">
+  <!-- <img src="https://img-blog.csdnimg.cn/20190407152738412.png" width="60%"> -->
+  <img src="/images/2024-12/20190407152738412.png" width="60%">
 - (5) 安装成功
-  <img src="https://img-blog.csdnimg.cn/20190407152806986.png" width="60%">
-  <img src="https://img-blog.csdnimg.cn/2019040715282075.png" width="60%">
+  <!-- <img src="https://img-blog.csdnimg.cn/20190407152806986.png" width="60%">
+  <img src="https://img-blog.csdnimg.cn/2019040715282075.png" width="60%"> -->
+  <img src="/images/2024-12/20190407152806986.png" width="60%">
+  <img src="/images/2024-12/2019040715282075.png" width="60%">
 - Launch Samples: `C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.1`
   Launch Documents: `file:///C:/Program%20Files/NVIDIA%20GPU%20Computing%20Toolkit/CUDA/v10.1/doc/html/index.html`
 - (6) 验证安装成功

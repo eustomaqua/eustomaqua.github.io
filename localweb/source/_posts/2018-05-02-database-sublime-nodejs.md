@@ -81,7 +81,8 @@ MongoDB 是一个基于分布式文件存储的开源数据库系统，由 C++ �
 MongoDB 旨在为 Web 应用提供可扩展的高性能数据存储解决方案。  
 MongoDB 将数据存储为一个文档，数据结构由键值 (key=>value) 对组成。  
 MongoDB 文档类似于 JSON 对象。字段值可以包含其他文档，数组及文档数组。  
-<img src="http://www.runoob.com/wp-content/uploads/2013/10/crud-annotated-document.png" height="60%" width="60%">
+<!-- <img src="http://www.runoob.com/wp-content/uploads/2013/10/crud-annotated-document.png" height="60%" width="60%"> -->
+<img src="/images/2024-12/crud-annotated-document.png" height="60%" width="60%">
 
 **主要特点**：  
 - 面向文档存储，安装简单，操作容易，且支持多种编程语言 (如：RUBY，PYTHON，JAVA，C++，PHP，C# 等)  
