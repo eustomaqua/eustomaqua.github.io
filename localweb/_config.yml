@@ -152,3 +152,11 @@ math:
 #   # enable: true
 #   meting: true
 #   asset_inject: false
+
+# hexo-tag-cloud
+tag_cloud:
+  textFont: Trebuchet MS, Helvetica
+  textColor: '#333'
+  textHeight: 25  # 字体高度和颜色
+  outlineColor: '#E2E1D1'
+  maxSpeed: 0.1   # 文字滚动速度
