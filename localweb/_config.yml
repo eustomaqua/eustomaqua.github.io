@@ -100,8 +100,8 @@ ignore:
 # theme: landscape
 # theme: next
 theme: Chic
-# theme: laughing
 # theme: dashed
+# theme: laughing
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
