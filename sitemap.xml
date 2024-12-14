@@ -20,7 +20,16 @@
   </url>
   
   <url>
-    <loc>https://eustomaqua.github.io/2024/2024-12-12-annual-summary/</loc>
+    <loc>https://eustomaqua.github.io/2024/2024-12-14-annual-summary/</loc>
+    
+    <lastmod>2024-12-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://eustomaqua.github.io/2024/2024-12-12-annual-playlist/</loc>
     
     <lastmod>2024-12-11</lastmod>
     
@@ -54,14 +63,7 @@
   </url>
   
   <url>
-    <loc>https://eustomaqua.github.io/tags/%E6%B2%B3%E5%9B%BE/</loc>
-    <lastmod>2024-12-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://eustomaqua.github.io/tags/Movie/</loc>
+    <loc>https://eustomaqua.github.io/tags/TV-Series/</loc>
     <lastmod>2024-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
