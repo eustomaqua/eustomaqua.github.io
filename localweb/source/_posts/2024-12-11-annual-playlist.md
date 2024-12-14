@@ -1474,7 +1474,10 @@ C3
 
 
 <br>
+<!--
 <iframe src="//player.bilibili.com/player.html?aid=1711338&bvid=BV1mx411P7QR&cid=2613005&page=1?rel=0&amp;autoplay=0" width="750px" height="560px" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+-->
+<iframe src="//player.bilibili.com/player.html?aid=1711338&bvid=BV1mx411P7QR&cid=2613005&page=1?rel=0&amp;autoplay=0" width="576px" height="370px" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 
 
