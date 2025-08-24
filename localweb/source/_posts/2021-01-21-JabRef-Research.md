@@ -6,6 +6,7 @@ categories:
   - Efficiency
 tags:
   - Kindle
+  - Windows
 mathjax: false
 ---
 
@@ -16,6 +17,7 @@ tags: iOS, Windows
 
 2021/1/31 17:04pm Sun, Productivity
 -->
+<!-- Servers, tag -->
 
 
 # LaTeX
@@ -44,7 +46,7 @@ JabRef 3.8.2 有个缺点是重新安装后 groups tree 不会自动生成，但
 现在 JabRef 3.8.2 好像打开新的 bib 文件也可以自动显示 groups tree 了，赞
 
 
-# Servers
+# Server
 
 推荐 Bitvise SSH Client 和 Cmder 结合使用，当然要在本地配好 ssh 免密登录。  
 Bitvise SSH Client 方便查看服务器端代码执行后产生的结果，下载文件也不会影响其最后修改时间。否则就只能在服务器端 zip 压缩文件后下载本地再解压。  

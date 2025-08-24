@@ -3,14 +3,22 @@ title: Debug Tips - cProfile in Python, TensorBoard
 date: 2020-04-16 05:08:51
 updated: 
 categories:
+  - Records
+tags:
+  - Python
+  - TensorFlow
+  - Windows
+mathjax: true
+---
+
+<!--
+categories:
   - Coding
 tags:
   - Debug
   - Python
   - TensorFlow
-mathjax: true
----
-
+-->
 <!--
 date: 2020-04-16 05:08:51
 

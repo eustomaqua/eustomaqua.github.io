@@ -131,7 +131,8 @@ deploy:
   # repo: https://github.com/eustomaqua/eustomaqua.github.io.git
   repo: git@github.com:eustomaqua/eustomaqua.github.io.git
   branch: master
-  message: updated on {{ now("ddd, MM/DD/YYYY") }}
+  message: updated on {{ now("MM/DD") }}
+  # message: updated on {{ now("ddd, MM/DD/YYYY") }}
   # message: updated at {{ now("YYYY-MM-DD") }}
 
 word_count: true #true|false  #开启/关闭字数统计

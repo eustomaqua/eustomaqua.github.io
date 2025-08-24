@@ -3,15 +3,24 @@ title: 深度学习框架常用命令
 date: 2021-01-03 14:02:29
 updated: 2021-01-03 14:02:29
 categories:
+  - Records
+tags:
+  - TensorFlow
+  - PyTorch
+  - NVIDIA
+  - Windows
+mathjax: false
+---
+
+<!--
+categories:
   - Coding
 tags:
   - Notes
   - TensorFlow
   - PyTorch
   - NVIDIA
-mathjax: false
----
-
+-->
 <!--
 2021/1/15 14:42pm Fri
 Tag: NVIDIA CUDA
@@ -895,10 +904,10 @@ pip install numpy==1.15.1 -i https://pypi.tuna.tsinghua.edu.cn/simple/
 [anaconda清华源可以暂弃了](https://www.jianshu.com/p/02b053b8143a)  
 
 
+<!--
 # TensorFlow
-
-
 # PyTorch
+-->
 
 
 # References
