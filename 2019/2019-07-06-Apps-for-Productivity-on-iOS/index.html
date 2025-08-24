@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="eustomaqua">
+
+
+
+    <meta name="description" content="Once upon a time....">
+
+
+
+<title>好用的效率小软件 (个人喜好) | Aqua Eustoma</title>
+
+
+
+    <link rel="icon" href="/images/EustomaAqua.png">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Aqua Eustoma" type="application/atom+xml">
+</head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">eustomaqua</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Archives</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/search">Search</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">eustomaqua</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Archives</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/search">Search</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <!--
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+        -->
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand</a>
+        <a onclick="go_top()">Top</a>
+        <a onclick="go_bottom()">Bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        // b.innerText = expanded ? 'Expand all' : 'Collapse all';
+        b.innerText = expanded ? 'Expand' : 'Collapse';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">好用的效率小软件 (个人喜好)</h1>
+            
+                <div class="post-meta">
+                    
+
+                    <!--
+                    
+                        <span class="post-time">
+                        Date: <a href="#">July 6, 2019&nbsp;&nbsp;11:31:19</a>
+                        </span>
+                    
+                    -->
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/Efficiency/">Efficiency</a>
+                            
+                        </span>
+                    
+
+                    <span class="post-time">
+                        / &nbsp;
+                        <i class="fas fa-calendar-check"></i>
+                        Date: <a href="#">July 6, 2019&nbsp;</a>
+                        <i class="far fa-clock"></i>
+                        5 min
+                    </span>
+
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <!--
+2021/1/15 14:36pm Fri
+Productivity
+
+2021/1/21 18:29pm Thu
+此去经年
+-->
+
+<h1 id="Used-frequently"><a href="#Used-frequently" class="headerlink" title="Used frequently"></a>Used frequently</h1><h2 id="ATracker-PRO"><a href="#ATracker-PRO" class="headerlink" title="ATracker PRO"></a>ATracker PRO</h2><p>强烈推荐。用于时间追踪和管理。是我觉得同类别中最美观简捷的应用。<br>免费版最多只有五个类别，其实也够用了，只分大类就行。<br>付费版可以用分类来对标签进行筛选，不过我其实大多数也只看大类时间，从这个角度讲跟免费版区别不大。<br>报表部分既有柱状图也有饼形图，一目了然每个时间段的工作时间变化趋势。<br>另外付费版多了数据备份功能。</p>
+<h2 id="Evernote-印象笔记"><a href="#Evernote-印象笔记" class="headerlink" title="Evernote &#x2F; 印象笔记"></a>Evernote &#x2F; 印象笔记</h2><p>笔记类应用里我最喜欢印象笔记，可惜免费版用户同一账号只能同时登录两台设备，我采取的方式是：实验室电脑和笔记本用同一个账号，手机用另一个账号，然后需要用的时候开网页版复制过去。<br>印象笔记比有道云、为知笔记都好看。我印象为知功能比有道云强大些，这两个好像单月流量几乎都跟没限制一样，不确定我记错没有。印象笔记除了流量这个问题，其他我都是很喜欢的，不过如果只用文字保存的话，流量是够的，如果想保存网页或者公众号文章的话就需要注意一下。</p>
+<h2 id="Calendars"><a href="#Calendars" class="headerlink" title="Calendars"></a>Calendars</h2><p>我用来同步的是 Google 日历，因为国内 Google Calendar 直接用起来有点问题。<br>我用的是免费版，付费版可以设置周期任务 (不过这个直接在 Google Calendar 中设置好然后同步过来就行。我日常本来就是直接在 Google 日历中直接设置的，如果在 Calendars 中设置想要反向同步到 Google 日历有时候会出现同步不过去任务丢失的情况，不知道原因)<br>Calendars 的周视图我觉得比 Google Calendar 做得要好，手机上我一般用周视图 (月视图太小，天视图只能看到当天任务，不能提前看下近期任务)；不过 Google Calendar 多了一个 “3 天” 视图，我个人比较偏向日程模式，如果用手机 Google 日历的话，手机 Google 日历唯一多的好处应该是可以设置循环任务吧，嗯还有颜值也是够的，不过 Calendars 的简洁我也是很喜欢的。</p>
+<h1 id="Used-sometimes-some-are-not-beautiful"><a href="#Used-sometimes-some-are-not-beautiful" class="headerlink" title="Used sometimes, (some are not beautiful)"></a>Used sometimes, (some are not beautiful)</h1><h2 id="Wunderlist-奇妙清单"><a href="#Wunderlist-奇妙清单" class="headerlink" title="Wunderlist 奇妙清单"></a>Wunderlist 奇妙清单</h2><p>颜值比滴答清单高，用起来还行，不过感觉用于时间管理来说，对我的效果一般。使用效果与滴答清单基本持平，靠颜值略高一丢丢。类似的还有 Any.do ，相比之下我更愿意选择奇妙清单</p>
+<h2 id="P-Schedule-Pocket-Schedule-Planner"><a href="#P-Schedule-Pocket-Schedule-Planner" class="headerlink" title="P. Schedule (Pocket Schedule Planner)"></a>P. Schedule (Pocket Schedule Planner)</h2><p>这个最近刚开始用，可以通过注册来同步数据，我直接用 Facebook 登录了。<br>Courses 部分可以设置课程里的 Class&#x2F;Exam&#x2F;Assignment，会根据时间显示在 Timetable 中 (Timetable 是周视图，提示当天有哪些 Class&#x2F;Exam&#x2F;Assignment due，不过调整不同的周看任务有点略微不太丝滑的感觉，但是好在设置完 Courses 后这里都是自动显示的，相当于一个提醒，但是无法像任务一样点击完成)<br>Assignments 视图可以根据 Due Date&#x2F;Course&#x2F;Priority 来排序，做完了勾选完成即可，这点比较方便。不过 Priority 只有 Important&#x2F;Normal 两种，也还行吧，分特别细了也未必好，这样省事。我觉得这里可以按照 Due Date 来看，如果有特别重要的任务，就看一下 Priority。<br>Tasks 视图可以组织不同的 Project ，Project 下又有 tasks，这里有 Overdue&#x2F;Today&#x2F;Next 7 days&#x2F;Someday 划分，这部分像是奇妙清单的 Inbox ，我主要会看 Today&#x2F;Next 7 days，用来提醒自己还有什么任务需要完成。tasks 完成后勾选完成即可，同 assignments 。至于里面有个 Flag (flagged task) ，我也不是很确定，可能是想表示 Priority Important 的意思吧，反正我是这么看的……</p>
+<p><strong>更新：</strong> 感觉跟奇妙清单差不多，持平或略差，又换回奇妙清单了</p>
+<h2 id="Documents"><a href="#Documents" class="headerlink" title="Documents"></a>Documents</h2><p>可以添加多个网盘账号，包括 Google Drive, OneDrive, Dropbox 。我下载下来的一些文件会存在这里看，比如 pdf, epub, txt, doc 等。如果用 txt, doc 的话，可以编辑。</p>
+<h2 id="长图拼接"><a href="#长图拼接" class="headerlink" title="长图拼接"></a>长图拼接</h2><p>网页看到合适的想保存可以用这个，缺点是只能截屏然后拼接，且免费版每次最多拼接九张。除此之外还是比较好用的。另一个 Sarafi 插件 Screenshot 我觉得不是特别好用。</p>
+<h1 id="Just-for-the-record"><a href="#Just-for-the-record" class="headerlink" title="Just for the record"></a>Just for the record</h1><h2 id="PlayTask"><a href="#PlayTask" class="headerlink" title="PlayTask"></a>PlayTask</h2><p>这个有点像成就系统，有点好玩，设计也比较简洁。注册账号后可同步数据。<br>可以设置 每日任务&#x2F;每周任务&#x2F;普通任务&#x2F;副本任务。副本任务我没用过，普通任务是一次性的，每日&#x2F;周任务是循环自动出现。任务完成后可获得设定好的成就得分。<br>满足欲望会消耗所获得的成就，相当于干完活后用某个自己想做的事情来奖励一下自己。欲望可设为 单次&#x2F;不限，后者可以多次满足，单次欲望可以设置那种购买一个比较贵的物品之类的，总之就是不会天天这么浪的。<br>统计部分可以看成就收入&#x2F;支出&#x2F;结余，按每日&#x2F;周&#x2F;月&#x2F;年统计。我不怎么看。我感觉这个软件除了好玩之外，其他对于任务的管理方面对我的效果不如奇妙清单。</p>
+<h2 id="Todokit"><a href="#Todokit" class="headerlink" title="Todokit"></a>Todokit</h2><p>长得好看。iPad 版比 iPhone 版感觉更合适些。这个胜在 Priority 可设置连续值。<br>每个 Project 下的任务可以根据 Priority&#x2F;Urgency&#x2F;Completed 来检查，其中 Urgency 是根据 Due date 来排序的。此外还可以设置 Progress ，归类在 Completed 中。<br>但是我现在两个设备通过 iCloud 同步有点问题…… </p>
+<h2 id="Gmail-网易邮箱大师"><a href="#Gmail-网易邮箱大师" class="headerlink" title="Gmail &#x2F; 网易邮箱大师"></a>Gmail &#x2F; 网易邮箱大师</h2><p>可以查收邮件，论颜值 Gmail 高一点，网易邮箱可以添加多个不同账号。不过我大部分邮件查收还是用浏览器，手机端用得相对较少。</p>
+<h2 id="BeFocused"><a href="#BeFocused" class="headerlink" title="BeFocused"></a>BeFocused</h2><p>番茄时钟。颜值是够的，不过免费版有广告，而且我觉得 25 分钟一停的番茄法我经常忘记记录，所以相比较来说更喜欢 ATracker。<br>类似的番茄时钟记录，Chrome 插件有个 Marinara (番茄工作法助理)。这个好在统计部分，有个像 GitHub 的工作时段统计，不过还是，25分钟一停我总是忘记记录停止或开始……</p>
+<h2 id="Days-Matter-倒数日"><a href="#Days-Matter-倒数日" class="headerlink" title="Days Matter (倒数日)"></a>Days Matter (倒数日)</h2><p>可以设置某目标&#x2F;任务 Due Date，能够看到还剩多少天或者过期了多少天。<br>还有一个功能是可以计算日期之间相隔多少天。<br>登录可以同步数据。缺点是难看，难看，真的难看…… 所以我不怎么用</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/iOS/"># iOS</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <!--
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+                -->
+                <a href="/">Home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2019/2019-07-20-Kindle-SignIn-WordWise/">Kindle 跌过的坑要反复地爬 T_T</a>
+            
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <!--
+        <span>© eustomaqua | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+        -->
+
+        <span>© eustomaqua | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span> 
+        <!--
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <span class="post-meta-divider">|</span>
+        Total 
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span> visits
+        </span> & 
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span> visitors
+        </span>
+        -->
+        <!--
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <span class="post-meta-divider">|</span>
+        <span id="busuanzi_container_site_pv">
+            Total visits<span id="busuanzi_value_site_pv"></span>
+        </span>
+        <span class="post-meta-divider">|</span>
+        <span id="busuanzi_container_site_uv">
+            Total visitors
+            <span id="busuanzi_value_site_uv"></span>
+        </span> 
+        -->
+
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>

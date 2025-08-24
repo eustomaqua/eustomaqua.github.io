@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="eustomaqua">
+
+
+
+    <meta name="description" content="Once upon a time....">
+
+
+
+<title>Debug Tips - cProfile in Python, TensorBoard | Aqua Eustoma</title>
+
+
+
+    <link rel="icon" href="/images/EustomaAqua.png">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+            <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+        
+    
+
+
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Aqua Eustoma" type="application/atom+xml">
+</head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">eustomaqua</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Archives</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/search">Search</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">eustomaqua</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Archives</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/search">Search</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <!--
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+        -->
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand</a>
+        <a onclick="go_top()">Top</a>
+        <a onclick="go_bottom()">Bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        // b.innerText = expanded ? 'Expand all' : 'Collapse all';
+        b.innerText = expanded ? 'Expand' : 'Collapse';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Debug Tips - cProfile in Python, TensorBoard</h1>
+            
+                <div class="post-meta">
+                    
+
+                    <!--
+                    
+                        <span class="post-time">
+                        Date: <a href="#">April 16, 2020&nbsp;&nbsp;5:08:51</a>
+                        </span>
+                    
+                    -->
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/Coding/">Coding</a>
+                            
+                        </span>
+                    
+
+                    <span class="post-time">
+                        / &nbsp;
+                        <i class="fas fa-calendar-check"></i>
+                        Date: <a href="#">April 16, 2020&nbsp;</a>
+                        <i class="far fa-clock"></i>
+                        32 min
+                    </span>
+
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <!--
+date: 2020-04-16 05:08:51
+
+2021/1/15 14:49pm Fri
+Category: Programming
+-->
+
+
+<h1 id="Python-Debug-cProfile"><a href="#Python-Debug-cProfile" class="headerlink" title="Python Debug: cProfile"></a>Python Debug: cProfile</h1><h2 id="cProfile-in-Python"><a href="#cProfile-in-Python" class="headerlink" title="cProfile in Python"></a>cProfile in Python</h2><p><strong>refs:</strong>  </p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/asukasmallriver/article/details/74356771">使用cProfile分析Python程序性能</a>  </li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/u010453363/article/details/78415553">python性能分析工具：cProfile使用</a></li>
+</ul>
+<p>为了优化 Python 脚本，使用 cProfile 和 pstats 对其进行性能分析。<br>思路：  </p>
+<ol>
+<li>使用 cProfile 模块生成脚本执行的统计信息文件</li>
+<li>使用 pstats 格式化统计信息，并根据需要做排序分析处理</li>
+</ol>
+<p>Step 1, 使用 cProfile 生成脚本执行的统计信息文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">python -m cProfile -o cPro_output.txt script.py -params</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>参数说明：</p>
+<ul>
+<li>使用模块当做脚本运行： <code>-m cProfile</code></li>
+<li>输出参数： <code>-o cPro_output.txt</code></li>
+<li>测试的 python 脚本： <code>script.py</code></li>
+<li>其余为 python 脚本的输入参数</li>
+</ul>
+</blockquote>
+<p>Step 2, 使用 pstats 查看格式化后的统计信息，可以根据自身需求做排序  </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">python profiler.py &gt; cProfiler_output.txt</span></span><br></pre></td></tr></table></figure>
+<p>其中，profiler.py 文件内容为</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pstats</span><br><span class="line">p=pstats.Stats(<span class="string">&#x27;./cPro_output.txt&#x27;</span>)</span><br><span class="line">p.print_stats()</span><br><span class="line"><span class="comment">#根据调用次数排序</span></span><br><span class="line">p.sort_stats(<span class="string">&#x27;calls&#x27;</span>).print_stats()</span><br><span class="line"><span class="comment">#根据调用总时间排序</span></span><br><span class="line">p.sort_stats(<span class="string">&#x27;cumulative&#x27;</span>).print_stats()</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>*Stats类 (pstats.Stats) 说明</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>def Function</th>
+<th>Illustration</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>strip_dirs()</td>
+<td>用以除去文件名前的路径信息。</td>
+</tr>
+<tr>
+<td>add(filename,[…])</td>
+<td>把 profile 的输出文件加入 Stats 实例中统计</td>
+</tr>
+<tr>
+<td>dump_stats(filename)</td>
+<td>把 Stats 的统计结果保存到文件</td>
+</tr>
+<tr>
+<td>sort_stats(key,[…])</td>
+<td>最重要的一个函数，用以排序 profile 的输出</td>
+</tr>
+<tr>
+<td>reverse_order()</td>
+<td>把 Stats 实例里的数据反序重排</td>
+</tr>
+<tr>
+<td>print_stats([restriction,…])</td>
+<td>把 Stats 报表输出到 stdout</td>
+</tr>
+<tr>
+<td>print_callers([restriction,…])</td>
+<td>输出调用了指定的函数的函数的相关信息</td>
+</tr>
+<tr>
+<td>print_callees([restriction,…])</td>
+<td>输出指定的函数调用过的函数的相关信息</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>sort_stats 支持以下参数：</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>‘calls’</td>
+<td>call count</td>
+</tr>
+<tr>
+<td>‘cumulative’</td>
+<td>cumulative time</td>
+</tr>
+<tr>
+<td>‘file’</td>
+<td>file name</td>
+</tr>
+<tr>
+<td>‘filename’</td>
+<td>file name</td>
+</tr>
+<tr>
+<td>‘module’</td>
+<td>module name</td>
+</tr>
+<tr>
+<td>‘ncalls’</td>
+<td>call count</td>
+</tr>
+<tr>
+<td>‘pcalls’</td>
+<td>primitive call count</td>
+</tr>
+<tr>
+<td>‘line’</td>
+<td>line number</td>
+</tr>
+<tr>
+<td>‘name’</td>
+<td>function name</td>
+</tr>
+<tr>
+<td>‘nfl’</td>
+<td>name&#x2F;file&#x2F;line</td>
+</tr>
+<tr>
+<td>‘stdname’</td>
+<td>standard name</td>
+</tr>
+<tr>
+<td>‘time’</td>
+<td>internal time</td>
+</tr>
+<tr>
+<td>‘tottime’</td>
+<td>internal time</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>* 一个比较典型的输出结果：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">197 function calls (192 primitive calls) in 0.002 seconds</span><br><span class="line">Ordered by: standard name</span><br><span class="line">ncalls tottime percall cumtime percall filename:lineno(function)</span><br><span class="line">1 0.000 0.000 0.001 0.001 :1()</span><br><span class="line">1 0.000 0.000 0.001 0.001 re.py:212(compile)</span><br><span class="line">1 0.000 0.000 0.001 0.001 re.py:268(_compile)</span><br><span class="line">1 0.000 0.000 0.000 0.000 sre_compile.py:172(_compile_charset)</span><br><span class="line">1 0.000 0.000 0.000 0.000 sre_compile.py:201(_optimize_charset)</span><br><span class="line">4 0.000 0.000 0.000 0.000 sre_compile.py:25(_identityfunction)</span><br><span class="line">3/1 0.000 0.000 0.000 0.000 sre_compile.py:33(_compile)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>输出结果说明：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">共有197次函数调用，原始调用为192次，原始调用说明不包含递归调用。</span><br><span class="line">以standard name进行排序。3/1表示发生了递归调用，1为原始调用次数，3为递归调用次数</span><br><span class="line">ncalls 函数的被调用次数</span><br><span class="line">tottime 函数总计运行时间，除去函数中调用的函数运行时间</span><br><span class="line">percall 函数运行一次的平均时间，等于tottime/ncalls</span><br><span class="line">cumtime 函数总计运行时间，含调用的函数运行时间</span><br><span class="line">percall 函数运行一次的平均时间，等于cumtime/ncalls</span><br><span class="line">filename:lineno(function) 函数所在的文件名，函数的行号，函数名</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="logging-v-s-print"><a href="#logging-v-s-print" class="headerlink" title="logging v.s. print"></a>logging v.s. print</h2><p>代码中若想获知中间结果，使用 print 输出耗时过于巨大。下表是我将对应的 print 都换成 logging 信息后，程序的耗时对比。注意其他代码可认为基本没改。<br>我本来也是不知道 print 会对性能有如此之大的影响的，刚换成 logger 后也没有太在意，直到我把两个数值放在一起比较了之后……</p>
+<!--Efficiency-->
+<p>e.g., Table: Comparison of Time (min) where<br>$$Percent &#x3D; \left(1 - \frac{Time_{;logger}}{Time_{;print}} \right)\times 100%$$</p>
+<table>
+<thead>
+<tr>
+<th>Example</th>
+<th>print</th>
+<th>logger</th>
+<th>Percent (%)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>mnist,dnn,b</td>
+<td>192.2485</td>
+<td>62.3390</td>
+<td>67.57</td>
+</tr>
+<tr>
+<td>mnist,dnn,c</td>
+<td>344.0925</td>
+<td>77.7800</td>
+<td>77.40</td>
+</tr>
+<tr>
+<td>mnist,dnn,d</td>
+<td>376.3242</td>
+<td>80.7567</td>
+<td>78.54</td>
+</tr>
+<tr>
+<td>mnist,dnn,e</td>
+<td>698.8540</td>
+<td>86.6952</td>
+<td>87.59</td>
+</tr>
+</tbody></table>
+<!--
+typo:
+| mnist,dnn,e | 698.8540 | 80.7567 | 88.44 |
+fact:
+        dnn,d      dnn,e      dnn,d   ERROR
+-->
+
+<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><p><em><strong>Example:</strong></em>  </p>
+<ul>
+<li>cProfile<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">python -m cProfile -o prt_1h.txt compare.py -n 100 -run print</span><br><span class="line">python -m cProfile -o log_1h.txt compare.py -n 100 -run logger</span><br><span class="line">python -m cProfile -o log_1hd.txt compare.py -n 100 -run logger -fmt default</span><br><span class="line">python -m cProfile -o log_1ht.txt compare.py -n 100 -run logger -fmt time</span><br><span class="line"></span><br><span class="line">python -m cProfile -o prt_1k.txt compare.py -n 1000 -run print</span><br><span class="line">python -m cProfile -o log_1k.txt compare.py -n 1000 -run logger</span><br><span class="line">python -m cProfile -o log_1kd.txt compare.py -n 1000 -run logger -fmt default</span><br><span class="line">python -m cProfile -o log_1kt.txt compare.py -n 1000 -run logger -fmt time</span><br><span class="line"></span><br><span class="line">python -m cProfile -o prt_1m.txt compare.py -n 1000000 -run print</span><br><span class="line">python -m cProfile -o log_1m.txt compare.py -n 1000000 -run logger</span><br><span class="line">python -m cProfile -o log_1md.txt compare.py -n 1000000 -run logger -fmt default</span><br><span class="line">python -m cProfile -o log_1mt.txt compare.py -n 1000000 -run logger -fmt time</span><br></pre></td></tr></table></figure></li>
+<li>pstat<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">python cprofiler.py -o prt_1h.txt &gt; cp_prt1h.txt</span><br><span class="line">python cprofiler.py -o log_1h.txt &gt; cp_log1h.txt</span><br><span class="line">python cprofiler.py -o log_1hd.txt &gt; cp_log1hd.txt</span><br><span class="line">python cprofiler.py -o log_1ht.txt &gt; cp_log1ht.txt</span><br><span class="line"></span><br><span class="line">python cprofiler.py -o prt_1k.txt &gt; cp_prt1k.txt</span><br><span class="line">python cprofiler.py -o log_1k.txt &gt; cp_log1k.txt</span><br><span class="line">python cprofiler.py -o log_1kd.txt &gt; cp_log1kd.txt</span><br><span class="line">python cprofiler.py -o log_1kt.txt &gt; cp_log1kt.txt</span><br><span class="line"></span><br><span class="line">python cprofiler.py -o prt_1m.txt &gt; cp_prt1m.txt</span><br><span class="line">python cprofiler.py -o log_1m.txt &gt; cp_log1m.txt</span><br><span class="line">python cprofiler.py -o log_1md.txt &gt; cp_log1md.txt</span><br><span class="line">python cprofiler.py -o log_1mt.txt &gt; cp_log1mt.txt</span><br></pre></td></tr></table></figure></li>
+<li><code>cp_*.txt</code> 中耗时最多的 tottime  | 对比表 (seconds)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><code>cp_&#123;row&#125;1&#123;col&#125;.txt</code></th>
+<th>1h</th>
+<th>1k</th>
+<th>1m</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>prt</td>
+<td>0.005</td>
+<td>0.005</td>
+<td>3.431</td>
+</tr>
+<tr>
+<td>log</td>
+<td>0.004</td>
+<td>0.007</td>
+<td>0.740</td>
+</tr>
+<tr>
+<td>log (default)</td>
+<td>0.006</td>
+<td>0.006</td>
+<td>0.934</td>
+</tr>
+<tr>
+<td>log (asciitime)</td>
+<td>0.004</td>
+<td>0.007</td>
+<td>0.804</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Time Cost (s)<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">python compare.py -n 5000 -run print</span><br><span class="line">python compare.py -n 5000 -run logger</span><br><span class="line">python compare.py -n 5000 -run logger -fmt default</span><br><span class="line">python compare.py -n 5000 -run logger -fmt time</span><br><span class="line"></span><br><span class="line">python compare.py -n 1000000 -run print</span><br><span class="line">python compare.py -n 1000000 -run logger</span><br><span class="line">python compare.py -n 1000000 -run logger -fmt default</span><br><span class="line">python compare.py -n 1000000 -run logger -fmt time</span><br></pre></td></tr></table></figure></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><code>-n &#123;col&#125; -run &#123;col&#125;</code></th>
+<th>5k</th>
+<th>1m</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>prt</td>
+<td>0.017555952072143555</td>
+<td>3.732201337814331</td>
+</tr>
+<tr>
+<td>log</td>
+<td>0.007807493209838867</td>
+<td>2.201814651489258</td>
+</tr>
+<tr>
+<td>log (default)</td>
+<td>0.012686729431152344</td>
+<td>1.920773983001709</td>
+</tr>
+<tr>
+<td>log (time)</td>
+<td>0.01854419708251953</td>
+<td>2.5776114463806152</td>
+</tr>
+</tbody></table>
+<h3 id="Codes"><a href="#Codes" class="headerlink" title="Codes"></a>Codes</h3><ul>
+<li>compare.py<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">coding: utf-8</span></span><br><span class="line">from __future__ import absolute_import</span><br><span class="line">from __future__ import division</span><br><span class="line">from __future__ import print_function</span><br><span class="line"></span><br><span class="line">import argparse</span><br><span class="line">import logging</span><br><span class="line">import sys</span><br><span class="line">import os</span><br><span class="line">import time</span><br><span class="line"></span><br><span class="line">logging.basicConfig(level=logging.INFO)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def testPrint(n, txt=&#x27;cmpPrint.log&#x27;):</span><br><span class="line">    saveout = sys.stdout</span><br><span class="line">    fsock = open(txt, &quot;w&quot;)</span><br><span class="line">    sys.stdout = fsock</span><br><span class="line">    #</span><br><span class="line">    for i in range(n):</span><br><span class="line">        print(&quot;No. &quot;, i)</span><br><span class="line">    #</span><br><span class="line">    fsock.close()</span><br><span class="line">    sys.stdout = saveout</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def testLogger(n, txt=&#x27;cmpLogger.log&#x27;, formatter=None):</span><br><span class="line">    logger = logging.getLogger(&#x27;compare&#x27;)</span><br><span class="line">    logtxt = logging.FileHandler(txt)  # &#x27;compareLogger.log&#x27;)</span><br><span class="line">    logtxt.setLevel(logging.DEBUG)</span><br><span class="line">    if not formatter:</span><br><span class="line">        logtxt.setFormatter(formatter)</span><br><span class="line">    logger.addHandler(logtxt)</span><br><span class="line">    #</span><br><span class="line">    for i in range(n):</span><br><span class="line">        logger.debug(&quot;No. &#123;&#125;&quot;.format(i))</span><br><span class="line">    #</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def deleteFiles(txt):</span><br><span class="line">    if os.path.exists(txt):</span><br><span class="line">        os.remove(txt)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">parser = argparse.ArgumentParser()</span><br><span class="line">parser.add_argument(&#x27;-n&#x27;, &#x27;--number&#x27;, type=int,</span><br><span class="line">    default=1000, help=&#x27;Number of Output&#x27;)</span><br><span class="line">parser.add_argument(&#x27;-run&#x27;, &#x27;--execute&#x27;, type=str,</span><br><span class="line">    default=&quot;print&quot;, choices=[&#x27;print&#x27;, &#x27;logger&#x27;],</span><br><span class="line">    help=&quot;Print or Logger?&quot;)</span><br><span class="line">parser.add_argument(&#x27;-fmt&#x27;, &#x27;--format&#x27;, type=str,</span><br><span class="line">    default=&#x27;&#x27;, help=&#x27;Formatter in Logger&#x27;)</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">txt_prt = <span class="string">&#x27;txtPrint.log&#x27;</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">txt_log = <span class="string">&#x27;txtLogger.log&#x27;</span></span></span><br><span class="line"></span><br><span class="line">args = parser.parse_args()</span><br><span class="line">n = args.number</span><br><span class="line"></span><br><span class="line">if args.execute.startswith(&#x27;p&#x27;):</span><br><span class="line">    txt = &#x27;txtPrint.log&#x27;</span><br><span class="line">    deleteFiles(txt)</span><br><span class="line">    testPrint(n, txt)</span><br><span class="line"></span><br><span class="line">else:</span><br><span class="line">    txt = &#x27;txtLogger.log&#x27;</span><br><span class="line">    deleteFiles(txt)</span><br><span class="line"></span><br><span class="line">    fmt = args.format</span><br><span class="line">    formatter = None</span><br><span class="line">    if not fmt:</span><br><span class="line">        pass</span><br><span class="line">    elif fmt == &#x27;default&#x27;:</span><br><span class="line">        formatter = logging.Formatter(logging.BASIC_FORMAT, None)</span><br><span class="line">    elif fmt == &#x27;time&#x27;:</span><br><span class="line">        formatter = logging.Formatter(</span><br><span class="line">            &#x27;%(asctime)s - %(name)s:%(levelname)s | %(message)s&#x27;)</span><br><span class="line"></span><br><span class="line">    testLogger(n, txt, formatter)</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>cprofiler.py<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">coding: utf8</span></span><br><span class="line">import argparse</span><br><span class="line"></span><br><span class="line">import pstats</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">p=pstats.Stats(&#x27;./cProfile_output.txt&#x27;)</span><br><span class="line">p.print_stats()</span><br><span class="line">p.sort_stats(&#x27;calls&#x27;).print_stats()  #    # 根据调用次数排序</span><br><span class="line">p.sort_stats(&#x27;cumulative&#x27;).print_stats()  # 根据调用总时间排序</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">parser = argparse.ArgumentParser()</span><br><span class="line">parser.add_argument(&#x27;-o&#x27;, &#x27;--output&#x27;, type=str,</span><br><span class="line">    default=&#x27;./cProfile_output.txt&#x27;,</span><br><span class="line">    help=&#x27;Filename of Outputs&#x27;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">args = parser.parse_args()</span><br><span class="line">t = args.output</span><br><span class="line"></span><br><span class="line">p = pstats.Stats(t)</span><br><span class="line">p.sort_stats(&#x27;tottime&#x27;).print_stats()</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>compare.py (Time Cost)<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line"></span><br><span class="line">args = parser.parse_args()</span><br><span class="line">n = args.number</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">since = time.time()</span></span><br><span class="line"></span><br><span class="line">if args.execute.startswith(&#x27;p&#x27;):</span><br><span class="line">    ...</span><br><span class="line">else:</span><br><span class="line">    ...</span><br><span class="line"></span><br><span class="line">time_elapsed = time.time() - since</span><br><span class="line">print(&quot;&#123;:6s&#125; n=&#123;&#125; fmt=&#123;&#125;&quot;.format(args.execute, args.number, args.format))</span><br><span class="line">print(&quot;Time Cost: &#123;&#125; s&quot;.format(time_elapsed))</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h1 id="TensorFlow-Debug"><a href="#TensorFlow-Debug" class="headerlink" title="TensorFlow Debug"></a>TensorFlow Debug</h1><h2 id="tf-logging"><a href="#tf-logging" class="headerlink" title="tf.logging"></a>tf.logging</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"></span><br><span class="line"><span class="comment"># http://landcareweb.com/questions/26327/ru-he-jiang-tensorflowri-zhi-ji-lu-zhong-ding-xiang-dao-wen-jian</span></span><br><span class="line"><span class="comment"># get TF logger</span></span><br><span class="line">log = logging.getLogger(<span class="string">&#x27;tensorflow&#x27;</span>)</span><br><span class="line">log.setLevel(logging.DEBUG)</span><br><span class="line"><span class="comment"># create formatter and add it to the handlers</span></span><br><span class="line"><span class="comment">#formatter = logging.Formatter(&#x27;%(asctime)s - %(name)s - %(levelname)s - %(message)s&#x27;)</span></span><br><span class="line"><span class="comment"># create file handler which logs even debug messages</span></span><br><span class="line">fh = logging.FileHandler(<span class="string">&#x27;tensorflow.log&#x27;</span>)</span><br><span class="line">fh.setLevel(logging.DEBUG)</span><br><span class="line"><span class="comment">#fh.setFormatter(formatter)</span></span><br><span class="line">log.addHandler(fh)</span><br></pre></td></tr></table></figure>
+
+<h2 id="TensorBoard"><a href="#TensorBoard" class="headerlink" title="TensorBoard"></a>TensorBoard</h2><p>Same Terminal, Different Machines</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Local</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">ssh -L 16006:127.0.0.1:6006 yourname@server.address</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Server</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> expected-folder-path</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">tensorboard --logdir=./network</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="comment"># Open http://127.0.0.1:16006 in Local browser</span></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="comment"># Ctrl+C close on the same Terminal</span></span></span><br></pre></td></tr></table></figure>
+
+<h1 id="PyTorch-Debug"><a href="#PyTorch-Debug" class="headerlink" title="PyTorch Debug"></a>PyTorch Debug</h1><p>ref: <a target="_blank" rel="noopener" href="https://yq.aliyun.com/articles/716950?spm=a2c4e.11153959.teamlist.33.4bd85a18ZHZchy">点赞收藏：PyTorch常用代码段整理合集</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ pip install tensorboardX</span><br><span class="line">$ python</span><br><span class="line">&gt;&gt;&gt; from tensorboardX import SummaryWriter</span><br></pre></td></tr></table></figure>
+<p>ref: <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/46eb3004beca">Pytorch使用tensorboardX可视化。超详细！！！</a></p>
+<h1 id="References"><a href="#References" class="headerlink" title="* References"></a>* References</h1><p><a target="_blank" rel="noopener" href="https://my.oschina.net/antsky/blog/1475173">Github 中 Markdown 锚点链接如何写</a>  </p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/Debug/"># Debug</a>
+                    
+                        <a href="/tags/Python/"># Python</a>
+                    
+                        <a href="/tags/TensorFlow/"># TensorFlow</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <!--
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+                -->
+                <a href="/">Home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2024/2024-12-11-annual-playlist/">河图的曲</a>
+            
+            
+            <a class="next" rel="next" href="/2019/2019-07-20-Kindle-SignIn-WordWise/">Kindle 跌过的坑要反复地爬 T_T</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <!--
+        <span>© eustomaqua | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+        -->
+
+        <span>© eustomaqua | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span> 
+        <!--
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <span class="post-meta-divider">|</span>
+        Total 
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span> visits
+        </span> & 
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span> visitors
+        </span>
+        -->
+        <!--
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <span class="post-meta-divider">|</span>
+        <span id="busuanzi_container_site_pv">
+            Total visits<span id="busuanzi_value_site_pv"></span>
+        </span>
+        <span class="post-meta-divider">|</span>
+        <span id="busuanzi_container_site_uv">
+            Total visitors
+            <span id="busuanzi_value_site_uv"></span>
+        </span> 
+        -->
+
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>
