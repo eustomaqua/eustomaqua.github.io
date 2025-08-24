@@ -3,12 +3,14 @@ title: Kindle 跌过的坑要反复地爬 T_T
 date: 2019-07-20 16:03:54
 updated: 2020-08-23 20:22:29
 categories:
-  - 此去经年
+  - Efficiency
 tags:
   - Kindle
 ---
 
 <!--
+categories - 此去经年
+
 2021/1/15 14:36 Fri
 Productivity
 -->
