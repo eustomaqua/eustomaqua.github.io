@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://eustomaqua.github.io/2020/2020-04-16-Python-Debug-cProfile-TensorBoard/</loc>
+    
+    <lastmod>2025-08-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://eustomaqua.github.io/tags/index.html</loc>
     
     <lastmod>2024-12-14</lastmod>
@@ -21,15 +30,6 @@
   
   <url>
     <loc>https://eustomaqua.github.io/2019/2019-07-06-Apps-for-Productivity-on-iOS/</loc>
-    
-    <lastmod>2024-12-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://eustomaqua.github.io/2020/2020-04-16-Python-Debug-cProfile-TensorBoard/</loc>
     
     <lastmod>2024-12-14</lastmod>
     
@@ -59,6 +59,15 @@
     <loc>https://eustomaqua.github.io/2024/2024-12-11-annual-playlist/</loc>
     
     <lastmod>2024-12-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://eustomaqua.github.io/2021/2021-01-21-JabRef-Research/</loc>
+    
+    <lastmod>2021-01-21</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -111,13 +120,6 @@
   </url>
   
   <url>
-    <loc>https://eustomaqua.github.io/tags/Debug/</loc>
-    <lastmod>2025-08-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://eustomaqua.github.io/tags/Python/</loc>
     <lastmod>2025-08-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -126,6 +128,13 @@
   
   <url>
     <loc>https://eustomaqua.github.io/tags/TensorFlow/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://eustomaqua.github.io/tags/Windows/</loc>
     <lastmod>2025-08-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -155,7 +164,7 @@
   </url>
   
   <url>
-    <loc>https://eustomaqua.github.io/categories/Coding/</loc>
+    <loc>https://eustomaqua.github.io/categories/Records/</loc>
     <lastmod>2025-08-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
