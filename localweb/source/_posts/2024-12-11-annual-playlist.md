@@ -1787,7 +1787,7 @@ C3
 <details>
 <summary>家乡
   [<a href="https://www.youtube.com/watch?v=ccWiaZ1j7s0">YouTube</a>,
-  <a href="https://music.163.com/#/song?id=233711">NetEase</a>
+  <a href="https://music.163.com/#/song?id=233711">NetEase</a>,
   <a href="https://www.bilibili.com/video/BV1X14y187BV/?vd_source=c22d6182e4d5d0880f8c1a72d0c9dab0">bilibili</a>]
 </summary>
 
@@ -1839,6 +1839,16 @@ C3
 
 -The End-
 ```
+</details>
+
+<details>
+<summary>et cetera
+</summary>
+
+命理难说 [<a href="https://5sing.kugou.com/yc/1067277.html">5sing</a>]
+乱世情缘 [<a href="https://www.missevan.com/sound/player?id=314996">missevan</a>]
+<a href="https://www.missevan.com/explore/13302?p=3">梦璟SAYA</a>
+徒然歌 [<a href="https://5sing.kugou.com/yc/1629006.html">5sing</a>]
 </details>
 
 
