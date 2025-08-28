@@ -29,15 +29,6 @@
   </url>
   
   <url>
-    <loc>https://eustomaqua.github.io/2019/2019-07-06-Apps-for-Productivity-on-iOS/</loc>
-    
-    <lastmod>2024-12-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://eustomaqua.github.io/2025/2024-12-14-annual-summary/</loc>
     
     <lastmod>2024-12-13</lastmod>
@@ -65,15 +56,6 @@
   </url>
   
   <url>
-    <loc>https://eustomaqua.github.io/2021/2021-01-21-JabRef-Research/</loc>
-    
-    <lastmod>2021-01-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://eustomaqua.github.io/2019/2019-07-20-Kindle-SignIn-WordWise/</loc>
     
     <lastmod>2020-08-23</lastmod>
@@ -85,7 +67,7 @@
 
   <url>
     <loc>https://eustomaqua.github.io/</loc>
-    <lastmod>2025-08-24</lastmod>
+    <lastmod>2025-08-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -93,49 +75,42 @@
   
   <url>
     <loc>https://eustomaqua.github.io/tags/Music/</loc>
-    <lastmod>2025-08-24</lastmod>
+    <lastmod>2025-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://eustomaqua.github.io/tags/TV-Series/</loc>
-    <lastmod>2025-08-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://eustomaqua.github.io/tags/iOS/</loc>
-    <lastmod>2025-08-24</lastmod>
+    <lastmod>2025-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://eustomaqua.github.io/tags/Kindle/</loc>
-    <lastmod>2025-08-24</lastmod>
+    <lastmod>2025-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://eustomaqua.github.io/tags/Python/</loc>
-    <lastmod>2025-08-24</lastmod>
+    <lastmod>2025-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://eustomaqua.github.io/tags/TensorFlow/</loc>
-    <lastmod>2025-08-24</lastmod>
+    <lastmod>2025-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://eustomaqua.github.io/tags/Windows/</loc>
-    <lastmod>2025-08-24</lastmod>
+    <lastmod>2025-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -144,28 +119,28 @@
   
   <url>
     <loc>https://eustomaqua.github.io/categories/%E4%BC%BC%E6%AD%A4%E6%98%9F%E8%BE%B0/</loc>
-    <lastmod>2025-08-24</lastmod>
+    <lastmod>2025-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://eustomaqua.github.io/categories/%E6%AD%A4%E5%8E%BB%E7%BB%8F%E5%B9%B4/</loc>
-    <lastmod>2025-08-24</lastmod>
+    <lastmod>2025-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://eustomaqua.github.io/categories/Efficiency/</loc>
-    <lastmod>2025-08-24</lastmod>
+    <lastmod>2025-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://eustomaqua.github.io/categories/Records/</loc>
-    <lastmod>2025-08-24</lastmod>
+    <lastmod>2025-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

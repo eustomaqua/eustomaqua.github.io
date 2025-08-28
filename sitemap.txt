@@ -1,16 +1,13 @@
 https://eustomaqua.github.io/2020/2020-04-16-Python-Debug-cProfile-TensorBoard/
 https://eustomaqua.github.io/tags/index.html
 https://eustomaqua.github.io/categories/index.html
-https://eustomaqua.github.io/2019/2019-07-06-Apps-for-Productivity-on-iOS/
 https://eustomaqua.github.io/2025/2024-12-14-annual-summary/
 https://eustomaqua.github.io/2024/2024-12-12-annual-playlist/
 https://eustomaqua.github.io/2024/2024-12-11-annual-playlist/
-https://eustomaqua.github.io/2021/2021-01-21-JabRef-Research/
 https://eustomaqua.github.io/2019/2019-07-20-Kindle-SignIn-WordWise/
 https://eustomaqua.github.io/
 https://eustomaqua.github.io/tags/Music/
 https://eustomaqua.github.io/tags/TV-Series/
-https://eustomaqua.github.io/tags/iOS/
 https://eustomaqua.github.io/tags/Kindle/
 https://eustomaqua.github.io/tags/Python/
 https://eustomaqua.github.io/tags/TensorFlow/
