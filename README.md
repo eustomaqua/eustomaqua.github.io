@@ -5,6 +5,7 @@ Summary
 [歌曲LRC滚动歌词在线生成制作编辑器软件](https://www.yuanchuangyinyue.com/3027.html)  
 ```shell
 $ cd hexo-next
+# cd localweb
 $ hexo g
 $ hexo s
 $ hexo d
@@ -154,6 +155,13 @@ $ git status
 ```
 
 [部署Hexo踩过的坑—node14.0配置hexo](https://zhuanlan.zhihu.com/p/136552969)  
+
+[Hexo框架的Next主题引入来必力LiveRe评论系统](https://jealyn.github.io/livere.html)  
+[hexo博客优化之实现来必力评论功能](https://blog.csdn.net/qwerty200696/article/details/78836421)  
+[Hexo之安装Livere（来必力）评论插件](https://cloud.tencent.com/developer/article/2170409)  
+[Chic自定义案例-包含评论、阅读量、样式等](https://github.com/Siricee/hexo-theme-Chic/issues/38)  
+[Hexo博客NexT主题开启文章目录和调整样式](https://www.0skyu.cn/posts/2207)  
+[NexT 常见问题](https://theme-next.iissnan.com/faqs.html)  
 
 
 
