@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="eustomaqua">
+
+
+
+    <meta name="description" content="Once upon a time....">
+
+
+
+<title>远程服务器与本地机的使用 (Ubuntu 16.04) | Aqua Eustoma</title>
+
+
+
+    <link rel="icon" href="/images/EustomaAqua.png">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Aqua Eustoma" type="application/atom+xml">
+</head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">eustomaqua</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Archives</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/search">Search</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">eustomaqua</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Archives</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/search">Search</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <!--
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+        -->
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand</a>
+        <a onclick="go_top()">Top</a>
+        <a onclick="go_bottom()">Bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        // b.innerText = expanded ? 'Expand all' : 'Collapse all';
+        b.innerText = expanded ? 'Expand' : 'Collapse';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">远程服务器与本地机的使用 (Ubuntu 16.04)</h1>
+            
+                <div class="post-meta">
+                    
+
+                    <!--
+                    
+                        <span class="post-time">
+                        Date: <a href="#">June 9, 2019&nbsp;&nbsp;23:02:59</a>
+                        </span>
+                    
+                    -->
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/Records/">Records</a>
+                            
+                        </span>
+                    
+
+                    <span class="post-time">
+                        / &nbsp;
+                        <i class="fas fa-calendar-check"></i>
+                        Date: <a href="#">June 9, 2019&nbsp;</a>
+                        <i class="far fa-clock"></i>
+                        41 min
+                    </span>
+
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <!--
+date: 2019-06-09 23:02:59
+updated: 
+
+Modified: 24 Mar 2020 10:05:57
+Configure: 4 Dec 2021 15:22:08
+-->
+
+
+<h1 id="Server"><a href="#Server" class="headerlink" title="Server"></a>Server</h1><p>前提条件： </p>
+<ol>
+<li>无 root 权限</li>
+<li>Ubuntu 16.04</li>
+<li>CUDA 9.0 (not necessary)</li>
+</ol>
+<h2 id="非-root-用户安装-cuda-cudnn"><a href="#非-root-用户安装-cuda-cudnn" class="headerlink" title="非 root 用户安装 cuda, cudnn"></a>非 root 用户安装 cuda, cudnn</h2><h3 id="1-下载安装-cuda"><a href="#1-下载安装-cuda" class="headerlink" title="1. 下载安装 cuda"></a>1. 下载安装 cuda</h3><ul>
+<li>下载 TensorFlow 对应版本的 CUDA <a target="_blank" rel="noopener" href="https://developer.nvidia.com/cuda-downloads">https://developer.nvidia.com/cuda-downloads</a> </li>
+<li>选择 linux 及对应系统之后，选择 runfile(local) 下载，<em>即 &#96;&#96;linux -&gt; x86_64 -&gt; Ubuntu -&gt; 16.04 -&gt; runfile (local)’’</em></li>
+<li>给文件运行权限 <strong>chmod +x filename.run</strong> 然后运行 <strong>.&#x2F;filename.run</strong></li>
+<li>在协议中选择同意 (accept)，不安装 driver installation (no)，然后在安装 cuda 时选择个人用户的家目录，如 <strong>&#x2F;home&#x2F;yourname&#x2F;cuda90</strong>，link 选择 no，samples 自己设定 (yes or no) 及安装目录，sudo 选择 no</li>
+<li>修改个人用户的环境变量，环境变量文件 <strong>~&#x2F;.bashrc</strong> 位于家目录，即 <strong>&#x2F;home&#x2F;yourname&#x2F;.bashrc</strong> (可用 <strong>vim ~&#x2F;.bashrc</strong> 编辑)，末尾添加如下语句  ；修改之后需 <strong>source ~&#x2F;.bashrc</strong> 使环境变量生效，或另开终端<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export PATH=$HOME/VirtualEnv/cuda90/bin:$PATH</span><br><span class="line">export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/VirtualEnv/cuda90/lib64/</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="2-查看-cuda-安装状态"><a href="#2-查看-cuda-安装状态" class="headerlink" title="2. 查看 cuda 安装状态"></a>2. 查看 cuda 安装状态</h3><ul>
+<li><strong>nvidia-smi</strong> 查看显卡驱动运行状态</li>
+<li><strong>nvcc -V</strong> 查看 cuda-toolkit 安装是否成功</li>
+</ul>
+<h3 id="3-安装-cudnn"><a href="#3-安装-cudnn" class="headerlink" title="3. 安装 cudnn"></a>3. 安装 cudnn</h3><ul>
+<li>cudnn 的安装，官网下载 <a target="_blank" rel="noopener" href="https://developer.nvidia.com/cudnn">https://developer.nvidia.com/cudnn</a> (需注册账号)，解压到 cuda 所在的文件夹，<strong>tar -xzvf cuda-9.0-linux-x64-v7.4.2.24.tgz</strong> (输入自己下载的安装包名)</li>
+<li>拷贝过去 cudnn -&gt; cuda (cuda90 是个人用户家目录下的 &#x2F;home&#x2F;yourname&#x2F;VirtualEnv&#x2F;cuda90 )，注意路径正确<br><strong>cp cuda&#x2F;include&#x2F;cudnn.h ~&#x2F;VirtualEnv&#x2F;cuda90&#x2F;include&#x2F;</strong><br><em><em>cp cuda&#x2F;lib64&#x2F;libcudnn</em> ~&#x2F;VirtualEnv&#x2F;cuda90&#x2F;lib64</em>*<br>*<em>chmod a+r ~&#x2F;VirtualEnv&#x2F;cuda90&#x2F;include&#x2F;cudnn.h ~&#x2F;VirtualEnv&#x2F;cuda90&#x2F;lib64&#x2F;libcudnn</em> **</li>
+</ul>
+<h3 id="4-查看-cudnn-安装状态"><a href="#4-查看-cudnn-安装状态" class="headerlink" title="4. 查看 cudnn 安装状态"></a>4. 查看 cudnn 安装状态</h3><p><strong>cat ~&#x2F;VirtualEnv&#x2F;cuda90&#x2F;include&#x2F;cudnn.h | grep CUDNN_MAJOR -A5</strong><br>显示</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ cat ~/VirtualEnv/cuda90/include/cudnn.h | grep CUDNN_MAJOR -A5</span><br><span class="line"><span class="comment">#define CUDNN_MAJOR 7</span></span><br><span class="line"><span class="comment">#define CUDNN_MINOR 4</span></span><br><span class="line"><span class="comment">#define CUDNN_PATCHLEVEL 2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#define CUDNN_VERSION (CUDNN_MAJOR * 1000 + CUDNN_MINOR * 100 + CUDNN_PATCHLEVEL)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#include &quot;driver_types.h&quot;</span></span><br><span class="line"><span class="comment">#include &lt;cuda_runtime.h&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#ifndef CUDNNWINAPI</span></span><br></pre></td></tr></table></figure>
+<p>则 cudnn 版本为 7.4.2<br>然后就可以安装自己想要安装的框架了</p>
+<p>后续：编译框架的时候提示无 lcuda.so 动态库<br>解决办法：在 &#x2F;usr&#x2F;lib64&#x2F;nvidia 中有，创建软链接到自己的安装 cuda 的目录 &#x2F;home&#x2F;liuao&#x2F;cuda91&#x2F;lib64 (i.e., &#x2F;home&#x2F;username&#x2F;VirtualEnv&#x2F;cuda90&#x2F;lib64) 即可。</p>
+<h3 id="安装过程-所用到的命令"><a href="#安装过程-所用到的命令" class="headerlink" title="* 安装过程 (所用到的命令)"></a>* 安装过程 (所用到的命令)</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">install cuda</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> ~/VirtualEnv</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">chmod</span> +x cuda_9.0.176_384.81_linux.run</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">./cuda_9.0.176_384.81_linux.run</span></span><br><span class="line">[EULA] accept</span><br><span class="line">[install Driver] no</span><br><span class="line">[install CUDA 9.0 Toolkit] yes</span><br><span class="line">[Toolkit location] /home/yourname/VirtualEnv/cuda90</span><br><span class="line">[symbolic link at /usr/local/cuda] no</span><br><span class="line">[install CUDA 9.0 Samples] yes</span><br><span class="line">[Samples location] /home/yourname/VirtualEnv/cudasamples</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">nvidia-smi</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">nvcc -V</span></span><br><span class="line">nvcc: NVIDIA (R) Cuda compiler driver</span><br><span class="line">Copyright (c) 2005-2017 NVIDIA Corporation</span><br><span class="line">Built on Fri_Sep__1_21:08:03_CDT_2017</span><br><span class="line">Cuda compilation tools, release 9.0, V9.0.176</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"></span></span><br><span class="line"><span class="language-bash"><span class="comment"># install cudnn</span></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> ~/VirtualEnv</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">tar -xzvf cudnn-9.0-linux-x64-v7.4.2.24.tgz</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cp</span> cuda/include/cudnn.h ~/VirtualEnv/cuda90/include/</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">ls</span> cuda/lib64</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cp</span> cuda/lib64/libcudnn* ~/VirtualEnv/cuda90/lib64/</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">chmod</span> a+r ~/VirtualEnv/cuda90/include/cudnn.h ~/VirtualEnv/cuda90/lib64/libcudnn*</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cat</span> ~/VirtualEnv/cuda90/include/cudnn.h | grep CUDNN_MAJOR -A5</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">define CUDNN_MAJOR 7</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">define CUDNN_MINOR 4</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">define CUDNN_PATCHLEVEL 2</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">define CUDNN_VERSION (CUDNN_MAJOR * 1000 + CUDNN_MINOR * 100 + CUDNN_PATCHLEVEL)</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">include <span class="string">&quot;driver_types.h&quot;</span></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">include &lt;cuda_runtime.h&gt;</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">ifndef CUDNNWINAPI</span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="非-root-用户安装自己的-Python"><a href="#非-root-用户安装自己的-Python" class="headerlink" title="非 root 用户安装自己的 Python"></a>非 root 用户安装自己的 Python</h2><p>我的习惯是  </p>
+<ul>
+<li>virtualenv 创建的虚拟环境都放在 <strong>VirtualEnv</strong> 文件夹下，命名格式 e.g., <strong>py36env</strong>, <strong>py35gnn</strong>, etc </li>
+<li>家目录安装的不同版本 Python 都放在 <strong>software</strong> 文件夹下 (同时存放软件下载包)，命名格式 e.g., <strong>python27</strong>, etc</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">mkdir</span> software</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> software</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"></span></span><br><span class="line"><span class="language-bash"><span class="comment"># install Python</span></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">wget https://www.python.org/ftp/python/3.6.1/Python-3.6.1.tgz</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">tar -zxvf Python-3.6.1.tgz</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> Python-3.6.1</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">./configure --prefix=/home/userrname/software/python36</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">make -j</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">make install</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">or: make -j &amp;&amp; make install</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">注意如果 make &amp;&amp; make install 会失败，应该是权限问题</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"></span></span><br><span class="line"><span class="language-bash"><span class="comment"># pip3 install package</span></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> ../python36</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">bin/python3</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">bin/pip3 list</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> bin</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">./pip3 install packagename</span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="非-root-用户安装-Python-包库"><a href="#非-root-用户安装-Python-包库" class="headerlink" title="非 root 用户安装 Python 包库"></a>非 root 用户安装 Python 包库</h2><p>两种方法：</p>
+<blockquote>
+<p>pip install –user package-name<br>virtualenv, virtualenvwrapper</p>
+</blockquote>
+<p>方法一的卸载，pip uninstall package-name 即可，会先卸载个人目录下的包。如果个人目录和系统目录有同名包，随后使用 sudo 卸载系统包即可。</p>
+<p>方法二更方便环境隔离，可以自行配置多个环境。</p>
+<p>方法三是用 docker，暂未尝试。</p>
+<p>非 root 用户在服务器上配置自己的环境，使用 pip install –user package 设置自己的虚拟环境</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ pip install --user virtualenv virtualwrapper</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># create virtual environment (not necessary)</span></span><br><span class="line">$ cd ~</span><br><span class="line">$ <span class="keyword">mkdir</span> VirtualEnv</span><br><span class="line">$ cd VirtualEnv</span><br><span class="line">$ virtualenv py36env --python=<span class="regexp">/usr/</span>bin/python3.<span class="number">6</span></span><br><span class="line">$ source py36env/bin/activate</span><br><span class="line">$ pip list</span><br><span class="line">$ pip install packagename....</span><br><span class="line">$ deactivate</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="Remote-Local-Server"><a href="#Remote-Local-Server" class="headerlink" title="Remote (Local - Server)"></a>Remote (Local - Server)</h1><h2 id="TensorBoard-远程访问"><a href="#TensorBoard-远程访问" class="headerlink" title="TensorBoard 远程访问"></a>TensorBoard 远程访问</h2><h3 id="远程连接"><a href="#远程连接" class="headerlink" title="远程连接"></a>远程连接</h3><p>在本地&#x2F;虚拟机 (Ubuntu 16.04) 中 </p>
+<ol>
+<li>终端 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -L 16006:127.0.0.1:6006 yourname@server.address</span><br></pre></td></tr></table></figure>
+  其中 16006:127.0.0.1 代表自己机器上的 16006 号端口，6006 是服务器上 TensorBoard 使用的端口</li>
+<li>在浏览器中打开 <a target="_blank" rel="noopener" href="http://127.0.0.1:16006/">http://127.0.0.1:16006</a></li>
+<li>服务器上 ctrl+c 关闭后，本地即无法连接</li>
+<li>本地终端 exit<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">ubuntu@VirtualBox:~<span class="variable">$</span> ssh <span class="literal">-L</span> <span class="number">16006</span>:<span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">6006</span> yourname@server.address</span><br><span class="line">yourname@server.address<span class="string">&#x27;s password: </span></span><br><span class="line"><span class="string">Welcome to Ubuntu 16.04.5 LTS (GNU/Linux 4.4.0-141-generic x86_64)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"> * Documentation:  https://help.ubuntu.com</span></span><br><span class="line"><span class="string"> * Management:     https://landscape.canonical.com</span></span><br><span class="line"><span class="string"> * Support:        https://ubuntu.com/advantage</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">79 packages can be updated.</span></span><br><span class="line"><span class="string">4 updates are security updates.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">New release &#x27;</span><span class="number">18.04</span>.<span class="number">1</span> LTS<span class="string">&#x27; available.</span></span><br><span class="line"><span class="string">Run &#x27;</span><span class="keyword">do</span><span class="literal">-release-upgrade</span><span class="string">&#x27; to upgrade to it.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">*** System restart required ***</span></span><br><span class="line"><span class="string">Last login: Thu Feb  7 15:46:49 2019 from 10.231.238.49</span></span><br><span class="line"><span class="string">yourname@server.address:~$ exit</span></span><br><span class="line"><span class="string">logout</span></span><br><span class="line"><span class="string">Connection to server.address closed.</span></span><br><span class="line"><span class="string">ubuntu@VirtualBox:~$ </span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>Usage: <code>$ tensorboard --logdir=folder_path</code></p>
+<ol>
+<li>between Local Steps 1 &amp; 2</li>
+<li>在服务器上开启 TensorBoard  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tensorboard --logdir=./network</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>e.g.,</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ubuntu@VirtualBox:~<span class="variable">$</span> ssh <span class="literal">-L</span> <span class="number">16006</span>:<span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">6006</span> yourname@server.address</span><br><span class="line">yourname@server.address<span class="string">&#x27;s password: </span></span><br><span class="line"><span class="string">Last login: Wed Feb 27 11:08:00 2019 from 10.230.167.212</span></span><br><span class="line"><span class="string">yourname@server.address:~$ source VirtualEnv/py35env/bin/activate</span></span><br><span class="line"><span class="string">(py35env) yourname@server.address:~$ cd yourfolder</span></span><br><span class="line"><span class="string">(py35env) yourname@server.address:~/yourfolder$ ls</span></span><br><span class="line"><span class="string">(py35env) yourname@server.address:~/yourfolder$ tensorboard --logdir=folder_of_your_model</span></span><br><span class="line"><span class="string">W0227 12:16:59.123035 Reloader tf_logging.py:120] Found more than one graph event per run, or there was a metagraph containing a graph_def, as well as one or more graph events.  Overwriting the graph with the newest event.</span></span><br><span class="line"><span class="string">TensorBoard 1.12.1 at http://yourserver:6006 (Press CTRL+C to quit)</span></span><br><span class="line"><span class="string">^C(py35env) yourname@server.address:~/yourfolder$ </span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Jupyter-notebook-远程访问"><a href="#Jupyter-notebook-远程访问" class="headerlink" title="Jupyter notebook 远程访问"></a>Jupyter notebook 远程访问</h2><p>仍以非 root 用户身份安装</p>
+<p>1, 安装步骤<br>(1) 登录服务器  </p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">~$ source ~<span class="regexp">/VirtualEnv/p</span>y36env/bin/activate</span><br><span class="line">(py36env) ~$ jupyter notebook</span><br><span class="line">jupyter: command <span class="keyword">not</span> found</span><br></pre></td></tr></table></figure>
+<p>(2) 检查是否有安装 jupyter notebook<br>终端输入 jupyter nootbook ，如果报错就是没有安装，用下列命令安装</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(py36env) ~$ <span class="comment">#pip install pyzmq tornado jinja2 jsonschema</span></span><br><span class="line">(py36env) ~$ pip install jupyter</span><br></pre></td></tr></table></figure>
+<p>(3) 生成配置文件</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(py36env) ~$ jupyter notebook --generate-config</span><br><span class="line">Writing default config to: <span class="regexp">/home/us</span>ername/.jupyter/jupyter_notebook_config.py</span><br></pre></td></tr></table></figure>
+<p>(4) 生成密码 （后续写配置文件、登录 Jupyter notebook 时需要）<br>打开Python终端，我输入的密码是 1234</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">(py36env) ~$ python</span><br><span class="line">Python <span class="number">3.6</span>.<span class="number">7</span> (default, Oct <span class="number">21</span> <span class="number">2018</span>, <span class="number">04</span>:<span class="number">56</span>:<span class="number">05</span>)</span><br><span class="line">[GCC <span class="number">5.4</span>.<span class="number">0</span> <span class="number">20160609</span>] on linux</span><br><span class="line">Type <span class="string">&quot;help&quot;</span>, <span class="string">&quot;copyright&quot;</span>, <span class="string">&quot;credits&quot;</span> <span class="keyword">or</span> <span class="string">&quot;license&quot;</span> <span class="keyword">for</span> more information.</span><br><span class="line">&gt;&gt;&gt; from IPython.lib import passwd</span><br><span class="line">&gt;&gt;&gt; passwd()</span><br><span class="line">Enter password:</span><br><span class="line">Verify password:</span><br><span class="line"><span class="string">&#x27;sha1:afc40e4de2b5:69f901707c23fde938709612d49424fab065c3b1&#x27;</span></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">[<span class="number">12</span>]+  Stopped                 python</span><br></pre></td></tr></table></figure>
+<p>(5) 修改默认配置文件</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(py36env) ~$ vim ~<span class="regexp">/.jupyter/</span>jupyter_notebook_config.py</span><br></pre></td></tr></table></figure>
+<p>进行如下修改（这里可以自行配置）：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">c</span>.NotebookApp.ip = <span class="string">&#x27;*&#x27;</span>  #允许所有ip访问</span><br><span class="line"><span class="keyword">c</span>.NotebookApp.password = <span class="keyword">u</span><span class="string">&#x27;sha1:afc40e4de2b5:69f901707c23fde938709612d49424fab065c3b1&#x27;</span>  #刚才复制的那个密文</span><br><span class="line"><span class="keyword">c</span>.NotebookApp.open_browser = False</span><br><span class="line"><span class="keyword">c</span>.NotebookApp.port = <span class="number">8888</span>  #随便指定一个端口</span><br><span class="line"><span class="keyword">c</span>.IPKernelApp.pylab = <span class="string">&#x27;inline&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>(6) 启动 Jupyter notebook</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">(py36env) ~$ jupyter notebook</span><br><span class="line">[I <span class="number">12</span>:<span class="number">16</span>:<span class="number">27.663</span> NotebookApp] Serving notebooks from <span class="keyword">local</span> directory: <span class="regexp">/home/us</span>ername</span><br><span class="line">[I <span class="number">12</span>:<span class="number">16</span>:<span class="number">27.663</span> NotebookApp] The Jupyter Notebook is running at:</span><br><span class="line">[I <span class="number">12</span>:<span class="number">16</span>:<span class="number">27.664</span> NotebookApp] http:<span class="regexp">//s</span>erver.address:<span class="number">8888</span>/</span><br><span class="line">[I <span class="number">12</span>:<span class="number">16</span>:<span class="number">27.664</span> NotebookApp] Use Control-C to stop this server <span class="keyword">and</span> shut down all kernels (twice to skip confirmation).</span><br><span class="line">^C[I <span class="number">12</span>:<span class="number">23</span>:<span class="number">05</span><span class="number">.617</span> NotebookApp] interrupted</span><br><span class="line">Serving notebooks from <span class="keyword">local</span> directory: <span class="regexp">/home/us</span>ername</span><br><span class="line"><span class="number">0</span> active kernels</span><br><span class="line">The Jupyter Notebook is running at:</span><br><span class="line">http:<span class="regexp">//us</span>ername:<span class="number">8888</span>/</span><br><span class="line">Shutdown this notebook server (<span class="keyword">y</span>/[n])? <span class="keyword">y</span></span><br><span class="line">[C <span class="number">12</span>:<span class="number">23</span>:08<span class="number">.408</span> NotebookApp] Shutdown confirmed</span><br><span class="line">[I <span class="number">12</span>:<span class="number">23</span>:08<span class="number">.409</span> NotebookApp] Shutting down <span class="number">0</span> kernels</span><br><span class="line">(py36env) ~$</span><br></pre></td></tr></table></figure>
+
+<p>注意：服务器的 ip，不需要加自己的用户名，即 ‘server.address’ 即可，若写成 ‘<a href="mailto:&#x75;&#x73;&#101;&#114;&#x6e;&#x61;&#109;&#101;&#64;&#x73;&#101;&#x72;&#118;&#x65;&#114;&#x2e;&#x61;&#100;&#x64;&#114;&#101;&#115;&#x73;">&#x75;&#x73;&#101;&#114;&#x6e;&#x61;&#109;&#101;&#64;&#x73;&#101;&#x72;&#118;&#x65;&#114;&#x2e;&#x61;&#100;&#x64;&#114;&#101;&#115;&#x73;</a>‘ 会报错，说其并非是一个 ip 地址</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call <span class="keyword">last</span>):</span><br><span class="line">  File <span class="string">&quot;/home/username/VirtualEnv/py36env/lib/python3.6/site-packages/notebook/notebookapp.py&quot;</span>, line <span class="number">864</span>, in _default_allow_remote</span><br><span class="line">    addr = ipaddress.ip_address(self.ip)</span><br><span class="line">  File <span class="string">&quot;/usr/lib/python3.6/ipaddress.py&quot;</span>, line <span class="number">54</span>, in ip_address</span><br><span class="line">    address)</span><br><span class="line">ValueError: <span class="string">&#x27;username@server.address&#x27;</span> does <span class="keyword">not</span> appear to be an IPv4 <span class="keyword">or</span> IPv6 address</span><br></pre></td></tr></table></figure>
+<p>注意：c.NotebookApp.ip 的问题及报错</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#(<span class="number">1</span>) <span class="keyword">c</span>.NotebookApp.ip = <span class="string">&#x27;username@server.address&#x27;</span></span><br><span class="line">ValueError: <span class="string">&#x27;username@server.address&#x27;</span> does not appear <span class="keyword">to</span> <span class="keyword">be</span> <span class="keyword">an</span> IPv4 <span class="built_in">or</span> IPv6 address</span><br><span class="line"></span><br><span class="line">#(<span class="number">2</span>) <span class="keyword">c</span>.NotebookApp.ip = <span class="string">&#x27;server.address&#x27;</span></span><br><span class="line">http://server.addres<span class="variable">s:8888</span></span><br><span class="line">无法访问此网站</span><br><span class="line">server.address 的响应时间过长</span><br><span class="line"></span><br><span class="line">#(<span class="number">3</span>) <span class="keyword">c</span>.NotebookApp.ip = <span class="string">&#x27;*&#x27;</span></span><br><span class="line">ValueError: <span class="string">&#x27;&#x27;</span> does not appear <span class="keyword">to</span> <span class="keyword">be</span> <span class="keyword">an</span> IPv4 <span class="built_in">or</span> IPv6 address</span><br><span class="line"></span><br><span class="line">#(<span class="number">4</span>) <span class="keyword">c</span>.NotebookApp.ip = <span class="string">&#x27;0.0.0.0&#x27;</span></span><br><span class="line">http://(server <span class="built_in">or</span> <span class="number">127.0</span>.<span class="number">0.1</span>):<span class="number">8888</span>/</span><br><span class="line">无法访问此网站 (<span class="number">4</span><span class="keyword">a</span>/<span class="number">4</span><span class="keyword">b</span>)</span><br><span class="line">(<span class="number">4</span><span class="keyword">a</span>) 找不到 server 的服务器 IP 地址</span><br><span class="line">(<span class="number">4</span><span class="keyword">b</span>) <span class="number">127.0</span>.<span class="number">0.1</span> 拒绝了我们的连接请求</span><br></pre></td></tr></table></figure>
+
+<p>(7) 远程访问<br>此时应该可以直接从本地浏览器直接访问 <a target="_blank" rel="noopener" href="http://address_of_remote:8888/">http://address_of_remote:8888</a> 就可以看到 jupyter 的登录页面。（注意服务器上的 Jupyter notebook 不要关）</p>
+<h2 id="PyCharm"><a href="#PyCharm" class="headerlink" title="PyCharm"></a>PyCharm</h2><h3 id="Deployment"><a href="#Deployment" class="headerlink" title="Deployment"></a>Deployment</h3><p><strong>Tools -&gt; Deployment -&gt; Configuration</strong><br>+server, and remember to “Save password”</p>
+<p><strong>Tools -&gt; Deployment -&gt; Options</strong><br>click “Create empty directions”</p>
+<h3 id="Python-interpreter"><a href="#Python-interpreter" class="headerlink" title="Python interpreter"></a>Python interpreter</h3><p><strong>File -&gt; Settings</strong><br><strong>Project: your_name -&gt; Project Interpreter</strong><br>add the python path on the server, remember to “<strong>Move this server to IDE settings</strong>“ instead of “Create copy of this deployment server in IDE settings”<br><strong>Edit Sync Folders</strong> (Local Path, Remote Path)</p>
+<h3 id="其它配置"><a href="#其它配置" class="headerlink" title="其它配置"></a>其它配置</h3><h4 id="autopep8"><a href="#autopep8" class="headerlink" title="autopep8"></a>autopep8</h4><p><strong>File -&gt; Settings -&gt; Tools -&gt; External Tools -&gt; +</strong>  </p>
+<blockquote>
+<p>Program：C:\Python35\Scripts\autopep8.exe<br>Parameters：–in-place –ignore&#x3D;E123,E133,E50 “$FilePath$“<br>Working directory：$FileDir$</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/yannanxiu/article/details/54598404">在PyCharm环境配置Autopep8到菜单栏</a><br><a target="_blank" rel="noopener" href="https://wsgzao.github.io/post/autopep8/">PyCharm 使用 autopep8 按 PEP8 风格自动排版 Python 代码</a></p>
+<h1 id="Local"><a href="#Local" class="headerlink" title="Local"></a>Local</h1><h2 id="Ubuntu-16-04-alongside-Win-7"><a href="#Ubuntu-16-04-alongside-Win-7" class="headerlink" title="Ubuntu 16.04 (alongside Win 7)"></a>Ubuntu 16.04 (alongside Win 7)</h2><p>我双系统安装失败了，现在只能用 Ubuntu，一启动 Win 7 就花屏</p>
+<h2 id="Windows-10"><a href="#Windows-10" class="headerlink" title="Windows 10"></a>Windows 10</h2><p>Bitvise SSH Client</p>
+<p>可以写个 .sh 然后 nohup 执行。<br>如果不用 nohup，一旦关闭终端&#x2F;连接断掉，这个脚本就会停止执行 </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">vim yourtask.sh</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">chmod</span> +x ./yourtask.sh</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">nohup</span> ./yourtask.sh</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看使用空间</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">du</span> -h --max-depth=1</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<h1 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git checkout branchname</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git pull upstream branchname</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git rebase upstream/branchname</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git <span class="built_in">log</span>    <span class="comment"># q (exit)</span></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git config --list</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/Linux/"># Linux</a>
+                    
+                        <a href="/tags/Git/"># Git</a>
+                    
+                        <a href="/tags/Configuration/"># Configuration</a>
+                    
+                        <a href="/tags/Remote-Server/"># Remote Server</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <!--
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+                -->
+                <a href="/">Home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2019/2019-07-20-Kindle-SignIn-WordWise/">Kindle 跌过的坑要反复地爬 T_T</a>
+            
+            
+            <a class="next" rel="next" href="/2018/2018-09-18-Python-Logging/">Logging in Python (日志处理)</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <!--
+        <span>© eustomaqua | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+        -->
+
+        <span>© eustomaqua | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span> 
+        <!--
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <span class="post-meta-divider">|</span>
+        Total 
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span> visits
+        </span> & 
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span> visitors
+        </span>
+        -->
+        <!--
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <span class="post-meta-divider">|</span>
+        <span id="busuanzi_container_site_pv">
+            Total visits<span id="busuanzi_value_site_pv"></span>
+        </span>
+        <span class="post-meta-divider">|</span>
+        <span id="busuanzi_container_site_uv">
+            Total visitors
+            <span id="busuanzi_value_site_uv"></span>
+        </span> 
+        -->
+
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>
