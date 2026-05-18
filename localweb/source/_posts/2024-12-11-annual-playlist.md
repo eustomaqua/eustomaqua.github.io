@@ -1311,6 +1311,79 @@ https://www.kumeiwp.com/wj/25253/2022/03/04/6f3fe6511ffd8822b36949a5ae5aac84.mp3
 最佳怨侣 春风几度都无温度
 </details>
 <details>
+<summary>各安其命
+  [<a href="https://5sing.kugou.com/fc/17611081.html">5sing</a>]
+</summary>
+
+各安其命
+
+选曲：HANA《只想与你再一起》
+作曲：徐洛锵
+编曲：Johnny Yim
+SC：
+原曲：只想与你再一起-HANA
+填词：SUIXINSUIYUAN
+歌手：MAD
+后期：岁语
+题字：姜语澈
+美工：醉微沉
+策划：古茗
+
+```markdown
+那时火是国家，那时水是边境
+那时岩石手印代表一种种文明
+花还随意交谈，树也没忘记表情
+我们约在悬崖侧壁仔细聆听
+
+那时你不隐忍，那时我不清醒
+那时我们却更懂爱情
+我若要认识自己，只能看你的眼睛
+看我的身影，多少次因你忘形
+
+我与历史应各安其命
+隔世真假该如何证明
+我问起前因后果，成败输赢
+它总说不清
+
+我与文字应各安其命
+并没有谁做我的象形
+也许我拥有姓名
+只为用一生描述它的心情
+
+那时海已汹涌，那时梦还安静
+我们眷恋渺小的和平
+但心脏突然悸动，但海面结成寒冰
+神秘的大陆，山和浪涌进神经
+
+我与人间应各安其命
+熙熙攘攘谁不在独行
+我走过一条条路，走个不停
+不祈求神灵
+
+我与岁月应各安其命
+承诺之后就不再年轻
+它来自，晨昏光景
+归去又对我邀请
+
+那漫天星光，只是异世流萤
+我们把美丽认做宿命
+其实已经決定，偏偏强调注定
+愿与那璀璨一刻天人相应
+
+我与爱人应各安其命
+谁未如愿谁戓许庆幸
+它仍是风的玫瑰，土的根茎
+柔软也坚硬
+
+我与快乐应各安其命
+关于生活我只是任性
+说什么，云淡风清
+我就爱代替月亮，说圆缺阴晴
+
+20.6.16
+```
+</details>
+<details>
 <summary>那里见
   [<a href="https://www.youtube.com/watch?v=QJlXLnvtguU">YouTube</a>,
   <a href="https://music.163.com/#/song?id=2748660343">NetEase</a>,
@@ -1968,6 +2041,7 @@ C3
 </summary>
 
 命理难说 [<a href="https://5sing.kugou.com/yc/1067277.html">5sing</a>]
+言不由衷 [<a href="https://5sing.kugou.com/fc/6419050.html">5sing</a>]
 乱世情缘 [<a href="https://www.missevan.com/sound/player?id=314996">missevan</a>]
 <a href="https://www.missevan.com/explore/13302?p=3">梦璟SAYA</a>
 徒然歌 [<a href="https://5sing.kugou.com/yc/1629006.html">5sing</a>]
