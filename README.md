@@ -9,6 +9,8 @@ $ cd hexo-next
 $ hexo g
 $ hexo s
 $ hexo d
+
+$ # hexo clean   # 慎用
 ```
 
 
