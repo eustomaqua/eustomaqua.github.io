@@ -41,7 +41,7 @@ tags:
 EU Login
 NetIQ Auth: ku身份验证
 MitID: 需要valid cpr registeration
-Digital Post (e-boks)
+Digital Post (e-boks), e-Boks
 
 <details>
   <summary>local
@@ -69,6 +69,7 @@ Digital Post (e-boks)
 **Supermarket**
 - eTilbudsavis: 超市discount
   Kobenhavn: Rema 1000/Netto/fotex
+- Normal, Matas (Magasin), Scandinavisk
 </details>
 
 
@@ -92,10 +93,10 @@ VIP Access: nus身份验证，IT register
 **Transportation**
 - NUS NextBus
 - MyTransport.SG
-- StarHub prepaid
+- StarHub prepaid (Singtel)
 
 **Supermarket**
-- Fairprice
+- Fairprice (晟松超市)
 </details>
 
 

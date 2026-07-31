@@ -2045,6 +2045,7 @@ C3
 乱世情缘 [<a href="https://www.missevan.com/sound/player?id=314996">missevan</a>]
 <a href="https://www.missevan.com/explore/13302?p=3">梦璟SAYA</a>
 徒然歌 [<a href="https://5sing.kugou.com/yc/1629006.html">5sing</a>]
+<a href="https://hetu-music.com/zh-CN/song/351">走向世界尽头的企鹅和背向人群的小丑</a>
 </details>
 
 
