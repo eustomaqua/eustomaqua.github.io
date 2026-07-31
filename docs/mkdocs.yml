@@ -1,0 +1,9 @@
+# site_name: My Docs
+site_name: eustomaqua
+
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - yaml
+    - rust
