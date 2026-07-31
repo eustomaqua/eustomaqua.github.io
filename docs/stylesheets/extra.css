@@ -1,0 +1,17 @@
+.md-header__topic > .md-ellipsis {
+    overflow: visible;
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+}
+/* text-overflow 與 white-space 兩個并不會生效，因爲 overflow 永遠都是可視的。
+寫在這裏只是因爲他們三者平時經常混在一起而已。 */
+
+body {
+      font-family: "LXGW WenKai", sans-serif;
+      /* Lite version */
+      /* font-family: "LXGW WenKai Lite", sans-serif; */
+      /* TC version */
+      /* font-family: "LXGW WenKai TC", sans-serif; */
+      /* Screen version */
+      /* font-family: "LXGW WenKai Screen", sans-serif; */
+    }

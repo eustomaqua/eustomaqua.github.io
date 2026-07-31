@@ -7,3 +7,13 @@ theme:
   hljs_languages:
     - yaml
     - rust
+  font:
+    text: Roboto # Noto Sans SC, Noto Serif SC
+    # code: Fira Code
+
+nav:
+  - Welcome to MkDocs: index.md
+  - Year 2026: hetu26.md
+extra_css:
+  - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
+  - stylesheets/extra.css

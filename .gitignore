@@ -16,3 +16,4 @@ hexo-next/package.json
 hexo-next/package-lock.json
 
 docs/site
+docs/build
