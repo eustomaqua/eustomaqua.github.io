@@ -13,7 +13,11 @@ theme:
 
 nav:
   - Welcome to MkDocs: index.md
-  - Year 2026: hetu26.md
+  - 风起天阑: hetu_cd1.md
+  - 唱给你的歌: hetu_cd2.md
+  - 倾尽天下: hetu_cd3.md
+  - NL不分: hetu_cd4.md
+  # - Year 2026: hetu26.md
 extra_css:
   - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
   - stylesheets/extra.css
