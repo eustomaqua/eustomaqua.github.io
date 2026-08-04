@@ -160,7 +160,7 @@
                         <i class="fas fa-calendar-check"></i>
                         Date: <a href="#">June 14, 2026&nbsp;</a>
                         <i class="far fa-clock"></i>
-                        12 min
+                        16 min
                     </span>
 
                 </div>
@@ -250,11 +250,24 @@
     padding: 4px;
     box-sizing: border-box;
   }
+  .calc-table input[role="modern-input"] {
+    background-color: #f0f2f5;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  #tax-result {
+    margin-top: 10px;
+    font-weight: bold;
+    white-space: pre-line;
+  }
 
-<p>  .calc-table input.modern-input {<br>    width: 250px;<br>    padding: 7px;<br>    background-color: #f0f2f5;<br>    border: 2px solid transparent;<br>    border-radius: 30px;<br>    outline: none;<br>    transition: all 0.3s ease;<br>  }<br>  .calc-table input.modern-input:focus {<br>    background-color: #ffffff;<br>    border-color: #1890ff;<br>    box-shadow: 0 0 8px rgba(24, 144, 255, 0.2);<br>  }<br>  #tax-result {<br>    margin-top: 10px;<br>    font-weight: bold;<br>    white-space: pre-line;<br>  }<br></style></p>
+<p>  .calc-table input.modern-input {<br>    width: 250px;<br>    padding: 7px;<br>    background-color: #f0f2f5;<br>    border: 2px solid transparent;<br>    border-radius: 30px;<br>    outline: none;<br>    transition: all 0.3s ease;<br>  }<br>  .calc-table input.modern-input:focus {<br>    background-color: #ffffff;<br>    border-color: #1890ff;<br>    box-shadow: 0 0 8px rgba(24, 144, 255, 0.2);<br>  }<br>  .calc-table input.modern-input[type&#x3D;”number”] {<br>    appearance: textfield;<br>    -moz-appearance: textfield;<br>    background: yellow !important;<br>    border: 3px solid blue !important;<br>  }<br>  .calc-table input.modern-input::-webkit-outer-spin-button,<br>  .calc-table input.modern-input::-webkit-inner-spin-button {<br>    -webkit-appearance: none;<br>    margin: 0;<br>  }<br></style></p>
 </head>
 
 <body>
+<div>Which date would you report? <input id="penalty-day" type="date" oninput="updatePenalty()" onchange="updatePenalty()"></div>
 <label for="year-select">Which year are you choosing? </label>
 <select id="year-select" onchange="getExchangeRate()">
     <option value="">---</option>
@@ -287,7 +300,8 @@
     </tr>
     <tr>
       <td></td><td>1.0000</td><td>
-        <input class="modern-input" type="number" id="inputC" value="-78000" oninput="calculate()">
+        <input role="modern-input" type="number" id="inputC" value="-78000" oninput="calculate()">
+        <!-- <input class="modern-input" type="number" id="inputC" value="-78000" oninput="calculate()" style="background: #f0f2f5; border: 2px solid transparent; border-radius: 30px; outline: none;"> -->
       </td><td>spec deductions (neg)</td><td></td><td></td> <!-- other -->
     </tr>
     <tr>
@@ -326,24 +340,24 @@
 </table>
 
 <div id="tax-result" style="margin-top: 10px; font-weight: bold;"></div>
-
+<div id="penalty-fee" style="margin-top: 10px; font-weight: bold;" oninput="calculate()"></div>
 
 
 <script>
-    const rate_usd = {"2025": 7.0288, "2024": 7.1884, "2023": 7.0827, };
-    const rate_eur = {"2025": 8.2355, "2024": 7.5257, "2023": 7.8592, };
-    const rate_gbp = {"2025": 9.4346, "2024": 9.0765, "2023": 9.0411, };
-    const rate_aud = {"2025": 4.6892, "2024": 4.5070, "2023": 4.8484, };
-    const rate_nzd = {"2025": 4.0520, "2024": 4.0955, "2023": 4.4991, };
-    const rate_sgd = {"2025": 5.4586, "2024": 5.3214, "2023": 5.3772, }
-    const rate_chf = {"2025": 8.8510, "2024": 7.9977, "2023": 8.4184, };
-    const rate_cad = {"2025": 5.1142, "2024": 5.0498, "2023": 5.3673, };
-    const rate_pln = {"2025": 1/0.51289, "2024": 1/0.56827, "2023": 1/0.55227, };
-    const rate_dkk = {"2025": 1/0.9076, "2024": 1/0.9917, "2023": 0.9491, };
-    const rate_sek = {"2025": 1/1.3129, "2024": 1/1.5233, "2023": 1.4065, };
-    const rate_nok = {"2025": 1/1.4351, "2024": 1/1.5658, "2023": 1.4362, };
-
+  const rate_usd = {"2025": 7.0288, "2024": 7.1884, "2023": 7.0827, };
+  const rate_eur = {"2025": 8.2355, "2024": 7.5257, "2023": 7.8592, };
+  const rate_gbp = {"2025": 9.4346, "2024": 9.0765, "2023": 9.0411, };
+  const rate_aud = {"2025": 4.6892, "2024": 4.5070, "2023": 4.8484, };
+  const rate_nzd = {"2025": 4.0520, "2024": 4.0955, "2023": 4.4991, };
+  const rate_sgd = {"2025": 5.4586, "2024": 5.3214, "2023": 5.3772, }
+  const rate_chf = {"2025": 8.8510, "2024": 7.9977, "2023": 8.4184, };
+  const rate_cad = {"2025": 5.1142, "2024": 5.0498, "2023": 5.3673, };
+  const rate_pln = {"2025": 1/0.51289, "2024": 1/0.56827, "2023": 1/0.55227, };
+  const rate_dkk = {"2025": 1/0.9076, "2024": 1/0.9917, "2023": 0.9491, };
+  const rate_sek = {"2025": 1/1.3129, "2024": 1/1.5233, "2023": 1.4065, };
+  const rate_nok = {"2025": 1/1.4351, "2024": 1/1.5658, "2023": 1.4362, };
   const rates = {us: rate_usd, sg: rate_sgd, dk: rate_dkk, pl: rate_pln};
+  let credit = 0;
   function input2num(id) {
     return parseFloat(document.getElementById(id).value) || 0;
   }
@@ -351,30 +365,47 @@
     document.getElementById(id).innerText = Number(value).toFixed(2);
   }
 
+  // document.getElementById('penalty-day').valueAsDate = today;
+  function format(today) {
+    // let month = ('0' + (today.getMonth() + 1)).slice(-2);
+    // let day_t = ('0' + today.getDate()).slice(-2);
+    // let formatted = year + '-' + month + '-' + day_t;
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const day_t = String(today.getDate()).padStart(2, '0');
+    const formatted = `${today.getFullYear()}-${month}-${day_t}`;
+    return formatted;
+  }
+  const today = new Date();
+  document.getElementById('penalty-day').value = format(today);
+  // document.getElementById('penalty-day').addEventListener('input', calculate);
+  // document.getElementById('penalty-day').addEventListener('change', function() {updatePenalty(credit)});
+  // document.getElementById('penalty-day').addEventListener('input', updatePenalty);
+  // document.getElementById('penalty-day').addEventListener('change', updatePenalty);
+
+
   function calculate() {
     const year = document.getElementById("year-select").value;
     if (!year) {
-      document.getElementById("tax-result").innerText = "Please choose a year first.";
+      document.getElementById(
+        "tax-result").innerText = "Please choose a year first.";
       return;
     }
-
     let a = parseFloat(document.getElementById('inputA').value) || 0;
     let b = parseFloat(document.getElementById('inputB').value) || 0;
     let c = parseFloat(document.getElementById('inputC').value) || 0;
     // let result = (a * 2) + b;
     // document.getElementById('result').innerText = result;
-    // document.getElementById("inputA").addEventListener("input", calculate);
 
     const salary_us = input2num('sal-us') * rates.us[year];
     const salary_sg = input2num('sal-sg') * rates.sg[year];
     const salary_dk = input2num('sal-dk') * rates.dk[year];
     const salary_pl = input2num('sal-pl') * rates.pl[year];
-    let income_ovs = salary_us + salary_sg + salary_dk + salary_pl;
+    let income_ovs = salary_us + salary_sg + salary_dk; // + salary_pl;
     let income_cny = a + income_ovs;
     let tax_cny = updateAnnualTax(income_cny + c);
     // document.getElementById('result').value = b.toFixed(2);
     setText('result', b);
-    setText('self-cn', updateAnnualTax(a + c)); //updateAnnualTax(income_cny));
+    setText('self-cn', updateAnnualTax(a + c)); //income_cny));
     setText('self-sg', calc_sgTax(input2num('sal-sg') - 1000));
     // setText('self-dk', calc_dkTax(input2num('sal-dk')));
 
@@ -382,6 +413,7 @@
     const taxed_sg = input2num('taxed-sg') * rates.sg[year];
     const taxed_dk = input2num('taxed-dk') * rates.dk[year];
     const taxed_pl = input2num('taxed-pl') * rates.pl[year];
+    income_ovs = (income_ovs == 0) ? 1 : income_ovs;
     let deduct_us = tax_cny * salary_us / income_ovs;
     let deduct_sg = tax_cny * salary_sg / income_ovs;
     let decuct_dk = tax_cny * salary_dk / income_ovs;
@@ -393,10 +425,11 @@
     setText('ded-sg', deduct_sg);
     setText('ded-dk', decuct_dk);
     setText('ded-pl', decuct_pl);
-    let credit = tax_cny - pay_cny;
+    credit = tax_cny - pay_cny;
+    updatePenalty();  // updatePenalty(year, credit);
 
     let text_icm = "Total income gained:"   //.padEnd(22, " ")
-    let text_tax = "Overall tax payable :"  // .padStart(22, " ")
+    let text_tax = "Overall  tax payable :"  // .padStart(22, " ")
     let text_todo = "Remaining tax to pay:"
     document.getElementById('tax-result').innerText = `\n ${text_icm} ${income_cny.toFixed(2)} \n ${text_tax} ${tax_cny.toFixed(2)} \n ${text_todo} ${credit.toFixed(2)}`;
   }
@@ -413,6 +446,66 @@
     const bracket = brackets.find(([limit]) => taxable_income <= limit);
     return taxable_income * bracket[1] - bracket[2];
   }
+  function obtainLateDay(year) {
+    // var today = new Date();
+    // const curr_yr = today.getFullYear();
+    // const curr_mo = today.getMonth() + 1;
+    // const curr_d = today.getDate();
+    // let curr = (curr_mo <= 6) ? (curr_d - 30) : 0;
+    // return 365 * (curr_yr - year) + diff;
+
+    const curr = document.getElementById('penalty-day').value;
+    const today = new Date(curr);
+    if (today.getFullYear() == year) return 0;
+    const deadline = Number(year) + 1;
+    var prev = new Date(`${deadline}-06-30`);
+    // var prev = Date(Number(year) + 1, 5, 30);  //deadline
+    today.setHours(0, 0, 0, 0);
+    prev.setHours(0, 0, 0, 0);  // deadline,days
+    let diff = today - prev;  // Math.abs(today - prev);
+    diff = Math.ceil(diff / (1000 * 60 * 60 * 24));
+    return Math.max(diff, 0);
+  }
+  function updatePenalty() {  // year, credit
+    const year = document.getElementById("year-select").value;
+    let penalty_ratio = obtainLateDay(year) * 5 / 10000;
+    let penalty = (1 + penalty_ratio) * credit;
+    document.getElementById('penalty-fee').innerText = `+Late payment fee if any : ${penalty.toFixed(2)} \nDue penalty (INT.x ${(penalty_ratio * 100).toFixed(2)}%): ${(penalty - credit).toFixed(2)}`;  // Thereinto interest rate
+  }
+
+
+  function getExchangeRate() {
+    const year = document.getElementById("year-select").value;
+    
+    if (year) {
+      document.getElementById("rate-us").innerText = `${rate_usd[year]}`;
+      document.getElementById("rate-sg").innerText = `${rate_sgd[year]}`;
+      document.getElementById("rate-dk").innerText = `${rate_dkk[year].toFixed(4)}`;
+      document.getElementById("rate-pl").innerText = `${rate_pln[year].toFixed(4)}`;
+    } else {
+      document.getElementById("rate-us").innerText = "";
+    }
+    // https://www.pbc.gov.cn/zhengcehuobisi/125207/125217/125925/2025123109021714424/index.html
+    // https://www.pbc.gov.cn/zhengcehuobisi/125207/125217/125925/5548334/index.html
+    // https://www.pbc.gov.cn/zhengcehuobisi/125207/125217/125925/5184576/index.html
+    // `${rates_us[year]}`;
+
+    // const year = document.getElementById("year-select").value;
+    // const resultDiv = document.getElementById("result");
+    // // 模拟的汇率数据（实际应用中可在此处调用 API 获取如 USD/CNY 的汇率）
+    // const rates = {
+    //     "2023": "1 USD = 7.05 CNY",
+    //     "2024": "1 USD = 7.12 CNY",
+    //     "2025": "1 USD = 7.15 CNY",
+    //     "2026": "1 USD = 7.20 CNY"
+    // };
+    // if (year) {
+    //     resultDiv.innerHTML = `该年份的平均汇率约为：${rates[year]}`;
+    // } else {
+    //     resultDiv.innerHTML = "";
+    // }
+  }
+
 
   function calc_sgTax(taxable) {
     if (taxable <= 20000) {
@@ -443,38 +536,6 @@
       return 292320 + 149000*0.49 + (base_taxable - 845000) * 0.56;
     } else {
       return 292320 + 73010 + 1973000*0.56 + (base_taxable - 2818000)*0.61;
-    }
-  }
-
-  function getExchangeRate() {
-    // const year = document.getElementById("year-select").value;
-    // const resultDiv = document.getElementById("result");
-    // // 模拟的汇率数据（实际应用中可在此处调用 API 获取如 USD/CNY 的汇率）
-    // const rates = {
-    //     "2023": "1 USD = 7.05 CNY",
-    //     "2024": "1 USD = 7.12 CNY",
-    //     "2025": "1 USD = 7.15 CNY",
-    //     "2026": "1 USD = 7.20 CNY"
-    // };
-    // if (year) {
-    //     resultDiv.innerHTML = `该年份的平均汇率约为：${rates[year]}`;
-    // } else {
-    //     resultDiv.innerHTML = "";
-    // }
-
-    // https://www.pbc.gov.cn/zhengcehuobisi/125207/125217/125925/2025123109021714424/index.html
-    // https://www.pbc.gov.cn/zhengcehuobisi/125207/125217/125925/5548334/index.html
-    // https://www.pbc.gov.cn/zhengcehuobisi/125207/125217/125925/5184576/index.html
-    // `${rates_us[year]}`;
-    const year = document.getElementById("year-select").value;
-    
-    if (year) {
-      document.getElementById("rate-us").innerText = `${rate_usd[year]}`;
-      document.getElementById("rate-sg").innerText = `${rate_sgd[year]}`;
-      document.getElementById("rate-dk").innerText = `${rate_dkk[year].toFixed(4)}`;
-      document.getElementById("rate-pl").innerText = `${rate_pln[year].toFixed(4)}`;
-    } else {
-      document.getElementById("rate-us").innerText = "";
     }
   }
 </script>
@@ -513,6 +574,8 @@
             </div>
         </section>
         <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2026/2026-07-17-overseas-app/">当地生活APP</a>
             
             
             <a class="next" rel="next" href="/2025/2024-12-14-annual-summary/">食为民天</a>

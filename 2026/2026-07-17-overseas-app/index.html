@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="eustomaqua">
+
+
+
+    <meta name="description" content="Once upon a time....">
+
+
+
+<title>当地生活APP | Aqua Eustoma</title>
+
+
+
+    <link rel="icon" href="/images/EustomaAqua.png">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Aqua Eustoma" type="application/atom+xml">
+</head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">eustomaqua</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Archives</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/search">Search</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">eustomaqua</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Archives</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/search">Search</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <!--
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+        -->
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand</a>
+        <a onclick="go_top()">Top</a>
+        <a onclick="go_bottom()">Bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        // b.innerText = expanded ? 'Expand all' : 'Collapse all';
+        b.innerText = expanded ? 'Expand' : 'Collapse';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">当地生活APP</h1>
+            
+                <div class="post-meta">
+                    
+
+                    <!--
+                    
+                        <span class="post-time">
+                        Date: <a href="#">July 16, 2026&nbsp;&nbsp;0:00:00</a>
+                        </span>
+                    
+                    -->
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E4%BF%97%E4%B8%96%E7%BA%A2%E5%B0%98/">俗世红尘</a>
+                            
+                        </span>
+                    
+
+                    <span class="post-time">
+                        / &nbsp;
+                        <i class="fas fa-calendar-check"></i>
+                        Date: <a href="#">July 16, 2026&nbsp;</a>
+                        <i class="far fa-clock"></i>
+                        3 min
+                    </span>
+
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <!--
+<ul><li>Singpass</li></ul>
+
+| Country | ID | Banking | Transportation | Supermarket | Renting |
+|--------:|:---|:--------|:---------------|:------------|:--------|
+|United States| | | | | |
+| Singapore   | Singpass<br>SGWorkPass<br>VIP Access | OCBC Digital<br>DSB digibank<br>PayNow<br>SC Mobile<br>Citibank SG | | | |
+| Denmark     | | | | | |
+| Poland      | | | | | |
+-->
+
+
+
+<h2 id="Poland"><a href="#Poland" class="headerlink" title="Poland"></a>Poland</h2><details>
+  <summary>local
+  </summary>
+
+<p><strong>Banking</strong></p>
+<p><strong>Transportation</strong></p>
+<ul>
+<li>Jakdojade</li>
+</ul>
+<p><strong>Supermarket</strong></p>
+</details>
+
+
+<h2 id="Denmark"><a href="#Denmark" class="headerlink" title="Denmark"></a>Denmark</h2><p>EU Login<br>NetIQ Auth: ku身份验证<br>MitID: 需要valid cpr registeration<br>Digital Post (e-boks), e-Boks</p>
+<details>
+  <summary>local
+  </summary>
+
+<p><strong>Banking</strong></p>
+<ul>
+<li>Mobilbank (Danske Bank)</li>
+<li>Eurocard &#x2F;AirPlus</li>
+<li>MobilePay</li>
+</ul>
+<p><strong>Renting</strong></p>
+<ul>
+<li>UMEUS (STUDENT CO-LIVING)</li>
+<li>JustIN Mobile</li>
+<li>Betalingsservice</li>
+<li>Forum: Frederiksberg kommune</li>
+<li>*Greystar Europe</li>
+</ul>
+<p><strong>Transportation</strong></p>
+<ul>
+<li>DSB, rejsekort: 单程随买</li>
+<li>Rejseplanen: 行程计划</li>
+<li>DOT Tickets: 月票，已停用</li>
+<li>LycaMobileDK</li>
+<li>Midttrafik live: 奥胡斯</li>
+</ul>
+<p><strong>Supermarket</strong></p>
+<ul>
+<li>eTilbudsavis: 超市discount<br>Kobenhavn: Rema 1000&#x2F;Netto&#x2F;fotex</li>
+<li>Normal, Matas (Magasin), Scandinavisk</details></li>
+</ul>
+<h2 id="Singapore"><a href="#Singapore" class="headerlink" title="Singapore"></a>Singapore</h2><p>Singpass (&amp; SGWorkPass): 离职后三个月失效<br>VIP Access: nus身份验证，IT register</p>
+<details>
+  <summary>local
+  </summary>
+
+<p><strong>Banking</strong></p>
+<ul>
+<li>OCBC Digital</li>
+<li>DSB digibank</li>
+<li>PayNow</li>
+<li>Trust</li>
+<li>SC Mobile</li>
+<li>Citibank SG</li>
+</ul>
+<p><strong>Transportation</strong></p>
+<ul>
+<li>NUS NextBus</li>
+<li>MyTransport.SG</li>
+<li>StarHub prepaid (Singtel)</li>
+</ul>
+<p><strong>Supermarket</strong></p>
+<ul>
+<li>Fairprice (晟松超市)</details></li>
+</ul>
+<h2 id="Other-places-temporary-visit"><a href="#Other-places-temporary-visit" class="headerlink" title="Other places (temporary visit)"></a>Other places (temporary visit)</h2><p><strong>Transportation</strong></p>
+<ul>
+<li>Skanetrafiken: 马尔默-哥哈火车<br>Oresund zone (Kopenhamn H, Malmo C; via The Oresund bridge; 24h Ticket 2 Adult)</li>
+<li>Vy: 挪威火车、长途巴士</li>
+<li>BudapestGO: 布达佩斯</li>
+</ul>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <!--
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+                -->
+                <a href="/">Home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2026/2026-06-15-taxable-income/">个人所得税申报</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <!--
+        <span>© eustomaqua | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+        -->
+
+        <span>© eustomaqua | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span> 
+        <!--
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <span class="post-meta-divider">|</span>
+        Total 
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span> visits
+        </span> & 
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span> visitors
+        </span>
+        -->
+        <!--
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <span class="post-meta-divider">|</span>
+        <span id="busuanzi_container_site_pv">
+            Total visits<span id="busuanzi_value_site_pv"></span>
+        </span>
+        <span class="post-meta-divider">|</span>
+        <span id="busuanzi_container_site_uv">
+            Total visitors
+            <span id="busuanzi_value_site_uv"></span>
+        </span> 
+        -->
+
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>
