@@ -130,77 +130,6 @@
                 <div class="container">
     
     
-        <div class="post-toc">
-    <div class="tocbot-list">
-    </div>
-    <div class="tocbot-list-menu">
-        <!--
-        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
-        <a onclick="go_top()">Back to top</a>
-        <a onclick="go_bottom()">Go to bottom</a>
-        -->
-        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand</a>
-        <a onclick="go_top()">Top</a>
-        <a onclick="go_bottom()">Bottom</a>
-    </div>
-</div>
-
-<script>
-    var tocbot_timer;
-    var DEPTH_MAX = 6; // 为 6 时展开所有
-    var tocbot_default_config = {
-        tocSelector: '.tocbot-list',
-        contentSelector: '.post-content',
-        headingSelector: 'h1, h2, h3, h4, h5',
-        orderedList: false,
-        scrollSmooth: true,
-        onClick: extend_click,
-    };
-
-    function extend_click() {
-        clearTimeout(tocbot_timer);
-        tocbot_timer = setTimeout(function() {
-            tocbot.refresh(obj_merge(tocbot_default_config, {
-                hasInnerContainers: true
-            }));
-        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
-    }
-
-    document.ready(function() {
-        tocbot.init(obj_merge(tocbot_default_config, {
-            collapseDepth: 1
-        }));
-    });
-
-    function expand_toc() {
-        var b = document.querySelector('.tocbot-toc-expand');
-        var expanded = b.getAttribute('data-expanded');
-        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
-        tocbot.refresh(obj_merge(tocbot_default_config, {
-            collapseDepth: expanded ? 1 : DEPTH_MAX
-        }));
-        // b.innerText = expanded ? 'Expand all' : 'Collapse all';
-        b.innerText = expanded ? 'Expand' : 'Collapse';
-    }
-
-    function go_top() {
-        window.scrollTo(0, 0);
-    }
-
-    function go_bottom() {
-        window.scrollTo(0, document.body.scrollHeight);
-    }
-
-    function obj_merge(target, source) {
-        for (var item in source) {
-            if (source.hasOwnProperty(item)) {
-                target[item] = source[item];
-            }
-        }
-        return target;
-    }
-</script>
-    
 
     
     <article class="post-wrap">
@@ -231,7 +160,7 @@
                         <i class="fas fa-calendar-check"></i>
                         Date: <a href="#">July 16, 2026&nbsp;</a>
                         <i class="far fa-clock"></i>
-                        3 min
+                        8 min
                     </span>
 
                 </div>
@@ -239,95 +168,31 @@
         </header>
 
         <div class="post-content">
-            <!--
-<ul><li>Singpass</li></ul>
-
-| Country | ID | Banking | Transportation | Supermarket | Renting |
-|--------:|:---|:--------|:---------------|:------------|:--------|
-|United States| | | | | |
-| Singapore   | Singpass<br>SGWorkPass<br>VIP Access | OCBC Digital<br>DSB digibank<br>PayNow<br>SC Mobile<br>Citibank SG | | | |
-| Denmark     | | | | | |
-| Poland      | | | | | |
--->
-
-
-
-<h2 id="Poland"><a href="#Poland" class="headerlink" title="Poland"></a>Poland</h2><details>
-  <summary>local
-  </summary>
-
-<p><strong>Banking</strong></p>
-<p><strong>Transportation</strong></p>
-<ul>
-<li>Jakdojade</li>
-</ul>
-<p><strong>Supermarket</strong></p>
-</details>
-
-
-<h2 id="Denmark"><a href="#Denmark" class="headerlink" title="Denmark"></a>Denmark</h2><p>EU Login<br>NetIQ Auth: ku身份验证<br>MitID: 需要valid cpr registeration<br>Digital Post (e-boks), e-Boks</p>
-<details>
-  <summary>local
-  </summary>
-
-<p><strong>Banking</strong></p>
-<ul>
-<li>Mobilbank (Danske Bank)</li>
-<li>Eurocard &#x2F;AirPlus</li>
-<li>MobilePay</li>
-</ul>
-<p><strong>Renting</strong></p>
-<ul>
-<li>UMEUS (STUDENT CO-LIVING)</li>
-<li>JustIN Mobile</li>
-<li>Betalingsservice</li>
-<li>Forum: Frederiksberg kommune</li>
-<li>*Greystar Europe</li>
-</ul>
-<p><strong>Transportation</strong></p>
-<ul>
-<li>DSB, rejsekort: 单程随买</li>
-<li>Rejseplanen: 行程计划</li>
-<li>DOT Tickets: 月票，已停用</li>
-<li>LycaMobileDK</li>
-<li>Midttrafik live: 奥胡斯</li>
-</ul>
-<p><strong>Supermarket</strong></p>
-<ul>
-<li>eTilbudsavis: 超市discount<br>Kobenhavn: Rema 1000&#x2F;Netto&#x2F;fotex</li>
-<li>Normal, Matas (Magasin), Scandinavisk</details></li>
-</ul>
-<h2 id="Singapore"><a href="#Singapore" class="headerlink" title="Singapore"></a>Singapore</h2><p>Singpass (&amp; SGWorkPass): 离职后三个月失效<br>VIP Access: nus身份验证，IT register</p>
-<details>
-  <summary>local
-  </summary>
-
-<p><strong>Banking</strong></p>
-<ul>
-<li>OCBC Digital</li>
-<li>DSB digibank</li>
-<li>PayNow</li>
-<li>Trust</li>
-<li>SC Mobile</li>
-<li>Citibank SG</li>
-</ul>
-<p><strong>Transportation</strong></p>
-<ul>
-<li>NUS NextBus</li>
-<li>MyTransport.SG</li>
-<li>StarHub prepaid (Singtel)</li>
-</ul>
-<p><strong>Supermarket</strong></p>
-<ul>
-<li>Fairprice (晟松超市)</details></li>
-</ul>
-<h2 id="Other-places-temporary-visit"><a href="#Other-places-temporary-visit" class="headerlink" title="Other places (temporary visit)"></a>Other places (temporary visit)</h2><p><strong>Transportation</strong></p>
-<ul>
-<li>Skanetrafiken: 马尔默-哥哈火车<br>Oresund zone (Kopenhamn H, Malmo C; via The Oresund bridge; 24h Ticket 2 Adult)</li>
-<li>Vy: 挪威火车、长途巴士</li>
-<li>BudapestGO: 布达佩斯</li>
-</ul>
-
+            <div class="hbe hbe-container" id="hexo-blog-encrypt"
+     data-hbe-format="4"
+     data-wpm="Oh, this is an invalid password. Check and try again, please."
+     data-whm="Oh, this is an invalid password. Check and try again, please."
+     data-salt="af1e0263c29d33ae1aae9e1418c2b0d287ea3a0b8f51bb45c8594721b7bef340"
+     data-nonce="e563d9e9eb47eea4da3954d3"
+     data-kdf-iterations="250000"
+     data-auto-save="false">
+  <script id="hbeData" type="hbeData">
+    65036ae8061413a77fa04d41ff504433661a200ea87b8a13d86536defa9a0797d014c8a9bc8d6e6988be9ce9aecc022d2247ca78c7426203512d5dd7e3a069b03933436af935fafd141fc0832a662fb1c6a63f73d16c81dbb2a5fd88daaf3c6ccb9e5c10bdcd88eefbbce82857126fecc987931ab3d05a4336ebe2ac2033ca109348a932d02854d74db4c44f6f9073a960dbdef7113838bfb01a5c96e0c6a85eba4d7a4cc77d0ffaaa31876be57cc5af7d5e9206b4cfa18716deb5cba8c200f8fa3e20740b37e44b8aad0e6f4b6e6b8ac928460ef539a69afe5ec88804b798a6d0edbf1c965d24468005badad4d5c486aab4e34e14a4ade9eead477ded06ae5a14f77a2d3bfe5112d0fd05a26e6cda791c600549badb278f894b63178d4fe24eaa1ab953e8a3e016abf67d5bef29b1274aaea3ffce987cadec99c069a3a5e6c48c30971b89cefabf0943e09b8389a935218d8bc3253999d56d822422fe37bf98388952d9a16d663eca88ae6a8d7d346ab84021d472e09c388f230fa80bf3adca7b75751e0eb205cf6b69f010d1bbac4a6cf2ea64b4b3df9fa0c12e9fb94473cc7aa56e19f306a4fceb29c8622c9d862feca7491f37fbd124d9a827a0dfdbf511dc7ac0e63eb68fb26e1a6afceb303efadb2c7051f425067abe2b9bd88ef85278fb8ae3076646cc1818d66e9496516372a872bc90c4374bad80beca85c016025a7b24efd89bcad65548d92612b949849fa6cbdc6d0279dfcb8bd358d6edd53abd9abb8f3c3f328585d2b0d3de554bfd920ce610528f56af3c44fe823afa33e66b329c5360f255beaeef37445a7e79d20f9013e4ebdd28e0bcac135aed59b6e18e2e3a8a366a62e29ed13435e8ac1277a1f33bf6a20771eca038bf7e360d65e7f1469cf99d80ee2a4f1aea9053df38f004fa7bb67706168068b8a339fcfcd19bcc80a55770a9f47c8f68b86ad2202043c3a700dbababa4d046597afa4e4fed8782602b3c11dfb2a81d506ba5796c1296ff70a43070c725508db8183c20d7077e09370d807192e10d256e646d14359e3cef6b17adf242ba07c096a3dc11bde1dcfe7dcce6582716adf1cf0c23547d27fece4525980cf7748cf12259a1cc7b0a37a359ee34f62856de2b42174dfff56eea9d54ada6fb3c86cdd67f9d72e3a88649bbf4106414643399f5a0224a54cbd20292dd4b5cff45d3119ebf2443535c26a35c7523a51eac9ac1368b14fb98dc07894c18e59a4482ec625d204bf33a12c6f41426de5eaeabab50df22d5a59a4bc9e23ccdcd39d0723134dd77e71951d2d4771b4236eb9d5a4ce38617c3e346d3291611e9748a670f4a0ab4c5787579cd20a346736057cee8733ae72d66722ea01435ee9023edfaa00ce559b3f50a45d92bdef1aeb1d016fb2899790750f3d77af837ac92b9b626d3306c0ad1d184a8f9fa4b423a16d136013215188467f129ec507451e0d8ebb52b1f4381cd5e68e14241b1306dc4471ba09926ee8bcd9aa3d134da63384c1f46d39e1fc94acc24792e145ae0c4f3c4bfcb10f8deea045fed3ac085baa5dcd19907f8abe4354b06a561397a48beadc72d5a69de5e2bdee0bc4f6c9396bf4270bb9f435792bdecd2697ac22318b2ef77fbb9891a678ddbea8f12d9dab247a71feef356146eae744b873c49e0ba0f42f544f627f2c95809f4c7c00222eeb71bc7dad7696508397fa48895ce7835ae8061b924ccae1bd8fb8a766163086548b10e33560f7af70f5a31cd3b9ba2d4feb07c39efeb0dc7291b8e818fe0112516f15aef1ba37e6681d362300d0af556032cc8355517123f66764314a74afbd1aba97aed1f912c8d6e4d7d25aed2508fc9e89467514714464f8179a18a192c5b320d9507b168296688b417207770d09fd88d92edf0490168fa8d846bf51b2e9f6f04eef8a8fb0c16a25370fdca0de2dc15a3f8321933387aeb073f95a151b3425b4e135b37c7bc96906ddd6d369c47d6b9ebec2fda13202372af0c8f2ae057a956edb7cf069cba3e75efc04d85ba91192f3ae6982cad816faf07a76e00aac613c11f34f9620462bf4d14ed952dccf138013e0de2e1f6fd1ca9d12cfe6e3f7d1f83f860a01fb9c466f0f971b1067563ba43facde499a14b3e5a326728d8c129c31ec64bd44c662803fed2874af475f123324ace44a2afb84b4634680c8cf840edb85c2928842e27348195d67de7dda8aa63d32b0b9ae0cfd0690cbcb24878e8ad3545f83c7ad1ad07084fe2b68cecd2da811847bd99fed82dfb1a358498f9631bb4cd4d4a83d237f2e55a7be5cf1a20966b1f84815e9b15d6799fb12f116ce99f8bf7ff55f1db801da68c883b801a59e06d522530b5b410e939183afa5e3d7c736309bf4d04f6083c10d792d03930e164adc88eb9fbd1ccb08e3ce9c9f5057a613aa6fcd3e90a08bcfde92ef50def55b000579b208c9efa88f97c23e0c5ef4ff76c3c33c207104dd719eff1016d4129f5f514ed66d46d66ee9090e3794af369154fc0103e0565fc6ed2c859ed163ba1060092fffc07496f727769654ed7a452d988d8e90f7e485ecaaf2af678a0b93d102eb4b0f1b54febfaac895b361a46cb7544643795601ee8b5cced8b1f5922c90bc27e0c5288e2d97ef43fb2d9a54b46e25300bbba6057c798947afd752db3555bfcec047fb914a4d9fbcaf572b7772383cb1a5e4ba063815239ed65e9ce5a7114aa1102cbd40dae3bda1dfda9e8674fe55ca1db56b8232d02d7d113be81e28f0d40fe9554af34d273768ae1466dcc1801e923316e165cef786caa9ebeb436fe3f2bae890c39dedf29df29691bda99277f7e042a3d9ecd442723aa6b7e584d1d236b15ff20cc047c95f995f64348ed9b1464c078c6bc4a5c80632e97b9c696714cba6d83b8b9f4a7364bb6e8ece588bf73a8c079769c61c0cb27334002f00ae16547f54ca0c711fe7c5c9201fc6657c2f35040932ac34237abec2c13d15c11cdc13189b8ef2bf387b4f002d5c21e3f53ea5f7e9ee8e8fc92fc95ec39297d681a4df63d57385e92d10f45a43aaa6d504f6f16ea1d6842450f0b4293eee9f07af96ee9da712e2cbe958395f42c7a6149e057f11b112b5a5c6ef19eb30f4fd30129cfb1ca63d3a94e146d246f4275c590a95116cd940b2b40b82dab8e360c79ec3241cab7b5c57e7ab2d0f8b424c95b71073b8a8908a82155325cc1f82e527ab84af297b1263e84682e934de98dee13c0418895838314afb1789d09ea1e8f384387fabd171b702f5b7d70d42625219104dde72b9550b980cff10217e8dbf533d8c7b79466d371121f610021f8e81ac4ff9da1c98c26d390bbdb3f4b3f95dbedec8c423f93975cb4b761095ae27c3bec52479d9b7f3b0a063620d8e533080b3ddc7585dc7e4b2fe947e71565eb9aa200788062d114cbfc5ed390e04f6b01c1da63b013091d333148930ac16be7459bb07fa36363acda53146b581ed933ccbc7bde7dcfa05ff294770a7f7c9db07cd0d76bcbe368fab018fc73e571903a0049cb09eb17efea1ff9374542269006b2e912a0f88a2e36d786f9ca20e5a2a23126f5d8ba2ed2874e2177bc4ce83156de15c2d4fa87ff2a038bff523f56a5aa25b4a97f553374fb784fcc5a019ee36c2de211ab795546d3db17aba76fd814469bb1ee8e0c8e0f64f52428052b73594600652a52271f0527f9ed29c8237868d40a01475cf90398bc68a3dbaf92554cbb9cbefd0d5704c3cff2a0206e097a0710df3a4e670ca01c6755011ca4fe539f8d7f4ada75b4cb201f01ceb55fb7b6c853d08960a944ac8395bb5e4310447e41d41dcd960d59a48f17a0d8fce442e2b2674592a27506ac38948eb49fa2c3abc4a8df39954d085916cf19799c2460e1ab1f1fe3fb604eefb83f0c839c90061b03c4f7a2ddb3c2f529ab52cf63942c4cc1b6d6ec57f43ce0be28d3c1f31a2ce403b5b8ce7761235c474fef8af784bd44d935c6cfbdfa34300bebb0001f3c8f463b8afb86ccbacf8647090dba5e0df29965c7cfe13e46ab3ae99139665b8df81424b7c391ea18efbed1405707b4616d780e456cca7dd01bc946c307abec8765cf4f175d26670ee6a85ed156440aa7f569753a5c38129dfd0158e7e863b25920c3218cad220adced5e6c2ebd545267736f42dfe59a48f4eba5a0f90c3bbf62b4704b58ed4e46da8e3340aa47772c07448b4cc570dc5a83a5b87b147c77a1d7f7246d0f3b11ae07f7dce53884f89ecb95f294ea6b34a9b1351dc3c8d5b4b2a40670fd3f8d775cc5c74c47a7b9d170f95f3a734ecc53aabcd3c4d6595f8ea496b6c21d8bdaf76e65225973fafbfc60c64a1d51d8c8f06a92ac32b7ef970f934a7e05564ef669cbb10980d2662f4fb895f662841d109a6dd7305e848a7ee27df77185a01c16ce84e087c94964b9a979a81d
+  </script>
+  <div class="hbe hbe-content">
+    <form id="hbeForm" class="hbe hbe-form" onsubmit="return false">
+      <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+      <button class="hbe hbe-button" type="submit">Decrypt</button>
+      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.51dd9f3b98.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
         </div>
 
         
