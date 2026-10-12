@@ -2,6 +2,7 @@
 title: 当地生活APP
 date: 2026-07-16
 updated: 2026-07-16
+password: passcode
 categories:
   - 俗世红尘
 tags:
@@ -28,11 +29,15 @@ tags:
   </summary>
 
 **Banking**
+- IKO (PKO Bank Polski)
 
 **Transportation**
 - Jakdojade
+- Orange Flex
 
 **Supermarket**
+- Rossmann
+- Zappka (Zabka)
 </details>
 
 
@@ -103,7 +108,23 @@ VIP Access: nus身份验证，IT register
 ## Other places (temporary visit)
 
 **Transportation**
+- AT Mobile: 奥克兰公交
 - Skanetrafiken: 马尔默-哥哈火车
   Oresund zone (Kopenhamn H, Malmo C; via The Oresund bridge; 24h Ticket 2 Adult)
 - Vy: 挪威火车、长途巴士
 - BudapestGO: 布达佩斯
+
+
+## P.R. China
+
+<details>
+  <summary>local
+  </summary>
+
+**Banking**
+- 缤纷生活 (中行信用卡)
+- 中国工商银行
+- 上海人社
+- 电子税务局
+- Whova: 会议日程
+</details>

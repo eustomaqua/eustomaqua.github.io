@@ -12,6 +12,11 @@ $ hexo d
 
 $ # hexo clean   # 慎用
 ```
+```
+$ cd localweb
+$ npm list       # npm list -g
+$ npm install --save hexo-blog-encrypt
+```
 Readthedocs https://eustomaquagithubio.readthedocs.io/en/latest/
 
 

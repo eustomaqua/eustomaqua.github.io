@@ -25,3 +25,7 @@ tags:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OD9ZJ0zn-yI?si=N_t8ElkJJufB4_H4?rel=0&amp;autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+
+*Love is a longing, and the longing dies when it is fulfilled.*
+-- H.C. Andersen
+[Hans Christian Andersen's House](https://hcandersenshus.dk/) @Odense

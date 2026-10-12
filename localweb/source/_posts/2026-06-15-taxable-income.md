@@ -2,6 +2,7 @@
 title: 个人所得税申报
 date: 2026-06-14
 updated: 2026-06-14
+password: passcode
 categories:
   - 俗世红尘
 tags:
