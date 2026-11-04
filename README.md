@@ -11,6 +11,7 @@ $ hexo s
 $ hexo d
 
 $ # hexo clean   # 慎用
+$ hexo new page "about"
 ```
 ```
 $ cd localweb
